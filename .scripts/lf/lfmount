@@ -1,0 +1,22 @@
+#!/bin/sh
+# mount archives from lf. requires archivemount.
+# usage: $ lfmount [-p] ARCHIVE_FILE
+
+# check $id
+[ -z "$id" ] && echo lf\'s id is not given. >&2 && exit 1
+
+mnt="$(mktemp -d "$1.XXXXXX.ArchiveMount")" || {
+    lf -remote "send $id echo failed creating the mountpoint here."
+    exit 1
+}
+
+output="$(archivemount -o readonly ${pass:+-o password} "$1" "$mnt" 2>&1)"
+if [ "$(ls -A "$mnt" | wc -l)" -le 0 ]; then
+    fusermount -u "$mnt"
+    rm -rf "$mnt"
+    lf -remote "send $id echo mount failed: $output"
+    exit 1
+fi
+
+mnt="$(printf '%s\n' "$mnt" | sed 's/"/\\"/g')"
+lf -remote "send $id cd \"$mnt\""

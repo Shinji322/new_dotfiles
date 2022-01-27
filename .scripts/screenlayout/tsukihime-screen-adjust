@@ -1,0 +1,7 @@
+#!/bin/sh
+# this is a simple xrandr script that adjusts the main display to 480p, intended for playing the visual novel Tsukihime, due to screen issues with that game
+
+# maindisplay=${"$(xrandr --listactivemonitors | grep -e '0:.*')"##* } # For some reason, this command only works with zsh. This could instead just be done by piping "awk '{print $4}'"after the grep command. 
+maindisplay=$(xrandr --listactivemonitors | grep -e '0:.*' | awk '{print $4}') # This is used to be more shell independent
+
+xrandr --output "$maindisplay" --primary --mode ${1:-"640x480"}

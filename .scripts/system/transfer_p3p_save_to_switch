@@ -1,0 +1,39 @@
+#!/bin/bash
+# Compares two files 
+
+
+# md5loop(){
+#     while sleep 1
+#     do
+#         md5f1=$(md5sum "$1" | cut -d' ' -f1)
+#         md5f2=$(md5sum "$2" | cut -d' ' -f1)
+#         if [ "$md5f1" != "$md5f2"]; then
+#             echo "The files are different now"
+#             break
+#         fi
+#     done
+# }
+
+# inotifyloop()
+# {
+#     inotifywait -m -e modify "$1"
+# }
+
+
+p3p_save_directory=~/.config/ppsspp/PSP/SAVEDATA/*
+
+date_modified_check(){
+    date=$(stat -c %y "$1")
+    while sleep 1; do date2=$(stat -c %y "$1")
+        if [[ $date2 != $date1 ]]; then ftp_file_transfer(); break; fi
+    done
+}
+
+ftp_file_transfer(){
+    echo "File has been updated!"
+    echo "Attempting to transfer"
+
+    for dir in p3p_save_directory
+    do
+
+}

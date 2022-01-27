@@ -1,0 +1,4 @@
+#!/bin/sh
+# This is a simple script that generates a desktop file given 
+
+echo "[Desktop Entry]" > "~/.local/share/appimages/${1}.desktop"

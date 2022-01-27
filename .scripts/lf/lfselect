@@ -1,0 +1,21 @@
+#!/bin/sh
+# read filenames from stdin/args and select them in lf.
+
+# check $id
+[ -z "$id" ] && echo lf\'s id is not given. >&2 && exit 1
+
+t="$(mktemp)" || exit 1
+trap 'rm "$t"' EXIT
+sed 's/"/\\"/g' > "$t"
+
+if [ "$(wc -l < "$t")" -eq 1 ]; then
+    file="$(cat "$t")"
+    lf -remote "send $id select \"$file\""
+    exit
+fi
+
+while IFS= read -r file; do
+    [ -z "$file" ] && continue
+    lf -remote "send $id select \"$file\"" >&2
+    lf -remote "send $id toggle" >&2
+done < "$t"
