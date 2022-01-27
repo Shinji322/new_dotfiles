@@ -1,0 +1,6 @@
+[Desktop Entry]
+Type=Application
+Name=lf
+GenericName=File manager
+Comment="list files"
+Exec=kitty /home/mokou/.scripts/lf/lfrun %u
