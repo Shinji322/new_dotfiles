@@ -777,3 +777,67 @@ cargo run
 : 1643295617:0;ls
 : 1643295619:0;lf
 : 1643295637:0;config add zsh/history
+: 1643295642:0;config push
+: 1643295714:0;config commit -m "Added zsh history as well as .desktop files"
+: 1643295731:0;config push
+: 1643295756:0;lf
+: 1643295764:0;lf
+: 1643295772:0;cd ~/.config
+: 1643295772:0;ls
+: 1643295782:0;lf
+: 1643295798:0;config add user-dirs.dirs
+: 1643295810:0;lf
+: 1643295826:0;config add i3
+: 1643295831:0;config add i3blocks
+: 1643295836:0;config add flameshot
+: 1643295851:0;config add beets/config.yaml
+: 1643295903:0;config add dunst
+: 1643295926:0;config add flameshot/flameshot.ini
+: 1643295936:0;config add fontconfig/fonts.conf
+: 1643295949:0;config add gtk-2.0
+: 1643295955:0;config add gtk-3.0
+: 1643295962:0;config add idea_vim
+: 1643295978:0;config add kitty
+: 1643296058:0;git rm kitty
+: 1643296078:0;ls
+: 1643296117:0;git rm -r kitty
+: 1643296120:0;ls
+: 1643296158:0;config add lf
+: 1643296165:0;config add mpd
+: 1643296171:0;config add mpDris2
+: 1643296173:0;config add mpv
+: 1643296180:0;config add ncmpcpp
+: 1643296186:0;config add nvim
+: 1643296189:0;config add picom
+: 1643296207:0;config add rofi
+: 1643296212:0;config add sc-im
+: 1643296216:0;config add shell
+: 1643296221:0;config add sxhkd
+: 1643296246:0;config add wget
+: 1643296251:0;config add x11
+: 1643296261:0;config add yarn
+: 1643296272:0;config add zathura
+: 1643296276:0;config add zsh
+: 1643296289:0;config add mimeapps.list
+: 1643296301:0;config add starship.toml
+: 1643296338:0;config commit -m "Added files in ~/.config"
+: 1643296348:0;history
+: 1643296355:0;lf
+: 1643296371:0;config push
+: 1643296393:0;cd ~/.cach
+: 1643296394:0;cd ~/.cache
+: 1643296412:0;config add wget-hsts
+: 1643296430:0;config add vim/undodir
+: 1643296464:0;config add nvim/undodir
+: 1643296467:0;config push
+: 1643296481:0;config commit -m "Added more cache related stuff"
+: 1643296484:0;config push
+: 1643296508:0;cd ..
+: 1643296516:0;cd .scripts
+: 1643296517:0;ls
+: 1643296522:0;cd ..
+: 1643296529:0;config add .scripts
+: 1643296541:0;config commit -m "Added scripts dot dir"
+: 1643296548:0;config push
+: 1643299236:0;man 'git add'
+: 1643299246:0;config add -u

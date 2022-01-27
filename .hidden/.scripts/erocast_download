@@ -1,0 +1,10 @@
+#!/bin/bash
+# This script takes an erocast link and downloads the hls stream with ffmpeg
+# Dependencies : sed, ffmpeg
+# example url  : https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+
+truncate=$(echo $1 | sed 's|https://erocast.me/track/||g')  
+id=${truncate%%/*}
+filename="${truncate##*/}.mp3"
+
+ffmpeg -i "https://erocast.me/stream/hls/$id" -c copy $filename
