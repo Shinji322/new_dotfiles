@@ -1,0 +1,277 @@
+# Basic Settings
+set previewer ~/.scripts/lf/lfpreviewer
+set cleaner ~/.scripts/lf/lfcleaner
+set preview 
+set hidden true
+set drawbox true
+set icons true
+set ignorecase true
+
+# Custom Functions
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        *) xdg-open "$f" &;;
+    esac
+}}
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir -p $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+cmd chmod ${{
+  printf "Mode Bits: "
+  read ans
+
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+
+  lf -remote 'send reload'
+}}
+
+cmd sudomkfile ${{
+  printf "File Name: "
+  read ans
+  sudo $EDITOR $ans
+}}
+
+cmd setwallpaper ${{ 
+  feh --no-fehbg --bg-fill -r -z "$f"
+}}
+
+cmd fzf_jump ${{
+  res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd broot_jump ${{
+  f=$(mktemp)
+  res="$(broot --outcmd $f && cat $f | sed 's/cd //')"
+  rm -f "$f"
+  if [ -f "$res" ]; then
+    cmd="select"
+  elif [ -d "$res" ]; then
+    cmd="cd"
+  fi
+  lf -remote "send $id $cmd \"$res\""
+}}
+
+cmd open_config  ${{
+  $EDITOR $(bookmenu -b ~/.config/bookmenu/configs -f fzf -o)
+}}
+
+# Archive bindings
+cmd extract ${{
+  case "$f" in
+    *.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
+        tar -xjvf "$f" ;;
+    *.lzma)      
+        unlzma ./"$f"      ;;
+    *.zip) 
+        unzip "$f" ;;
+    *.cbr|*.rar)       
+        unrar x -ad ./"$f" ;;
+    *.gz)        
+        gunzip ./"$f"      ;;
+    *.cbz|*.epub|*.zip)       
+        unzip ./"$f"       ;;
+    *.z)         
+        uncompress ./"$f"  ;;
+    *.7z|*.arj|*.cab|*.cb7|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.pkg|*.rpm|*.udf|*.wim|*.xar)
+        7z x ./"$f"        ;;
+    *.xz)        
+        unxz ./"$f"        ;;
+    *.exe)       
+        cabextract ./"$f"  ;;
+    *.cpio)      
+        cpio -id < ./"$f"  ;;
+    *.cba|*.ace)      
+        unace x ./"$f"      ;;
+    *.tar.gz) 
+        tar -xzvf "$f" ;;
+    *.tar) 
+        tar -xvf "$f" ;;
+    *) 
+        echo "Unsupported format" ;;
+  esac
+}}
+
+# Trash cli bindings
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    # extract the substring from start of string up to delimiter.
+    # this is the first "element" of the string.
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    # if there's only one element left, set `files` to an empty string.
+    # this causes us to exit this `while` loop.
+    # else, we delete the first "element" of the string from files, and move onto the next.
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+cmd clear_trash %trash-empty
+
+cmd restore_trash ${{
+  trash-restore
+}}
+
+cmd stripspace %stripspace "$f"
+
+cmd copy-file-contents &{{
+    xclip -sel c < "$f"
+}}
+
+cmd copy-file-name &{{
+    echo "${f##*/}" | xclip -sel c
+}}
+
+cmd copy-file-path &{{
+    echo "$f" | xclip -sel c
+}}
+
+cmd bulk-rename ${{
+    vidir "$f"
+}}
+
+cmd dragon-drag %{{
+    dragon-drag-and-drop "$f"
+}}
+cmd dragon-drag-all %{{
+    dragon-drag-and-drop --all "$f"
+}}
+
+cmd fzf-open ${{
+    choice=$(fzf)
+    [ -n "$choice" ] && xdg-open $choice
+}}
+
+cmd fzf-dir-open ${{
+    choice=$(fd . --type d | fzf)
+    [ -n '$choice' ] && cd ./$choice
+}}
+
+# Bindings
+# Remove some defaults
+map m
+map o
+map n
+map "'"
+map '"'
+map d
+map c
+map e
+map f
+
+# File Openers
+map ee $$EDITOR "$f"
+map u $view "$f"
+
+# Archive Mappings
+map ex extract "$f"
+
+# Trash Mappings
+map dd trash
+map tc clear_trash
+map tr restore_trash
+
+# Dragon Mapping
+map dr dragon-drag
+map da dragon-drag-all
+
+map ss stripspace
+
+# Basic Functions
+map . set hidden!
+map DD delete
+map p paste
+map x cut
+map y copy
+map <enter> open
+map mf mkfile
+map mr sudomkfile
+map md mkdir
+map ms $mkscript
+map ch chmod
+map cc copy-file-contents
+map cn copy-file-name
+map bg setwallpaper
+map o open_config
+map br $vimv $fx
+map r rename
+map R bulk-rename
+map H top
+map L bottom
+map R reload
+map C clear
+map U unselect
+map ff fzf-open 
+map fd fzf-dir-open
+
+# Movement
+map gtr  cd ~/.local/share/Trash/files
+map gm   cd /run/media/mokou
+
+map gv.  cd ~/video
+map gva  cd ~/video/anime
+
+map gi.  cd ~/images
+map gis  cd ~/images/screenshots
+map giw  cd ~/images/wallpapers
+
+map gD   cd ~/documents
+map gd   cd ~/downloads
+map ge   cd ~/desktop
+
+map gG   cd ~/games
+
+map gS   cd ~/.scripts
+map gs.  cd ~/software
+map gsa  cd ~/software/app-images
+map gss  cd ~/software/source 
+
+map gp.  cd ~/code
+map gpl  cd ~/code/learning
+map gpp  cd ~/code/projects
+
+map gc.  cd ~/.config
+map gcn  cd ~/.config/nvim
+map gcl  cd ~/.config/lf
+map gcs  cd ~/.config/shell
+map gcz  cd ~/.config/zsh
+map gct  cd ~/.config/kitty
+map gcx  cd ~/.config/x11
+map gck  cd ~/.config/sxhkd
+
+map gL  cd ~/literature
+
+map gl. cd ~/.local
+map gls cd ~/.local/share
+map gE  cd /etc
+map gU. cd /usr
+map gUs cd /usr/share
+
+map gw  cd ~/vimwiki
+
+map \;j cd ~
