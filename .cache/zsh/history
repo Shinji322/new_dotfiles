@@ -976,3 +976,13 @@ git push -u origin main
 : 1643304903:0;ls
 : 1643304912:0;config add broot
 : 1643304921:0;config add -u
+: 1643304928:0;config commit -m "Added broot"
+: 1643304940:0;config push 
+: 1643304961:0;lf
+: 1643305014:0;br
+: 1643305018:0;br
+: 1643305060:0;lf
+: 1643305124:0;lf
+: 1643305183:0;cd .config
+: 1643305531:0;config status
+: 1643305535:0;config add -u

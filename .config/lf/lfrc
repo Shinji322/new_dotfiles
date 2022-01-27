@@ -228,7 +228,7 @@ map cc copy-file-contents
 map cn copy-file-name
 map bg setwallpaper
 map o open_config
-map br $vimv $fx
+map br broot_jump
 map r rename
 map R bulk-rename
 map H top
