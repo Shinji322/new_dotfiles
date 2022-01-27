@@ -94,3 +94,5 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 #     zdharma-continuum/zinit-annex-rust \
 # 
 # ### End of Zinit's installer chunk
+
+source /home/mokou/.config/broot/launcher/bash/br

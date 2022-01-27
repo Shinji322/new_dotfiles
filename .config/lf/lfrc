@@ -24,7 +24,15 @@ cmd mkdir ${{
 cmd mkfile ${{
   printf "File Name: "
   read ans
-  $EDITOR $ans
+  touch $ans
+}}
+
+cmd mkgitkeep ${{
+    touch .gitkeep
+}}
+
+cmd mkbakup ${{
+    cp "$f" "$f.bak"
 }}
 
 cmd chmod ${{
@@ -213,6 +221,8 @@ map mf mkfile
 map mr sudomkfile
 map md mkdir
 map ms $mkscript
+map mg mkgitkeep
+map mb mkbakup
 map ch chmod
 map cc copy-file-contents
 map cn copy-file-name

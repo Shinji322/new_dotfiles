@@ -841,3 +841,138 @@ cargo run
 : 1643296548:0;config push
 : 1643299236:0;man 'git add'
 : 1643299246:0;config add -u
+: 1643299459:0;man acorn 
+: 1643299463:0;acorn -h
+: 1643300327:0;lf
+: 1643300401:0;config status
+: 1643300456:0;config add .hidden/.scripts
+: 1643300459:0;config status
+: 1643300481:0;config commit -m "Added download script"
+: 1643300525:0;config diff
+: 1643300546:0;config push
+: 1643300571:0;cd .scripts
+: 1643300572:0;ls
+: 1643300578:0;mkdir bootstrap
+: 1643300580:0;cd $-
+: 1643300582:0;ls
+: 1643300592:0;cd bootstrap
+: 1643300592:0;ls
+: 1643300602:0;vi install-dots
+: 1643300627:0;vi install-dots
+: 1643300659:0;cd ~/software/source
+: 1643300659:0;ls
+: 1643300665:0;mkdir personal
+: 1643300667:0;cd $_
+: 1643300669:0;lf
+: 1643300693:0;cd github
+: 1643300716:0;mkdir file-tree
+: 1643300718:0;cd $_
+: 1643300719:0;ls
+: 1643300721:0;git init
+: 1643300730:0;lf
+: 1643300734:0;lf
+: 1643300736:0;lf
+: 1643301368:0;lf
+: 1643301381:0;lf
+: 1643301440:0;lf
+: 1643301551:0;lf
+: 1643301680:0;git remote add origin https://gitlab.com/ronananakinmaharaj/file-tree.git\
+
+: 1643301687:0;git branch -M main
+: 1643301696:0;git push -uf origin main
+: 1643301700:0;git push
+: 1643301717:0;git push --set-upstream origin main
+: 1643301746:0;git push -u origin main
+: 1643301753:0;git push -u origin master
+: 1643301766:0;git remote update
+: 1643302064:0;lf
+: 1643302071:0;git push
+: 1643302090:0;git push --set-upstream origin main
+: 1643302143:0;git add archive/assets/.gitkeep
+: 1643302153:0;git commit -m "added assets folder"
+: 1643302158:0;git push --set-upstream origin main
+: 1643302189:0;git pull
+: 1643302220:0;git pull git@gitlab.com:ronananakinmaharaj/file-tree.git main
+: 1643302245:0;lf
+: 1643302257:0;git pull git@gitlab.com:ronananakinmaharaj/file-tree.git main
+: 1643302260:0;ls
+: 1643302263:0;git push
+: 1643302272:0;git push --set-upstream origin main
+: 1643302281:0;git push --set-upstream origin main
+: 1643302308:0;git pull
+: 1643302324:0;lf
+: 1643302345:0;cd software/source/personal/github/file-tree
+: 1643302348:0;git init
+: 1643302424:0;history
+: 1643302431:0;lf
+: 1643302445:0;git remote add origin git@github.com:Shinji322/file-tree.git
+: 1643302464:0;git add archive/assets/.gitkeep
+: 1643302494:0;git commit -m "Added assets/.gitkeep"
+: 1643302509:0;git branch -M master
+: 1643302518:0;git push -u origin main
+: 1643302535:0;rm -rf .git
+: 1643302550:0;echo "# file-tree" >> README.md\
+git init\
+git add README.md\
+git commit -m "first commit"\
+git branch -M main\
+git remote add origin git@github.com:Shinji322/file-tree.git\
+git push -u origin main
+: 1643302570:0;ls
+: 1643302582:0;git branch -M master
+: 1643302587:0;git push -u origin master
+: 1643302620:0;git branch -M main
+: 1643302625:0;git push -u origin main
+: 1643302648:0;git pull
+: 1643302652:0;git push -u origin main
+: 1643302689:0;git push -u origin main --force
+: 1643302781:0;ls -R
+: 1643302789:0;fd . .gitkeep
+: 1643302793:0;fd 
+: 1643302796:0;man fd
+: 1643302826:0;ls -R | grep gitkeep
+: 1643302845:0;man exa
+: 1643302853:0;ls -lah
+: 1643302858:0;ls -lahR
+: 1643302889:0;fd
+: 1643302894:0;fd , '
+: 1643302895:0;fd , 
+: 1643302898:0;fd .
+: 1643302906:0;fd . -type d
+: 1643302916:0;fd . --type d
+: 1643302924:0;man f
+: 1643302925:0;man ffd
+: 1643302927:0;man fd
+: 1643302950:0;fd -p
+: 1643302954:0;man fd
+: 1643302964:0;fd -H
+: 1643302970:0;fd -H | grep gitkeep
+: 1643302984:0;git add $(fd -H | grep gitkeep)
+: 1643302997:0;git commit -m "Added all folders"
+: 1643303029:0;git push -u origin main --force
+: 1643303160:0;mkdir .scripts
+: 1643303171:0;rmdir $_
+: 1643303231:0;vi README.md
+: 1643303238:0;lf
+: 1643304223:0;cd software/source/personal/github
+: 1643304224:0;ls
+: 1643304226:0;cd file-tree
+: 1643304226:0;ls
+: 1643304231:0;cat tags
+: 1643304242:0;git rm code/
+: 1643304248:0;git rm -r code/
+: 1643304265:0;lf
+: 1643304384:0;redshift 
+: 1643304636:0;sudo pacman -S broot
+: 1643304642:0;broot
+: 1643304673:0;br
+: 1643304706:0;lf
+: 1643304749:0;lf
+: 1643304786:0;ls
+: 1643304789:0;lf
+: 1643304850:0;lf
+: 1643304900:0;cd .config/ls
+: 1643304902:0;cd .config/
+: 1643304903:0;ls
+: 1643304912:0;config add broot
+: 1643304921:0;config add -u
