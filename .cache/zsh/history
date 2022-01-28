@@ -986,3 +986,75 @@ git push -u origin main
 : 1643305183:0;cd .config
 : 1643305531:0;config status
 : 1643305535:0;config add -u
+: 1643305571:0;config commit -m "Added broot function to lf"
+: 1643305575:0;lf
+: 1643305585:0;cd .config
+: 1643305591:0;git add broot
+: 1643305599:0;config add broot
+: 1643305602:0;ls
+: 1643305652:0;config status
+: 1643305672:0;config push
+: 1643305946:0;vi important-pkgs.txt
+: 1643307337:0;cd
+: 1643307345:0;br
+: 1643307347:0;r
+: 1643307347:0;br
+: 1643307351:0;br
+: 1643307352:0;br
+: 1643308114:0;sudo pacman -Syu
+: 1643320320:0;vi
+: 1643320332:0;lf
+: 1643330790:0;redshift &!
+: 1643333126:0;man doom
+: 1643333130:0;lf
+: 1643333307:0;sudo pacman -Rns intellij-idea-community-edition
+: 1643333335:0;sudo pacman -R intellij-idea-community-edition
+: 1643333525:0;anki
+: 1643335310:0;sudo poweroff
+: 1643370836:0;anki
+: 1643372927:0;lsblk
+: 1643373438:0;syncthing &!
+: 1643373897:0;lf
+: 1643374733:0;lf
+: 1643374783:0;lf
+: 1643374813:0;lf
+: 1643374869:0;lf
+: 1643374887:0;br
+: 1643374922:0;lf
+: 1643374938:0;lf
+: 1643375211:0;sudo pacman -Syu
+: 1643375225:0;yay -Ss desmume
+: 1643375478:0;config add .config/npm
+: 1643375482:0;cd .config/
+: 1643375483:0;ls
+: 1643375488:0;ls | grep npm
+: 1643375501:0;config status
+: 1643375515:0;config commit -m "Added npm"
+: 1643375519:0;config push
+: 1643375535:0;cd .cache/zsh
+: 1643375536:0;ls
+: 1643375539:0;vi history
+: 1643375555:0;config push --force
+: 1643375684:0;sudo pacman -Ss zsh-completion
+: 1643375691:0;sudo pacman -Ss zsh
+: 1643375717:0;yay -Ss zsh
+: 1643375739:0;lf
+: 1643375743:0;cd ..
+: 1643375745:0;ls
+: 1643375772:0;anki
+: 1643375844:0;vi
+: 1643375967:0;yay -Ss codium
+: 1643376000:0;lf
+: 1643376013:0;locate emacs
+: 1643376021:0;trash-empty
+: 1643376027:0;lf
+: 1643376045:0;sudo updatedb
+: 1643376050:0;fd . emacs
+: 1643376056:0;locate emacs
+: 1643376073:0;yay -Ss emacs
+: 1643376083:0;sudo pacman -Rns emacs
+: 1643376095:0;yay -Ss emacs | grep installed
+: 1643376110:0;lf
+: 1643376136:0;lf
+: 1643376218:0;lf
+: 1643376329:0;config add -u

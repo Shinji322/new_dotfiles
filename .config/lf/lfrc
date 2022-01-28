@@ -32,7 +32,7 @@ cmd mkgitkeep ${{
 }}
 
 cmd mkbakup ${{
-    cp "$f" "$f.bak"
+    cp -r "$f" "$f.bak"
 }}
 
 cmd chmod ${{
@@ -238,6 +238,7 @@ map C clear
 map U unselect
 map ff fzf-open 
 map fd fzf-dir-open
+map fj fzf_jump
 
 # Movement
 map gtr  cd ~/.local/share/Trash/files

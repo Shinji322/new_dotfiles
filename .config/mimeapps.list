@@ -11,8 +11,6 @@ image/gif=img.desktop;
 video/x-matroska=video.desktop
 inode/directory=file.desktop
 
-text/html=text.desktop;
-
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/chrome=firefox.desktop
