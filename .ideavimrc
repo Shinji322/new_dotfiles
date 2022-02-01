@@ -1,6 +1,0 @@
-source ~/.config/idea_vim/personal.vim
-source ~/.config/idea_vim/bindings.vim
-source ~/.config/idea_vim/vim_plug.vim
-
-
-source ~/.config/idea_vim/sensible.vim

@@ -21,8 +21,9 @@ alias grep='grep -i --color=auto'
 alias mkdir='mkdir -p'
 
 # ~-=| Shortcuts |=-~
-alias vim="nvim"
-alias vi="nvim"
+alias nvim="lvim"
+alias vim="lvim"
+alias vi="lvim"
 alias scim="sc-im"
 alias cat='bat'
 alias find='fd'

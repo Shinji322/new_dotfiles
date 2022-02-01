@@ -1,456 +1,456 @@
-: 1642535072:0;lf
-: 1642535092:0;lf
-: 1642535239:0;dotnet build
-: 1642535241:0;lf
-: 1642535261:0;cd ~/software/source/git/Mod-Compendium
-: 1642535262:0;ls
-: 1642535264:0;cd Source
-: 1642535265:0;ls
-: 1642535271:0;dotnet build
-: 1642535290:0;lf
-: 1642535373:0;sudo pacman -Rns dotnet-sdk dotnet-runtime
-: 1642535391:0;sudo pacman -S dotnet-sdk-3.1 dotnet-runtime-3.1
-: 1642535410:0;dotnet build
-: 1642535455:0;lf
-: 1642535597:0;lf
-: 1642535642:0;lf
-: 1642535665:0;lf
-: 1642535677:0;dotnet build
-: 1642535773:0;lf
-: 1642535781:0;sudo pacman -Rns dotnet-sdk-3.1 dotnet-runtime-3.1
-: 1642535809:0;cd ..
-: 1642535811:0;ls
-: 1642535820:0;git clone https://github.com/youwereeatenbyalid/ModCompendium.git ModCompendium-Linux
-: 1642535830:0;lf
-: 1642535995:0;sudo pacman -S dotnet-sdk dotnet-runtime
-: 1642536012:0;lf
-: 1642536016:0;lf
-: 1642536193:0;sudo pacman -Ss virt-manager
-: 1642536200:0;sudo pacman -S $_
-: 1642536221:0;sudo pacman -Syu
-: 1642536272:0;sudo pacman -Rns virt-manager 
-: 1642536282:0;sudo pacman -Ss virtualbox
-: 1642536291:0;sudo pacman -Ss virtualbox
-: 1642536342:0;sudo pacman -S virtualbox vritualbox-host-dkms
-: 1642536354:0;sudo pacman -S virtualbox virtualbox-host-dkms
-: 1642536373:0;vi important-pkgs.txt
-: 1642537063:0;sudo /sbin/vboxconfig
-: 1642537072:0;/sbin/vboxmanage
-: 1642537165:0;sudo su
-: 1642537202:0;sudo pacman -Ss virtualbox
-: 1642537523:0;lf
-: 1642537717:0;lf
-: 1642546331:0;sudo pacman -Syu
-: 1642546346:0;yay -Sua
-: 1642546921:0;lf
-: 1642547390:0;lf
-: 1642550476:0;redshift &!
-: 1642550739:0;lf
-: 1642551695:0;lf
-: 1642552618:0;lf
-: 1642552627:0;vi
-: 1642552630:0;lf
-: 1642552731:0;lf
-: 1642552859:0;lf
-: 1642552987:0;lf
-: 1642553033:0;cd games/roms/mods/assets/persona_3_portable
-: 1642553037:0;extract *.zip
-: 1642553038:0;lf
-: 1642553058:0;lf
-: 1642561104:0;sudo poweroff
-: 1642600361:0;lsblk
-: 1642600512:0;lf
-: 1642600632:0;sudo pacman -Ss xkill
-: 1642600639:0;sudo pacman -S xorg-xkill
-: 1642600643:0;xkill
-: 1642600817:0;lf
-: 1642600829:0;lf
-: 1642600879:0;lf
-: 1642600949:0;;f
-: 1642600955:0;cd images/wallpapers
-: 1642600955:0;ls
-: 1642600974:0;kitty +kitten icat 1610795587524.jpg
-: 1642601043:0;lf
-: 1642601054:0;lf
-: 1642601438:0;lg
-: 1642601438:0;lf
-: 1642601473:0;cd /run/media/mokou/WD_BLACK/software/firmware/OSes/Windows/11/Activator
-: 1642601476:0;extract Activator.rar
-: 1642601478:0;lf
-: 1642606991:0;xkill
-: 1642610590:0;lf
-: 1642611458:0;lf
-: 1642613405:0;xkill
-: 1642613414:0;xkill
-: 1642615190:0;xkill
-: 1642615195:0;xkill
-: 1642619400:0;cd downloads
-: 1642619401:0;ls
-: 1642619407:0;extract vndb-tags-2022-01-19.json.gz
-: 1642619408:0;lf
-: 1642619473:0;lf
-: 1642619484:0;lf
-: 1642619520:0;xkill
-: 1642619525:0;xkill
-: 1642619547:0;lf
-: 1642619584:0;lf
-: 1642619589:0;lsblk
-: 1642619598:0;pkill qbittorrent
-: 1642619607:0;umount /dev/sdc1
-: 1642619685:0;umount /dev/sdc1
-: 1642619748:0;umount /dev/sdc1
-: 1642619810:0;umount /dev/sdc1
-: 1642620745:0;lf
-: 1642621602:0;lf
-: 1642622815:0;sudo pacman -Ss cabextrect
-: 1642622823:0;sudo pacman -Ss exe
-: 1642622830:0;sudo pacman -Syu
-: 1642622901:0;yay -Sua
-: 1642622962:0;lsblk
-: 1642622969:0;umount /dev/sdc1
-: 1642638774:0;redshift &!
-: 1642640426:0;xkill
-: 1642640768:0;xkill
-: 1642641031:0;kmix
-: 1642642196:0;lf
-: 1642644664:0;xkill
-: 1642644672:0;xkill
-: 1642644693:0;pkill VirtualBox
-: 1642645076:0;sudo pacman -Ss ppsspp
-: 1642645159:0;sudo pacman -Ss ppsspp
-: 1642645163:0;sudo pacman -S ppsspp
-: 1642646472:0;lf
-: 1642646501:0;lf
-: 1642646875:0;lsblk
-: 1642646878:0;umount /dev/sdc1
-: 1642646887:0;sudo poweroff
-: 1642686190:0;lf
-: 1642686209:0;sudo fc-cache -fv
-: 1642690250:0;lf
-: 1642690276:0;kf
-: 1642690279:0;lf
-: 1642690364:0;trash-list
-: 1642690370:0;trash-restore
-: 1642690456:0;lf
-: 1642690469:0;lf
-: 1642690522:0;lf
-: 1642690555:0;lf
-: 1642690589:0;sudo cp -r ~/games/roms/UMDGen_v4.00 /run/media/mokou/WD_BLACK/games/mods/tools
-: 1642690600:0;lf
-: 1642690627:0;lf
-: 1642690672:0;lf
-: 1642690769:0;lf
-: 1642690860:0;lf
-: 1642691500:0;lf
-: 1642691563:0;anki
-: 1642691913:0;lf
-: 1642691915:0;lf
-: 1642699897:0;lf
-: 1642700646:0;lf
-: 1642701074:0;cd games/roms
-: 1642701074:0;ls
-: 1642701079:0;extract 0297\ -\ Mario\ \&\ Luigi\ -\ Partners\ in\ Time\ \(Europe\)\ \(En,Fr,De,Es,It\).7z
-: 1642701082:0;lf
-: 1642704262:0;sudo pacman -Syu
-: 1642704636:0;pkill qbittorrent
-: 1642704638:0;lsblk
-: 1642704652:0;umount /dev/sdc1
-: 1642704655:0;umount /dev/sdc1
-: 1642704668:0;umount /dev/sdc1
-: 1642704805:0;lf
-: 1642710664:0;lf
-: 1642723016:0;vi
-: 1642723639:0;redshift &!
-: 1642726302:0;yt-dlp https://youtu.be/qg9c4-UZKek 
-: 1642726363:0;sudo poweroff
-: 1642775026:0;sudo pacman -Syu
-: 1642775051:0;sx
-: 1642775419:0;se
-: 1642776254:0;sudo pacman -Syu
-: 1642779396:0;yay -Sua
-: 1642781310:0;vi
-: 1642787096:0;sudo poweroff
-: 1642793034:0;sudo pacman -Syu
-: 1642796894:0;lsblk
-: 1642798832:0;y
-: 1642800376:0;sudo pacman -Syu
-: 1642800410:0;sx
-: 1642800417:0;lf
-: 1642800453:0;sx
-: 1642800470:0;man fd
-: 1642800510:0;sx
-: 1642800531:0;man fd
-: 1642800892:0;sx
-: 1642800907:0;fd . $SCRIPT_DIR -t f
-: 1642800918:0;fd . $SCRIPT_DIR -t f | sed "s/$HOME//g"
-: 1642800930:0;fd . $SCRIPT_DIR -t f | sed -e "s/$HOME//g"
-: 1642800940:0;vi
-: 1642801037:0;fd . $SCRIPT_DIR -t f | sed -e "^$HOME/d"
-: 1642801055:0;fd . $SCRIPT_DIR -t f | sed -e "s/$HOME//g"
-: 1642801158:0;se
-: 1642801225:0;fd . $SCRIPT_DIR -t f | sed -e "s|/home/mokou||g"
-: 1642801236:0;sx
-: 1642811775:0;lsblk
-: 1642811792:0;pkill qbittorrent&& umount /dev/sdc1 && sudo poweroff
-: 1642811796:0;pkill qbittorrent
-: 1642811808:0;umount /dev/sdc1
-: 1642811819:0;sudo poweroff
-: 1642818862:0;sudo poweroff
-: 1642852173:0;sudo pacman -Syu && yay -Syua
-: 1642856698:0;lf
-: 1642856725:0;cd downloads
-: 1642856726:0;ls
-: 1642856729:0;lf
-: 1642856797:0;cd software/firmware/retroarch-switch
-: 1642856801:0;extract RetroArch.7z
-: 1642856826:0;lf
-: 1642865049:0;vi
-: 1642865206:0;lf
-: 1642865349:0;sudo pacman -Rns ppsspp
-: 1642865362:0;lsblk
-: 1642865396:0;cd /media
-: 1642865396:0;ls
-: 1642865399:0;cd ..
-: 1642865406:0;sudo rmdir media
-: 1642865409:0;cd 
-: 1642867997:0;vi
-: 1642877586:0;pkill qbittorrent
-: 1642877589:0;lsblk
-: 1642877594:0;umount /dev/sdc1
-: 1642877604:0;sudo poweroff
-: 1642939934:0;lf
-: 1642940216:0;sudo pacman -Syu
-: 1642940227:0;sx
-: 1642941083:0;sudo pacman -Syu
-: 1642941954:0;cd downloads
-: 1642941955:0;ls
-: 1642941959:0;extract ppsspp_libretro_libnx.7z
-: 1642941961:0;lf
-: 1642942014:0;cd software/firmware/ppsspp
-: 1642942019:0;extract ppsspp_libretro_libnx.7z
-: 1642942021:0;lf
-: 1642942033:0;ls
-: 1642942038:0;extract  assets.7z
-: 1642942039:0;lf
-: 1642942623:0;vi
-: 1642943312:0;cd software/firmware/new_ppsspp
-: 1642943313:0;ls
-: 1642943316:0;extract PPSSPP_GL.7z
-: 1642943318:0;lf
-: 1642944909:0;cd software/firmware/ppsspp_retroarch
-: 1642944911:0;extract ppsspp_libretro_libnx.7z
-: 1642945008:0;cd software/firmware/ppsspp_retroarch
-: 1642945011:0;extract assets.7z
-: 1642945012:0;lf
-: 1642945042:0;cd assets
-: 1642945045:0;extract assets.7z
-: 1642945048:0;lf
-: 1642945195:0;vi
-: 1642945307:0;vi
-: 1642945616:0;lf
-: 1642946471:0;man ftp
-: 1642946569:0;man ftp
-: 1642946632:0;sudo pacman -Ss ppsspp
-: 1642946642:0;sudo pacman -S ppsspp
-: 1642946648:0;lf
-: 1642946680:0;lf
-: 1642947638:0;vi
-: 1642947646:0;lf
-: 1642947661:0;lbslk
-: 1642947663:0;lsblk
-: 1642947665:0;lsblk
-: 1642947668:0;lf
-: 1642947690:0;vi
-: 1642947700:0;lf
-: 1642956050:0;vi
-: 1642968267:0;man ppssppp
-: 1642968269:0;man ppsspp
-: 1642969430:0;vi
-: 1642971430:0;lf
-: 1642971454:0;locate ppsspp.desktop
-: 1642971461:0;sudo updatedb && locate ppsspp.desktop
-: 1642971471:0;fd
-: 1642971475:0;fd ppsspp.desktop
-: 1642971481:0;lf
-: 1642971493:0;locate ppsspp
-: 1642971503:0;locate ppsspp | grep desktop
-: 1642971509:0;lf
-: 1642971531:0;man PPSSPP
-: 1642971731:0;vi
-: 1642971734:0;vi
-: 1642981742:0;redshift &!
-: 1642981979:0;sudo pacman -Syu
-: 1642981995:0;yay -Sua
-: 1642982151:0;ftp 192.168.101.107
-: 1642982181:0;ftp 192.168.101.107:5000
-: 1642982221:0;ping 192.168.101.107
-: 1642982251:0;ping 192.168.101.107
-: 1642982259:0;ftp 192.168.101.107
-: 1642982343:0;sudo pacman -Ss sftp
-: 1642982354:0;man sftp
-: 1642982422:0;sftp 192.168.101.107
-: 1642982429:0;sftp 192.168.101.107:5000
-: 1642982456:0;ftp $_
-: 1642982466:0;man filezilla
-: 1642982686:0;vi
-: 1642982945:0;lf
-: 1642982964:0;sudo reboot
-: 1642983003:0;lsblk
-: 1642983010:0;umount /dev/sdb1
-: 1642987989:0;sudo poweroff
-: 1643026886:0;sudo pacman -Ss \
+lf
+lf
+dotnet build
+lf
+cd ~/software/source/git/Mod-Compendium
+ls
+cd Source
+ls
+dotnet build
+lf
+sudo pacman -Rns dotnet-sdk dotnet-runtime
+sudo pacman -S dotnet-sdk-3.1 dotnet-runtime-3.1
+dotnet build
+lf
+lf
+lf
+lf
+dotnet build
+lf
+sudo pacman -Rns dotnet-sdk-3.1 dotnet-runtime-3.1
+cd ..
+ls
+git clone https://github.com/youwereeatenbyalid/ModCompendium.git ModCompendium-Linux
+lf
+sudo pacman -S dotnet-sdk dotnet-runtime
+lf
+lf
+sudo pacman -Ss virt-manager
+sudo pacman -S $_
+sudo pacman -Syu
+sudo pacman -Rns virt-manager 
+sudo pacman -Ss virtualbox
+sudo pacman -Ss virtualbox
+sudo pacman -S virtualbox vritualbox-host-dkms
+sudo pacman -S virtualbox virtualbox-host-dkms
+vi important-pkgs.txt
+sudo /sbin/vboxconfig
+/sbin/vboxmanage
+sudo su
+sudo pacman -Ss virtualbox
+lf
+lf
+sudo pacman -Syu
+yay -Sua
+lf
+lf
+redshift &!
+lf
+lf
+lf
+vi
+lf
+lf
+lf
+lf
+cd games/roms/mods/assets/persona_3_portable
+extract *.zip
+lf
+lf
+sudo poweroff
+lsblk
+lf
+sudo pacman -Ss xkill
+sudo pacman -S xorg-xkill
+xkill
+lf
+lf
+lf
+;f
+cd images/wallpapers
+ls
+kitty +kitten icat 1610795587524.jpg
+lf
+lf
+lg
+lf
+cd /run/media/mokou/WD_BLACK/software/firmware/OSes/Windows/11/Activator
+extract Activator.rar
+lf
+xkill
+lf
+lf
+xkill
+xkill
+xkill
+xkill
+cd downloads
+ls
+extract vndb-tags-2022-01-19.json.gz
+lf
+lf
+lf
+xkill
+xkill
+lf
+lf
+lsblk
+pkill qbittorrent
+umount /dev/sdc1
+umount /dev/sdc1
+umount /dev/sdc1
+umount /dev/sdc1
+lf
+lf
+sudo pacman -Ss cabextrect
+sudo pacman -Ss exe
+sudo pacman -Syu
+yay -Sua
+lsblk
+umount /dev/sdc1
+redshift &!
+xkill
+xkill
+kmix
+lf
+xkill
+xkill
+pkill VirtualBox
+sudo pacman -Ss ppsspp
+sudo pacman -Ss ppsspp
+sudo pacman -S ppsspp
+lf
+lf
+lsblk
+umount /dev/sdc1
+sudo poweroff
+lf
+sudo fc-cache -fv
+lf
+kf
+lf
+trash-list
+trash-restore
+lf
+lf
+lf
+lf
+sudo cp -r ~/games/roms/UMDGen_v4.00 /run/media/mokou/WD_BLACK/games/mods/tools
+lf
+lf
+lf
+lf
+lf
+lf
+anki
+lf
+lf
+lf
+lf
+cd games/roms
+ls
+extract 0297\ -\ Mario\ \&\ Luigi\ -\ Partners\ in\ Time\ \(Europe\)\ \(En,Fr,De,Es,It\).7z
+lf
+sudo pacman -Syu
+pkill qbittorrent
+lsblk
+umount /dev/sdc1
+umount /dev/sdc1
+umount /dev/sdc1
+lf
+lf
+vi
+redshift &!
+yt-dlp https://youtu.be/qg9c4-UZKek 
+sudo poweroff
+sudo pacman -Syu
+sx
+se
+sudo pacman -Syu
+yay -Sua
+vi
+sudo poweroff
+sudo pacman -Syu
+lsblk
+y
+sudo pacman -Syu
+sx
+lf
+sx
+man fd
+sx
+man fd
+sx
+fd . $SCRIPT_DIR -t f
+fd . $SCRIPT_DIR -t f | sed "s/$HOME//g"
+fd . $SCRIPT_DIR -t f | sed -e "s/$HOME//g"
+vi
+fd . $SCRIPT_DIR -t f | sed -e "^$HOME/d"
+fd . $SCRIPT_DIR -t f | sed -e "s/$HOME//g"
+se
+fd . $SCRIPT_DIR -t f | sed -e "s|/home/mokou||g"
+sx
+lsblk
+pkill qbittorrent&& umount /dev/sdc1 && sudo poweroff
+pkill qbittorrent
+umount /dev/sdc1
+sudo poweroff
+sudo poweroff
+sudo pacman -Syu && yay -Syua
+lf
+cd downloads
+ls
+lf
+cd software/firmware/retroarch-switch
+extract RetroArch.7z
+lf
+vi
+lf
+sudo pacman -Rns ppsspp
+lsblk
+cd /media
+ls
+cd ..
+sudo rmdir media
+cd 
+vi
+pkill qbittorrent
+lsblk
+umount /dev/sdc1
+sudo poweroff
+lf
+sudo pacman -Syu
+sx
+sudo pacman -Syu
+cd downloads
+ls
+extract ppsspp_libretro_libnx.7z
+lf
+cd software/firmware/ppsspp
+extract ppsspp_libretro_libnx.7z
+lf
+ls
+extract  assets.7z
+lf
+vi
+cd software/firmware/new_ppsspp
+ls
+extract PPSSPP_GL.7z
+lf
+cd software/firmware/ppsspp_retroarch
+extract ppsspp_libretro_libnx.7z
+cd software/firmware/ppsspp_retroarch
+extract assets.7z
+lf
+cd assets
+extract assets.7z
+lf
+vi
+vi
+lf
+man ftp
+man ftp
+sudo pacman -Ss ppsspp
+sudo pacman -S ppsspp
+lf
+lf
+vi
+lf
+lbslk
+lsblk
+lsblk
+lf
+vi
+lf
+vi
+man ppssppp
+man ppsspp
+vi
+lf
+locate ppsspp.desktop
+sudo updatedb && locate ppsspp.desktop
+fd
+fd ppsspp.desktop
+lf
+locate ppsspp
+locate ppsspp | grep desktop
+lf
+man PPSSPP
+vi
+vi
+redshift &!
+sudo pacman -Syu
+yay -Sua
+ftp 192.168.101.107
+ftp 192.168.101.107:5000
+ping 192.168.101.107
+ping 192.168.101.107
+ftp 192.168.101.107
+sudo pacman -Ss sftp
+man sftp
+sftp 192.168.101.107
+sftp 192.168.101.107:5000
+ftp $_
+man filezilla
+vi
+lf
+sudo reboot
+lsblk
+umount /dev/sdb1
+sudo poweroff
+sudo pacman -Ss \
 inotifywait
-: 1643026903:0;sudo pacman -Ss inotifywait\
+sudo pacman -Ss inotifywait\
 
-: 1643026951:0;lf
-: 1643027049:0;lf
-: 1643027061:0;cd .config/ppsspp/PSP/SAVEDATA/
-: 1643027062:0;ls
-: 1643027069:0;df
-: 1643027070:0;du .
-: 1643027098:0;md5sum ULUS10512DATA18 
-: 1643027119:0;md5sum ULUS10512DATA18/P3PSAVE.BIN
-: 1643027128:0;md5sum ULUS10512DATA18/P3PSAVE.BIN | cut -d' '
-: 1643027135:0;md5sum ULUS10512DATA18/P3PSAVE.BIN | cut -d' ' -f1
-: 1643027352:0;vi
-: 1643027569:0;man cut
-: 1643027571:0;vi
-: 1643027601:0;man cut
-: 1643027776:0;sudo pacman -Ss inotify
-: 1643027801:0;sudo pacman -S inotify-tools
-: 1643027822:0;sudo pacman -Syu
-: 1643027991:0;which inotifywait
-: 1643028007:0;se
-: 1643028028:0;se
-: 1643028043:0;[ -n "$(which inotifywait)" ] && echo "hello"
-: 1643028049:0;[ -n "$(which inotifywat)" ] && echo "hello"
-: 1643028072:0;which inotifywatch
-: 1643028078:0;which inotifywa
-: 1643028123:0;whereis inotifywatch
-: 1643028133:0;whereis inoifywatch
-: 1643028162:0;whereis inoifywatch | awk '${print 2}'
-: 1643028171:0;whereis inoifywatch | awk 'print #2'
-: 1643028174:0;whereis inoifywatch | awk 'print $2'
-: 1643028194:0;whereis inoifywatch | awk '{ print $2 }'
-: 1643028224:0;whereis inoifywatch | cut -d' ' -f1
-: 1643028228:0;whereis inoifywatch | cut -d':' -f1
-: 1643028239:0;whereis inoifywatch | cut -d':' -f2
-: 1643028269:0;[ -n "$(whereis inotifywait | cut -d ':' -f2)" ] && echo "hello"
-: 1643028277:0;whereis inotifywatch | cut -d':' -f2
-: 1643028286:0;[ -n "$(whereis iotifywait | cut -d ':' -f2)" ] && echo "hello"
-: 1643028353:0;lf
-: 1643028436:0;ls
-: 1643028483:0;inotifywait -m -e modify important-pkgs.txt
-: 1643028497:0;echo "hello" >> important-pkgs.txt
-: 1643028506:0;vi important-pkgs.txt
-: 1643028796:0;man stat
-: 1643028808:0;stat -c %y important-pkgs.txt
-: 1643029405:0;echo .config/ppsspp/PSP/S
-: 1643029408:0;echo .config/ppsspp/PSP/SAVEDATA
-: 1643029411:0;echo .config/ppsspp/PSP/SAVEDATA/*
-: 1643029459:0;man ftp
-: 1643029541:0;ftp 192.168.101.107:5000
-: 1643029556:0;sudo su
-: 1643029673:0;pacman -Qqe | grep openssh
-: 1643029678:0;sudo pacman -Ss openssh
-: 1643029689:0;pacman -Qqe
-: 1643029748:0;sftp 192.168.101.107:5000
-: 1643029751:0;sftp
-: 1643029765:0;sftp 192.168.101.107 -P 5000
-: 1643029768:0;man sftp
-: 1643029860:0;sudo pacman -Ss inetutils
-: 1643029877:0;man filezilla
-: 1643029986:0;ftp 
-: 1643030127:0;ftp 192.168.101.107
-: 1643030182:0;man ftpd
-: 1643030205:0;ftpd 192.168.101.107
-: 1643030217:0;ftpd --help
-: 1643030433:0;ftp
-: 1643030438:0;ftpd
-: 1643030443:0;ftpd -?
-: 1643030447:0;ftpd -helo
-: 1643030450:0;ftpd -help
-: 1643030454:0;ftpd -h
-: 1643030462:0;ftpd --help
-: 1643030511:0;man ftp
-: 1643030523:0;ftp -i 192.168.101.107
-: 1643030636:0;lf
-: 1643031288:0;lf
-: 1643031305:0;yay -Rns codium
-: 1643031311:0;yay -Ss codium
-: 1643031318:0;yay -Rns vscodium-bin
-: 1643031321:0;lf
-: 1643031419:0;sudo pacman -Ss intellij
-: 1643031427:0;sudo pacman -S intellij-idea-community-edition
-: 1643031442:0;vi
-: 1643031445:0;lf
-: 1643032012:0;lf
-: 1643032045:0;vi .ideavimrc
-: 1643032153:0;lf
-: 1643032277:0;mkdir .cache/vim
-: 1643032284:0;mkdir .cache/vim/undodir
-: 1643032489:0;curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
+lf
+lf
+cd .config/ppsspp/PSP/SAVEDATA/
+ls
+df
+du .
+md5sum ULUS10512DATA18 
+md5sum ULUS10512DATA18/P3PSAVE.BIN
+md5sum ULUS10512DATA18/P3PSAVE.BIN | cut -d' '
+md5sum ULUS10512DATA18/P3PSAVE.BIN | cut -d' ' -f1
+vi
+man cut
+vi
+man cut
+sudo pacman -Ss inotify
+sudo pacman -S inotify-tools
+sudo pacman -Syu
+which inotifywait
+se
+se
+[ -n "$(which inotifywait)" ] && echo "hello"
+[ -n "$(which inotifywat)" ] && echo "hello"
+which inotifywatch
+which inotifywa
+whereis inotifywatch
+whereis inoifywatch
+whereis inoifywatch | awk '${print 2}'
+whereis inoifywatch | awk 'print #2'
+whereis inoifywatch | awk 'print $2'
+whereis inoifywatch | awk '{ print $2 }'
+whereis inoifywatch | cut -d' ' -f1
+whereis inoifywatch | cut -d':' -f1
+whereis inoifywatch | cut -d':' -f2
+[ -n "$(whereis inotifywait | cut -d ':' -f2)" ] && echo "hello"
+whereis inotifywatch | cut -d':' -f2
+[ -n "$(whereis iotifywait | cut -d ':' -f2)" ] && echo "hello"
+lf
+ls
+inotifywait -m -e modify important-pkgs.txt
+echo "hello" >> important-pkgs.txt
+vi important-pkgs.txt
+man stat
+stat -c %y important-pkgs.txt
+echo .config/ppsspp/PSP/S
+echo .config/ppsspp/PSP/SAVEDATA
+echo .config/ppsspp/PSP/SAVEDATA/*
+man ftp
+ftp 192.168.101.107:5000
+sudo su
+pacman -Qqe | grep openssh
+sudo pacman -Ss openssh
+pacman -Qqe
+sftp 192.168.101.107:5000
+sftp
+sftp 192.168.101.107 -P 5000
+man sftp
+sudo pacman -Ss inetutils
+man filezilla
+ftp 
+ftp 192.168.101.107
+man ftpd
+ftpd 192.168.101.107
+ftpd --help
+ftp
+ftpd
+ftpd -?
+ftpd -helo
+ftpd -help
+ftpd -h
+ftpd --help
+man ftp
+ftp -i 192.168.101.107
+lf
+lf
+yay -Rns codium
+yay -Ss codium
+yay -Rns vscodium-bin
+lf
+sudo pacman -Ss intellij
+sudo pacman -S intellij-idea-community-edition
+vi
+lf
+lf
+vi .ideavimrc
+lf
+mkdir .cache/vim
+mkdir .cache/vim/undodir
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \\
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-: 1643032935:0;sudo pacman -Syu
-: 1643032969:0;sudo reboot
-: 1643035936:0;sudo pacman -Ss pulseaudio
-: 1643035949:0;sudo pacman -S pulsemixer
-: 1643035954:0;pulsemixer
-: 1643036052:0;pulseaudio --check
-: 1643036061:0;pulseaudio -D
-: 1643036076:0;htop
-: 1643036104:0;pkill pulseaudio
-: 1643036112:0;pulseaudio -k
-: 1643036124:0;pulseaudio -D
-: 1643036138:0;pulseaudio -v
-: 1643036152:0;pulseaudio -k
-: 1643036164:0;pulseaudio -D
-: 1643036181:0;sudo reboot
-: 1643036264:0;htop
-: 1643036428:0;lf
-: 1643036576:0;lf
-: 1643036782:0;sudo pacman -S rustup
-: 1643036865:0;cargo build
-: 1643036942:0;sudo pacman -Ss cargo
-: 1643037036:0;sudo pacman -Rns rustup
-: 1643037222:0;sudo updatedb && locate .desktop
-: 1643037246:0;locate .desktop | grep intel
-: 1643037255:0;locate .desktop | grep idea
-: 1643037267:0;lf
-: 1643037288:0;idea
-: 1643037357:0;lf
-: 1643037641:0;yay -S vscodium-bin
-: 1643037680:0;idea
-: 1643037684:0;idea &!
-: 1643038543:0;anki
-: 1643042747:0;lf
-: 1643042751:0;lf
-: 1643042842:0;man ueberzug
-: 1643042845:0;ueberzug
-: 1643042855:0;ls
-: 1643042856:0;lf
-: 1643042864:0;cd images/wallpapers
-: 1643042865:0;ls
-: 1643042890:0;kitty +icat 
-: 1643042905:0;kitty +icat 1610795587524
-: 1643042909:0;kitty +icat 1610795587524.jpg
-: 1643042921:0;lf
-: 1643043118:0;cd code/learning/online/rust/img-combiner
-: 1643043122:0;mkdir output
-: 1643043607:0;lf
-: 1643048063:0;cd .hidden
-: 1643048099:0;mkdir porn_where_they_enjoy_it
-: 1643048103:0;cd $_
-: 1643048112:0;yt-dlp https://www.pornhub.com/view_video.php?viewkey=ph5d0a7c777b18c
-: 1643048118:0;yt-dlp "https://www.pornhub.com/view_video.php?viewkey=ph5d0a7c777b18c"
-: 1643048792:0;lf
-: 1643049400:0;lf
-: 1643052211:0;sudo pacman -Syu
-: 1643052565:0;quazip
-: 1643057689:0;lf
-: 1643060414:0;sudo pacman -Syu
-: 1643060468:0;sx
-: 1643060479:0;lf
+sudo pacman -Syu
+sudo reboot
+sudo pacman -Ss pulseaudio
+sudo pacman -S pulsemixer
+pulsemixer
+pulseaudio --check
+pulseaudio -D
+htop
+pkill pulseaudio
+pulseaudio -k
+pulseaudio -D
+pulseaudio -v
+pulseaudio -k
+pulseaudio -D
+sudo reboot
+htop
+lf
+lf
+sudo pacman -S rustup
+cargo build
+sudo pacman -Ss cargo
+sudo pacman -Rns rustup
+sudo updatedb && locate .desktop
+locate .desktop | grep intel
+locate .desktop | grep idea
+lf
+idea
+lf
+yay -S vscodium-bin
+idea
+idea &!
+anki
+lf
+lf
+man ueberzug
+ueberzug
+ls
+lf
+cd images/wallpapers
+ls
+kitty +icat 
+kitty +icat 1610795587524
+kitty +icat 1610795587524.jpg
+lf
+cd code/learning/online/rust/img-combiner
+mkdir output
+lf
+cd .hidden
+mkdir porn_where_they_enjoy_it
+cd $_
+yt-dlp https://www.pornhub.com/view_video.php?viewkey=ph5d0a7c777b18c
+yt-dlp "https://www.pornhub.com/view_video.php?viewkey=ph5d0a7c777b18c"
+lf
+lf
+sudo pacman -Syu
+quazip
+lf
+sudo pacman -Syu
+sx
+lf
 cargo build
 cargo build 
 cargo run 
@@ -474,22 +474,22 @@ cargo run -- assets/hamuko.jpg assets/neko_arc_baiken.jpg output/test.jpg
 cargo run -- assets/hamuko.jpg assets/neko_arc_baiken.jpg output/test.jpg
 cargo run -- assets/hamuko.jpg assets/neko_arc_baiken.jpg output/test.jpg
 cargo run -- assets/hamuko.jpg assets/neko_arc_baiken.jpg output/test.jpg
-: 1643062469:0;vi
-: 1643062614:0;lf
-: 1643065478:0;startx
-: 1643065704:0;pkill firefox
-: 1643065708:0;top
-: 1643065712:0;htop
-: 1643065775:0;sudo reboot
-: 1643066185:0;lf
-: 1643070230:0;redshift &!
-: 1643070437:0;pkill PPSSPPSDL
-: 1643070445:0;pkill PPSSPPSDL
-: 1643070596:0;kill -SIGKILL $(pgrep PPSSPPSDL)
-: 1643071303:0;sudo pacman -Syu
-: 1643071310:0;sx
-: 1643071351:0;idea &!
-: 1643073540:0;lf
+vi
+lf
+startx
+pkill firefox
+top
+htop
+sudo reboot
+lf
+redshift &!
+pkill PPSSPPSDL
+pkill PPSSPPSDL
+kill -SIGKILL $(pgrep PPSSPPSDL)
+sudo pacman -Syu
+sx
+idea &!
+lf
 cargo build
 ccargo run
 cargo run
@@ -498,563 +498,876 @@ cargo build
 cargo build
 cargo run
 cargo run
-: 1643074615:0;lf
-: 1643075248:0;pkill qbittorrent
-: 1643075250:0;lsblk
-: 1643075255:0;umount /dev/sdb1
-: 1643075262:0;sudo poweroff
-: 1643116471:0;lf
-: 1643116952:0;sudo pacman -Syu
-: 1643116959:0;yay -Sua
-: 1643117890:0;lf
-: 1643117923:0;lfd
-: 1643117924:0;lf
-: 1643118411:0;lf
-: 1643118478:0;idea &!
-: 1643119633:0;i
-: 1643119635:0;vi 
-: 1643119645:0;lf
-: 1643120593:0;lf
-: 1643120600:0;cd software/source/learning-projects
-: 1643120602:0;git clone https://github.com/superjer/tinyc.games.git
-: 1643120606:0;lf
-: 1643120633:0;sudo pacman -Ss sdl2
-: 1643120701:0;sudo pacman -S sdl2_ttf lib32-sd2_ttf
-: 1643120707:0;sudo pacman -S sdl2_ttf lib32-sdl2_ttf
-: 1643120722:0;sudo pacman -Ss tcc
-: 1643120726:0;sudo pacman -S tcc
-: 1643120736:0;sudo pacman -Ss glew
-: 1643120762:0;sudo pacman -S glew1.10 lib32-glew1.10
-: 1643120952:0;anki
-: 1643121084:0;history
-: 1643121598:0;lf
-: 1643121623:0;man idea
-: 1643121628:0;idea &!
-: 1643122951:0;lf
-: 1643123335:0;lf
-: 1643123702:0;lf
-: 1643123816:0;df -h
-: 1643123818:0;lf
-: 1643128017:0;sudo pacman -Syu 
-: 1643128045:0;sx
-: 1643129485:0;lf
-: 1643131778:0;sudo pacman -Syu && yay -Sua
-: 1643131866:0;sx &!
-: 1643131877:0;htop
-: 1643131937:0;htop
-: 1643133934:0;lf
-: 1643135249:0;lf
-: 1643135278:0;lf
-: 1643135310:0;xdg-open pkglist.txt
-: 1643135317:0;lf
-: 1643140236:0;vi
-: 1643141772:0;sudo pacman -Syu
-: 1643141785:0;se
-: 1643142089:0;anki
-: 1643146451:0;lf
-: 1643152693:0;redshift &!
-: 1643158764:0;lf
-: 1643161299:0;pkill qbittorrent
-: 1643161303:0;lsblk
-: 1643161316:0;umount /dev/sdc1
-: 1643161334:0;sudo poweroff
-: 1643201462:0;lf
-: 1643209085:0;lf
-: 1643209141:0;vi
-: 1643209178:0;sudo pacman -S ttf-croscore
-: 1643209958:0;lf
-: 1643210248:0;sudo pacman -Ss build-essential
-: 1643210251:0;sudo pacman -Ss build
-: 1643210483:0;vi
-: 1643210495:0;vi
-: 1643212435:0;lf
-: 1643216621:0;anki
-: 1643219277:0;vi
-: 1643228285:0;lf
-: 1643228508:0;cd .hidden/audio
-: 1643228536:0;ffmpeg -i https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f -c copy cum-talk-with-me-s01e01-ff4f.mp3
-: 1643228582:0;yt-dlp https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643228749:0;https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643228753:0;ffmpeg -i https://erocast.me/stream/hls/250 -c copy erocast_250_voteforme.mp3 
-: 1643228763:0;lf
-: 1643228857:0;ffmpeg -i https://erocast.me/stream/hls/1454 -c copy erocast_250_voteforme.mp3 
-: 1643228883:0;lf
-: 1643229012:0;lf
-: 1643229018:0;vi
-: 1643229022:0;lf
-: 1643229119:0;lf
-: 1643229121:0;history
-: 1643229158:0;lf
-: 1643229178:0;history
-: 1643229294:0;vi
-: 1643229298:0;lf
-: 1643229377:0;cd .hidden/audio
-: 1643229377:0;ls
-: 1643229385:0;cd ../.scripts
-: 1643229385:0;;s
-: 1643229386:0;ls
-: 1643229389:0;chmod +x
-: 1643229393:0;chmod +x erocast_download
-: 1643229403:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229430:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229513:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229542:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229550:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229582:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229616:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229694:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229783:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229803:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229878:0;./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
-: 1643229896:0;lf
-: 1643238300:0;redshift&!
-: 1643238929:0;sudo pacman -Syu
-: 1643246995:0;sudo pacman -Syu
-: 1643247003:0;yay -Sua
-: 1643248637:0;sudo poweroff
-: 1643288766:0;sudo pacman -Syu
-: 1643288780:0;yay -Sua
-: 1643289387:0;lf
-: 1643289853:0;sudo pacman -Ss oni
-: 1643289900:0;yay -Ss onivim
-: 1643289936:0;lf
-: 1643289986:0;lf
-: 1643290004:0;lf
-: 1643290354:0;lf
-: 1643290569:0;cd .dotfiles
-: 1643290571:0;git remote add origin https://gitlab.com/ronananakinmaharaj/dotfiles.git\
+lf
+pkill qbittorrent
+lsblk
+umount /dev/sdb1
+sudo poweroff
+lf
+sudo pacman -Syu
+yay -Sua
+lf
+lfd
+lf
+lf
+idea &!
+i
+vi 
+lf
+lf
+cd software/source/learning-projects
+git clone https://github.com/superjer/tinyc.games.git
+lf
+sudo pacman -Ss sdl2
+sudo pacman -S sdl2_ttf lib32-sd2_ttf
+sudo pacman -S sdl2_ttf lib32-sdl2_ttf
+sudo pacman -Ss tcc
+sudo pacman -S tcc
+sudo pacman -Ss glew
+sudo pacman -S glew1.10 lib32-glew1.10
+anki
+history
+lf
+man idea
+idea &!
+lf
+lf
+lf
+df -h
+lf
+sudo pacman -Syu 
+sx
+lf
+sudo pacman -Syu && yay -Sua
+sx &!
+htop
+htop
+lf
+lf
+lf
+xdg-open pkglist.txt
+lf
+vi
+sudo pacman -Syu
+se
+anki
+lf
+redshift &!
+lf
+pkill qbittorrent
+lsblk
+umount /dev/sdc1
+sudo poweroff
+lf
+lf
+vi
+sudo pacman -S ttf-croscore
+lf
+sudo pacman -Ss build-essential
+sudo pacman -Ss build
+vi
+vi
+lf
+anki
+vi
+lf
+cd .hidden/audio
+ffmpeg -i https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f -c copy cum-talk-with-me-s01e01-ff4f.mp3
+yt-dlp https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+ffmpeg -i https://erocast.me/stream/hls/250 -c copy erocast_250_voteforme.mp3 
+lf
+ffmpeg -i https://erocast.me/stream/hls/1454 -c copy erocast_250_voteforme.mp3 
+lf
+lf
+vi
+lf
+lf
+history
+lf
+history
+vi
+lf
+cd .hidden/audio
+ls
+cd ../.scripts
+;s
+ls
+chmod +x
+chmod +x erocast_download
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+./erocast_download https://erocast.me/track/1454/cum-talk-with-me-s01e01-ff4f
+lf
+redshift&!
+sudo pacman -Syu
+sudo pacman -Syu
+yay -Sua
+sudo poweroff
+sudo pacman -Syu
+yay -Sua
+lf
+sudo pacman -Ss oni
+yay -Ss onivim
+lf
+lf
+lf
+lf
+cd .dotfiles
+git remote add origin https://gitlab.com/ronananakinmaharaj/dotfiles.git\
 
-: 1643290589:0;cd ..
-: 1643290594:0;rmdir .dotfiles
-: 1643290598:0;cd -
-: 1643290598:0;ls
-: 1643290600:0;lf
-: 1643290613:0;git init --bare ~/.dotfiles
-: 1643290616:0;lf
-: 1643290624:0;lf
-: 1643290704:0;alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-: 1643290718:0;config config status.showUntrackedFiles no\
+cd ..
+rmdir .dotfiles
+cd -
+ls
+lf
+git init --bare ~/.dotfiles
+lf
+lf
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+config config status.showUntrackedFiles no\
 
-: 1643290767:0;git remote add origin https://gitlab.com/ronananakinmaharaj/dotfiles.git\
+git remote add origin https://gitlab.com/ronananakinmaharaj/dotfiles.git\
 
-: 1643290774:0;git branch -M main\
+git branch -M main\
 
-: 1643290778:0;git push -uf origin main\
+git push -uf origin main\
 
-: 1643290799:0;lf
-: 1643290814:0;lf
-: 1643290879:0;sudo pacman -S git
-: 1643290886:0;sudo pacman -Syu
-: 1643290912:0;git config --gobal user.name "Shinji515"
-: 1643290926:0;git config --global user.name "Shinji515"
-: 1643290941:0;git config --global user.email "ronananakinmaharaj@gmail.com"
-: 1643290950:0;lf
-: 1643290979:0;ls
-: 1643290981:0;lf
-: 1643290988:0;cd .dotfil
-: 1643291008:0;git init --bare ~/.dotfiles
-: 1643291015:0;cd .dotfiles
-: 1643291015:0;ls
-: 1643291019:0;ls -lah
-: 1643291032:0;git status
-: 1643291039:0;cd documents
-: 1643291042:0;mkdir test_git
-: 1643291044:0;cd $_
-: 1643291045:0;git init
-: 1643291049:0;ls
-: 1643291054:0;git status
-: 1643291117:0;touch index.html
-: 1643291126:0;git add index.html
-: 1643291131:0;git status
-: 1643291139:0;git commit -m "added index.html"
-: 1643291150:0;git log
-: 1643291338:0;anki
-: 1643291464:0;yay -Ss github-desktop
-: 1643291473:0;yay -S github-desktop-bin
-: 1643291729:0;lf
-: 1643292746:0;lf
-: 1643292776:0;config config --local status.showUntrackedFiles no
-: 1643292796:0;cd .dotfiles
-: 1643292798:0;config config --local status.showUntrackedFiles no
-: 1643292807:0;cd -
-: 1643292877:0;ls
-: 1643292882:0;config add .zshenv
-: 1643292886:0;lf
-: 1643292890:0;lf
-: 1643292908:0;config add .zshenv
-: 1643292918:0;config commit -m "Added zshenv"
-: 1643292968:0;config status
-: 1643292974:0;ls
-: 1643292976:0;lf
-: 1643292993:0;lf
-: 1643293001:0;config push
-: 1643293013:0;config push dotfiles
-: 1643293022:0;config push ~/.dotfiles
-: 1643293075:0;lf
-: 1643293146:0;lf
-: 1643293187:0;lf
-: 1643293528:0;history
-: 1643293532:0;lf
-: 1643293554:0;git init --bare ~/.dotfiles
-: 1643293561:0;cd .dotfiles
-: 1643293561:0;ls
-: 1643293563:0;cd ..
-: 1643293615:0;config config --local status.showUntrackedFiles no
-: 1643293641:0;config add .zshenv
-: 1643293650:0;config commit -m "Added zshenv"
-: 1643293658:0;config push
-: 1643293695:0;git remote add new_dotfiles https://github.com/Shinji322/new_dotfiles.git
-: 1643293712:0;ls
-: 1643293715:0;ls
-: 1643293734:0;git remote add ~/.dotfiles https://github.com/Shinji322/new_dotfiles
-: 1643293772:0;lf
-: 1643293828:0;git clone https://github.com/Shinji322/new_dotfiles.git ~/.dotfiles
-: 1643293831:0;lf
-: 1643293847:0;git add .zshenv
-: 1643293855:0;cd .dotfiles
-: 1643293861:0;git add ../.zshenv
-: 1643293863:0;lf
-: 1643293912:0;cd ..
-: 1643293921:0;ls
-: 1643293925:0;git init --bare ~/.dotfiles
-: 1643293958:0;config config status.showUntrackedFiles no
-: 1643294122:0;config status
-: 1643294131:0;config add .zshrc
-: 1643294134:0;config add .zshenv
-: 1643294135:0;ls
-: 1643294139:0;config status
-: 1643294150:0;config commit  -m "pls work"
-: 1643294155:0;config status
-: 1643294159:0;config push
-: 1643294217:0;git remote add origin git@github.com:Shinji322/new_dotfiles.git
-: 1643294229:0;config remote git@github.com:Shinji322/new_dotfiles.git
-: 1643294244:0;config remote add origin git@github.com:Shinji322/new_dotfiles.git
-: 1643294247:0;config push
-: 1643294257:0;config push --set-upstream origin master
-: 1643294293:0;ssh -vT git@github.com
-: 1643294318:0;ssh-add -l -E sha256
-: 1643294331:0;eval "$(ssh-agent -s)"\
+lf
+lf
+sudo pacman -S git
+sudo pacman -Syu
+git config --gobal user.name "Shinji515"
+git config --global user.name "Shinji515"
+git config --global user.email "ronananakinmaharaj@gmail.com"
+lf
+ls
+lf
+cd .dotfil
+git init --bare ~/.dotfiles
+cd .dotfiles
+ls
+ls -lah
+git status
+cd documents
+mkdir test_git
+cd $_
+git init
+ls
+git status
+touch index.html
+git add index.html
+git status
+git commit -m "added index.html"
+git log
+anki
+yay -Ss github-desktop
+yay -S github-desktop-bin
+lf
+lf
+config config --local status.showUntrackedFiles no
+cd .dotfiles
+config config --local status.showUntrackedFiles no
+cd -
+ls
+config add .zshenv
+lf
+lf
+config add .zshenv
+config commit -m "Added zshenv"
+config status
+ls
+lf
+lf
+config push
+config push dotfiles
+config push ~/.dotfiles
+lf
+lf
+lf
+history
+lf
+git init --bare ~/.dotfiles
+cd .dotfiles
+ls
+cd ..
+config config --local status.showUntrackedFiles no
+config add .zshenv
+config commit -m "Added zshenv"
+config push
+git remote add new_dotfiles https://github.com/Shinji322/new_dotfiles.git
+ls
+ls
+git remote add ~/.dotfiles https://github.com/Shinji322/new_dotfiles
+lf
+git clone https://github.com/Shinji322/new_dotfiles.git ~/.dotfiles
+lf
+git add .zshenv
+cd .dotfiles
+git add ../.zshenv
+lf
+cd ..
+ls
+git init --bare ~/.dotfiles
+config config status.showUntrackedFiles no
+config status
+config add .zshrc
+config add .zshenv
+ls
+config status
+config commit  -m "pls work"
+config status
+config push
+git remote add origin git@github.com:Shinji322/new_dotfiles.git
+config remote git@github.com:Shinji322/new_dotfiles.git
+config remote add origin git@github.com:Shinji322/new_dotfiles.git
+config push
+config push --set-upstream origin master
+ssh -vT git@github.com
+ssh-add -l -E sha256
+eval "$(ssh-agent -s)"\
 
-: 1643294346:0;ssh-add -l -E md5\
+ssh-add -l -E md5\
 
-: 1643294407:0;ssh-keygen -t rsa
-: 1643294447:0;ssh-add -l
-: 1643294452:0;ssh-add -l -E md5\
+ssh-keygen -t rsa
+ssh-add -l
+ssh-add -l -E md5\
 
-: 1643294465:0;ssh-add ~/.ssh/id_rsa
-: 1643294479:0;ssh-add -l -E md5\
+ssh-add ~/.ssh/id_rsa
+ssh-add -l -E md5\
 
-: 1643294564:0;lf
-: 1643294610:0;config push --set-upstream origin master
-: 1643294650:0;vi
-: 1643295285:0;lf
-: 1643295300:0;config add .ideavimrc
-: 1643295314:0;ls
-: 1643295326:0;vi
-: 1643295373:0;lf
-: 1643295397:0;lf
-: 1643295418:0;config add .vim
-: 1643295437:0;config commit -m "Added idea vim stuff"
-: 1643295442:0;lf
-: 1643295460:0;config add .config
-: 1643295477:0;config status
-: 1643295487:0;config push
-: 1643295514:0;ls
-: 1643295523:0;cd .local/share/applications
-: 1643295524:0;ls
-: 1643295537:0;config add file.desktop
-: 1643295545:0;config add img.desktop
-: 1643295549:0;config add text.destkop
-: 1643295554:0;config add text.desktop
-: 1643295564:0;config add pdf.desktop
-: 1643295573:0;config add video.desktop
-: 1643295578:0;lf
-: 1643295589:0;cd ..
-: 1643295592:0;lf
-: 1643295611:0;cd 
-: 1643295612:0;ls
-: 1643295617:0;cd .cache
-: 1643295617:0;ls
-: 1643295619:0;lf
-: 1643295637:0;config add zsh/history
-: 1643295642:0;config push
-: 1643295714:0;config commit -m "Added zsh history as well as .desktop files"
-: 1643295731:0;config push
-: 1643295756:0;lf
-: 1643295764:0;lf
-: 1643295772:0;cd ~/.config
-: 1643295772:0;ls
-: 1643295782:0;lf
-: 1643295798:0;config add user-dirs.dirs
-: 1643295810:0;lf
-: 1643295826:0;config add i3
-: 1643295831:0;config add i3blocks
-: 1643295836:0;config add flameshot
-: 1643295851:0;config add beets/config.yaml
-: 1643295903:0;config add dunst
-: 1643295926:0;config add flameshot/flameshot.ini
-: 1643295936:0;config add fontconfig/fonts.conf
-: 1643295949:0;config add gtk-2.0
-: 1643295955:0;config add gtk-3.0
-: 1643295962:0;config add idea_vim
-: 1643295978:0;config add kitty
-: 1643296058:0;git rm kitty
-: 1643296078:0;ls
-: 1643296117:0;git rm -r kitty
-: 1643296120:0;ls
-: 1643296158:0;config add lf
-: 1643296165:0;config add mpd
-: 1643296171:0;config add mpDris2
-: 1643296173:0;config add mpv
-: 1643296180:0;config add ncmpcpp
-: 1643296186:0;config add nvim
-: 1643296189:0;config add picom
-: 1643296207:0;config add rofi
-: 1643296212:0;config add sc-im
-: 1643296216:0;config add shell
-: 1643296221:0;config add sxhkd
-: 1643296246:0;config add wget
-: 1643296251:0;config add x11
-: 1643296261:0;config add yarn
-: 1643296272:0;config add zathura
-: 1643296276:0;config add zsh
-: 1643296289:0;config add mimeapps.list
-: 1643296301:0;config add starship.toml
-: 1643296338:0;config commit -m "Added files in ~/.config"
-: 1643296348:0;history
-: 1643296355:0;lf
-: 1643296371:0;config push
-: 1643296393:0;cd ~/.cach
-: 1643296394:0;cd ~/.cache
-: 1643296412:0;config add wget-hsts
-: 1643296430:0;config add vim/undodir
-: 1643296464:0;config add nvim/undodir
-: 1643296467:0;config push
-: 1643296481:0;config commit -m "Added more cache related stuff"
-: 1643296484:0;config push
-: 1643296508:0;cd ..
-: 1643296516:0;cd .scripts
-: 1643296517:0;ls
-: 1643296522:0;cd ..
-: 1643296529:0;config add .scripts
-: 1643296541:0;config commit -m "Added scripts dot dir"
-: 1643296548:0;config push
-: 1643299236:0;man 'git add'
-: 1643299246:0;config add -u
-: 1643299459:0;man acorn 
-: 1643299463:0;acorn -h
-: 1643300327:0;lf
-: 1643300401:0;config status
-: 1643300456:0;config add .hidden/.scripts
-: 1643300459:0;config status
-: 1643300481:0;config commit -m "Added download script"
-: 1643300525:0;config diff
-: 1643300546:0;config push
-: 1643300571:0;cd .scripts
-: 1643300572:0;ls
-: 1643300578:0;mkdir bootstrap
-: 1643300580:0;cd $-
-: 1643300582:0;ls
-: 1643300592:0;cd bootstrap
-: 1643300592:0;ls
-: 1643300602:0;vi install-dots
-: 1643300627:0;vi install-dots
-: 1643300659:0;cd ~/software/source
-: 1643300659:0;ls
-: 1643300665:0;mkdir personal
-: 1643300667:0;cd $_
-: 1643300669:0;lf
-: 1643300693:0;cd github
-: 1643300716:0;mkdir file-tree
-: 1643300718:0;cd $_
-: 1643300719:0;ls
-: 1643300721:0;git init
-: 1643300730:0;lf
-: 1643300734:0;lf
-: 1643300736:0;lf
-: 1643301368:0;lf
-: 1643301381:0;lf
-: 1643301440:0;lf
-: 1643301551:0;lf
-: 1643301680:0;git remote add origin https://gitlab.com/ronananakinmaharaj/file-tree.git\
+lf
+config push --set-upstream origin master
+vi
+lf
+config add .ideavimrc
+ls
+vi
+lf
+lf
+config add .vim
+config commit -m "Added idea vim stuff"
+lf
+config add .config
+config status
+config push
+ls
+cd .local/share/applications
+ls
+config add file.desktop
+config add img.desktop
+config add text.destkop
+config add text.desktop
+config add pdf.desktop
+config add video.desktop
+lf
+cd ..
+lf
+cd 
+ls
+cd .cache
+ls
+lf
+config add zsh/history
+config push
+config commit -m "Added zsh history as well as .desktop files"
+config push
+lf
+lf
+cd ~/.config
+ls
+lf
+config add user-dirs.dirs
+lf
+config add i3
+config add i3blocks
+config add flameshot
+config add beets/config.yaml
+config add dunst
+config add flameshot/flameshot.ini
+config add fontconfig/fonts.conf
+config add gtk-2.0
+config add gtk-3.0
+config add idea_vim
+config add kitty
+git rm kitty
+ls
+git rm -r kitty
+ls
+config add lf
+config add mpd
+config add mpDris2
+config add mpv
+config add ncmpcpp
+config add nvim
+config add picom
+config add rofi
+config add sc-im
+config add shell
+config add sxhkd
+config add wget
+config add x11
+config add yarn
+config add zathura
+config add zsh
+config add mimeapps.list
+config add starship.toml
+config commit -m "Added files in ~/.config"
+history
+lf
+config push
+cd ~/.cach
+cd ~/.cache
+config add wget-hsts
+config add vim/undodir
+config add nvim/undodir
+config push
+config commit -m "Added more cache related stuff"
+config push
+cd ..
+cd .scripts
+ls
+cd ..
+config add .scripts
+config commit -m "Added scripts dot dir"
+config push
+man 'git add'
+config add -u
+man acorn 
+acorn -h
+lf
+config status
+config add .hidden/.scripts
+config status
+config commit -m "Added download script"
+config diff
+config push
+cd .scripts
+ls
+mkdir bootstrap
+cd $-
+ls
+cd bootstrap
+ls
+vi install-dots
+vi install-dots
+cd ~/software/source
+ls
+mkdir personal
+cd $_
+lf
+cd github
+mkdir file-tree
+cd $_
+ls
+git init
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+git remote add origin https://gitlab.com/ronananakinmaharaj/file-tree.git\
 
-: 1643301687:0;git branch -M main
-: 1643301696:0;git push -uf origin main
-: 1643301700:0;git push
-: 1643301717:0;git push --set-upstream origin main
-: 1643301746:0;git push -u origin main
-: 1643301753:0;git push -u origin master
-: 1643301766:0;git remote update
-: 1643302064:0;lf
-: 1643302071:0;git push
-: 1643302090:0;git push --set-upstream origin main
-: 1643302143:0;git add archive/assets/.gitkeep
-: 1643302153:0;git commit -m "added assets folder"
-: 1643302158:0;git push --set-upstream origin main
-: 1643302189:0;git pull
-: 1643302220:0;git pull git@gitlab.com:ronananakinmaharaj/file-tree.git main
-: 1643302245:0;lf
-: 1643302257:0;git pull git@gitlab.com:ronananakinmaharaj/file-tree.git main
-: 1643302260:0;ls
-: 1643302263:0;git push
-: 1643302272:0;git push --set-upstream origin main
-: 1643302281:0;git push --set-upstream origin main
-: 1643302308:0;git pull
-: 1643302324:0;lf
-: 1643302345:0;cd software/source/personal/github/file-tree
-: 1643302348:0;git init
-: 1643302424:0;history
-: 1643302431:0;lf
-: 1643302445:0;git remote add origin git@github.com:Shinji322/file-tree.git
-: 1643302464:0;git add archive/assets/.gitkeep
-: 1643302494:0;git commit -m "Added assets/.gitkeep"
-: 1643302509:0;git branch -M master
-: 1643302518:0;git push -u origin main
-: 1643302535:0;rm -rf .git
-: 1643302550:0;echo "# file-tree" >> README.md\
+git branch -M main
+git push -uf origin main
+git push
+git push --set-upstream origin main
+git push -u origin main
+git push -u origin master
+git remote update
+lf
+git push
+git push --set-upstream origin main
+git add archive/assets/.gitkeep
+git commit -m "added assets folder"
+git push --set-upstream origin main
+git pull
+git pull git@gitlab.com:ronananakinmaharaj/file-tree.git main
+lf
+git pull git@gitlab.com:ronananakinmaharaj/file-tree.git main
+ls
+git push
+git push --set-upstream origin main
+git push --set-upstream origin main
+git pull
+lf
+cd software/source/personal/github/file-tree
+git init
+history
+lf
+git remote add origin git@github.com:Shinji322/file-tree.git
+git add archive/assets/.gitkeep
+git commit -m "Added assets/.gitkeep"
+git branch -M master
+git push -u origin main
+rm -rf .git
+echo "# file-tree" >> README.md\
 git init\
 git add README.md\
 git commit -m "first commit"\
 git branch -M main\
 git remote add origin git@github.com:Shinji322/file-tree.git\
 git push -u origin main
-: 1643302570:0;ls
-: 1643302582:0;git branch -M master
-: 1643302587:0;git push -u origin master
-: 1643302620:0;git branch -M main
-: 1643302625:0;git push -u origin main
-: 1643302648:0;git pull
-: 1643302652:0;git push -u origin main
-: 1643302689:0;git push -u origin main --force
-: 1643302781:0;ls -R
-: 1643302789:0;fd . .gitkeep
-: 1643302793:0;fd 
-: 1643302796:0;man fd
-: 1643302826:0;ls -R | grep gitkeep
-: 1643302845:0;man exa
-: 1643302853:0;ls -lah
-: 1643302858:0;ls -lahR
-: 1643302889:0;fd
-: 1643302894:0;fd , '
-: 1643302895:0;fd , 
-: 1643302898:0;fd .
-: 1643302906:0;fd . -type d
-: 1643302916:0;fd . --type d
-: 1643302924:0;man f
-: 1643302925:0;man ffd
-: 1643302927:0;man fd
-: 1643302950:0;fd -p
-: 1643302954:0;man fd
-: 1643302964:0;fd -H
-: 1643302970:0;fd -H | grep gitkeep
-: 1643302984:0;git add $(fd -H | grep gitkeep)
-: 1643302997:0;git commit -m "Added all folders"
-: 1643303029:0;git push -u origin main --force
-: 1643303160:0;mkdir .scripts
-: 1643303171:0;rmdir $_
-: 1643303231:0;vi README.md
-: 1643303238:0;lf
-: 1643304223:0;cd software/source/personal/github
-: 1643304224:0;ls
-: 1643304226:0;cd file-tree
-: 1643304226:0;ls
-: 1643304231:0;cat tags
-: 1643304242:0;git rm code/
-: 1643304248:0;git rm -r code/
-: 1643304265:0;lf
-: 1643304384:0;redshift 
-: 1643304636:0;sudo pacman -S broot
-: 1643304642:0;broot
-: 1643304673:0;br
-: 1643304706:0;lf
-: 1643304749:0;lf
-: 1643304786:0;ls
-: 1643304789:0;lf
-: 1643304850:0;lf
-: 1643304900:0;cd .config/ls
-: 1643304902:0;cd .config/
-: 1643304903:0;ls
-: 1643304912:0;config add broot
-: 1643304921:0;config add -u
-: 1643304928:0;config commit -m "Added broot"
-: 1643304940:0;config push 
-: 1643304961:0;lf
-: 1643305014:0;br
-: 1643305018:0;br
-: 1643305060:0;lf
-: 1643305124:0;lf
-: 1643305183:0;cd .config
-: 1643305531:0;config status
-: 1643305535:0;config add -u
-: 1643305571:0;config commit -m "Added broot function to lf"
-: 1643305575:0;lf
-: 1643305585:0;cd .config
-: 1643305591:0;git add broot
-: 1643305599:0;config add broot
-: 1643305602:0;ls
-: 1643305652:0;config status
-: 1643305672:0;config push
-: 1643305946:0;vi important-pkgs.txt
-: 1643307337:0;cd
-: 1643307345:0;br
-: 1643307347:0;r
-: 1643307347:0;br
-: 1643307351:0;br
-: 1643307352:0;br
-: 1643308114:0;sudo pacman -Syu
-: 1643320320:0;vi
-: 1643320332:0;lf
-: 1643330790:0;redshift &!
-: 1643333126:0;man doom
-: 1643333130:0;lf
-: 1643333307:0;sudo pacman -Rns intellij-idea-community-edition
-: 1643333335:0;sudo pacman -R intellij-idea-community-edition
-: 1643333525:0;anki
-: 1643335310:0;sudo poweroff
-: 1643370836:0;anki
-: 1643372927:0;lsblk
-: 1643373438:0;syncthing &!
-: 1643373897:0;lf
-: 1643374733:0;lf
-: 1643374783:0;lf
-: 1643374813:0;lf
-: 1643374869:0;lf
-: 1643374887:0;br
-: 1643374922:0;lf
-: 1643374938:0;lf
-: 1643375211:0;sudo pacman -Syu
-: 1643375225:0;yay -Ss desmume
-: 1643375478:0;config add .config/npm
-: 1643375482:0;cd .config/
-: 1643375483:0;ls
-: 1643375488:0;ls | grep npm
-: 1643375501:0;config status
-: 1643375515:0;config commit -m "Added npm"
-: 1643375519:0;config push
-: 1643375535:0;cd .cache/zsh
-: 1643375536:0;ls
-: 1643375539:0;vi history
-: 1643375555:0;config push --force
-: 1643375684:0;sudo pacman -Ss zsh-completion
-: 1643375691:0;sudo pacman -Ss zsh
-: 1643375717:0;yay -Ss zsh
-: 1643375739:0;lf
-: 1643375743:0;cd ..
-: 1643375745:0;ls
-: 1643375772:0;anki
-: 1643375844:0;vi
-: 1643375967:0;yay -Ss codium
-: 1643376000:0;lf
-: 1643376013:0;locate emacs
-: 1643376021:0;trash-empty
-: 1643376027:0;lf
-: 1643376045:0;sudo updatedb
-: 1643376050:0;fd . emacs
-: 1643376056:0;locate emacs
-: 1643376073:0;yay -Ss emacs
-: 1643376083:0;sudo pacman -Rns emacs
-: 1643376095:0;yay -Ss emacs | grep installed
-: 1643376110:0;lf
-: 1643376136:0;lf
-: 1643376218:0;lf
-: 1643376329:0;config add -u
+ls
+git branch -M master
+git push -u origin master
+git branch -M main
+git push -u origin main
+git pull
+git push -u origin main
+git push -u origin main --force
+ls -R
+fd . .gitkeep
+fd 
+man fd
+ls -R | grep gitkeep
+man exa
+ls -lah
+ls -lahR
+fd
+fd , '
+fd , 
+fd .
+fd . -type d
+fd . --type d
+man f
+man ffd
+man fd
+fd -p
+man fd
+fd -H
+fd -H | grep gitkeep
+git add $(fd -H | grep gitkeep)
+git commit -m "Added all folders"
+git push -u origin main --force
+mkdir .scripts
+rmdir $_
+vi README.md
+lf
+cd software/source/personal/github
+ls
+cd file-tree
+ls
+cat tags
+git rm code/
+git rm -r code/
+lf
+redshift 
+sudo pacman -S broot
+broot
+br
+lf
+lf
+ls
+lf
+lf
+cd .config/ls
+cd .config/
+ls
+config add broot
+config add -u
+config commit -m "Added broot"
+config push 
+lf
+br
+br
+lf
+lf
+cd .config
+config status
+config add -u
+config commit -m "Added broot function to lf"
+lf
+cd .config
+git add broot
+config add broot
+ls
+config status
+config push
+vi important-pkgs.txt
+cd
+br
+r
+br
+br
+br
+sudo pacman -Syu
+vi
+lf
+redshift &!
+man doom
+lf
+sudo pacman -Rns intellij-idea-community-edition
+sudo pacman -R intellij-idea-community-edition
+anki
+sudo poweroff
+anki
+lsblk
+syncthing &!
+lf
+lf
+lf
+lf
+lf
+br
+lf
+lf
+sudo pacman -Syu
+yay -Ss desmume
+config add .config/npm
+cd .config/
+ls
+ls | grep npm
+config status
+config commit -m "Added npm"
+config push
+cd .cache/zsh
+ls
+vi history
+config push --force
+sudo pacman -Ss zsh-completion
+sudo pacman -Ss zsh
+yay -Ss zsh
+lf
+cd ..
+ls
+anki
+vi
+yay -Ss codium
+lf
+locate emacs
+trash-empty
+lf
+sudo updatedb
+fd . emacs
+locate emacs
+yay -Ss emacs
+sudo pacman -Rns emacs
+yay -Ss emacs | grep installed
+lf
+lf
+lf
+config add -u
+config push --force
+cd .config
+config add mimeapps.list
+config status
+config commit -m "Now html files are opened in firefox"
+config push
+vi
+lfd
+lf
+vi
+lf
+pulseaudio -k
+sudo pacman -SYu
+sudo pacman -Syu
+yay -Sua
+sx
+redshift &!
+lf
+lf
+man bash
+man zsh
+lf
+lf
+sudo pacman -Syu
+lf
+lf
+lsblk
+pkill qbittorrent
+lsblk
+umount /dev/sdc1
+lf
+lsblk
+umount /dev/sdc1
+lsblk
+lf
+sudo poweroff
+sudo pacman -Syu
+vi
+vi test.txt
+lf
+syncthing&!
+lf
+vi
+lf
+vi
+sudo poweroff
+lsblk
+lsblk
+df
+df
+man df
+df -h
+ping gnu.com
+nmtui
+lf
+pkill qbittorrent
+lsblk
+umount /dev/sdc1
+sudo poweroff
+lsblk
+lf
+sudo pacman -Syu
+anki
+yay -Ss edge
+yay -Ss microsoft
+config merge main
+config status
+config checkout master
+config merge main
+config branch -d main
+vi
+config branch minimal main
+config branch minimal master
+config status
+config checkout minimal
+config status
+config push
+config push --set-upstream origin minimal
+lf
+cd software/source
+ls
+lf
+cd personal/github
+ls
+cd file-tree
+ls
+git status
+git commit -m "Removed code folder"
+lf
+git status
+git add tags
+git add -u
+git commit -m "Updated README and added tags"
+git push
+lf
+lf
+lf
+lf
+cd software/source/personal/github/file-tree/documents
+lf
+git add -u
+git commit -m "Added some readmes"
+git status
+git add archive/README.md audio/README.md documents/README.md documents/learning/
+git commit -m "Added some readmes"
+git push
+pkill qbittorrent
+lsblk
+umount /dev/sdc1
+sudo pacman -Ss xone
+yay -Ss xone
+vi important-pkgs.txt
+yay -S xone-dkms
+unalias find
+which find
+yay -S xone-dkms
+yay -Sua
+uname -a
+sudo pacman -Syu
+yay -S xone-dkms-git
+lsmod | grep xpad
+lsmod
+yay -S xbox-generic-controller
+lsmod | grep xpad
+ls /dev/input
+pacman -Ss evtest
+sudo pacman -S evtest
+ls /dev/input
+ls /dev/input/event11
+evtest /dev/input/event11
+sudo evtest /dev/input/event11
+pacman -Qe
+yay -Q
+yay -Qqe 
+yay -Rns xbox-generic-controller
+sudo pacman -Ss xbox
+yay -Ss xboxdrv
+yay -Ss pokemon
+sudo poweroff
+anki
+lf
+lf
+lf
+lf
+anki
+lf
+lf
+curl -sLf https://spacevim.org/install.sh | bash
+nvim
+nvim
+lf
+vi
+lf
+curl -sLf https://spacevim.org/install.sh | bash
+lf
+cd .config/
+cd SpaceVim
+ls
+lf
+mv ~/.SpaceVim .
+lf
+nvim
+nvim
+nvim temp
+lf
+nvim
+cd ..
+ls
+nvim
+curl -sLf https://spacevim.org/install.sh | bash -s -- --uninstall
+nvim
+lf
+nvim
+sudo lf
+curl -sLf https://spacevim.org/install.sh | bash -s -- -h
+curl -sLf https://spacevim.org/install.sh | bash -u
+curl -sLf https://spacevim.org/install.sh | bash --uninstall
+curl -sLf https://spacevim.org/install.sh | bash -s --uninstall
+curl -sLf https://spacevim.org/install.sh | bash -s -- -u
+lf
+uname -s
+cd downloads
+vi
+lf
+vi install.sh
+./install.sh
+chmod +x install.sh
+./$_
+vim
+nvim
+lf
+nvim
+lf
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1\
+nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+nvim
+lf
+nvim
+lf
+lf
+lf
+yay -Ss spacevim
+yay -Ss vim
+yay -Ss nvchad
+yay -Ss chad
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+nvim
+nvim
+lf
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+rm -rf ~/.config/nvim\
+rm -rf ~/.local/share/nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1\
+nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+nvim
+lf
+history
+lf
+curl -sLf https://spacevim.org/install.sh | bash
+lf
+curl -sLf https://spacevim.org/install.sh | bash -s -- -h
+curl -sLf https://spacevim.org/install.sh | bash -s -- --install neovim
+lf
+vi
+nvim
+lf
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1\
+nvim +'hi NormalFloat guibg=#1e222a' +PackerSync
+nvim
+lf
+lf
+startx
+sx
+sx
+lf
+sx
+sudo poweroff
+nvim
+lf
+lf
+nvim
+lf
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+lvim
+nvim
+lvim
+lf
+lf 
+cd code/learning
+ls
+lf
+cd online/c
+ls
+cd learnc.org
+ls
+vi 19-pointer_arithmetic_notes.c
+lf
+vi 19-pointer_arithmetic_notes.c
+lvim 19-pointer_arithmetic_notes.c
+lvim 18-unions_
+lvim 18-unions_exercise.c
+lf
+lvim
+lf
+yay -Ss lunar
+lf
+lf
+lvim
+lf
+sudo pacman -Rns libreoffice-fresh
+lvim
+lf
+lvim
+echo $EDITOR
+lf
+echo $EDITOR
+lf
+lvim +LvimUpdate +q
+lf
+cd .config
+config add lvim
+config commit "added lvim"
+config commit -m "added lvim"
+config push
+lf
+config status
+config push
+config push --force
+lf
+lf
+exit
+: 1643736031:0;lf
+: 1643736038:0;lvim
+: 1643736702:0;man open
+: 1643737974:0;anki
+: 1643739606:0;lf
+: 1643740763:0;lf
+: 1643740866:0;cd code/learning/online/cpp/yt/javidx9/NES-Emulator
+: 1643741162:0;git add remote origin git@github.com:Shinji322/nes_emulator_tutorial.git
+: 1643741169:0;lf
+: 1643741197:0;git remote add origin git@github.com:Shinji322/nes_emulator_tutorial.git
+: 1643741202:0;git push
+: 1643741210:0;git push --set-upstream origin main
+: 1643741231:0;git push --set-upstream origin master
+: 1643742156:0;lf
+: 1643742159:0;lf
+: 1643742187:0;lf
+: 1643742201:0;lvim
+: 1643742298:0;lf
+: 1643742476:0;lf
+: 1643744226:0;config add -u

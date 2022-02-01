@@ -23,7 +23,7 @@ unsetopt PROMPT_SP
 
 # Default Programs
 export TERMINAL="kitty"
-export EDITOR="nvim"
+export EDITOR="lvim"
 export READER="zathura"
 export VISUAL="nvim"
 export PAGER="less"
@@ -54,7 +54,8 @@ export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
 export NUGET_PACKAGES="${XDG_DATA_HOME:-$HOME/.local/share}/NuGetPackages"
-export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$Home/.config}/npm/npmrc"
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
+export SPACEVIMDIR="${XDG_CONFIG_HOME:-$HOME/.config}/SpaceVim"
 
 export FZF_DEFAULT_OPTS="--margin 5% --border"
 

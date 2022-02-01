@@ -64,9 +64,9 @@ super + F8
 super + F5
     playerctl --player=mpd stop 
 super + F9
-    playerctl --player=mpd volume 0.1- && notify-send "MPD Volume -0.1"
+    playerctl --player=mpd volume 0.05- && notify-send "MPD Volume -0.05"
 super + F10
-    playerctl --player=mpd volume 0.1+ && notify-send "MPD Volume +0.1"
+    playerctl --player=mpd volume 0.05+ && notify-send "MPD Volume +0.05"
 
 super + shift + F9
     amixer sset Master 5%- && notify-send "Volume -5%"

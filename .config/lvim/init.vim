@@ -1,3 +1,5 @@
+" For my sensible vim defaults
+
 set title
 set clipboard+=unnamedplus
 set guioptions+=a
@@ -11,9 +13,6 @@ syntax on
 set tabstop=4 softtabstop=4
 set shiftwidth=4
 set noswapfile
-set undodir=~/.cache/vim/undodir
-set undofile
-set timeoutlen=300
 
 " search related things
 set hlsearch
