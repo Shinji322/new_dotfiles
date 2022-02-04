@@ -10,9 +10,11 @@ set encoding=UTF-8
 filetype plugin on
 syntax on
 
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+"set tabstop=4 softtabstop=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set noswapfile
+set spelllang = "en"
 
 " search related things
 set hlsearch

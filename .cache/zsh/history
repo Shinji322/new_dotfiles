@@ -1351,23 +1351,407 @@ config push --force
 lf
 lf
 exit
-: 1643736031:0;lf
-: 1643736038:0;lvim
-: 1643736702:0;man open
-: 1643737974:0;anki
-: 1643739606:0;lf
-: 1643740763:0;lf
-: 1643740866:0;cd code/learning/online/cpp/yt/javidx9/NES-Emulator
-: 1643741162:0;git add remote origin git@github.com:Shinji322/nes_emulator_tutorial.git
-: 1643741169:0;lf
-: 1643741197:0;git remote add origin git@github.com:Shinji322/nes_emulator_tutorial.git
-: 1643741202:0;git push
-: 1643741210:0;git push --set-upstream origin main
-: 1643741231:0;git push --set-upstream origin master
-: 1643742156:0;lf
-: 1643742159:0;lf
-: 1643742187:0;lf
-: 1643742201:0;lvim
-: 1643742298:0;lf
-: 1643742476:0;lf
-: 1643744226:0;config add -u
+lf
+lvim
+man open
+anki
+lf
+lf
+cd code/learning/online/cpp/yt/javidx9/NES-Emulator
+git add remote origin git@github.com:Shinji322/nes_emulator_tutorial.git
+lf
+git remote add origin git@github.com:Shinji322/nes_emulator_tutorial.git
+git push
+git push --set-upstream origin main
+git push --set-upstream origin master
+lf
+lf
+lf
+lvim
+lf
+lf
+config add -u
+config status
+lf
+cd .config/lvim
+config add init.vim
+cd lua
+config add mappings.lua mappings.vim plugins.lua
+config commit -m "Configured lunar vim with my personal configs a bit"
+config push
+vi
+vi
+cd software/source/git/
+ls
+git clone --single-branch --branch master https://github.com/briancodex/html-css-website-v1.git
+lf
+sudo pacman -Syu
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+sudo poweroff
+sudo pacman -Syu
+yay -Syua
+yay -Rns vscodium-bin
+yay -Syua
+lf
+lf
+htop
+sudo pacman -Ss typescript
+lf
+lvim
+lf
+lf
+anki
+lf
+lf
+lf
+lvim
+sudo pacman -Syu
+sx
+sudo pacman -Syu
+man lvim
+nvim
+vi
+yt-dlp https://soundgasm.net/u/girl_in_dungarees/F4F-Youre-so-needy-now-too-bad-youre-tied-up-1
+lf
+lf
+lf
+vi
+lf
+sudo pacman -Ss raylib
+sudo pacman -S raylib
+lf
+sudo pacman -Ss sdl
+sudo pacman -Ss "sdl c"
+sudo pacman -Ss libsdl
+sudo pacman -Syu
+pkg-config --cflags sdl2
+lf
+lf
+lf
+redshift &!
+kmix
+sudo pacman -Syu
+sudo pacman -Ss nvidia
+yay -Ss nvidia
+cd /etc/pacman.d/hooks
+cd /etc/pacman.d/
+ls
+lf
+sudo pacman -S nvidia
+cd /etc/modprobe.d/blacklist-nvidia
+cd /etc/modprobe.d/
+ls
+cat xone-blacklist.conf
+sudo trash-put xone-blacklist.conf
+yay -Ss "nvidia setup"
+lspci | grep VGA
+cd /etc/X11
+sudoedit xorg.conf.d
+lf
+man mf\
+
+sudo touch xorg.conf
+sudoedit $_
+lf
+ls
+sudo trash-put xorg.conf
+pkill qbi
+pkill qbittorrent
+ls
+lsblk
+umount /dev/sdc1
+sudo poweroff
+anki
+sudo pacman -Syu
+anki
+yay -Sua
+lf
+lf
+man xclip
+xclip -o
+xclip -o
+echo $(xclip -o)
+lf
+lf
+assignment-name="$(echo $(xclip -o) | tr '[:upper:]' '[:lower]' | sed 's/ /-/g')"
+cd code/learning/freecodecamp/responsive-web-design/2-basic_css
+ls
+unalias ls
+ls
+man cut
+man grep
+man grpe
+man grep
+ls | grep '/d'
+ls | grep '\d'
+ls | grep '\d.*'
+ls
+ls | grep "\d{1,2}"
+ls | sed 's/^[0-9]*//g'
+numbers="$(ls | sed 's/^[0-9]*//g')"\
+echo $NUMBERS
+ls | sed 's/[^0-9]*//g'
+ls 
+vi
+numbers=$( ls | sed 's/[^0-9]*//g' )\
+y=0\
+for x in numbers\
+do\
+    if x > y \
+    then \
+        y = x\
+    fi\
+done\
+echo $y
+numbers=$( ls | sed 's/[^0-9]*//g' )\
+y=0\
+for x in numbers\
+do\
+    if [ x -gt y ] \
+    then \
+        y=x\
+    fi\
+done\
+echo $y
+numbers=$( ls | sed 's/[^0-9]*//g' )\
+y=0\
+for x in numbers\
+do\
+    if [ $x -gt $y ] \
+    then \
+        $y=$x\
+    fi\
+done\
+echo $y
+echo $IFS
+numbers=$( ls | sed 's/[^0-9]*//g' )\
+echo $numbers
+numbers=( $( ls | sed 's/[^0-9]*//g' )\
+)echo $numbers
+numbers=($(ls | sed 's/[^0-9]*//g'))\
+echo $numbers
+numbers=$( ($(ls | sed 's/[^0-9]*//g')) | sort -nr | head -n1 )\
+echo $numbers 
+numbers= ($(ls | sed 's/[^0-9]*//g'))\
+IFS=$'\n'\
+echo "${numbers[*]}" | sort -nr | head -n1
+numbers=($(ls | sed 's/[^0-9]*//g'))\
+IFS=$'\n'\
+echo "${numbers[*]}" | sort -nr | head -n1
+vi
+numbers=($(ls | sed 's/[^0-9]*//g'))\
+IFS=$'\n'\
+number-ans=$( "${numbers[*]}" | sort -nr | head -n1 )\
+echo $number-ans
+numbers=($(ls | sed 's/[^0-9]*//g'))\
+IFS=$'\n'\
+number-ans=$( echo "${numbers[*]}" | sort -nr | head -n1 )\
+echo $number-ans
+numbers=($(ls | sed 's/[^0-9]*//g'))\
+IFS=$'\n'\
+number-ans=$( echo "${numbers[*]}" | sort -nr | head -n1 )\
+echo $number-ans+1
+numbers=($(ls | sed 's/[^0-9]*//g'))\
+IFS=$'\n'\
+number-ans=$( $(echo "${numbers[*]}" | sort -nr | head -n1) + 1 )\
+echo $number-ans
+largestfile=1\
+let new-file-prefix = largestfile+1
+largestfile=1\
+let new-file-prefix = $largestfile + 1
+largestfile=1\
+let new-file-prefix=$largestfile+1
+expr 1 + 2
+let x=1\
+echo $x\
+\
+let x=$x+1\
+echo $x
+largest=5\
+new-largest="$(expr $largest+1)"\
+echo $new-largest
+largest=5\
+let new-largest="$(expr $largest+1)"\
+echo $new-largest
+vi basic.sh
+ls | wc
+ls | wc -l
+vi basic.sh
+chmod +x $_
+./$_
+vi basic.sh
+./$_
+lf
+vi basic.sh
+./$_
+vi basic.sh
+./$_
+vi basic.sh
+./$_
+./basic.sh
+vi basic.sh
+./basic.sh
+vi basic.sh
+cd .scripts/misc/productivity
+ls
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./basic.sh
+vi basic.sh
+./basic.sh
+vi basic.sh
+./basic.sh
+ls
+ls
+lf
+vi basic.sh
+./basic.sh
+vi basic.sh
+./basic.sh
+vi basic.sh
+./basic.sh
+vi basic.sh
+./basic.sh
+mv basic.sh basic
+./basic
+vi basic
+./basic
+vi basic
+./basic
+vi basic
+./basic
+vi basic
+./basic
+vi basic
+ls
+ls 25-style-the-html-body-element.html
+exit
+: 1643897058:0;./basic
+: 1643897060:0;vi basic
+: 1643897072:0;vi basic
+: 1643897078:0;./basic
+: 1643897081:0;vi basic
+: 1643897105:0;./basic
+: 1643897147:0;vi basic
+: 1643897154:0;./basic
+: 1643897211:0;vi
+: 1643897238:0;vi basic
+: 1643897262:0;./basic
+: 1643897296:0;cd .scripts/misc/productivity
+: 1643897297:0;ls
+: 1643897299:0;./free-code-camp-file-creator
+: 1643897327:0;./free-code-camp-file-creator
+: 1643897353:0;./free-code-camp-file-creator
+: 1643897370:0;mf 25-sdsjkh
+: 1643897396:0;cd .scripts/misc/productivity
+: 1643897396:0;ls
+: 1643897411:0;touch 24-nes
+: 1643897416:0;./free-code-camp-file-creator
+: 1643897448:0;./free-code-camp-file-creator
+: 1643897484:0;./free-code-camp-file-creator
+: 1643897511:0;echo "${number-prefixes[*]}" | sort -nr | head -n1)"
+: 1643897522:0;echo "${number-prefixes[*]}" | sort -nr | head -n1"
+: 1643897674:0;./free-code-camp-file-creator
+: 1643897702:0;touch 25-nes
+: 1643897706:0;./free-code-camp-file-creator
+: 1643897726:0;./free-code-camp-file-creator
+: 1643897740:0;./free-code-camp-file-creator
+: 1643897844:0;./free-code-camp-file-creator
+: 1643897868:0;./free-code-camp-file-creator
+: 1643897914:0;./free-code-camp-file-creator
+: 1643897945:0;./free-code-camp-file-creator
+: 1643897959:0;./free-code-camp-file-creator
+: 1643897979:0;./free-code-camp-file-creator
+: 1643898081:0;./free-code-camp-file-creator
+: 1643898096:0;./free-code-camp-file-creator
+: 1643898201:0;./free-code-camp-file-creator
+: 1643898237:0;./free-code-camp-file-creator
+: 1643898247:0;./free-code-camp-file-creator
+: 1643898267:0;./free-code-camp-file-creator
+: 1643898330:0;./free-code-camp-file-creator
+: 1643898339:0;./free-code-camp-file-creator
+: 1643898446:0;./free-code-camp-file-creator
+: 1643898653:0;lf
+: 1643898860:0;lf
+: 1643898888:0;lf
+: 1643900125:0;lf
+: 1643900161:0;kf
+: 1643900161:0;lf
+: 1643904881:0;git config --global init.defaultBranch main
+: 1643904942:0;lf
+: 1643904946:0;vi
+: 1643911066:0;cd software/source/git/
+: 1643911070:0;git clone https://github.com/b0mh0lt/freeCodeCamp.git
+: 1643911381:0; lf
+: 1643911414:0;top
+: 1643911418:0;htop
+: 1643911426:0;lf
+: 1643912056:0;syncthing &!
+: 1643912344:0;lf
+: 1643912388:0;vi observations-ive-made
+: 1643912468:0;lf
+: 1643914811:0;lf
+: 1643914848:0;vi
+: 1643914876:0;mpc update
+: 1643914948:0;man mpd
+: 1643914954:0;man mcp
+: 1643914957:0;man mpc
+: 1643915010:0;lf
+: 1643915750:0;lf
+: 1643915946:0;sudo pacman -Syu
+: 1643916690:0;sudo pacman -Ss simplescreen
+: 1643916694:0;sudo pacman -Syu
+: 1643916705:0;sudo pacman -S simplescreenrecorder
+: 1643916880:0;lf
+: 1643917625:0;lsblk
+: 1643918329:0;yt-dlp https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/
+: 1643918339:0;sudo pacman -Ss jdownloader
+: 1643918354:0;yay -S jdownloader2
+: 1643918571:0;htmlq
+: 1643918575:0;htmlq https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/
+: 1643918581:0;man htmlq
+: 1643918675:0;man curl
+: 1643918681:0;man curl
+: 1643918728:0;lf
+: 1643918764:0;yay -Rns jdownloader2
+: 1643918773:0;curl https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/
+: 1643918789:0;curl https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/ > data.html
+: 1643918794:0;vi data.html
+: 1643918835:0;htmlq data.html
+: 1643918843:0;htmlq --filename data.html
+: 1643918897:0;cat data.html | grep gls
+: 1643918899:0;cat data.html | grep hls
+: 1643918920:0;vi data.html
+: 1643918968:0;cat data.html | grep mp4
+: 1643918974:0;cat data.html | grep \.
+: 1643918981:0;cat data.html | grep "\."
+: 1643918999:0;cat data.html | grep "tbw"
+: 1643919057:0;rm data.html
+: 1643919280:0;lf
+: 1643919412:0;lf
+: 1643938718:0;vi
+: 1643943521:0;pkill qbittorrent
+: 1643943523:0;lsblk
+: 1643943528:0;umount /dev/sdc1 
+: 1643943536:0;sudo poweroff
+: 1643974580:0;sudo pacman -Syu
+: 1643974707:0;yay -Ss wd719x
+: 1643974749:0;lf
+: 1643974964:0;timeshift -h
+: 1643974973:0;timeshift --delete-all
+: 1643974980:0;sudo timeshift --delete-alll
+: 1643974982:0;sudo timeshift --delete-all
+: 1643975000:0;lf
+: 1643977786:0;yay -syua
+: 1643977790:0;yay -Syua
+: 1643978113:0;lf
+: 1643978561:0;lf
+: 1643979111:0;anki
+: 1643985945:0;config status
+: 1643985953:0;config add -u

@@ -10,7 +10,7 @@ set ignorecase true
 # Custom Functions
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
-        text/*|application/json) $EDITOR "$f";;
+        # text/*|application/json) $EDITOR "$f";;
         *) xdg-open "$f" &;;
     esac
 }}
@@ -29,6 +29,21 @@ cmd mkfile ${{
 
 cmd mkgitkeep ${{
     touch .gitkeep
+}}
+
+cmd mknewassignement ${{
+    printf "Assignment Name: "
+    read assignment_name
+
+    new_assignment_name=$(echo $assignment_name | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
+    number_prefixes="($(ls | sed 's/[^0-9]*//g'))"
+    largest_file_prefix="1"
+    IFS=$'\n'
+    largest_file_prefix=$(echo "${number_prefixes[*]}" | sort -nr | head -n1 | sed "s/)//g")
+    ((largest_file_prefix++))
+
+    filename="$largest_file_prefix-$new_assignment_name.html"
+    touch $filename && $EDITOR $filename
 }}
 
 cmd mkbakup ${{
@@ -222,6 +237,7 @@ map mr sudomkfile
 map md mkdir
 map ms $mkscript
 map mg mkgitkeep
+map ma mknewassignement
 map mb mkbakup
 map ch chmod
 map cc copy-file-contents
