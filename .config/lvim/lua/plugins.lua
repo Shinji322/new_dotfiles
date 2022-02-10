@@ -3,4 +3,5 @@ lvim.plugins = {
   {"vimwiki/vimwiki"},
   {"ptzz/lf.vim"},
   {"easymotion/vim-easymotion"},
+  {"ap/vim-css-color"}
 }

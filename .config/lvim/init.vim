@@ -31,3 +31,6 @@ vmap > >gv
 
 " Other
 set mouse=a
+
+" Ensure files are read as I want
+autocmd BufRead,BufNewFile *.md set filetype=markdown
