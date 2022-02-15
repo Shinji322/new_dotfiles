@@ -1,7 +1,7 @@
 # ~-=| Built in Aliases |=-~
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias ls='exa -la --icons --color=always --group-directories-first'
+alias l='exa -la --icons --color=always --group-directories-first'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
 
@@ -26,14 +26,13 @@ alias vim="lvim"
 alias vi="lvim"
 alias scim="sc-im"
 alias cat='bat'
-alias find='fd'
 alias mutt="neomutt"
 alias lf='~/.scripts/lf/lfrun'
 alias sxiv='sxiv -a'
 alias figlet='figlet -f ~/software/typefaces/figlet/doom.flf'
 alias startx='startx /home/mokou/.config/x11/xinitrc'
 alias locate="~/.scripts/alias/locate.sh"
-alias tspreed="tspreed -p point -f -l -w 200" 
+# alias tspreed="tspreed -p point -f -l -w 200" 
 
 #  ~-=| $HOME ~ Cleanup |=-~
 alias newsboat='newsboat --url-file="$XDG_CONFIG_HOME/newsboat/urls" --config-file="$XDG_CONFIG_HOME/newsboat/config" --cache-file="$XDG_CACHE_HOME/newsboat/cache"'
@@ -49,3 +48,6 @@ alias vscodium='vscodium --extensions-dir $XDG_DATA_HOME/vscode'
 #  ~-=| Making sure I am not dumb |=-~
 #alias 'pacman -Sy'='pacman -Syu'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+# Let zsh get the entire history
+alias hist='history 1'

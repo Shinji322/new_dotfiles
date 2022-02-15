@@ -11,8 +11,8 @@ cnoreabbrev wq wqall
 " Specific Plugin configs
 nmap s <Plug>(easymotion-bd-f)
 nmap S <Plug>(easymotion-overwin-f2)
-
-
+vmap s <Plug>(easymotion-bd-f)
+vmap S <Plug>(easymotion-overwin-f2)
 
 " Manipulating multiple windows
 " map <A-h> <C-w>h

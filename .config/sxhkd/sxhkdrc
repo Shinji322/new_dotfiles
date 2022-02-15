@@ -30,7 +30,7 @@ super + shift + r
 #                                                  
 # Flameshot
 super + s
-    flameshot full -c
+    flameshot gui -p ~/images/screenshots/ -s 
 super + shift + s
     flameshot gui 
 

@@ -3,5 +3,6 @@ lvim.plugins = {
   {"vimwiki/vimwiki"},
   {"ptzz/lf.vim"},
   {"easymotion/vim-easymotion"},
-  {"ap/vim-css-color"}
+  {"ap/vim-css-color"},
+  {"tpope/vim-repeat"},
 }

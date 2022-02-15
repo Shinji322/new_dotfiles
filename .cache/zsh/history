@@ -1632,126 +1632,1308 @@ vi basic
 ls
 ls 25-style-the-html-body-element.html
 exit
-: 1643897058:0;./basic
-: 1643897060:0;vi basic
-: 1643897072:0;vi basic
-: 1643897078:0;./basic
-: 1643897081:0;vi basic
-: 1643897105:0;./basic
-: 1643897147:0;vi basic
-: 1643897154:0;./basic
-: 1643897211:0;vi
-: 1643897238:0;vi basic
-: 1643897262:0;./basic
-: 1643897296:0;cd .scripts/misc/productivity
-: 1643897297:0;ls
-: 1643897299:0;./free-code-camp-file-creator
-: 1643897327:0;./free-code-camp-file-creator
-: 1643897353:0;./free-code-camp-file-creator
-: 1643897370:0;mf 25-sdsjkh
-: 1643897396:0;cd .scripts/misc/productivity
-: 1643897396:0;ls
-: 1643897411:0;touch 24-nes
-: 1643897416:0;./free-code-camp-file-creator
-: 1643897448:0;./free-code-camp-file-creator
-: 1643897484:0;./free-code-camp-file-creator
-: 1643897511:0;echo "${number-prefixes[*]}" | sort -nr | head -n1)"
-: 1643897522:0;echo "${number-prefixes[*]}" | sort -nr | head -n1"
-: 1643897674:0;./free-code-camp-file-creator
-: 1643897702:0;touch 25-nes
-: 1643897706:0;./free-code-camp-file-creator
-: 1643897726:0;./free-code-camp-file-creator
-: 1643897740:0;./free-code-camp-file-creator
-: 1643897844:0;./free-code-camp-file-creator
-: 1643897868:0;./free-code-camp-file-creator
-: 1643897914:0;./free-code-camp-file-creator
-: 1643897945:0;./free-code-camp-file-creator
-: 1643897959:0;./free-code-camp-file-creator
-: 1643897979:0;./free-code-camp-file-creator
-: 1643898081:0;./free-code-camp-file-creator
-: 1643898096:0;./free-code-camp-file-creator
-: 1643898201:0;./free-code-camp-file-creator
-: 1643898237:0;./free-code-camp-file-creator
-: 1643898247:0;./free-code-camp-file-creator
-: 1643898267:0;./free-code-camp-file-creator
-: 1643898330:0;./free-code-camp-file-creator
-: 1643898339:0;./free-code-camp-file-creator
-: 1643898446:0;./free-code-camp-file-creator
-: 1643898653:0;lf
-: 1643898860:0;lf
-: 1643898888:0;lf
-: 1643900125:0;lf
-: 1643900161:0;kf
-: 1643900161:0;lf
-: 1643904881:0;git config --global init.defaultBranch main
-: 1643904942:0;lf
-: 1643904946:0;vi
-: 1643911066:0;cd software/source/git/
-: 1643911070:0;git clone https://github.com/b0mh0lt/freeCodeCamp.git
-: 1643911381:0; lf
-: 1643911414:0;top
-: 1643911418:0;htop
-: 1643911426:0;lf
-: 1643912056:0;syncthing &!
-: 1643912344:0;lf
-: 1643912388:0;vi observations-ive-made
-: 1643912468:0;lf
-: 1643914811:0;lf
-: 1643914848:0;vi
-: 1643914876:0;mpc update
-: 1643914948:0;man mpd
-: 1643914954:0;man mcp
-: 1643914957:0;man mpc
-: 1643915010:0;lf
-: 1643915750:0;lf
-: 1643915946:0;sudo pacman -Syu
-: 1643916690:0;sudo pacman -Ss simplescreen
-: 1643916694:0;sudo pacman -Syu
-: 1643916705:0;sudo pacman -S simplescreenrecorder
-: 1643916880:0;lf
-: 1643917625:0;lsblk
-: 1643918329:0;yt-dlp https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/
-: 1643918339:0;sudo pacman -Ss jdownloader
-: 1643918354:0;yay -S jdownloader2
-: 1643918571:0;htmlq
-: 1643918575:0;htmlq https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/
-: 1643918581:0;man htmlq
-: 1643918675:0;man curl
-: 1643918681:0;man curl
-: 1643918728:0;lf
-: 1643918764:0;yay -Rns jdownloader2
-: 1643918773:0;curl https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/
-: 1643918789:0;curl https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/ > data.html
-: 1643918794:0;vi data.html
-: 1643918835:0;htmlq data.html
-: 1643918843:0;htmlq --filename data.html
-: 1643918897:0;cat data.html | grep gls
-: 1643918899:0;cat data.html | grep hls
-: 1643918920:0;vi data.html
-: 1643918968:0;cat data.html | grep mp4
-: 1643918974:0;cat data.html | grep \.
-: 1643918981:0;cat data.html | grep "\."
-: 1643918999:0;cat data.html | grep "tbw"
-: 1643919057:0;rm data.html
-: 1643919280:0;lf
-: 1643919412:0;lf
-: 1643938718:0;vi
-: 1643943521:0;pkill qbittorrent
-: 1643943523:0;lsblk
-: 1643943528:0;umount /dev/sdc1 
-: 1643943536:0;sudo poweroff
-: 1643974580:0;sudo pacman -Syu
-: 1643974707:0;yay -Ss wd719x
-: 1643974749:0;lf
-: 1643974964:0;timeshift -h
-: 1643974973:0;timeshift --delete-all
-: 1643974980:0;sudo timeshift --delete-alll
-: 1643974982:0;sudo timeshift --delete-all
-: 1643975000:0;lf
-: 1643977786:0;yay -syua
-: 1643977790:0;yay -Syua
-: 1643978113:0;lf
-: 1643978561:0;lf
-: 1643979111:0;anki
-: 1643985945:0;config status
-: 1643985953:0;config add -u
+./basic
+vi basic
+vi basic
+./basic
+vi basic
+./basic
+vi basic
+./basic
+vi
+vi basic
+./basic
+cd .scripts/misc/productivity
+ls
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+mf 25-sdsjkh
+cd .scripts/misc/productivity
+ls
+touch 24-nes
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+echo "${number-prefixes[*]}" | sort -nr | head -n1)"
+echo "${number-prefixes[*]}" | sort -nr | head -n1"
+./free-code-camp-file-creator
+touch 25-nes
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+./free-code-camp-file-creator
+lf
+lf
+lf
+lf
+kf
+lf
+git config --global init.defaultBranch main
+lf
+vi
+cd software/source/git/
+git clone https://github.com/b0mh0lt/freeCodeCamp.git
+ lf
+top
+htop
+lf
+syncthing &!
+lf
+vi observations-ive-made
+lf
+lf
+vi
+mpc update
+man mpd
+man mcp
+man mpc
+lf
+lf
+sudo pacman -Syu
+sudo pacman -Ss simplescreen
+sudo pacman -Syu
+sudo pacman -S simplescreenrecorder
+lf
+lsblk
+yt-dlp https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/
+sudo pacman -Ss jdownloader
+yay -S jdownloader2
+htmlq
+htmlq https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/
+man htmlq
+man curl
+man curl
+lf
+yay -Rns jdownloader2
+curl https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/
+curl https://javryo.com/movies/tbw-08-heroine-brainwash-vol-08-sailor-medium/ > data.html
+vi data.html
+htmlq data.html
+htmlq --filename data.html
+cat data.html | grep gls
+cat data.html | grep hls
+vi data.html
+cat data.html | grep mp4
+cat data.html | grep \.
+cat data.html | grep "\."
+cat data.html | grep "tbw"
+rm data.html
+lf
+lf
+vi
+pkill qbittorrent
+lsblk
+umount /dev/sdc1 
+sudo poweroff
+sudo pacman -Syu
+yay -Ss wd719x
+lf
+timeshift -h
+timeshift --delete-all
+sudo timeshift --delete-alll
+sudo timeshift --delete-all
+lf
+yay -syua
+yay -Syua
+lf
+lf
+anki
+config status
+config add -u
+config commit -m "Updated lvim config"
+config push
+lf
+lf
+lf
+lf
+lf
+br
+lf
+cd code/learning/freecodecamp/responsive-web-design
+git status
+git add -u
+git status
+git add 3-Applied_Visual_Design/
+git status
+git add projects/
+git commit -m "Completed the visual design section. Still need to understand bezier curves though"
+git push
+expr 6 + 1 + 3 + 1
+lf
+lsblk
+lf
+exit
+lf
+lff
+lf
+redshift &!
+amixer
+kmix
+pkill kmix
+sudo po
+sudo poweroff
+sudo pacman -SYu
+sudo pacman -Syu
+lf
+cd .hidden/\[131031\]\ \[MangaGamer\]\ Demon\ Master\ Chris
+ls
+./DMC.sh&!
+ls
+sudo pacman -Syu 
+yay -Syua
+htop
+yay -Ss nvim
+pacman -Ss neovim
+sudo pacman -SYu
+pacman -Ss 
+pacman -Qqe > pkgs.txt
+vi pkgs.txt
+lvim pkgs.txt
+lvim
+lvim
+lvim
+lf
+sudo pacman -Syu
+lf
+cd code/learning/freecodecamp/responsive-web-design
+git add 5-Responsive_Web_Design_Principles/
+git commit -m "Did the principles section: about different viewports and such."
+git push
+df
+pacman -Ss calamares
+yay -Ss calamares
+yay -Ss installer
+yay -Ss "nvidia installer"
+sudo pacman -Ss nvidia
+pacman -Q | grpe nvidia
+pacman -Q | grep nvidia
+vi pkglist.txt
+nvidia-settings
+cd .config/
+ls
+lf
+nvidia-settings
+lf
+yay -Ss optimus
+yay -Ss "optimus indiciator"
+yay -Rns timeshift
+ncmpcpp
+lf
+man ssr
+man simplescreenrecorder
+lf
+config status
+config push
+lf
+cd .config/simplescreenrecorder
+config add settings.conf
+config commit -m "Added simple screen recorder confs"
+config push
+vidir
+lf
+lf
+lf
+view
+lf
+sudo pacman -S entr
+vi important-pkgs.txt
+lf
+cd downloads
+ls
+rm install.sh
+rm *.torrent
+ls
+wget https://archive.org/download/github.com-LukeSmithxyz-voidrice_-_2019-11-25_15-29-34/LukeSmithxyz-voidrice_-_2019-11-25_15-29-34.bundle
+ls
+git clone LukeSmithxyz-voidrice_-_2019-11-25_15-29-34.bundle
+ls
+lf
+lf
+lf
+cd code/learning/freecodecamp/responsive-web-design
+git add 6-css_flexbox/
+git status
+git commit -m "Became a flexbox master. Moving onto CSS grid. May revist #5 later"
+git push
+yay -Ss btop
+sudo pacman -S btop
+btop
+sudo pacman -Rns htop
+btop
+lf
+cd .config
+config add btop
+config commit -m "Added btop"
+config push
+sudo pacman -Syu
+lf
+lf
+lf
+vi
+lf
+sudo pacman -Syu
+pkill qbittorrent
+lsblk
+umount /dev/sdc1
+sudo poweroff
+sudo pacman -Syu
+pacman -Ss pamac
+yay -Ss pamac
+yay -S pamac-all
+pacman -Ss libalpm
+sudo pacman -S pcurses
+pcurses
+sudo pacman -Syu
+kitty
+kitty &!
+lf
+history
+lf
+sudo pacman -Syu
+yay -S pamac-all
+lf
+lf
+lf
+lf
+lf
+yay -Ss obsidian
+vi vim-plugs.txt
+cd .config
+ls
+mkdir vim
+cd vim
+ls
+lf
+vi bindings.vim
+vi personal.vim
+vi sensible.vim
+vi plugins.vim
+lf
+lf
+lf
+vi vim-plugs.txt
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+sudo updatedb && locate xone
+lf
+vi
+lf
+lf
+ls
+ls -lah
+lf
+vi
+cd code/Teaching
+gcc learn-c.c -o foo
+./foo
+gcc learn-c.c
+./a.out
+gcc learn-c.c
+./foo
+gcc learn-c.c
+./a.out
+lf
+vi print.c
+vi print.c
+gcc print.c
+./a.out
+rm a.out
+rm print.c
+vi 
+lf
+redshift &!
+sudo pacman -Syu
+lf
+echo -e '\033[?16;0;224c'
+vi
+man ehco
+man echo
+lf
+sudo poweroff
+sudo pacman -Syu
+se
+which reflector
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+kf
+lf
+lf
+f
+cd code/learning/freecodecamp/responsive-web-design/projects
+ls
+git status
+lf
+git status
+git add -u
+git commit -m "Worked on first project"
+cd ..
+ls
+git add 7-Create_Your_First_CSS_Grid/
+git commit -m "Became a grid master"
+git push
+lf
+cd code/learning/freecodecamp/responsive-web-design/projects/tribute-page
+ls
+git status
+git add -u 
+vi index.html
+vi style.css
+lf
+sudo pacman -Syu
+lf
+lf
+lslblk
+lsblk
+umount /dev/sdd1
+lf
+lf
+lf
+f
+lf
+lf
+vo
+vi
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+cd archive/assets/games
+ls
+unalias ls
+for f in $(ls) printf("$f")\
+
+for
+for f in $(ls)\
+printf $f
+for f in $(ls)\
+printf $f\n
+for f in $(ls)\
+printf "$f\n"
+ls
+vi script.sh
+chmod +x script.sh
+./script.sh
+lf
+./script.sh
+vi script.sh
+./script.sh
+vi script.sh
+./script.sh
+vi script.sh
+./script.sh
+vi script.sh
+ls
+vi script.sh
+./script.sh
+vi script.sh
+echo "$f" | sed 's/\.zip//g'
+ls
+ls | sed "sed 's/\.zip//g'"
+ls | sed 's/\.zip//g'
+vi script.sh
+for f in $ls \
+newdir=$(echo $f | sed 's/\.zip//g')
+for f in $ls \
+newdir=$(echo $f | sed 's/\.zip//g') && echo $newdir
+vi script.sh
+lf
+vi
+files=$(ls)
+echo ${#files[@]}
+ls
+ls | wc -l
+lf
+lf
+cd archive/assets/test
+ls
+unalias ls
+ls
+fd
+fd
+vi mybash.sh
+vi mybash.sh
+vi mybash.sh
+lf
+redshift &!
+lf
+lf
+lf
+kmix
+xkill
+kmix
+htop
+btop
+btop
+lsblk
+pkill qbittorrent
+umount /dev/sdc1
+sudo poweroff
+sudo pacman -Syu
+anki
+lf
+cd archive/assets/test
+rmdir $'\n'
+ls
+lf
+lf
+man rofi
+lf
+sherlock265
+man $_
+lf
+sudo pacman -Syu
+yay -Syua
+lf
+lf
+vi
+cd archive/assets/test
+ls
+vidir
+ls
+./s*
+./script.sh
+./script.sh
+./script.sh
+./script.sh
+./script.sh
+./script.sh
+./script.sh
+ls
+lf
+man unzip
+ls
+vidir
+lf
+ls
+./script.sh
+ls
+lf
+vidir
+vidir
+ls
+lf
+ls
+lf
+ls
+lf
+cd ~/code/learning/freecodecamp/responsive-web-design/projects/product_landing_page
+vidir
+ls
+cd img
+ls
+vidir
+vidir
+ls
+cd ..
+ls
+lf
+lf
+lf
+yay -Ss brave
+yay -S brave-bin
+lf
+lf
+lsblk
+lf
+lf
+lf
+lf
+lkf
+lf
+vi
+lf
+lf
+lf
+cd code/learning/freecodecamp/responsive-web-design/projects/
+git add product_landing_page/
+git commit -m "Made the weebiest website ever. Ashamed to admit how long it took"
+git push
+man npm
+man npx
+lf
+lf
+lf
+lf
+lsblk
+pkill qbittorrent
+umount /dev/sdc1
+sudo poweroff
+anki
+sudo pacman -Syu
+lf
+cd /usr/share/doc/arch-wiki
+ls
+lf
+man mktemp
+br
+ls
+lf
+git status
+git add responsive-web-design/projects/tribute-page/
+git status
+git commit -m "Fixed some typos"
+git push
+lf
+br
+ls
+lf
+lf
+lf
+lf
+lf
+lf
+vi
+lf
+lf
+lf
+lf
+vi test.html
+lf
+firefox -h
+lf
+lf
+lf
+lf
+yay -Ss pandoc
+lf
+lf
+lf
+lf
+lf
+cd .hidden
+ls
+cd [
+cd \[131031\]\ \[MangaGamer\]\ Demon\ Master\ Chris
+ls
+./DMC.sh &!
+lf
+lf
+lf
+f
+lf
+lf
+cd .hidden/\[131031\]\ \[MangaGamer\]\ Demon\ Master\ Chris/
+ls
+./DMC.sh
+pulsemixer
+: 1644441654:0;pulsemixer
+: 1644446646:0;lsblk
+: 1644446649:0;umount /dev/sdc1
+: 1644446726:0;pulsemixer
+: 1644451842:0;./DMC.sh&!
+: 1644451870:0;pulsemixer
+: 1644454245:0;pulsemixer
+: 1644456661:0;lf
+: 1644459585:0;sudo pacman -Syu
+: 1644459834:0;sx
+: 1644459929:0;redshift &!
+: 1644460209:0;lf
+: 1644460212:0;lf
+: 1644460574:0;lf
+: 1644462243:0; lf
+: 1644463791:0;sudo poweroff
+: 1644492994:0;sudo pacman -Syu
+: 1644493010:0;yay -Syua
+: 1644493748:0;lf
+: 1644493894:0;lf
+: 1644493953:0;config status
+: 1644493959:0;cd .config
+: 1644493963:0;cd kitty
+: 1644493972:0;man git
+: 1644493981:0;git-diff
+: 1644493992:0;cat kitty
+: 1644493997:0;cat kitty.conf
+: 1644494065:0;config add kitty.conf
+: 1644494070:0;cd ../lf
+: 1644494077:0;config add lfrc
+: 1644494084:0;cd ../lvim
+: 1644494095:0;config add config.lua
+: 1644494096:0;ls
+: 1644494100:0;config add init.vim
+: 1644494108:0;config add lua/plugins.lua
+: 1644494138:0;config commit -m "Added css color vim plugin"
+: 1644494145:0;cd ../mpv
+: 1644494147:0;ls
+: 1644494148:0;lf
+: 1644494165:0;config add persistent_config.json
+: 1644494169:0;cd ../simplescreenrecorder
+: 1644494169:0;ls
+: 1644494175:0;cat settings.conf
+: 1644494187:0;config add settings.conf
+: 1644494197:0;config commit -m "Did stuff"
+: 1644494208:0;config push
+: 1644494231:0;lf
+: 1644494334:0;lf
+: 1644495208:0;lf
+: 1644495249:0;lf
+: 1644495260:0;cd code/learning/freecodecamp/responsive-web-design/projects/personal_portfolio_webpage
+: 1644495260:0;ls
+: 1644495266:0;vi index.html
+: 1644495302:0;lf
+: 1644496178:0;lf
+: 1644497064:0;;f
+: 1644497065:0;lf
+: 1644497070:0;ls
+: 1644497213:0;vi index.html
+: 1644500064:0;lf
+: 1644500067:0;cd ..
+: 1644500069:0;git status
+: 1644500074:0;git add personal_portfolio_webpage/
+: 1644500089:0;git commit -m "Became a certified web-dev god"
+: 1644500091:0;git push
+: 1644500095:0;lf
+: 1644500137:0;vi
+: 1644503056:0;kf
+: 1644503057:0;lf
+: 1644503574:0;lf
+: 1644504050:0;lf
+: 1644504145:0;lf
+: 1644504280:0;pacman -Ss xdotool
+: 1644504288:0;sudo pacman -S xdotool
+: 1644504315:0;sleep 1; xdotool type "Epic"
+: 1644504627:0;lf
+: 1644505067:0;lf
+: 1644505398:0;lf
+: 1644514994:0;lf
+: 1644515532:0;lf
+: 1644515739:0;lf
+: 1644515743:0;lf
+: 1644516233:0;cd code/challenges/karan-projects/numbers/find-pi
+: 1644516236:0;python solution.py
+: 1644516259:0;cd code/challenges/karan-projects/numbers/find-pi
+: 1644516264:0;python solution.py
+: 1644516508:0;python solution.py
+: 1644516511:0;ls
+: 1644516516:0;python main.py
+: 1644516522:0;python main.py -h
+: 1644516538:0;python main.py -h
+: 1644516597:0;python main.py -h
+: 1644516855:0;python main.py -h
+: 1644516903:0;python main.py 5
+: 1644516947:0;python main.py 5
+: 1644516952:0;python main.py 500
+: 1644516983:0;python main.py 500
+: 1644517024:0;lf
+: 1644517071:0;lf
+: 1644519209:0;sudo pacman -S dmenu
+: 1644519217:0;man dmenu
+: 1644519220:0;dmenu
+: 1644519225:0;man dmenu
+: 1644519249:0;lf
+: 1644521386:0;cd code/challenges/karan-projects/numbers/find-pi/rust/target/debug
+: 1644521387:0;ls
+: 1644521393:0;./rust 5
+: 1644521394:0;ls
+: 1644521395:0;lf
+: 1644521402:0;cd ...
+: 1644521404:0;cd ..
+: 1644521406:0;cd ..
+: 1644521406:0;ks
+: 1644521407:0;ls
+: 1644521409:0;lf
+: 1644521931:0;cargo build
+: 1644521935:0;cargo run
+: 1644521941:0;cargo run --  4
+: 1644522008:0;cargo build 
+: 1644522012:0;cargo run -- 5
+: 1644522031:0;cargo run -- 5
+: 1644522087:0;cargo run -- 5
+: 1644522118:0;cargo run -- 5
+: 1644522280:0;cargo run -- 5
+: 1644522306:0;cargo run -- 5
+: 1644522314:0;cargo run -- 5
+: 1644522380:0;cargo run -- 5
+: 1644522389:0;cargo run -- 5
+: 1644522530:0;cargo run -- 5
+: 1644523879:0;lf
+: 1644523961:0;lf
+: 1644523976:0;cd code/challenges/karan-projects/numbers/2-find-e
+: 1644523978:0;ls
+: 1644523985:0;cd ../1-find-pi
+: 1644523986:0;ls
+: 1644523987:0;cat main.py
+: 1644524026:0;cd code/challenges/karan-projects/numbers/2-find-e
+: 1644524027:0;ls
+: 1644524038:0;python main.py 5
+: 1644524069:0;python main.py 5
+: 1644524077:0;python main.py 500
+: 1644524464:0;python main.py 500
+: 1644524562:0;python main.py 500
+: 1644524588:0;python main.py 500
+: 1644530711:0;cd ..
+: 1644530711:0;ls
+: 1644530713:0;cd 2-find-e
+: 1644530723:0;python main.py
+: 1644530726:0;python main.py -h
+: 1644530743:0;python main.py 50 50
+: 1644530751:0;python main.py 5 5
+: 1644531134:0;python main.py 5 5
+: 1644538536:0;lf
+: 1644539430:0;redshift &!
+: 1644540089:0;cd rust
+: 1644540089:0;ls
+: 1644540091:0;cargo build
+: 1644540095:0;cargo run
+: 1644540107:0;cargo run -- 5
+: 1644540117:0;cargo run -- 5
+: 1644540291:0;cargo run -- 5
+: 1644540509:0;cargo run -- string
+: 1644540953:0;cargo run -- string
+: 1644540979:0;cargo run -- string
+: 1644541711:0;cargo run -- 22
+: 1644542249:0;lf
+: 1644543146:0;lf
+: 1644543391:0;cd code/learning/book/python/boring-stuff
+: 1644543398:0;python regex.py
+: 1644543413:0;python regex.py | xclip -sel c
+: 1644543795:0;sudo pacman -Syu
+: 1644547560:0;sudo poweroff
+: 1644582585:0;sudo pacman -Syu
+: 1644582882:0;sudo pacman -S ttf-croscore
+: 1644582908:0;sudo pacman -Rns ttf-croscore
+: 1644582942:0;sudo pacman -S ttf-croscore
+: 1644583096:0;lf
+: 1644583543:0;cd code/challenges/karan-projects/numbers/3-fibonnaci-sequence
+: 1644583586:0;python main.py
+: 1644583618:0;python main.py
+: 1644583652:0;lf
+: 1644585096:0;ls
+: 1644585104:0;python main.py 
+: 1644585113:0;python main.py 
+: 1644585125:0;python main.py7
+: 1644585132:0;python main.py 7
+: 1644585303:0;python main.py 7
+: 1644585360:0;python main.py 7
+: 1644585387:0;python main.py 7
+: 1644585461:0;python main.py 7
+: 1644585488:0;python main.py 7
+: 1644585506:0;python main.py 7
+: 1644585595:0;python main.py 7
+: 1644585637:0;python main.py 7
+: 1644585686:0;python main.py
+: 1644585729:0;python main.py
+: 1644585784:0;python main.py
+: 1644585803:0;python main.py
+: 1644585810:0;python main.py
+: 1644586082:0;python main.py -m 3
+: 1644586092:0;python main.py --method 3
+: 1644586098:0;python main.py 2 --method 3
+: 1644586311:0;cat main.py
+: 1644586427:0;lf
+: 1644592096:0;lf
+: 1644592344:0;cd rust
+: 1644592345:0;ls
+: 1644592348:0;cargo check
+: 1644593467:0;cd ..
+: 1644593468:0;ls
+: 1644593470:0;cat main.py
+: 1644594115:0;lf
+: 1644594178:0;lf
+: 1644595180:0;lf
+: 1644595270:0;vi 
+: 1644595291:0;vi
+: 1644596169:0;anki
+: 1644596195:0;anki
+: 1644596352:0;vi test.cpp
+: 1644597358:0;lf
+: 1644597911:0;vi
+: 1644598041:0;lf
+: 1644598344:0;lf
+: 1644598466:0;pacman -Ss mdbook
+: 1644598472:0;sudo pacman -S mdbook
+: 1644598478:0;lf
+: 1644598804:0;lf
+: 1644599350:0;lf
+: 1644599409:0;lf
+: 1644599420:0;cd code/challenges/karan-projects/classic
+: 1644599423:0;ls
+: 1644599424:0;cd 1-collatz-conjecture
+: 1644599425:0;ls
+: 1644599428:0;python main.py
+: 1644599463:0;python main.py 3
+: 1644599531:0;python main.py 3
+: 1644599541:0;python main.py 3
+: 1644599643:0;python main.py 7
+: 1644599711:0;python main.py 7
+: 1644599725:0;python main.py st
+: 1644599729:0;python main.py -h
+: 1644599762:0;python main.py -h
+: 1644599823:0;python main.py -h
+: 1644599834:0;python main.py -h
+: 1644599839:0;python main.py 7
+: 1644600008:0;python main.py 7
+: 1644600024:0;python main.py 7
+: 1644602337:0;python main.py 20
+: 1644602341:0;python main.py 22
+: 1644602368:0;python main.py 22
+: 1644602372:0;python main.py 2220
+: 1644602870:0;lf
+: 1644603741:0;cd ..
+: 1644603741:0;ls
+: 1644603745:0;cd 2-sorting
+: 1644603746:0;ls
+: 1644603784:0;python bubble-sort.py
+: 1644603791:0;python bubble-sort.py
+: 1644603843:0;python bubble-sort.py
+: 1644604575:0;python bubble-sort.py
+: 1644604587:0;python bubble-sort.py
+: 1644606037:0;cd ..
+: 1644606040:0;cd ..
+: 1644606076:0;git init
+: 1644606081:0;ls
+: 1644606244:0;ls
+: 1644606257:0;git add README.md
+: 1644606265:0;git commit -m "Made the readme"
+: 1644606274:0;cd classic/1-collatz-conjecture
+: 1644606279:0;git add main.py
+: 1644606297:0;git commit -m "Solved the collatz conjecture in python recursively after much headache"
+: 1644606302:0;cd ../2-sorting
+: 1644606302:0;ls
+: 1644606309:0;cd ../..
+: 1644606312:0;cd numbers
+: 1644606312:0;ls
+: 1644606371:0;ls
+: 1644606375:0;lf
+: 1644606396:0;lf
+: 1644606471:0;git add 1-find-pi/
+: 1644606475:0;git commit -m "Found pi"
+: 1644606479:0;git add 2-find-e/
+: 1644606484:0;git commit -m "Found e"
+: 1644606490:0;git add 3-fibonnaci-sequence/
+: 1644606495:0;git commit -m "Fibbed"
+: 1644606510:0;lf
+: 1644606512:0;vi
+: 1644606515:0;lf
+: 1644606572:0;git remote add origin git@github.com:Shinji322/Projects.git
+: 1644606576:0;git push --force
+: 1644606588:0;git push --set-upstream origin main --force
+: 1644609107:0;sudo pacman -Syu
+: 1644609568:0;lf
+: 1644609741:0;yay -S vscodium-bin
+: 1644628926:0;redshift  &
+: 1644632227:0;pulsemixer
+: 1644636121:0;sudo poweroff
+: 1644667276:0;sudo pacman -Syu
+: 1644667720:0;lsblk
+: 1644667729:0;du
+: 1644667731:0;df
+: 1644667743:0;lf
+: 1644667752:0;cd /run/media/mokou/WD_BLACK
+: 1644667753:0;ls
+: 1644667759:0;cd archives
+: 1644667760:0;ls
+: 1644667762:0;cd youtube
+: 1644667762:0;ls
+: 1644667766:0;lf
+: 1644667853:0;lf
+: 1644667899:0;lf
+: 1644667908:0;lf
+: 1644667948:0;lf
+: 1644668410:0;lf
+: 1644668438:0;lf
+: 1644668963:0;lf
+: 1644668981:0;cd /run/media/mokou/WD_BLACK/archives
+: 1644668981:0;ls
+: 1644668982:0;lf
+: 1644669005:0;cd youtube
+: 1644669005:0;ls
+: 1644669008:0;cd channels
+: 1644669009:0;ls
+: 1644669010:0;lf
+: 1644669137:0;lf
+: 1644669161:0;lf
+: 1644671003:0;lf
+: 1644671010:0;cd .hidden/\[131031\]\ \[MangaGamer\]\ Demon\ Master\ Chris
+: 1644671011:0;;s
+: 1644671012:0;ls
+: 1644671016:0;./DMC.sh &!
+: 1644671037:0;lf
+: 1644673114:0;anki
+: 1644673162:0;yay -Syua
+: 1644675818:0;sudo pacman -Syu
+: 1644675827:0;sx
+: 1644676245:0;lf
+: 1644676512:0;yay -Ss grabber
+: 1644676535:0;yay -S imgbrd-grabber-bin
+: 1644676586:0;yay -Rs imgbrd-grabber-bin
+: 1644676589:0;lf
+: 1644677647:0;lf
+: 1644677739:0;vi grabber-msg
+: 1644678135:0;vi .html
+: 1644678766:0;pacman -Ss peco
+: 1644678771:0;history
+: 1644678805:0;history 1
+: 1644678812:0;lf
+: 1644678919:0;history 1
+: 1644678922:0;history
+: 1644678938:0;lf
+: 1644678968:0;hist
+: 1644678973:0;lf
+: 1644680038:0;lf
+: 1644680080:0;cd images/anime
+: 1644680083:0;ls
+: 1644680184:0;lf
+: 1644680370:0;ls
+: 1644680500:0;vi 
+: 1644680756:0;rm $_
+: 1644683303:0;sudo pacman -Syu
+: 1644683394:0;lf
+: 1644683436:0;lf
+: 1644683443:0;cd vimwiki
+: 1644683444:0;ls
+: 1644683448:0;vi cyberleaks.txt
+: 1644683450:0;lf
+: 1644683582:0;lf
+: 1644683721:0;lf
+: 1644683842:0;lf
+: 1644684032:0;nvim index.wiki
+: 1644684036:0;unalias nvim
+: 1644684039:0;nvim index.wiki
+: 1644684057:0;lf
+: 1644684157:0;mkdir notes
+: 1644684159:0;cd notes
+: 1644684167:0;cd ..
+: 1644684169:0;rmdir notes
+: 1644684169:0;lf
+: 1644684413:0;sudo pacman -Ss pandoc
+: 1644684419:0;sudo pacman -S padnoc
+: 1644684422:0;sudo pacman -S pandoc
+: 1644684484:0;vi important-pkgs.txt
+: 1644684540:0;man pandoc
+: 1644687071:0;lf
+: 1644687094:0;cd software/source/personal
+: 1644687095:0;ls
+: 1644687096:0;cd github
+: 1644687097:0;ls
+: 1644687099:0;cd file-tree/
+: 1644687100:0;ls
+: 1644687101:0;lf
+: 1644687106:0;cd images
+: 1644687108:0;mkdir anime
+: 1644687110:0;cd $_
+: 1644687110:0;ls
+: 1644687113:0;lf
+: 1644687165:0;cd ../..
+: 1644687165:0;ls
+: 1644687172:0;chmod +x remove.sh
+: 1644687174:0;ls
+: 1644687175:0;lf
+: 1644687238:0;fd . .gitkeep
+: 1644687241:0;fd .
+: 1644687246:0;man fd
+: 1644687258:0;man fd
+: 1644687315:0;fd -H -e .gitkeep
+: 1644687359:0;fd -H -e .gitkeep
+: 1644687367:0;fd .gitkeep . 
+: 1644687372:0;fd -R
+: 1644687375:0;fd -h
+: 1644687390:0;fd -h | grep sub
+: 1644687441:0;fd 
+: 1644687454:0;fd --min-depth 5
+: 1644687460:0;fd --max-depth 5
+: 1644687469:0;fd --max-depth 5
+: 1644687480:0;fd --max-depth 5 -H 
+: 1644687486:0;fd --max-depth 5 -H | grep .gitkeep
+: 1644687493:0;lf
+: 1644687509:0;cd ..
+: 1644687509:0;ls
+: 1644687512:0;cd file-tree.\~1\~
+: 1644687512:0;ls
+: 1644687515:0;vi remove.sh
+: 1644687523:0;hist
+: 1644687545:0;/bin/ls -R
+: 1644687550:0;/bin/ls -R | grep .gitkeep
+: 1644687555:0;/bin/ls -Rh | grep .gitkeep
+: 1644687562:0;unalias ls
+: 1644687564:0;ls -lah
+: 1644687569:0;ls -a
+: 1644687572:0;ls -l
+: 1644687575:0;ls -h
+: 1644687590:0;ls -a -R | grep .gitkeep
+: 1644687594:0;ls -a -R 
+: 1644687610:0;vi remove.sh
+: 1644687621:0;man find
+: 1644687628:0;lf
+: 1644687643:0;vi remove.sh
+: 1644687647:0;man find
+: 1644687693:0;find 
+: 1644687697:0;unalias find
+: 1644687698:0;find
+: 1644687703:0;find .gitkeep
+: 1644687713:0;find | grep .gitkeep
+: 1644687723:0;rm $_
+: 1644687728:0;find | grep .gitkeep
+: 1644687747:0;rm $(find | grep .gitkeep)
+: 1644687750:0;find | grep .gitkeep
+: 1644687751:0;ls
+: 1644687753:0;lf
+: 1644687759:0;hist
+: 1644687765:0;lf
+: 1644687802:0;cd ..
+: 1644687805:0;rm file-tree.\~1\~
+: 1644687807:0;ls
+: 1644687810:0;lf
+: 1644687814:0;cd file-tree
+: 1644687814:0;ls
+: 1644687818:0;ls
+: 1644687819:0;lf
+: 1644687825:0;git add remove.sh
+: 1644687841:0;git commit -m "Added script to remove all .gitkeep files after deployment"
+: 1644687845:0;git push
+: 1644687847:0;lf
+: 1644691018:0;git diff
+: 1644691022:0;git status
+: 1644691035:0;git add games/README.md
+: 1644691041:0;git add images/README/md
+: 1644691046:0;git add images/README.md
+: 1644691055:0;git add images/anime/.gitkeep
+: 1644691063:0;git add literature/README.md
+: 1644691070:0;git add music/README.md
+: 1644691098:0;git add music/norm/.gitkeep
+: 1644691106:0;git add music/vgm/.gitkeep
+: 1644691127:0;git add music/vgm/touhou/.gitkeep
+: 1644691132:0;git add software/README.md
+: 1644691137:0;git add software/source/personal/.gitkeep
+: 1644691142:0;git add software/source/repos/.gitkeep
+: 1644691149:0;git add video/README.md
+: 1644691152:0;cd video
+: 1644691153:0;ls
+: 1644691267:0;git commit -m "Updated some directories"
+: 1644691274:0;git push
+: 1644691947:0;lf
+: 1644692979:0;lf
+: 1644693180:0;lf
+: 1644693188:0;lf
+: 1644693765:0;lf
+: 1644711980:0;redshift &!
+: 1644724529:0;lsblk
+: 1644724533:0;cd
+: 1644724536:0;umount /dev/sdc1
+: 1644724551:0;umount /dev/sdc1
+: 1644724567:0;sudo poweroff
+: 1644786463:0;vi quicksort.py
+: 1644792089:0;sudo pacman -Syu
+: 1644792136:0;yay -Syua
+: 1644792140:0;sx
+: 1644792696:0;vi
+: 1644792777:0;nvidia-settings
+: 1644792881:0;glxinfo | grep NVIDIA
+: 1644792886:0;glxinfo 
+: 1644792945:0;glxinfo| grep opengl
+: 1644792995:0;PPSSPP
+: 1644793012:0;sudo updatedb && locate ppsspp
+: 1644793017:0;sudo updatedb 
+: 1644793034:0;sudo updatedb && locate ppsspp | grep .desktop
+: 1644793043:0;cd /usr/share/applications
+: 1644793044:0;ls
+: 1644793050:0;cat ppsspp-qt.desktop
+: 1644793057:0;cat ppsspp-sdl.desktop
+: 1644793071:0;prime-run PPSSPPDL
+: 1644793111:0;prime-run glxinfo | grep "OpenGL"
+: 1644793132:0;sudo lvim ppsspp-sdl.desktop
+: 1644793137:0;lf
+: 1644793198:0;sudo lvim ppsspp-sdl.desktop
+: 1644793201:0;lvim
+: 1644793261:0;vi
+: 1644798000:0;lf
+: 1644798008:0;lf
+: 1644798133:0;lf
+: 1644798137:0;lf
+: 1644798562:0;lf
+: 1644799420:0;lf
+: 1644799575:0;cd /run/media/mokou/My\ Passport/games/vns/Sakura/Sakura\ Dungeon
+: 1644799588:0;cd ..
+: 1644799606:0;cp -r Sakura\ Dungeon ~/.hidden
+: 1644799702:0;cd $_
+: 1644799708:0;cd Sakura\ Dungeon
+: 1644799709:0;ls
+: 1644799718:0;./sakura_dungeon.sh&!
+: 1644799762:0;zathura Game\ Manual.pdf
+: 1644799795:0;lf
+: 1644802529:0;lsblk
+: 1644802539:0;umount /dev/sdd1
+: 1644802545:0;umount /dev/sdc1
+: 1644802634:0;sudo poweroff
+: 1644839759:0;sudo pacman -Syu
+: 1644840630:0;anki
+: 1644840687:0;lf
+: 1644840768:0;cd literature
+: 1644840768:0;l
+: 1644840769:0;ls
+: 1644840772:0;lf
+: 1644840808:0;l
+: 1644840817:0;cd literature
+: 1644840818:0;l
+: 1644840822:0;ls
+: 1644840823:0;lf
+: 1644840833:0;cd education/COMPUTERS/Data\ Structures\ and\ Algorithms
+: 1644840836:0;zathura Aditya\ Bhargava\ -\ Grokking\ Algorithms_\ An\ illustrated\ guide\ for\ programmers\ and\ other\ curious\ people-Manning\ Publications\ \(2016\).pdf
+: 1644840845:0;zathura Aditya\ Bhargava\ -\ Grokking\ Algorithms_\ An\ illustrated\ guide\ for\ programmers\ and\ other\ curious\ people-Manning\ Publications\ \(2016\).pdf &!
+: 1644840905:0;lf
+: 1644841431:0;lf
+: 1644841459:0;cd documents/obsidian/Computer\ Science/
+: 1644841475:0;mkdir data-structures-and-algorithms
+: 1644841479:0;cd $-
+: 1644841485:0;cd data-structures-and-algorithms
+: 1644841494:0;man mf
+: 1644841529:0;mkdir 1-grokking
+: 1644841531:0;cd $_
+: 1644841565:0;hist | fzf
+: 1644841622:0;l
+: 1644841676:0;mkdir 4-quicksort
+: 1644841694:0;cd $_
+: 1644841701:0;lvim quicksort.md
+: 1644841715:0;lf
+: 1644841757:0;cd documents/obsidian/Computer\ Science/data-structures-and-algorithms/1-grokking/4-quicksort
+: 1644841768:0;lvim quicksort.md
+: 1644842009:0;lf
+: 1644842197:0;lvim quicksort.md
+: 1644842370:0;lvim quicksort.md
+: 1644842380:0;cat quicksort.py
+: 1644842702:0;vi
+: 1644842705:0;lf
+: 1644845003:0;lvim quicksort.md
+: 1644845262:0;lf
+: 1644845288:0;man env
+: 1644845475:0;man zathura
+: 1644845513:0;lf
+: 1644848447:0;lf
+: 1644848916:0;cd ../1-big-o
+: 1644848921:0;vi binary_search.py
+: 1644849176:0;lf
+: 1644850450:0;vi bi
+: 1644850453:0;vi binary_search.py
+: 1644850906:0;lf
+: 1644850923:0;man flameshot
+: 1644851065:0;lf
+: 1644851090:0;lf
+: 1644851120:0;vi
+: 1644851488:0;vi selection-sort.py
+: 1644852105:0;lf
+: 1644852772:0;lf
+: 1644852805:0;vi
+: 1644852812:0;pcurses
+: 1644852856:0;lf
+: 1644853507:0;lf
+: 1644857821:0;man prime
+: 1644857835:0;sudo pacman -Syu
+: 1644857845:0;sudo updatedb
+: 1644857920:0;hist | awk '{print $2}'
+: 1644857930:0;hist
+: 1644857949:0;history 2
+: 1644857953:0;history 3
+: 1644857960:0;man history
+: 1644859401:0;lf
+: 1644859581:0;lf
+: 1644862194:0;cd .hidden/Sakura\ Dungeon
+: 1644862194:0;ls
+: 1644862197:0;l
+: 1644862206:0;./sakura_dungeon.sh
+: 1644865289:0;lf
+: 1644865855:0;lf
+: 1644865957:0;lf
+: 1644866035:0;lf
+: 1644866158:0;lf
+: 1644867589:0;vi merge_sort.py
+: 1644868750:0;python merge_sort.py
+: 1644868859:0;python merge_sort.py
+: 1644868904:0;python merge_sort.py
+: 1644869233:0;python merge_sort.py
+: 1644869269:0;python merge_sort.py
+: 1644869311:0;python merge_sort.py
+: 1644869455:0;python merge_sort.py
+: 1644869476:0;python merge_sort.py
+: 1644869515:0;python merge_sort.py
+: 1644869764:0;python merge_sort.py
+: 1644869884:0;vi test.py
+: 1644870001:0;rm $_
+: 1644870003:0;python merge_sort.py
+: 1644870045:0;vi new.py
+: 1644870101:0;python new.py
+: 1644870104:0;vi new.py
+: 1644870124:0;python new.py
+: 1644870126:0;vi new.py
+: 1644870146:0;lf
+: 1644870171:0;lf
+: 1644870233:0;lf
+: 1644870269:0;cd ../4-quicksort
+: 1644870274:0;python quicksort.py
+: 1644870310:0;python quicksort.py
+: 1644870381:0;python quicksort.py
+: 1644870402:0;python quicksort.py
+: 1644870450:0;python quicksort.py
+: 1644870470:0;python quicksort.py
+: 1644870701:0;python quicksort.py
+: 1644870709:0;cat quicksort.py
+: 1644870805:0;cat quicksort.py
+: 1644870808:0;python quicksort.py
+: 1644870889:0;python quicksort.py
+: 1644881199:0;redshift &!
+: 1644885708:0;cd games
+: 1644885710:0;mkdir good-scenes
+: 1644885712:0;cd $_
+: 1644885715:0;yt-dlp https://www.youtube.com/watch?v=PvOOu4uJE08
+: 1644885721:0;yt-dlp "https://www.youtube.com/watch?v=PvOOu4uJE08"
+: 1644885788:0;lf
+: 1644887492:0;lf
+: 1644887505:0;cd documents/obsidian/Computer\ Science/data-structures-and-algorithms
+: 1644887505:0;ls
+: 1644887507:0;l
+: 1644887510:0;cd 1-grokking
+: 1644887511:0;l
+: 1644887514:0;cd 6-breadth-first-search
+: 1644887521:0;lvim graphs.md
+: 1644887569:0;lf
+: 1644887597:0;lf
+: 1644887682:0;lf
+: 1644888915:0;lf
+: 1644890476:0;sudo poweroff
+: 1644926066:0;sudo pacman -Syu
+: 1644926156:0;lf
+: 1644926373:0;yay -Syua
+: 1644926814:0;vi
+: 1644926844:0;lf
+: 1644926848:0;lf
+: 1644926856:0;cd ..
+: 1644926856:0;lf
+: 1644926860:0;lf
+: 1644930742:0;;f
+: 1644930746:0;lf
+: 1644930783:0;config status
+: 1644930799:0;cd .config/lvim
+: 1644930806:0;config add -u
