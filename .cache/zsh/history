@@ -2251,689 +2251,2401 @@ cd .hidden/\[131031\]\ \[MangaGamer\]\ Demon\ Master\ Chris/
 ls
 ./DMC.sh
 pulsemixer
-: 1644441654:0;pulsemixer
-: 1644446646:0;lsblk
-: 1644446649:0;umount /dev/sdc1
-: 1644446726:0;pulsemixer
-: 1644451842:0;./DMC.sh&!
-: 1644451870:0;pulsemixer
-: 1644454245:0;pulsemixer
-: 1644456661:0;lf
-: 1644459585:0;sudo pacman -Syu
-: 1644459834:0;sx
-: 1644459929:0;redshift &!
-: 1644460209:0;lf
-: 1644460212:0;lf
-: 1644460574:0;lf
-: 1644462243:0; lf
-: 1644463791:0;sudo poweroff
-: 1644492994:0;sudo pacman -Syu
-: 1644493010:0;yay -Syua
-: 1644493748:0;lf
-: 1644493894:0;lf
-: 1644493953:0;config status
-: 1644493959:0;cd .config
-: 1644493963:0;cd kitty
-: 1644493972:0;man git
-: 1644493981:0;git-diff
-: 1644493992:0;cat kitty
-: 1644493997:0;cat kitty.conf
-: 1644494065:0;config add kitty.conf
-: 1644494070:0;cd ../lf
-: 1644494077:0;config add lfrc
-: 1644494084:0;cd ../lvim
-: 1644494095:0;config add config.lua
-: 1644494096:0;ls
-: 1644494100:0;config add init.vim
-: 1644494108:0;config add lua/plugins.lua
-: 1644494138:0;config commit -m "Added css color vim plugin"
-: 1644494145:0;cd ../mpv
-: 1644494147:0;ls
-: 1644494148:0;lf
-: 1644494165:0;config add persistent_config.json
-: 1644494169:0;cd ../simplescreenrecorder
-: 1644494169:0;ls
-: 1644494175:0;cat settings.conf
-: 1644494187:0;config add settings.conf
-: 1644494197:0;config commit -m "Did stuff"
-: 1644494208:0;config push
-: 1644494231:0;lf
-: 1644494334:0;lf
-: 1644495208:0;lf
-: 1644495249:0;lf
-: 1644495260:0;cd code/learning/freecodecamp/responsive-web-design/projects/personal_portfolio_webpage
-: 1644495260:0;ls
-: 1644495266:0;vi index.html
-: 1644495302:0;lf
-: 1644496178:0;lf
-: 1644497064:0;;f
-: 1644497065:0;lf
-: 1644497070:0;ls
-: 1644497213:0;vi index.html
-: 1644500064:0;lf
-: 1644500067:0;cd ..
-: 1644500069:0;git status
-: 1644500074:0;git add personal_portfolio_webpage/
-: 1644500089:0;git commit -m "Became a certified web-dev god"
-: 1644500091:0;git push
-: 1644500095:0;lf
-: 1644500137:0;vi
-: 1644503056:0;kf
-: 1644503057:0;lf
-: 1644503574:0;lf
-: 1644504050:0;lf
-: 1644504145:0;lf
-: 1644504280:0;pacman -Ss xdotool
-: 1644504288:0;sudo pacman -S xdotool
-: 1644504315:0;sleep 1; xdotool type "Epic"
-: 1644504627:0;lf
-: 1644505067:0;lf
-: 1644505398:0;lf
-: 1644514994:0;lf
-: 1644515532:0;lf
-: 1644515739:0;lf
-: 1644515743:0;lf
-: 1644516233:0;cd code/challenges/karan-projects/numbers/find-pi
-: 1644516236:0;python solution.py
-: 1644516259:0;cd code/challenges/karan-projects/numbers/find-pi
-: 1644516264:0;python solution.py
-: 1644516508:0;python solution.py
-: 1644516511:0;ls
-: 1644516516:0;python main.py
-: 1644516522:0;python main.py -h
-: 1644516538:0;python main.py -h
-: 1644516597:0;python main.py -h
-: 1644516855:0;python main.py -h
-: 1644516903:0;python main.py 5
-: 1644516947:0;python main.py 5
-: 1644516952:0;python main.py 500
-: 1644516983:0;python main.py 500
-: 1644517024:0;lf
-: 1644517071:0;lf
-: 1644519209:0;sudo pacman -S dmenu
-: 1644519217:0;man dmenu
-: 1644519220:0;dmenu
-: 1644519225:0;man dmenu
-: 1644519249:0;lf
-: 1644521386:0;cd code/challenges/karan-projects/numbers/find-pi/rust/target/debug
-: 1644521387:0;ls
-: 1644521393:0;./rust 5
-: 1644521394:0;ls
-: 1644521395:0;lf
-: 1644521402:0;cd ...
-: 1644521404:0;cd ..
-: 1644521406:0;cd ..
-: 1644521406:0;ks
-: 1644521407:0;ls
-: 1644521409:0;lf
-: 1644521931:0;cargo build
-: 1644521935:0;cargo run
-: 1644521941:0;cargo run --  4
-: 1644522008:0;cargo build 
-: 1644522012:0;cargo run -- 5
-: 1644522031:0;cargo run -- 5
-: 1644522087:0;cargo run -- 5
-: 1644522118:0;cargo run -- 5
-: 1644522280:0;cargo run -- 5
-: 1644522306:0;cargo run -- 5
-: 1644522314:0;cargo run -- 5
-: 1644522380:0;cargo run -- 5
-: 1644522389:0;cargo run -- 5
-: 1644522530:0;cargo run -- 5
-: 1644523879:0;lf
-: 1644523961:0;lf
-: 1644523976:0;cd code/challenges/karan-projects/numbers/2-find-e
-: 1644523978:0;ls
-: 1644523985:0;cd ../1-find-pi
-: 1644523986:0;ls
-: 1644523987:0;cat main.py
-: 1644524026:0;cd code/challenges/karan-projects/numbers/2-find-e
-: 1644524027:0;ls
-: 1644524038:0;python main.py 5
-: 1644524069:0;python main.py 5
-: 1644524077:0;python main.py 500
-: 1644524464:0;python main.py 500
-: 1644524562:0;python main.py 500
-: 1644524588:0;python main.py 500
-: 1644530711:0;cd ..
-: 1644530711:0;ls
-: 1644530713:0;cd 2-find-e
-: 1644530723:0;python main.py
-: 1644530726:0;python main.py -h
-: 1644530743:0;python main.py 50 50
-: 1644530751:0;python main.py 5 5
-: 1644531134:0;python main.py 5 5
-: 1644538536:0;lf
-: 1644539430:0;redshift &!
-: 1644540089:0;cd rust
-: 1644540089:0;ls
-: 1644540091:0;cargo build
-: 1644540095:0;cargo run
-: 1644540107:0;cargo run -- 5
-: 1644540117:0;cargo run -- 5
-: 1644540291:0;cargo run -- 5
-: 1644540509:0;cargo run -- string
-: 1644540953:0;cargo run -- string
-: 1644540979:0;cargo run -- string
-: 1644541711:0;cargo run -- 22
-: 1644542249:0;lf
-: 1644543146:0;lf
-: 1644543391:0;cd code/learning/book/python/boring-stuff
-: 1644543398:0;python regex.py
-: 1644543413:0;python regex.py | xclip -sel c
-: 1644543795:0;sudo pacman -Syu
-: 1644547560:0;sudo poweroff
-: 1644582585:0;sudo pacman -Syu
-: 1644582882:0;sudo pacman -S ttf-croscore
-: 1644582908:0;sudo pacman -Rns ttf-croscore
-: 1644582942:0;sudo pacman -S ttf-croscore
-: 1644583096:0;lf
-: 1644583543:0;cd code/challenges/karan-projects/numbers/3-fibonnaci-sequence
-: 1644583586:0;python main.py
-: 1644583618:0;python main.py
-: 1644583652:0;lf
-: 1644585096:0;ls
-: 1644585104:0;python main.py 
-: 1644585113:0;python main.py 
-: 1644585125:0;python main.py7
-: 1644585132:0;python main.py 7
-: 1644585303:0;python main.py 7
-: 1644585360:0;python main.py 7
-: 1644585387:0;python main.py 7
-: 1644585461:0;python main.py 7
-: 1644585488:0;python main.py 7
-: 1644585506:0;python main.py 7
-: 1644585595:0;python main.py 7
-: 1644585637:0;python main.py 7
-: 1644585686:0;python main.py
-: 1644585729:0;python main.py
-: 1644585784:0;python main.py
-: 1644585803:0;python main.py
-: 1644585810:0;python main.py
-: 1644586082:0;python main.py -m 3
-: 1644586092:0;python main.py --method 3
-: 1644586098:0;python main.py 2 --method 3
-: 1644586311:0;cat main.py
-: 1644586427:0;lf
-: 1644592096:0;lf
-: 1644592344:0;cd rust
-: 1644592345:0;ls
-: 1644592348:0;cargo check
-: 1644593467:0;cd ..
-: 1644593468:0;ls
-: 1644593470:0;cat main.py
-: 1644594115:0;lf
-: 1644594178:0;lf
-: 1644595180:0;lf
-: 1644595270:0;vi 
-: 1644595291:0;vi
-: 1644596169:0;anki
-: 1644596195:0;anki
-: 1644596352:0;vi test.cpp
-: 1644597358:0;lf
-: 1644597911:0;vi
-: 1644598041:0;lf
-: 1644598344:0;lf
-: 1644598466:0;pacman -Ss mdbook
-: 1644598472:0;sudo pacman -S mdbook
-: 1644598478:0;lf
-: 1644598804:0;lf
-: 1644599350:0;lf
-: 1644599409:0;lf
-: 1644599420:0;cd code/challenges/karan-projects/classic
-: 1644599423:0;ls
-: 1644599424:0;cd 1-collatz-conjecture
-: 1644599425:0;ls
-: 1644599428:0;python main.py
-: 1644599463:0;python main.py 3
-: 1644599531:0;python main.py 3
-: 1644599541:0;python main.py 3
-: 1644599643:0;python main.py 7
-: 1644599711:0;python main.py 7
-: 1644599725:0;python main.py st
-: 1644599729:0;python main.py -h
-: 1644599762:0;python main.py -h
-: 1644599823:0;python main.py -h
-: 1644599834:0;python main.py -h
-: 1644599839:0;python main.py 7
-: 1644600008:0;python main.py 7
-: 1644600024:0;python main.py 7
-: 1644602337:0;python main.py 20
-: 1644602341:0;python main.py 22
-: 1644602368:0;python main.py 22
-: 1644602372:0;python main.py 2220
-: 1644602870:0;lf
-: 1644603741:0;cd ..
-: 1644603741:0;ls
-: 1644603745:0;cd 2-sorting
-: 1644603746:0;ls
-: 1644603784:0;python bubble-sort.py
-: 1644603791:0;python bubble-sort.py
-: 1644603843:0;python bubble-sort.py
-: 1644604575:0;python bubble-sort.py
-: 1644604587:0;python bubble-sort.py
-: 1644606037:0;cd ..
-: 1644606040:0;cd ..
-: 1644606076:0;git init
-: 1644606081:0;ls
-: 1644606244:0;ls
-: 1644606257:0;git add README.md
-: 1644606265:0;git commit -m "Made the readme"
-: 1644606274:0;cd classic/1-collatz-conjecture
-: 1644606279:0;git add main.py
-: 1644606297:0;git commit -m "Solved the collatz conjecture in python recursively after much headache"
-: 1644606302:0;cd ../2-sorting
-: 1644606302:0;ls
-: 1644606309:0;cd ../..
-: 1644606312:0;cd numbers
-: 1644606312:0;ls
-: 1644606371:0;ls
-: 1644606375:0;lf
-: 1644606396:0;lf
-: 1644606471:0;git add 1-find-pi/
-: 1644606475:0;git commit -m "Found pi"
-: 1644606479:0;git add 2-find-e/
-: 1644606484:0;git commit -m "Found e"
-: 1644606490:0;git add 3-fibonnaci-sequence/
-: 1644606495:0;git commit -m "Fibbed"
-: 1644606510:0;lf
-: 1644606512:0;vi
-: 1644606515:0;lf
-: 1644606572:0;git remote add origin git@github.com:Shinji322/Projects.git
-: 1644606576:0;git push --force
-: 1644606588:0;git push --set-upstream origin main --force
-: 1644609107:0;sudo pacman -Syu
-: 1644609568:0;lf
-: 1644609741:0;yay -S vscodium-bin
-: 1644628926:0;redshift  &
-: 1644632227:0;pulsemixer
-: 1644636121:0;sudo poweroff
-: 1644667276:0;sudo pacman -Syu
-: 1644667720:0;lsblk
-: 1644667729:0;du
-: 1644667731:0;df
-: 1644667743:0;lf
-: 1644667752:0;cd /run/media/mokou/WD_BLACK
-: 1644667753:0;ls
-: 1644667759:0;cd archives
-: 1644667760:0;ls
-: 1644667762:0;cd youtube
-: 1644667762:0;ls
-: 1644667766:0;lf
-: 1644667853:0;lf
-: 1644667899:0;lf
-: 1644667908:0;lf
-: 1644667948:0;lf
-: 1644668410:0;lf
-: 1644668438:0;lf
-: 1644668963:0;lf
-: 1644668981:0;cd /run/media/mokou/WD_BLACK/archives
-: 1644668981:0;ls
-: 1644668982:0;lf
-: 1644669005:0;cd youtube
-: 1644669005:0;ls
-: 1644669008:0;cd channels
-: 1644669009:0;ls
-: 1644669010:0;lf
-: 1644669137:0;lf
-: 1644669161:0;lf
-: 1644671003:0;lf
-: 1644671010:0;cd .hidden/\[131031\]\ \[MangaGamer\]\ Demon\ Master\ Chris
-: 1644671011:0;;s
-: 1644671012:0;ls
-: 1644671016:0;./DMC.sh &!
-: 1644671037:0;lf
-: 1644673114:0;anki
-: 1644673162:0;yay -Syua
-: 1644675818:0;sudo pacman -Syu
-: 1644675827:0;sx
-: 1644676245:0;lf
-: 1644676512:0;yay -Ss grabber
-: 1644676535:0;yay -S imgbrd-grabber-bin
-: 1644676586:0;yay -Rs imgbrd-grabber-bin
-: 1644676589:0;lf
-: 1644677647:0;lf
-: 1644677739:0;vi grabber-msg
-: 1644678135:0;vi .html
-: 1644678766:0;pacman -Ss peco
-: 1644678771:0;history
-: 1644678805:0;history 1
-: 1644678812:0;lf
-: 1644678919:0;history 1
-: 1644678922:0;history
-: 1644678938:0;lf
-: 1644678968:0;hist
-: 1644678973:0;lf
-: 1644680038:0;lf
-: 1644680080:0;cd images/anime
-: 1644680083:0;ls
-: 1644680184:0;lf
-: 1644680370:0;ls
-: 1644680500:0;vi 
-: 1644680756:0;rm $_
-: 1644683303:0;sudo pacman -Syu
-: 1644683394:0;lf
-: 1644683436:0;lf
-: 1644683443:0;cd vimwiki
-: 1644683444:0;ls
-: 1644683448:0;vi cyberleaks.txt
-: 1644683450:0;lf
-: 1644683582:0;lf
-: 1644683721:0;lf
-: 1644683842:0;lf
-: 1644684032:0;nvim index.wiki
-: 1644684036:0;unalias nvim
-: 1644684039:0;nvim index.wiki
-: 1644684057:0;lf
-: 1644684157:0;mkdir notes
-: 1644684159:0;cd notes
-: 1644684167:0;cd ..
-: 1644684169:0;rmdir notes
-: 1644684169:0;lf
-: 1644684413:0;sudo pacman -Ss pandoc
-: 1644684419:0;sudo pacman -S padnoc
-: 1644684422:0;sudo pacman -S pandoc
-: 1644684484:0;vi important-pkgs.txt
-: 1644684540:0;man pandoc
-: 1644687071:0;lf
-: 1644687094:0;cd software/source/personal
-: 1644687095:0;ls
-: 1644687096:0;cd github
-: 1644687097:0;ls
-: 1644687099:0;cd file-tree/
-: 1644687100:0;ls
-: 1644687101:0;lf
-: 1644687106:0;cd images
-: 1644687108:0;mkdir anime
-: 1644687110:0;cd $_
-: 1644687110:0;ls
-: 1644687113:0;lf
-: 1644687165:0;cd ../..
-: 1644687165:0;ls
-: 1644687172:0;chmod +x remove.sh
-: 1644687174:0;ls
-: 1644687175:0;lf
-: 1644687238:0;fd . .gitkeep
-: 1644687241:0;fd .
-: 1644687246:0;man fd
-: 1644687258:0;man fd
-: 1644687315:0;fd -H -e .gitkeep
-: 1644687359:0;fd -H -e .gitkeep
-: 1644687367:0;fd .gitkeep . 
-: 1644687372:0;fd -R
-: 1644687375:0;fd -h
-: 1644687390:0;fd -h | grep sub
-: 1644687441:0;fd 
-: 1644687454:0;fd --min-depth 5
-: 1644687460:0;fd --max-depth 5
-: 1644687469:0;fd --max-depth 5
-: 1644687480:0;fd --max-depth 5 -H 
-: 1644687486:0;fd --max-depth 5 -H | grep .gitkeep
-: 1644687493:0;lf
-: 1644687509:0;cd ..
-: 1644687509:0;ls
-: 1644687512:0;cd file-tree.\~1\~
-: 1644687512:0;ls
-: 1644687515:0;vi remove.sh
-: 1644687523:0;hist
-: 1644687545:0;/bin/ls -R
-: 1644687550:0;/bin/ls -R | grep .gitkeep
-: 1644687555:0;/bin/ls -Rh | grep .gitkeep
-: 1644687562:0;unalias ls
-: 1644687564:0;ls -lah
-: 1644687569:0;ls -a
-: 1644687572:0;ls -l
-: 1644687575:0;ls -h
-: 1644687590:0;ls -a -R | grep .gitkeep
-: 1644687594:0;ls -a -R 
-: 1644687610:0;vi remove.sh
-: 1644687621:0;man find
-: 1644687628:0;lf
-: 1644687643:0;vi remove.sh
-: 1644687647:0;man find
-: 1644687693:0;find 
-: 1644687697:0;unalias find
-: 1644687698:0;find
-: 1644687703:0;find .gitkeep
-: 1644687713:0;find | grep .gitkeep
-: 1644687723:0;rm $_
-: 1644687728:0;find | grep .gitkeep
-: 1644687747:0;rm $(find | grep .gitkeep)
-: 1644687750:0;find | grep .gitkeep
-: 1644687751:0;ls
-: 1644687753:0;lf
-: 1644687759:0;hist
-: 1644687765:0;lf
-: 1644687802:0;cd ..
-: 1644687805:0;rm file-tree.\~1\~
-: 1644687807:0;ls
-: 1644687810:0;lf
-: 1644687814:0;cd file-tree
-: 1644687814:0;ls
-: 1644687818:0;ls
-: 1644687819:0;lf
-: 1644687825:0;git add remove.sh
-: 1644687841:0;git commit -m "Added script to remove all .gitkeep files after deployment"
-: 1644687845:0;git push
-: 1644687847:0;lf
-: 1644691018:0;git diff
-: 1644691022:0;git status
-: 1644691035:0;git add games/README.md
-: 1644691041:0;git add images/README/md
-: 1644691046:0;git add images/README.md
-: 1644691055:0;git add images/anime/.gitkeep
-: 1644691063:0;git add literature/README.md
-: 1644691070:0;git add music/README.md
-: 1644691098:0;git add music/norm/.gitkeep
-: 1644691106:0;git add music/vgm/.gitkeep
-: 1644691127:0;git add music/vgm/touhou/.gitkeep
-: 1644691132:0;git add software/README.md
-: 1644691137:0;git add software/source/personal/.gitkeep
-: 1644691142:0;git add software/source/repos/.gitkeep
-: 1644691149:0;git add video/README.md
-: 1644691152:0;cd video
-: 1644691153:0;ls
-: 1644691267:0;git commit -m "Updated some directories"
-: 1644691274:0;git push
-: 1644691947:0;lf
-: 1644692979:0;lf
-: 1644693180:0;lf
-: 1644693188:0;lf
-: 1644693765:0;lf
-: 1644711980:0;redshift &!
-: 1644724529:0;lsblk
-: 1644724533:0;cd
-: 1644724536:0;umount /dev/sdc1
-: 1644724551:0;umount /dev/sdc1
-: 1644724567:0;sudo poweroff
-: 1644786463:0;vi quicksort.py
-: 1644792089:0;sudo pacman -Syu
-: 1644792136:0;yay -Syua
-: 1644792140:0;sx
-: 1644792696:0;vi
-: 1644792777:0;nvidia-settings
-: 1644792881:0;glxinfo | grep NVIDIA
-: 1644792886:0;glxinfo 
-: 1644792945:0;glxinfo| grep opengl
-: 1644792995:0;PPSSPP
-: 1644793012:0;sudo updatedb && locate ppsspp
-: 1644793017:0;sudo updatedb 
-: 1644793034:0;sudo updatedb && locate ppsspp | grep .desktop
-: 1644793043:0;cd /usr/share/applications
-: 1644793044:0;ls
-: 1644793050:0;cat ppsspp-qt.desktop
-: 1644793057:0;cat ppsspp-sdl.desktop
-: 1644793071:0;prime-run PPSSPPDL
-: 1644793111:0;prime-run glxinfo | grep "OpenGL"
-: 1644793132:0;sudo lvim ppsspp-sdl.desktop
-: 1644793137:0;lf
-: 1644793198:0;sudo lvim ppsspp-sdl.desktop
-: 1644793201:0;lvim
-: 1644793261:0;vi
-: 1644798000:0;lf
-: 1644798008:0;lf
-: 1644798133:0;lf
-: 1644798137:0;lf
-: 1644798562:0;lf
-: 1644799420:0;lf
-: 1644799575:0;cd /run/media/mokou/My\ Passport/games/vns/Sakura/Sakura\ Dungeon
-: 1644799588:0;cd ..
-: 1644799606:0;cp -r Sakura\ Dungeon ~/.hidden
-: 1644799702:0;cd $_
-: 1644799708:0;cd Sakura\ Dungeon
-: 1644799709:0;ls
-: 1644799718:0;./sakura_dungeon.sh&!
-: 1644799762:0;zathura Game\ Manual.pdf
-: 1644799795:0;lf
-: 1644802529:0;lsblk
-: 1644802539:0;umount /dev/sdd1
-: 1644802545:0;umount /dev/sdc1
-: 1644802634:0;sudo poweroff
-: 1644839759:0;sudo pacman -Syu
-: 1644840630:0;anki
-: 1644840687:0;lf
-: 1644840768:0;cd literature
-: 1644840768:0;l
-: 1644840769:0;ls
-: 1644840772:0;lf
-: 1644840808:0;l
-: 1644840817:0;cd literature
-: 1644840818:0;l
-: 1644840822:0;ls
-: 1644840823:0;lf
-: 1644840833:0;cd education/COMPUTERS/Data\ Structures\ and\ Algorithms
-: 1644840836:0;zathura Aditya\ Bhargava\ -\ Grokking\ Algorithms_\ An\ illustrated\ guide\ for\ programmers\ and\ other\ curious\ people-Manning\ Publications\ \(2016\).pdf
-: 1644840845:0;zathura Aditya\ Bhargava\ -\ Grokking\ Algorithms_\ An\ illustrated\ guide\ for\ programmers\ and\ other\ curious\ people-Manning\ Publications\ \(2016\).pdf &!
-: 1644840905:0;lf
-: 1644841431:0;lf
-: 1644841459:0;cd documents/obsidian/Computer\ Science/
-: 1644841475:0;mkdir data-structures-and-algorithms
-: 1644841479:0;cd $-
-: 1644841485:0;cd data-structures-and-algorithms
-: 1644841494:0;man mf
-: 1644841529:0;mkdir 1-grokking
-: 1644841531:0;cd $_
-: 1644841565:0;hist | fzf
-: 1644841622:0;l
-: 1644841676:0;mkdir 4-quicksort
-: 1644841694:0;cd $_
-: 1644841701:0;lvim quicksort.md
-: 1644841715:0;lf
-: 1644841757:0;cd documents/obsidian/Computer\ Science/data-structures-and-algorithms/1-grokking/4-quicksort
-: 1644841768:0;lvim quicksort.md
-: 1644842009:0;lf
-: 1644842197:0;lvim quicksort.md
-: 1644842370:0;lvim quicksort.md
-: 1644842380:0;cat quicksort.py
-: 1644842702:0;vi
-: 1644842705:0;lf
-: 1644845003:0;lvim quicksort.md
-: 1644845262:0;lf
-: 1644845288:0;man env
-: 1644845475:0;man zathura
-: 1644845513:0;lf
-: 1644848447:0;lf
-: 1644848916:0;cd ../1-big-o
-: 1644848921:0;vi binary_search.py
-: 1644849176:0;lf
-: 1644850450:0;vi bi
-: 1644850453:0;vi binary_search.py
-: 1644850906:0;lf
-: 1644850923:0;man flameshot
-: 1644851065:0;lf
-: 1644851090:0;lf
-: 1644851120:0;vi
-: 1644851488:0;vi selection-sort.py
-: 1644852105:0;lf
-: 1644852772:0;lf
-: 1644852805:0;vi
-: 1644852812:0;pcurses
-: 1644852856:0;lf
-: 1644853507:0;lf
-: 1644857821:0;man prime
-: 1644857835:0;sudo pacman -Syu
-: 1644857845:0;sudo updatedb
-: 1644857920:0;hist | awk '{print $2}'
-: 1644857930:0;hist
-: 1644857949:0;history 2
-: 1644857953:0;history 3
-: 1644857960:0;man history
-: 1644859401:0;lf
-: 1644859581:0;lf
-: 1644862194:0;cd .hidden/Sakura\ Dungeon
-: 1644862194:0;ls
-: 1644862197:0;l
-: 1644862206:0;./sakura_dungeon.sh
-: 1644865289:0;lf
-: 1644865855:0;lf
-: 1644865957:0;lf
-: 1644866035:0;lf
-: 1644866158:0;lf
-: 1644867589:0;vi merge_sort.py
-: 1644868750:0;python merge_sort.py
-: 1644868859:0;python merge_sort.py
-: 1644868904:0;python merge_sort.py
-: 1644869233:0;python merge_sort.py
-: 1644869269:0;python merge_sort.py
-: 1644869311:0;python merge_sort.py
-: 1644869455:0;python merge_sort.py
-: 1644869476:0;python merge_sort.py
-: 1644869515:0;python merge_sort.py
-: 1644869764:0;python merge_sort.py
-: 1644869884:0;vi test.py
-: 1644870001:0;rm $_
-: 1644870003:0;python merge_sort.py
-: 1644870045:0;vi new.py
-: 1644870101:0;python new.py
-: 1644870104:0;vi new.py
-: 1644870124:0;python new.py
-: 1644870126:0;vi new.py
-: 1644870146:0;lf
-: 1644870171:0;lf
-: 1644870233:0;lf
-: 1644870269:0;cd ../4-quicksort
-: 1644870274:0;python quicksort.py
-: 1644870310:0;python quicksort.py
-: 1644870381:0;python quicksort.py
-: 1644870402:0;python quicksort.py
-: 1644870450:0;python quicksort.py
-: 1644870470:0;python quicksort.py
-: 1644870701:0;python quicksort.py
-: 1644870709:0;cat quicksort.py
-: 1644870805:0;cat quicksort.py
-: 1644870808:0;python quicksort.py
-: 1644870889:0;python quicksort.py
-: 1644881199:0;redshift &!
-: 1644885708:0;cd games
-: 1644885710:0;mkdir good-scenes
-: 1644885712:0;cd $_
-: 1644885715:0;yt-dlp https://www.youtube.com/watch?v=PvOOu4uJE08
-: 1644885721:0;yt-dlp "https://www.youtube.com/watch?v=PvOOu4uJE08"
-: 1644885788:0;lf
-: 1644887492:0;lf
-: 1644887505:0;cd documents/obsidian/Computer\ Science/data-structures-and-algorithms
-: 1644887505:0;ls
-: 1644887507:0;l
-: 1644887510:0;cd 1-grokking
-: 1644887511:0;l
-: 1644887514:0;cd 6-breadth-first-search
-: 1644887521:0;lvim graphs.md
-: 1644887569:0;lf
-: 1644887597:0;lf
-: 1644887682:0;lf
-: 1644888915:0;lf
-: 1644890476:0;sudo poweroff
-: 1644926066:0;sudo pacman -Syu
-: 1644926156:0;lf
-: 1644926373:0;yay -Syua
-: 1644926814:0;vi
-: 1644926844:0;lf
-: 1644926848:0;lf
-: 1644926856:0;cd ..
-: 1644926856:0;lf
-: 1644926860:0;lf
-: 1644930742:0;;f
-: 1644930746:0;lf
-: 1644930783:0;config status
-: 1644930799:0;cd .config/lvim
-: 1644930806:0;config add -u
+pulsemixer
+lsblk
+umount /dev/sdc1
+pulsemixer
+./DMC.sh&!
+pulsemixer
+pulsemixer
+lf
+sudo pacman -Syu
+sx
+redshift &!
+lf
+lf
+lf
+ lf
+sudo poweroff
+sudo pacman -Syu
+yay -Syua
+lf
+lf
+config status
+cd .config
+cd kitty
+man git
+git-diff
+cat kitty
+cat kitty.conf
+config add kitty.conf
+cd ../lf
+config add lfrc
+cd ../lvim
+config add config.lua
+ls
+config add init.vim
+config add lua/plugins.lua
+config commit -m "Added css color vim plugin"
+cd ../mpv
+ls
+lf
+config add persistent_config.json
+cd ../simplescreenrecorder
+ls
+cat settings.conf
+config add settings.conf
+config commit -m "Did stuff"
+config push
+lf
+lf
+lf
+lf
+cd code/learning/freecodecamp/responsive-web-design/projects/personal_portfolio_webpage
+ls
+vi index.html
+lf
+lf
+;f
+lf
+ls
+vi index.html
+lf
+cd ..
+git status
+git add personal_portfolio_webpage/
+git commit -m "Became a certified web-dev god"
+git push
+lf
+vi
+kf
+lf
+lf
+lf
+lf
+pacman -Ss xdotool
+sudo pacman -S xdotool
+sleep 1; xdotool type "Epic"
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+cd code/challenges/karan-projects/numbers/find-pi
+python solution.py
+cd code/challenges/karan-projects/numbers/find-pi
+python solution.py
+python solution.py
+ls
+python main.py
+python main.py -h
+python main.py -h
+python main.py -h
+python main.py -h
+python main.py 5
+python main.py 5
+python main.py 500
+python main.py 500
+lf
+lf
+sudo pacman -S dmenu
+man dmenu
+dmenu
+man dmenu
+lf
+cd code/challenges/karan-projects/numbers/find-pi/rust/target/debug
+ls
+./rust 5
+ls
+lf
+cd ...
+cd ..
+cd ..
+ks
+ls
+lf
+cargo build
+cargo run
+cargo run --  4
+cargo build 
+cargo run -- 5
+cargo run -- 5
+cargo run -- 5
+cargo run -- 5
+cargo run -- 5
+cargo run -- 5
+cargo run -- 5
+cargo run -- 5
+cargo run -- 5
+cargo run -- 5
+lf
+lf
+cd code/challenges/karan-projects/numbers/2-find-e
+ls
+cd ../1-find-pi
+ls
+cat main.py
+cd code/challenges/karan-projects/numbers/2-find-e
+ls
+python main.py 5
+python main.py 5
+python main.py 500
+python main.py 500
+python main.py 500
+python main.py 500
+cd ..
+ls
+cd 2-find-e
+python main.py
+python main.py -h
+python main.py 50 50
+python main.py 5 5
+python main.py 5 5
+lf
+redshift &!
+cd rust
+ls
+cargo build
+cargo run
+cargo run -- 5
+cargo run -- 5
+cargo run -- 5
+cargo run -- string
+cargo run -- string
+cargo run -- string
+cargo run -- 22
+lf
+lf
+cd code/learning/book/python/boring-stuff
+python regex.py
+python regex.py | xclip -sel c
+sudo pacman -Syu
+sudo poweroff
+sudo pacman -Syu
+sudo pacman -S ttf-croscore
+sudo pacman -Rns ttf-croscore
+sudo pacman -S ttf-croscore
+lf
+cd code/challenges/karan-projects/numbers/3-fibonnaci-sequence
+python main.py
+python main.py
+lf
+ls
+python main.py 
+python main.py 
+python main.py7
+python main.py 7
+python main.py 7
+python main.py 7
+python main.py 7
+python main.py 7
+python main.py 7
+python main.py 7
+python main.py 7
+python main.py 7
+python main.py
+python main.py
+python main.py
+python main.py
+python main.py
+python main.py -m 3
+python main.py --method 3
+python main.py 2 --method 3
+cat main.py
+lf
+lf
+cd rust
+ls
+cargo check
+cd ..
+ls
+cat main.py
+lf
+lf
+lf
+vi 
+vi
+anki
+anki
+vi test.cpp
+lf
+vi
+lf
+lf
+pacman -Ss mdbook
+sudo pacman -S mdbook
+lf
+lf
+lf
+lf
+cd code/challenges/karan-projects/classic
+ls
+cd 1-collatz-conjecture
+ls
+python main.py
+python main.py 3
+python main.py 3
+python main.py 3
+python main.py 7
+python main.py 7
+python main.py st
+python main.py -h
+python main.py -h
+python main.py -h
+python main.py -h
+python main.py 7
+python main.py 7
+python main.py 7
+python main.py 20
+python main.py 22
+python main.py 22
+python main.py 2220
+lf
+cd ..
+ls
+cd 2-sorting
+ls
+python bubble-sort.py
+python bubble-sort.py
+python bubble-sort.py
+python bubble-sort.py
+python bubble-sort.py
+cd ..
+cd ..
+git init
+ls
+ls
+git add README.md
+git commit -m "Made the readme"
+cd classic/1-collatz-conjecture
+git add main.py
+git commit -m "Solved the collatz conjecture in python recursively after much headache"
+cd ../2-sorting
+ls
+cd ../..
+cd numbers
+ls
+ls
+lf
+lf
+git add 1-find-pi/
+git commit -m "Found pi"
+git add 2-find-e/
+git commit -m "Found e"
+git add 3-fibonnaci-sequence/
+git commit -m "Fibbed"
+lf
+vi
+lf
+git remote add origin git@github.com:Shinji322/Projects.git
+git push --force
+git push --set-upstream origin main --force
+sudo pacman -Syu
+lf
+yay -S vscodium-bin
+redshift  &
+pulsemixer
+sudo poweroff
+sudo pacman -Syu
+lsblk
+du
+df
+lf
+cd /run/media/mokou/WD_BLACK
+ls
+cd archives
+ls
+cd youtube
+ls
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+cd /run/media/mokou/WD_BLACK/archives
+ls
+lf
+cd youtube
+ls
+cd channels
+ls
+lf
+lf
+lf
+lf
+cd .hidden/\[131031\]\ \[MangaGamer\]\ Demon\ Master\ Chris
+;s
+ls
+./DMC.sh &!
+lf
+anki
+yay -Syua
+sudo pacman -Syu
+sx
+lf
+yay -Ss grabber
+yay -S imgbrd-grabber-bin
+yay -Rs imgbrd-grabber-bin
+lf
+lf
+vi grabber-msg
+vi .html
+pacman -Ss peco
+history
+history 1
+lf
+history 1
+history
+lf
+hist
+lf
+lf
+cd images/anime
+ls
+lf
+ls
+vi 
+rm $_
+sudo pacman -Syu
+lf
+lf
+cd vimwiki
+ls
+vi cyberleaks.txt
+lf
+lf
+lf
+lf
+nvim index.wiki
+unalias nvim
+nvim index.wiki
+lf
+mkdir notes
+cd notes
+cd ..
+rmdir notes
+lf
+sudo pacman -Ss pandoc
+sudo pacman -S padnoc
+sudo pacman -S pandoc
+vi important-pkgs.txt
+man pandoc
+lf
+cd software/source/personal
+ls
+cd github
+ls
+cd file-tree/
+ls
+lf
+cd images
+mkdir anime
+cd $_
+ls
+lf
+cd ../..
+ls
+chmod +x remove.sh
+ls
+lf
+fd . .gitkeep
+fd .
+man fd
+man fd
+fd -H -e .gitkeep
+fd -H -e .gitkeep
+fd .gitkeep . 
+fd -R
+fd -h
+fd -h | grep sub
+fd 
+fd --min-depth 5
+fd --max-depth 5
+fd --max-depth 5
+fd --max-depth 5 -H 
+fd --max-depth 5 -H | grep .gitkeep
+lf
+cd ..
+ls
+cd file-tree.\~1\~
+ls
+vi remove.sh
+hist
+/bin/ls -R
+/bin/ls -R | grep .gitkeep
+/bin/ls -Rh | grep .gitkeep
+unalias ls
+ls -lah
+ls -a
+ls -l
+ls -h
+ls -a -R | grep .gitkeep
+ls -a -R 
+vi remove.sh
+man find
+lf
+vi remove.sh
+man find
+find 
+unalias find
+find
+find .gitkeep
+find | grep .gitkeep
+rm $_
+find | grep .gitkeep
+rm $(find | grep .gitkeep)
+find | grep .gitkeep
+ls
+lf
+hist
+lf
+cd ..
+rm file-tree.\~1\~
+ls
+lf
+cd file-tree
+ls
+ls
+lf
+git add remove.sh
+git commit -m "Added script to remove all .gitkeep files after deployment"
+git push
+lf
+git diff
+git status
+git add games/README.md
+git add images/README/md
+git add images/README.md
+git add images/anime/.gitkeep
+git add literature/README.md
+git add music/README.md
+git add music/norm/.gitkeep
+git add music/vgm/.gitkeep
+git add music/vgm/touhou/.gitkeep
+git add software/README.md
+git add software/source/personal/.gitkeep
+git add software/source/repos/.gitkeep
+git add video/README.md
+cd video
+ls
+git commit -m "Updated some directories"
+git push
+lf
+lf
+lf
+lf
+lf
+redshift &!
+lsblk
+cd
+umount /dev/sdc1
+umount /dev/sdc1
+sudo poweroff
+vi quicksort.py
+sudo pacman -Syu
+yay -Syua
+sx
+vi
+nvidia-settings
+glxinfo | grep NVIDIA
+glxinfo 
+glxinfo| grep opengl
+PPSSPP
+sudo updatedb && locate ppsspp
+sudo updatedb 
+sudo updatedb && locate ppsspp | grep .desktop
+cd /usr/share/applications
+ls
+cat ppsspp-qt.desktop
+cat ppsspp-sdl.desktop
+prime-run PPSSPPDL
+prime-run glxinfo | grep "OpenGL"
+sudo lvim ppsspp-sdl.desktop
+lf
+sudo lvim ppsspp-sdl.desktop
+lvim
+vi
+lf
+lf
+lf
+lf
+lf
+lf
+cd /run/media/mokou/My\ Passport/games/vns/Sakura/Sakura\ Dungeon
+cd ..
+cp -r Sakura\ Dungeon ~/.hidden
+cd $_
+cd Sakura\ Dungeon
+ls
+./sakura_dungeon.sh&!
+zathura Game\ Manual.pdf
+lf
+lsblk
+umount /dev/sdd1
+umount /dev/sdc1
+sudo poweroff
+sudo pacman -Syu
+anki
+lf
+cd literature
+l
+ls
+lf
+l
+cd literature
+l
+ls
+lf
+cd education/COMPUTERS/Data\ Structures\ and\ Algorithms
+zathura Aditya\ Bhargava\ -\ Grokking\ Algorithms_\ An\ illustrated\ guide\ for\ programmers\ and\ other\ curious\ people-Manning\ Publications\ \(2016\).pdf
+zathura Aditya\ Bhargava\ -\ Grokking\ Algorithms_\ An\ illustrated\ guide\ for\ programmers\ and\ other\ curious\ people-Manning\ Publications\ \(2016\).pdf &!
+lf
+lf
+cd documents/obsidian/Computer\ Science/
+mkdir data-structures-and-algorithms
+cd $-
+cd data-structures-and-algorithms
+man mf
+mkdir 1-grokking
+cd $_
+hist | fzf
+l
+mkdir 4-quicksort
+cd $_
+lvim quicksort.md
+lf
+cd documents/obsidian/Computer\ Science/data-structures-and-algorithms/1-grokking/4-quicksort
+lvim quicksort.md
+lf
+lvim quicksort.md
+lvim quicksort.md
+cat quicksort.py
+vi
+lf
+lvim quicksort.md
+lf
+man env
+man zathura
+lf
+lf
+cd ../1-big-o
+vi binary_search.py
+lf
+vi bi
+vi binary_search.py
+lf
+man flameshot
+lf
+lf
+vi
+vi selection-sort.py
+lf
+lf
+vi
+pcurses
+lf
+lf
+man prime
+sudo pacman -Syu
+sudo updatedb
+hist | awk '{print $2}'
+hist
+history 2
+history 3
+man history
+lf
+lf
+cd .hidden/Sakura\ Dungeon
+ls
+l
+./sakura_dungeon.sh
+lf
+lf
+lf
+lf
+lf
+vi merge_sort.py
+python merge_sort.py
+python merge_sort.py
+python merge_sort.py
+python merge_sort.py
+python merge_sort.py
+python merge_sort.py
+python merge_sort.py
+python merge_sort.py
+python merge_sort.py
+python merge_sort.py
+vi test.py
+rm $_
+python merge_sort.py
+vi new.py
+python new.py
+vi new.py
+python new.py
+vi new.py
+lf
+lf
+lf
+cd ../4-quicksort
+python quicksort.py
+python quicksort.py
+python quicksort.py
+python quicksort.py
+python quicksort.py
+python quicksort.py
+python quicksort.py
+cat quicksort.py
+cat quicksort.py
+python quicksort.py
+python quicksort.py
+redshift &!
+cd games
+mkdir good-scenes
+cd $_
+yt-dlp https://www.youtube.com/watch?v=PvOOu4uJE08
+yt-dlp "https://www.youtube.com/watch?v=PvOOu4uJE08"
+lf
+lf
+cd documents/obsidian/Computer\ Science/data-structures-and-algorithms
+ls
+l
+cd 1-grokking
+l
+cd 6-breadth-first-search
+lvim graphs.md
+lf
+lf
+lf
+lf
+sudo poweroff
+sudo pacman -Syu
+lf
+yay -Syua
+vi
+lf
+lf
+cd ..
+lf
+lf
+;f
+lf
+config status
+cd .config/lvim
+config add -u
+config commit -m "Changed stuff"
+config push
+lf
+cd ../..
+lf
+lf
+yay -Ss sml
+pacman -S smlnj
+sudo pacman -S smlnj
+sudo pacman -Syu
+lf
+sudo pacman -S streamlink
+streamlink "https://www.coursera.org/learn/programming-languages/lecture/ByEpU/rules-for-expressions"
+lf
+man stream
+streamlink "https://www.youtube.com/watch?v=x8dow_8fhfs"
+streamlink --plugins
+cd .config
+ls
+ls | grep stream
+mkdir streamlink
+cd $_
+vi config
+streamlink "https://www.youtube.com/watch?v=x8dow_8fhfs"
+streamlink "https://www.youtube.com/watch?v=x8dow_8fhfs" best
+lf
+lf
+lf
+lf
+yay -Ss pomotroid
+yay -S pomotroid-bin
+yay -Rns pomotroid-bin
+lf
+cd software/source/
+l
+lf
+cd learning-projects
+git clone https://github.com/mareksuscak/cs50.git
+lf
+vi
+vi pat-github
+vi
+vi tem
+vi
+vi te
+lf
+lf
+lf
+cd code/learning
+ls
+l
+lf
+mkdir cs50
+cd $_
+git init
+mkdir mario-more
+cd $_
+vi mario.c
+cd ..
+mkdir credit
+cd $_
+vi credit.c
+lf
+vi credit.c
+vi credit.c
+vi credit.c
+make credit
+ls
+./credit
+vi credit
+rm $_
+vi credit.c
+gcc credit.c
+./a.out
+./a.out
+cd code/learning/cs50/credit
+./a.out
+vi credit.c
+make credit.c
+gcc credit.c
+ls
+cd code/learning/cs50/credit
+./a.out
+vi credit.c
+cd code/learning/cs50
+ls
+cd credit
+ls
+make credit
+ls
+./credit
+unalias make
+make credit
+./credit
+make credit
+./credit
+make credit
+./credit
+make credit
+./credit
+vi s.py
+python $_
+rm $_
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+vi credit.py
+vi credit.py
+python credit.py
+python credit.py
+python credit.py
+python credit.py
+python credit.py
+python credit.py
+vi credit.c
+python credit.py
+vi credit
+vi credit.c
+vi credit.py
+python credit.py
+python credit.py
+hist | fzf
+make credit && ./credit
+python credit.py
+vi credit.c
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+cd code/learning/cs50/credit
+ls
+l
+rm a.out
+python credit.py
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+vi new-credit.c
+mv $_ old.c
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+vi test.c
+make test && ./test
+vi test.c
+rm test*
+ls
+vi credit.c
+ls
+l
+cat credit
+rm $_
+cat credit.c
+hist | fzf
+make credit && ./credit.
+make credit && ./credit
+./credit
+cd code/learning/cs50/credit
+./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+lf
+make credit && ./credit
+make credit && ./credit
+sudo pacman -S intellij-idea-community-edition
+sx
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+cd code/learning/cs50/credit
+codium . 
+yay -Ss idea
+yay -Ss ide
+pacman -Ss kdevelop
+pacman -Ss ide
+pacman -Ss ide | grep C
+sudo pacman -S codeblocks
+se
+make credit && ./credit
+make credit && ./credit
+se
+cat /etc/pacman.d/mirrorlist
+cat /etc/pacman.d/mirrorlist
+sudo pacman -S codeblocks
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+make credit && ./credit
+pkill steam
+lsblk
+umount /dev/sdc1
+cd /etc
+ls
+lf
+lf
+vi
+sudo lf
+bluetoothctl
+sudo pacman -Syu
+sudo reboot
+lf
+steam steam::/rungameid/553310
+kf
+lf
+redshift &!
+sudo poweroff
+sudo pacman -Syu
+lsblk
+yt-dlp https://www.camwhores.video/videos/6808753/pinkie-pie92/
+lf
+syncthing &!
+lf
+lf
+sudo pacman -Rns codeblocks
+cd documents/obsidian/Computer\ Science/CS50
+ls
+vi 2-arrays.md
+lf
+ls -R
+man ls
+ls -cl
+man ls
+ls -c
+ls -c | awk '{print $1}'
+cd images/screenshots
+echo .
+echo ./
+echo ./*
+echo ./* | awk '{print $1}'
+cd .scripts
+ls
+l
+cd sxhkd
+ls
+vi screenshot
+vi screenshot
+echo ./* | xclip -sel c
+sx
+cd
+sx
+chmod +x .scripts/sxhkd/screenshot
+sx
+sx
+lf
+se
+sx 
+sx
+lf
+cd documents/obsidian/
+mv Computer\ Science ComputerScience
+l
+sx
+lf
+sx
+lf
+cd ..
+cd CS50
+l
+echo documents/obsidian/ComputerScience/CS50/*
+touch hellp
+l
+echo documents/obsidian/ComputerScience/CS50/*
+ls -c
+cd documents/obsidian/ComputerScience/CS50
+l
+ls -c
+ls -c | awk "{print $1}"
+ls -c | awk "{print $2}"
+lf
+ls -c | cut -d " "
+ls -c | cut -d " " -f 1
+ls -d
+ls -d */
+ls -c
+ls -Art
+ls -ct
+ls -ct | head -n1
+sx
+lf
+source ~/.zshenv
+sx
+sx
+l
+lf
+cd documents/obsidian/ComputerScience/CS50
+ls
+vi 2022-02-16_10-34.png
+vi 2-arrays.md
+sx
+sx
+vi 2-arrays.md
+lf
+cd code/learning/cs50
+ls
+l
+cd credit
+l
+codium . 
+codium . 
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=41853 
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=40395 
+l
+./credit
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=35273 
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=38207 
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=42809 
+man cc
+cc
+yay -Ss lldb
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=43591 
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=38969 
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=45561 
+cmake -v
+sudo pacman -S gdb
+vi im
+vi important-pkgs.txt
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=40397 
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=42675 
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=33597 
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=37809 
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=38217 
+l
+ /home/mokou/.local/share/vscode/vadimcn.vscode-lldb-1.6.10/adapter/codelldb terminal-agent --port=38217 
+hist
+codium . 
+yay -S clion
+yay -Ss clion
+yay -Ss kdevelop
+sudo pacman -S kdevelop
+sudo pacman -Rns kdevelop
+sudo pacman -S intellij-idea-community-edition
+sudo pacman -S clion
+yay -S clion
+sudo pacman -S kdevelop
+yay -Ss qt
+sudo pacman -S oxygen
+vi important-pkgs.txt
+sudo pacman -S kvantum
+lf
+lf
+pacman -Ss kdevelop
+sudo pacman -S kdevelop-meta kdevelop-pg-qt
+yay -Ss kdevelop
+sudo pacman -Rns kdevelop kdevelop-meta kdevelop-pg-qt
+lf
+yay -Rns vscodium-bin
+yay -Ss vscode
+sudo pacman -S code
+sudo pacman -S base-devel
+sudo pacman -Rns code
+yay -Ss vscode
+sudo pacman -S code
+yay -S code-marketplace
+vi 2-arrays.md
+ /usr/bin/env /bin/sh /tmp/Microsoft-MIEngine-Cmd-jjzbt3l5.cwo 
+ /usr/bin/env /bin/sh /tmp/Microsoft-MIEngine-Cmd-xzvu0tiz.xx4 
+ /usr/bin/env /bin/sh /tmp/Microsoft-MIEngine-Cmd-v3vb1huo.b0i 
+lf
+vi
+lf
+sx
+sx
+man rofi
+rofi -show combi
+rofi -show combi
+rofi -show combi
+nvim
+nvim
+rofi -show combi
+pkill qbittorrent
+rofi -show combi
+lsblk
+umount /dev/sdc1
+sudo reboot
+sudo poweroff
+sudo pacman -Syu
+yay -Syua
+cd .hidden/Sakura\ Dungeon
+ls
+./sakura_dungeon.sh&!
+lf
+lf
+cd .config/ls
+cd .config/
+l
+cd vim
+l
+lf
+lf
+lf
+lf
+cd code/learning/cs50/readability
+wget https://cdn.cs50.net/2021/fall/psets/2/readability.zip
+unzip readability.zip
+rm readability
+lf
+l
+lf
+cd ..
+cd -
+cd ~/code/learning/cs50
+l
+unzip readability.zip
+rm readability.zip
+lf
+cd readability
+sudo updatedb && code .
+lf
+lf
+cd code/learning/cs50
+lf
+cd readability
+code . 
+locate g++
+locate g++ | grep /usr/bin
+gcc -Wp,-v -E -xc -x c++ /dev/null
+locate string.h
+locate string.h | grep include
+gcc -v -E -dD readability.c
+sudo pacman -S gdb g++
+pacman -Ss g++
+g++ --version
+sudo pacman -Rns code
+sudo pacman -Rns code-marketplace code
+sudo pacman -S code
+lf
+lf
+lf
+sudo pacman -s code code-marketplace
+sudo pacman -S code code-marketplace
+sudo pacman -S code && yay -S code-marketplace
+yay -Ss cs50
+yay -S libcs50
+yay -Rns asciidoctor ruby ruby-irb ruby-reline rubygems
+vi
+sudo pacman -Ss g++
+sudo pacman -Ss "C++ compil"
+sudo pacman -Ss "C compiler"
+lf
+lf
+lf
+lf
+lfm
+lf
+lf
+lf
+sudo pacman -Syu
+yay -Qqe | grep discord
+pacman -Qqe | grep discord
+sudo pacman -Ss discord
+yay -Syua
+sudo pacman -R discord
+sudo pacman -S discord
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+redshift &!
+lf
+man flameshot
+pkill qbittorrent
+lsblk
+umount /dev/sdc1 
+umount /dev/sdc1 
+umount /dev/sdc1 
+umount /dev/sdd1
+pulsemixer
+pulsemixer
+pulsemixer
+lsblk
+umount /dev/sdc1
+sudo poweroff
+sudo pacman -Syu
+vi
+lf
+sudo lf
+sudo lf
+lf
+lsblk
+lf
+lf
+yay -Ss r-linux
+yay -Ss "file recover"
+yay -S r-linux
+rlinux
+lf
+echo $HSELL
+echo $SHELL
+sudo rlinux
+yay -Rns r-linux
+yay -Ss testdisk
+sudo pacman -S testdisk
+testdisk
+sudo testdisk
+testdisk
+testdisk
+man testdisk
+yay -Rns testdisk
+yay -Ss recoverjpeg
+yay -Ss r-liunux
+yay -S r-linux
+rlinux
+sudo rlinux
+lf
+lf
+lf
+df
+df
+df
+df
+lf
+df
+lf
+lf
+lf
+lf
+br
+lf
+cd ComputerScience/CS50/l
+cd ComputerScience/CS50/
+l
+rm hellp
+vi 3-algorithms.md
+lf
+lf
+lf
+lf
+lf
+yay -Ss emscripten
+yay -Ss kdenlive
+sudo pacman -Syu
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+lf
+setxkbmap -option caps:escape\
+
+vi
+vi s
+vi g
+lsblk
+lf
+pulsemixer
+lf
+lf
+sudo pacman -Syu
+sudo reboot
+lf
+lsblk
+lf
+cd .hidden/.scripts
+l
+vi psst_audio.py
+vi psst_audio.py
+lf
+lf
+lf
+redshift &!
+lf
+cd .hidden
+cd .scripts
+l
+vi psst_audio.py
+lf
+man pip
+man pip
+pip search auto
+pip install autoscraper
+vi psst_audio.py
+python psst_audio.py
+cd .hidden/.scripts
+python psst_audio.py
+vi psst_audio.py
+python psst_audio.py
+code . 
+ /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43573 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38179 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 39429 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 39751 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38649 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41853 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 40115 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45855 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37101 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37953 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 44513 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 34931 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 36415 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41795 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38407 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43287 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 46467 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 42869 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41109 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38511 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 39373 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43375 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38197 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38845 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 33333 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43535 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 39769 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 33749 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 44281 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41813 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+lf
+yt-dlp --add-metadata https://psstaudio.com/post/149615cfd84b46988d6a4df5f80f88f7
+lf
+hist | fzf
+yt-dlp --add-metadata --output-format "%(title)s -- %(uploader)s" https://psstaudio.com/post/149615cfd84b46988d6a4df5f80f88f7
+yt-dlp --add-metadata -o "%(title)s -- %(uploader)s" https://psstaudio.com/post/149615cfd84b46988d6a4df5f80f88f7
+lf
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41255 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 39655 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43453 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45413 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37653 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 34603 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+pip install wget
+wget https://psstaudio.com/post/149615cfd84b46988d6a4df5f80f88f7
+ls
+lf
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38359 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37259 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 40293 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38465 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35913 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 34623 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 40789 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37081 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 46657 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 44273 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 38645 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 36589 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 35893 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 40283 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41483 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 41509 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 40953 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 39511 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 40015 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37703 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45225 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45375 -- /home/mokou/.hidden/.scripts/psst_audio.py 
+lf
+python psst_audio.py https://psstaudio.com/post/e737d9bee68f4ef1a268ef144dadd258
+python psst_audio.py -l https://psstaudio.com/post/e737d9bee68f4ef1a268ef144dadd258
+lf
+python psst_audio.py -l https://psstaudio.com/post/e737d9bee68f4ef1a268ef144dadd258
+lf
+python psst_audio.py -l https://psstaudio.com/post/e737d9bee68f4ef1a268ef144dadd258
+lf
+cd .hidden/.scripts
+l;
+python psst_audio.py -l https://psstaudio.com/post/706d4d8356334765a81fb8ede964cd79
+lf
+python psst_audio.py -l https://psstaudio.com/post/706d4d8356334765a81fb8ede964cd79\
+
+cd .hidden/.scripts
+python psst_audio.py -l https://psstaudio.com/post/706d4d8356334765a81fb8ede964cd79
+python psst_audio.py -l https://psstaudio.com/post/dcc51b2f4ef6449689f763247431e9ff
+python psst_audio.py -l https://psstaudio.com/post/149615cfd84b46988d6a4df5f80f88f7
+python psst_audio.py -l https://psstaudio.com/post/2eab16b0dfb44ec58a82a2eaec24762a
+python psst_audio.py -l https://psstaudio.com/post/d6003b0f8f5c45409017bd06bd88dcd2
+python psst_audio.py -l https://psstaudio.com/post/1cdc397a763c40a9904ef3b792afc054
+;f
+lf
+sudo poweroff
+sudo pacman -Syu
+yay -Syua
+lf
+exit
+cd .hidden/.scripts
+code .
+vi psst_audio-test.py
+lf
+ /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 42619 -- /home/mokou/.hidden/.scripts/psst_audio-test.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43939 -- /home/mokou/.hidden/.scripts/psst_audio-test.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 36639 -- /home/mokou/.hidden/.scripts/psst_audio-test.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 45067 -- /home/mokou/.hidden/.scripts/psst_audio-test.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 37733 -- /home/mokou/.hidden/.scripts/psst_audio-test.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 39573 -- /home/mokou/.hidden/.scripts/psst_audio-test.py 
+ cd /home/mokou/.hidden/.scripts ; /usr/bin/env /bin/python /home/mokou/.vscode-oss/extensions/ms-python.python-2022.0.1814523869/pythonFiles/lib/python/debugpy/launcher 43635 -- /home/mokou/.hidden/.scripts/psst_audio-test.py 
+cd .hidden/.scripts
+chmod +x psst_audio
+./psst_audio -l https://psstaudio.com/post/d6003b0f8f5c45409017bd06bd88dcd2
+./psst_audio -l https://psstaudio.com/post/d6003b0f8f5c45409017bd06bd88dcd2
+./psst_audio -l https://psstaudio.com/post/d6003b0f8f5c45409017bd06bd88dcd2
+./psst_audio -l https://psstaudio.com/post/d6003b0f8f5c45409017bd06bd88dcd2
+;f
+lf
+lf
+cd .hidden/Sakura\ Dungeon
+l
+./sakura_dungeon.sh &!
+python -m SimpleHTTPServer
+npm install http-server -g
+vi
+pulsemixer
+lsblk
+pkill qbittorrent
+umount /dev/sdb1
+sudo pacman -SYu
+sudo pacman -Syu
+yay -Syua
+pulsemixer
+lf
+vi
+vi p3notes
+redshift &!
+lf
+touch employee.py
+exit
+touch test_employee.py
+exit
+cd .hidden/Sakura\ Dungeon
+./sakura_dungeon.sh &!
+sudo poweroff
+sudo pacman -Syu
+anki
+lf
+cd software/source/misc/anki-2.1.49-linux
+l
+./uninstall.sh
+sudo ./uninstall.sh
+yay -Ss anki
+yay -S anki-bin
+yay -S anki
+lf
+lf
+vi
+lf
+locate obsidian.desktop
+locate .desktop | grep obsidian
+sudo updatedb && 
+sudo updatedb && sudo updatedb && 
+sudo updatedb && locate .desktop | grep obsidian
+exit
+locate .desktop
+cd .local/share/applications
+l
+cat video.desktop
+cd .config/autostart
+l
+vi obsidian.desktop
+lf
+pacman -Ss dex
+sudo pacman -S dex
+man dex
+dex -a obsidian.desktop
+lf
+lf
+sudo pacman -Rns kmix
+vi time
+rm $_
+lf
+lf
+lf
+vi .html
+lf
+sudo poweroff
+sudo pacman -Syu
+lf
+lf
+cd .scripts/sxhkd
+./find-name-needed
+lf
+cd ~/.local/share/applications
+vi obsidian.desktop
+cd ~/.config/
+mkdir autostart
+cd $_
+cd ..
+rm dir autostart
+rmdir autostart
+l
+mkdir -p systemd/user
+cd $_
+ls
+cd ..
+cd ..
+rm -rf systemd
+cd ..
+l
+cd /etc/systemd/system/
+l
+;f
+lf
+cd
+crontab -e
+sudo pacman -S cron
+vi important-pkgs.txt
+sudo systemctl enable cronie 
+sudo systemctl start cronie 
+crontab -e
+lf
+echo $EDITOR
+crontab -e
+vi
+ lf
+crontab -e
+sudo crontab -e
+sudo crontab -e
+vi
+crontab select-editor
+man crontab
+crontab -e
+vi
+lf
+cd .scripts
+l
+mkdir rofi
+cd $_
+vi powermenu
+chmod +x powermenu
+vi powermenu
+cd ~/code/learning/cs50
+l
+cd ..
+yay -Ss 4chan
+mv downloads/3dd99c93-f50b-413d-82b3-5fbbe5a69c1e-mp4_720p.mp4 ~/documents/obsidian/
+lf
+cd documents/obsidian
+l
+cd ComputerScience
+l
+cd CS50
+l
+touch 4-memory.md
+vi $_
+lf
+cd documents/obsidian/ComputerScience/CS50/assets/lectures
+yt-dlp --embed-chapters https://youtu.be/Fa6Jq0Iue3U -o "4.%(ext)"
+yt-dlp --embed-chapters https://youtu.be/Fa6Jq0Iue3U -o "4.%(ext)s"
+l
+yay -Rns anki-official-binary-bundle
+lf
+cd software/source/misc
+cd anki-2.1.49-linux
+./install.sh
+sudo ./install.sh
+anki
+anki
+anki
+anki
+yay -Rns kvantum
+anki
+cd .config
+l
+lf
+anki
+anki
+sudo anki
+anki
+cd -
+cd software/source/misc
+cd anki-2.1.49-linux
+l
+./uninstall.sh
+sudo ./uninstall.sh
+sudo ./install.sh
+anki
+anki
+sudo pacman -S qt5ct
+cd .config/shell
+l
+vi profile
+anki
+anki
+qt5ct
+vi profile
+anki
+sudo pacman -S qt5-base
+anki
+sudo pacman -Ss qt
+sudo pacman -Ss qt5
+sudo pacman -S qt5*
+sudo pacman -S qt5
+anki
+ankI
+anki
+sudo pacman -Rns qt5
+yay -S anki-bin
+yay -S anki-official-binary-bundle
+yay -Ss base16
+yay -Rns anki-official-binary-bundle
+yay -S base16-universal-manager 
+base16-unviersal-manager
+base16-universal-manager
+base16-universal-manager --help
+base16-universal-manager --update-list
+yay -Rns base16-universal-manager
+lf
+anki
+sudo reboot
+ankii
+anki
+anki --help
+anki --safemode
+cd documents/obsidian/ComputerScience/CS50/
+l
+vi 4-memory.md
+vi .c
+lf
+yay -Ss valgrind
+sudo pacman -S valgrind
+sudo pacman -Syu
+yay -Syua
+mv .c ~/documents/obsidian/ComputerScience/CS50/assets/3-memory.c
+cd ~/documents/obsidian/ComputerScience/CS50/assets
+l
+mv 3-memory.c 4-memory.c
+gcc 4-memory.c -o memory
+l
+mv memory 4-memory
+valgrind memory
+valgrind ./memory
+valgrind ./4-memory
+vi 4-garbage.c
+lf
+cd software/scripts/youtube-dl-scripts/Audio-Only\ Scripts/Listen\ Script/Listen
+l
+./Listen.sh
+lf
+vi important-pkgs.txt
+lf
+vi 4-scanf.c
+sudo pacman -Syu
+sudo pacman -Syu
+cd .config
+yay -Ss 4chan 
+cd ~/code/learning/cs50/
+mkdir filter-more
+cd $_
+vi notes.md
+xclip -sel o
+echo xclip -sel o
+echo $(xclip -sel o)
+lf
+echo $(xclip -o) 
+echo $(xclip -o) > bmp.h
+vi bmp.h
+echo $(xclip -o) > bmp.h
+vi bmp.h
+[200~ * See http://en.wikipedia.org/wiki/Stdint.h for more on stdint.h.
+echo $(xclip -o) > bmp.h
+cat bmp.h
+rm bmp.h
+cd code/learning/cs50/filter-more
+echo $(xclip -o) > bmp.h
+cat bmp.h
+rm bmp.h
+vi $_
+vi filter.c
+vi helpers.c
+vi helpers.h
+vi Makefile
+lf
+lf
+vi helpers.c
+vi helpers.c
+vi
+vi n
+vi n.md
+lf
+vi n
+vi helpers.c
+vi helpers.c
+vi helpers.c
+lf
+redshift &!
+vi
+lf
+cd .hidden/
+mkdir phub
+l
+cd phub
+l
+yt-dlp https://www.pornhub.com/view_video.php?viewkey=ph6096fe7e3a098
+yt-dlp "https://www.pornhub.com/view_video.php?viewkey=ph6096fe7e3a098"
+cd ../Sakura\ Dungeon
+./sakura_dungeon.sh
+lf
+sx
+se
+sx
+se
+se
+se
+sx 
+se
+cd .scripts/rofi
+l
+./powermenu
+./powermenu
+sudo pacman -Syu
+sudo pacman -Syuw
+cd code/learning/cs50
+l
+mkdir recover
+cd $_
+l
+vi recovere.c
+mv recovere.c recover.c
+;f
+lf
+lf
+sudo pacman -Syu
+yt-dlp -h
+yt-dlp -h | grep thumb
+sx
+lsblk
+lf
+sudo pacman -Syuw
+sudo pacman -Syu
+cd downloads
+l
+mpv a1063303-88fa-478b-9d21-7fd56026ce14-mp4_720p.mp4
+lf
+lf
+sudo pacman -Syuw
+anki
+lf
+cd code/learning/cs50
+l
+mkdir volume
+cd $_
+vi volume.c
+vi volume.c
+vi notes.md
+vi notes.md
+anki
+anki -v
+anki -h
+anki 
+anki  &!
+anki  &!
+anki 
+lf
+anki --no-sandbox
+lf
+redshift &!
+sx
+sudo pacman -Syu
+crontab -e
+crontab -e
+iv
+vi
+notify-send "hey"
+cd code/learning/cs50/
+wget wget https://cdn.cs50.net/2021/fall/psets/5/speller.zip
+l
+unzip speller.zip&& rm speller.zip 
+ps ax
+ps
+uname
+uname -a
+mkdir inheritance
+cd $_
+vi $_.c
+vi inheritance.c
+lf
+vi ../README.md
+cd ..
+l
+cd speller
+l
+cd code/learning/cs50
+vi README.md
+vi dictionary.c
+vi dictionary.c
+vi dictionary.c
+lf
+vi dictionary.c
+w 
+sudo pacman -Ss acpi
+sudo pacman -S acpi 
+vi important-pkgs.txt
+acpi
+acpi
+lf
+cd code/learning/cs50
+l
+cd speller
+l
+vi dictionar
+vi dictionary.c
+apci
+acpi
+acpi
+acpi
+mokou
+sx
+lf
+acpi
+upower -d
+sx
+lf
+lf
+cd .config/x11
+l
+acpi
+acpi
+startx ./xinitrc
+sx
+sx
+se
+acpi
+upower
+upower -d
+man upower
+upower --help
+upower -u
+upower -i
+sudo pacman -Syu
+yay -Syua
+yay -Rns github-desktop-bin
+yay -Syua
+l
+acpi
+lf
+lvim
+ld
+lf
+sx
+sudo poweroff
+acpi
+crontab -e
+vi
+which acpi
+notify-send $(which acpi)
+cd .scripts
+l
+cd system
+l
+vi power
+vi power
+crontab -e
+date
+acpi
+vi
+locate asfg
+touch $_
+rm $_
+acpi
+sudo pacman -Syuw
+acpi
+acpi
+acpi
+acpi
+sx
+acpi
+lf
+yay -Ss pixiv
+yay -S pixiv-dl
+sudo updatedb && locate pixiv
+man pixiv-dl 
+pixiv-dl -h
+pixiv-dl 64936415
+yay -Rns pixiv-dl
+redshift &!
+acpi
+lf
+sx
+sudo pacman -Syu
+crontab -e
+crontab -e
+/usr/bin/mpc update && notify-send "Updated music library"
+vi
+cd code/learning/cs50
+l
+mkdir sentimental-mario-more
+mkdir sentimental-credit
+mkdir sentimental-readability
+mkdir dna
+vi README.md
+locate dna
+sudo pacman -S cronie
+systemctl enable cronie.service
+systemctl start cronie.service
+yay -Syua
+cd sentimental-mario-more
+l
+vi mario.py
+python mario.py
+vi mario.py
+python mario.py
+vi mario.py
+cd code/learning/cs50
+l
+cd sentimental-mario-more
+l
+python mario.py
+locate recusive-mario
+sudo updatedb && locate recusive-mario
+locate recursive-mario
+locate mario
+cd code
+fd . mario
+man fd
+fd mario
+lf
+python mario.py
+vi mario.py
+python mario.py
+vi mario.py
+python mario.py
+vi mario.py
+python mario.py
+vi mario.py
+python mario.py
+python mario.py
+vi mario.py
+python mario.py
+vi mario.py
+python mario.py
+vi mario.py
+vi mario.py
+vi mario.py
+python mario.py
+vi mario.py
+python mario.py
+vi mario.py
+python mario.py
+vi mario.py
+python mario.py
+vi mario.py
+lf
+cd documents/obsidian
+l
+cd ComputerScience
+l
+cd CS50
+l
+vi 6-python.md
+vi 6-python.md
+vi 6-python.md
+vi 6-python.md
+vi 6-python.md
+cd code/learning/cs50
+l
+cd re
+cd readability
+l
+lf
+l
+cd ../sentimental-readability
+l
+python readability.py
+python readability.py
+python readability.py
+python readability.py
+python readability.py
+python readability.py
+lf
+cd code/learning/cs50/re
+cd code/learning/cs50/readability
+cd ../sentimental-readability
+l
+python readability.py
+python readability.py
+python readability.py
+python readability.py
+cd ..
+mkdir dna
+cd learning
+l
+cd cs50
+l
+git status
+lf
+git add README.md
+git commit -m "Added a readme that explains certain topics"
+git add credit/
+git commit -m "Pulled my hair out"
+git add filter-more/
+git commit -m "Blurring is pain ):"
+git add inheritance/
+git commit -m "Pretty cool lab but the layout confused me"
+git add mario-more/
+git commit -m "This was cool"
+l
+lf
+git add plurality/
+git commit -m "Voted"
+git add recover/
+git commit -m "Recovered jpegs"
+git add runoff "We voted again"
+git add runoff 
+git commit -m "We voted again"
+git add scrabble/
+git commit -m "Fairly self explanatory"
+git add speller/
+git commit -m "EOF is not a string but a unique identifier in C. This made me pull my hair out"
+git add sentimental-credit/
+git add sentimental-mario-more/
+git add sentimental-readability/
+git commit -m "Took a stroll down memory lane"
+git add substitution/
+git commit -m "Implemented a substitution cipher"
+git add volume
+git commit -m "Wav files are kinda dope"
+git push
+ wget https://cdn.cs50.net/2021/fall/psets/6/dna.zip && unzip *zip && rm *zip
+cd dna
+l
+man fzf
+vi 6-python.md
+vi 6-python.md
+vi dna.py
+vi 6-python.md
+vi 6-python.md
+sudo pacman -Syu 
+vi dna.py
+lf
+lf
+vi
+lf
+curl cht.sh/python/:learn
+l
+lf
+yay -Ss cheat.sh
+yay -S cht.sh-git
+sudo pacman -Syu
+dmenu
+man dmenu
+see
+se
+sx
+cd .config/shell/
+vi alias
+cht.sh
+cht.sh --help
+cht.sh lua
+lf
+history
+l
+cht/ls
+lf
+cht.sh node
+lf
+curl https://cheat.sh/:zsh
+curl https://cheat.sh/zsh+fpath
+curl https://cheat.sh/zsh+fpath | less
+lf
+lf
+cd .scripts
+l
+cd lf
+l
+chmod +x lfcd
+./lfcd
+./lfcd
+sudo pacman -Syu
+l
+./lfcd
+lf
+chsh -s /bin/bash
+chsh -s /bin/zsh
+cd ..
+lf
+cd ../code
+l
+cd projects
+l
+mkdir personal-webiste
+cd $_
+lf
+vi index.html
+mkdir css
+touch $_/styles.cdd
+touch css/styles.css
+rm css/styles.cdd
+lf
+lf
+redshift &!
+sudo pacman -Ss rofi
+sudo pacman -Ss "rofi emoji"
+sudo pacman -S roji-emoji
+sudo pacman -S rofi-emoji
+rofi -show emoji  -modi emoji
+lf
+vi important-pkgs.txt
+lf
+lf
+sudo pacman -Syu
+cd video
+l
+cd ../.hidden
+l
+mkdir video
+cd $_
+yt-dlp https://www.youtube.com/watch?v=lkHlnWFnA0c
+yt-dlp "https://www.youtube.com/watch?v=lkHlnWFnA0c"
+l
+sudo poweroff
+sudo pacman -Syu
+lf 
+sudo pacman -Ss sql
+sudo pacman -Ss sqlite
+curl cheat.sh
+pulsemixer
+lf
+cd /etc
+sudo lvim inputrc
+lf
+cd .config/zsh
+l
+vi .zshrc
+lf
+lf
+lfl
+lf
+set bell-style non
+set bell-style none
+lf
+vi .inputrc
+rm $_
+lf
+cd code/learning/cs50/
+l
+cd ..
+lf
+lf
+exit
+lf
+l
+cd assets
+l
+exit
+exit
+cd assets
+l
+sqlite3 7-shows.db
+exit
+: 1645797916:0;cd documents/obsidian/ComputerScience
+: 1645797917:0;l
+: 1645797922:0;cd CS50
+: 1645797922:0;l
+: 1645797925:0;cd assets
+: 1645797926:0;l
+: 1645797936:0;sqlite3 7-shows.db
+: 1645797991:0;vi s
+: 1645798172:0;cd documents/obsidian/ComputerScience/CS50/assets
+: 1645798172:0;l;
+: 1645798180:0;sqlite3 7-shows.db
+: 1645798215:0;sqlite3 7-shows.db
+: 1645798311:0;sqlite3 7-shows.db
+: 1645798460:0;sqlite3 7-shows.db
+: 1645799337:0;sudo pacman -Syu
+: 1645799348:0;sx
+: 1645800792:0;cd code
+: 1645800793:0;l
+: 1645800795:0;cd learning
+: 1645800796:0;l
+: 1645800799:0;cd cs50
+: 1645800799:0;l
+: 1645800812:0;wget https://cdn.cs50.net/2021/fall/psets/7/movies.zip
+: 1645800836:0;unzip movies.zip && rm -f movies.zip
+: 1645800841:0;cd movies
+: 1645800842:0;l
+: 1645800950:0;cd documents/learning
+: 1645800950:0;l
+: 1645800961:0;cd ../obsidian/ComputerScience/CS50
+: 1645800961:0;l
+: 1645800973:0;cat 7-sql.md| less
+: 1645800980:0;bat 7-sql.md| less
+: 1645800988:0;vi 7-sql.md
+: 1645801080:0;sqlite3 movies.db
+: 1645801833:0;sqlite3 movies.db
+: 1645801961:0;sqlite3 movies.db
+: 1645802338:0;curl cht.sh
+: 1645802342:0;curl cht.sh/sql
+: 1645802350:0;curl cht.sh/sql+100
+: 1645806151:0;vi 13.sql
+: 1645806484:0;vi running-sql-files.md
+: 1645806517:0;vi running-sql-files.md
+: 1645806882:0;sudo poweroff
+: 1645814464:0;sudo pacman -Syu
+: 1645814478:0;lf
+: 1645814510:0;sa
+: 1645815360:0;lg
+: 1645815362:0;lf
+: 1645815367:0;cd ..
+: 1645815368:0;cd..
+: 1645815370:0;cd ..
+: 1645815371:0;lf
+: 1645815388:0;locate index.html
+: 1645815397:0;locate projects
+: 1645815398:0;lf
+: 1645815636:0;lf
+: 1645815695:0;lf
+: 1645816152:0;cd code/learning
+: 1645816152:0;l
+: 1645816154:0;cd online
+: 1645816155:0;l
+: 1645816157:0;cd ss
+: 1645816161:0;cd css
+: 1645816161:0;l
+: 1645816163:0;cd fireship
+: 1645816163:0;l
+: 1645816169:0;cd cards-git
+: 1645816170:0;lf
+: 1645817243:0;yay -Sua]
+: 1645817246:0;yay -Sua
+: 1645821980:0;sudo pacman -Syu
+: 1645822313:0;curl cht.sh/html+input
+: 1645822332:0;curl cht.sh/html
+: 1645822651:0;cd ~/code/learning/cs50
+: 1645822651:0;l
+: 1645822653:0;cd movies
+: 1645822654:0;l
+: 1645822661:0;vi 1.sql
+: 1645822671:0;lf
+: 1645822982:0;cd code/learning/cs50
+: 1645822985:0;cd movies
+: 1645822989:0;sqlite3 movies.db
+: 1645823033:0;echo ".schema" | sqlite3 movies.db > output.txt
+: 1645823271:0;lf
+: 1645823384:0;lf
+: 1645823508:0;cd ..
+: 1645823630:0;wget https://cdn.cs50.net/2021/fall/psets/7/fiftyville.zip && unzip *.zip && rm -f *.zip
+: 1645823635:0;cd fiftyville
+: 1645823635:0;l
+: 1645823641:0;sqlite3 fiftyville.db
+: 1645824340:0;echo ".schema" | sqlite3 fiftyville.db > .schema
+: 1645824349:0;cd code/learning/cs50/fi
+: 1645824352:0;cd code/learning/cs50/fiftyville
+: 1645824352:0;l
+: 1645824356:0;cat .schema
+: 1645824368:0;mv $_ $_.sql
+: 1645824370:0;l
+: 1645824375:0;cat .schema.sql
+: 1645824389:0;sqlite3 fiftyville.db
+: 1645824417:0;vi .sql
+: 1645825685:0;sqlite3 fiftyville.db
+: 1645825722:0;sqlite3 fiftyville.db
+: 1645826871:0;sqlite3 fiftyville.db
+: 1645826899:0;sqlite3 fiftyville.db
+: 1645827114:0;sqlite3 fiftyville.db
+: 1645828025:0;sqlite3 fiftyville.db
+: 1645828338:0;sqlite3 fiftyville.db
+: 1645828444:0;sqlite3 fiftyville.db
+: 1645830006:0;sqlite3 fiftyville.db
+: 1645830251:0;sqlite3 fiftyville.db
+: 1645831967:0;sqlite3 fiftyville.db
+: 1645832023:0;sqlite3 fiftyville.db
+: 1645832096:0;sqlite3 fiftyville.db
+: 1645832448:0;cd code/learning/cs50/fiftyville
+: 1645832453:0;vi ../README.md
+: 1645832473:0;vi log.sql
+: 1645832490:0;vi answers.txt
+: 1645837026:0;sudo pacman -Syu
+: 1645847459:0;sudo poweroff
+: 1645875108:0;sudo pacman -Syu
+: 1645877234:0;cd .hidden/Sakura\ Dungeon
+: 1645877234:0;l
+: 1645877240:0;./sakura_dungeon.sh &!
+: 1645887622:0;sudo pacman -Syu
+: 1645887692:0;yay -Ss pixiv
+: 1645887799:0;lf
+: 1645887835:0;se
+: 1645887854:0;lf
+: 1645887899:0;lf
+: 1645888210:0;yay -Ss yt-dlp 
+: 1645888227:0;yay -Ss zsh
+: 1645888257:0;yay -Ss zsh-fast 
+: 1645888332:0;sudo pacman -Rns zsh-syntax-highlighting && yay -S  zsh-fast-syntax-highlighting 
+: 1645888364:0;lf
+: 1645888373:0;lf
+: 1645888430:0;sudo updatedb && locate fast-syntax
+: 1645888443:0;sudo updatedb && locate fast-syntax | grep .zsh
+: 1645888452:0;sudo updatedb && locate fast-syntax | grep .*\.zsh
+: 1645888456:0;sudo updatedb && locate fast-syntax | grep *\.zsh
+: 1645888460:0;sudo updatedb && locate fast-syntax 
+: 1645888529:0;sudo updatedb && locate fast-syntax | grep -e "\.zsh"
+: 1645888537:0;lf
+: 1645888569:0;sudo pacman -Syu
+: 1645888576:0;vi important-pkgs.txt
+: 1645888646:0;yay -Ss moreutils
+: 1645888710:0;sudo pacman -S moreutils
+: 1645888725:0;sudo pacman -Rns vidir 
+: 1645888727:0;sudo pacman -S moreutils
+: 1645894471:0;cd .scripts
+: 1645894472:0;l
+: 1645894479:0;cd ../.hidden/.scripts
+: 1645894479:0;l
+: 1645894490:0;./psst_audio https://psstaudio.com/post/28f35eb441cb4d42a329f55fe7229941
+: 1645894496:0;./psst_audio -l https://psstaudio.com/post/28f35eb441cb4d42a329f55fe7229941
+: 1645894511:0;cd .hidden/.scripts
+: 1645894511:0;l
+: 1645894514:0;vi psst_audio
+: 1645894593:0;cd .hidden/.scripts
+: 1645894594:0;l
+: 1645894608:0;./psst_audio -l "https://psstaudio.com/post/28f35eb441cb4d42a329f55fe7229941"
+: 1645894663:0;lf
+: 1645894909:0;sudo pacman -Syu
+: 1645894918:0;sudo pacman -Syu
+: 1645894921:0;sx
+: 1645894989:0;yay -Ss pixiv
+: 1645895033:0;yay -S pixivutil2-git
+: 1645895063:0;man pixiv
+: 1645895066:0;pixiv -h
+: 1645895118:0;lf
+: 1645895237:0;time
+: 1645895239:0;date
+: 1645895567:0;pixiv -h
+: 1645895699:0;vi
+: 1645895764:0;lf
+: 1645895992:0;cd code/learning/cs50
+: 1645895992:0;l
+: 1645895995:0;wget https://cdn.cs50.net/2021/fall/labs/7/songs.zip
+: 1645896005:0;unzip *.zip && rm -f *.zip
+: 1645896008:0;cd songs
+: 1645896008:0;l
+: 1645896022:0;cd code/learning/cs50/songs
+: 1645896022:0;l
+: 1645896028:0;sqlite3 songs.db 
+: 1645896046:0;echo ".schema" | sqlite3 songs.db > .schema.sql
+: 1645896058:0;cd code/learning/cs50/songs
+: 1645896060:0;l
+: 1645896066:0;cat .schema.sql
+: 1645896090:0;vi 1.sql
+: 1645896106:0;SELECT name FROM songs;\
+
+: 1645896112:0;sqlite3 songs.db
+: 1645896134:0;vi 2.sql
+: 1645896159:0;lf
+: 1645896270:0;lf
+: 1645897160:0;lf
+: 1645906383:0;cd documents/obsidian/ComputerScience
+: 1645906383:0;l
+: 1645906385:0;cd CS50
+: 1645906385:0;l
+: 1645906388:0;cd assets
+: 1645906389:0;l
+: 1645906398:0;sqlite3 7-shows.db
+: 1645906420:0;vi .sql
+: 1645906972:0;rm $_
+: 1645906973:0;l
+: 1645906978:0;cat te
+: 1645906982:0;rm te
+: 1645907302:0;lf
+: 1645907344:0;man pandoc
+: 1645907367:0;cd documents/obsidian/ComputerScience/CS50
+: 1645907368:0;l
+: 1645907383:0;pandoc -f html -t markdown Lecture\ 8\ -\ CS50x\ 2022.html
+: 1645907387:0;lf
+: 1645907426:0;pandoc -f html -t markdown Lecture\ 8\ -\ CS50x\ 2022.html -o 8.md
+: 1645907432:0;vi 8.md
+: 1645907660:0;pandoc -f html -t markdown Lecture\ 8\ -\ CS50x\ 2022.html -o 8.md
+: 1645907663:0;vi 8.md
+: 1645907792:0;sudo pacman -Syu
+: 1645907823:0;vi important-pkgs.txt
+: 1645910551:0;yay -Syua
+: 1645910582:0;sudo pacman -Syu
+: 1645911369:0;pkill qbittorrent
+: 1645911372:0;lsblk
+: 1645911377:0;umount /dev/sdc1
+: 1645911474:0;config status
+: 1645911487:0;cd .config
+: 1645911494:0;git add -u
+: 1645911499:0;config add -u

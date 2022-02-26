@@ -5,4 +5,6 @@ lvim.plugins = {
   {"easymotion/vim-easymotion"},
   {"ap/vim-css-color"},
   {"tpope/vim-repeat"},
+  {"tpope/vim-commentary"},
+  {"dbeniamine/cheat.sh-vim"},
 }

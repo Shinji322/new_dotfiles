@@ -31,5 +31,4 @@ cleanup()
     kill $pid
 }
 
-
 main "$@"

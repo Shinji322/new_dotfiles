@@ -26,11 +26,10 @@ alias vim="lvim"
 alias vi="lvim"
 alias scim="sc-im"
 alias cat='bat'
-alias mutt="neomutt"
 alias lf='~/.scripts/lf/lfrun'
 alias sxiv='sxiv -a'
 alias figlet='figlet -f ~/software/typefaces/figlet/doom.flf'
-alias startx='startx /home/mokou/.config/x11/xinitrc'
+alias strx='startx /home/mokou/.config/x11/xinitrc'
 alias locate="~/.scripts/alias/locate.sh"
 # alias tspreed="tspreed -p point -f -l -w 200" 
 
@@ -39,7 +38,7 @@ alias newsboat='newsboat --url-file="$XDG_CONFIG_HOME/newsboat/urls" --config-fi
 alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia/settings/.nvidia-settings-rc"'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
 alias gpg2='gpg2 --homedir "$XDG_DATA_HOME/gnupg""'
-alias anki='anki -b "$XDG_DATA_HOME"/Anki'
+alias anki='anki --no-sandbox -b "$XDG_DATA_HOME"/Anki'
 alias feh='feh --no-fehbg'
 alias codium='codium --extensions-dir $XDG_DATA_HOME/vscode'
 alias vscodium='vscodium --extensions-dir $XDG_DATA_HOME/vscode'
@@ -51,3 +50,4 @@ alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 # Let zsh get the entire history
 alias hist='history 1'
+

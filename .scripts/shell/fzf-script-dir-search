@@ -3,11 +3,11 @@
 # It is piped into fzf where it is selected.
 function se {
     choice=$(fd . $SCRIPT_DIR -t f | sed "s|/home/mokou/||g" | fzf) 
-    [ -n "$choice" ] && $EDITOR $choice
+    [ -n "$choice" ] && $EDITOR ~/$choice
 }
 
 # Instead executes script
 function sx {
     choice=$(fd . $SCRIPT_DIR -t f | sed "s|/home/mokou/||g" | fzf) 
-    [ -n "$choice" ] && $choice
+    [ -n "$choice" ] && ~/$choice
 }

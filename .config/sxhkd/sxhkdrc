@@ -30,9 +30,11 @@ super + shift + r
 #                                                  
 # Flameshot
 super + s
-    flameshot gui -p ~/images/screenshots/ -s 
+    flameshot gui -p ~/images/screenshots/ -s
 super + shift + s
     flameshot gui 
+# super + s
+#     flameshot screen -p ~/images/screenshots/games/
 
 
 #           __ _ 
@@ -46,7 +48,7 @@ super + p
 super + d 
     rofi -show run
 # alt_l + tab
-alt + tab
+Alt_L + tab
     rofi -show window
 
 
