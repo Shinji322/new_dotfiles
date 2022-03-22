@@ -39,12 +39,12 @@ fi
 setxkbmap -option caps:escape
 
 # startup apps
-transmission-daemon &
 udiskie &
 picom &
 dunst &
 blueberry-tray &
 sxhkd &
 ~/.scripts/alias/mpd
+~/.scripts/system/wallpaper
 
 exec i3
