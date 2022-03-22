@@ -1,0 +1,18 @@
+# This is a basic command that searches for scripts in the script directory
+# It opens them with $EDITOR. It only includes files (not directories)
+# It is piped into fzf where it is selected.
+function se {
+    CHOICE=$(fd . $SCRIPT_DIR -t f | sed "s|$HOME/||g" | fzf) 
+    [ -n "$CHOICE" ] && $EDITOR ~/$CHOICE
+}
+
+# Instead executes script
+function sx {
+    CHOICE=$(fd . $SCRIPT_DIR -t f | sed "s|$HOME/||g" | fzf) 
+    [ -n "$CHOICE" ] && ~/$CHOICE
+}
+
+# searches history
+function hf {
+    print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac --height "50%" | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
+}
