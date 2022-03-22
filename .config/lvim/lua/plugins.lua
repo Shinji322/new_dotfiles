@@ -7,4 +7,7 @@ lvim.plugins = {
   {"tpope/vim-repeat"},
   {"tpope/vim-commentary"},
   {"dbeniamine/cheat.sh-vim"},
+  {"junegunn/fzf"},
+  {"junegunn/fzf.vim"},
+  {"dhruvasagar/vim-table-mode"},
 }
