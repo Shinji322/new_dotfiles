@@ -70,6 +70,7 @@ bindkey '^e' edit-command-line
 # plugins
 source $XDG_CONFIG_HOME/broot/launcher/bash/br
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 
 # Startup
 # echo "lets all love lain"
