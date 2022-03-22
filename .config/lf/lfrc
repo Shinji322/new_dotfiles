@@ -166,6 +166,10 @@ cmd copy-file-contents &{{
     xclip -sel c < "$f"
 }}
 
+cmd copy-file-path &{{
+    echo "$f" | xclip -sel c
+}}
+
 cmd copy-file-name &{{
     echo "${f##*/}" | xclip -sel c
 }}
@@ -238,6 +242,7 @@ map mb mkbakup
 map ch chmod
 map cc copy-file-contents
 map cn copy-file-name
+map cf copy-file-path
 map bg setwallpaper
 map o open_config
 map br broot_jump
