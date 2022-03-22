@@ -1,14 +1,11 @@
 # ~-=| Built in Aliases |=-~
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-
-alias l='exa -la --icons --color=always --group-directories-first'
+alias l='exa -laG --icons --color=always --group-directories-first'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
-
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-
 
 # ~-=| Streamlining basic commands |=-~
 alias make='clear && make'
@@ -28,10 +25,15 @@ alias scim="sc-im"
 alias cat='bat'
 alias lf='~/.scripts/lf/lfrun'
 alias sxiv='sxiv -a'
-alias figlet='figlet -f ~/software/typefaces/figlet/doom.flf'
+# alias figlet='figlet -f ~/software/typefaces/figlet/doom.flf'
 alias strx='startx /home/mokou/.config/x11/xinitrc'
-alias locate="~/.scripts/alias/locate.sh"
+alias locate="sudo updatedb && ~/.scripts/alias/locate.sh"
 # alias tspreed="tspreed -p point -f -l -w 200" 
+
+#  ~-=| Others |=-~
+#alias 'pacman -Sy'='pacman -Syu'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
 
 #  ~-=| $HOME ~ Cleanup |=-~
 alias newsboat='newsboat --url-file="$XDG_CONFIG_HOME/newsboat/urls" --config-file="$XDG_CONFIG_HOME/newsboat/config" --cache-file="$XDG_CACHE_HOME/newsboat/cache"'
@@ -42,12 +44,18 @@ alias anki='anki --no-sandbox -b "$XDG_DATA_HOME"/Anki'
 alias feh='feh --no-fehbg'
 alias codium='codium --extensions-dir $XDG_DATA_HOME/vscode'
 alias vscodium='vscodium --extensions-dir $XDG_DATA_HOME/vscode'
+alias sqlite3="sqlite3 -init $XDG_CONFIG_HOME/sqlite/sqliterc" 
+alias mdanki="mdanki --config $XDG_CONFIG_HOME/mdanki/settings.json"
 
 
-#  ~-=| Making sure I am not dumb |=-~
-#alias 'pacman -Sy'='pacman -Syu'
-alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
-
-# Let zsh get the entire history
+# Let's move faster
+alias g="git"
+alias p="sudo pacman"
+alias y="yay"
+alias f="$FILE"
+alias e="$EDITOR"
+alias v="$EDITOR"
+alias yt="yt-dlp --add-metadata -i"
+# Let zsh get the entire history 
 alias hist='history 1'
 
