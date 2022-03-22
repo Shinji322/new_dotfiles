@@ -46,7 +46,7 @@ super + shift + s
 super + p 
     rofi -show drun
 super + d 
-    rofi -show run
+    dmenu_run
 # alt_l + tab
 Alt_L + tab
     rofi -show window
