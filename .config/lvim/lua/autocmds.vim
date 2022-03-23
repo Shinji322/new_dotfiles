@@ -1,17 +1,17 @@
 " Markdown/RMarkdown
 
 autocmd FileType rmd map <F5> :!Rscript -e "rmarkdown::render('%')"<CR>
-autocmd FileType rmd, markdown inoremap ,i ![](<++>){#fig:<++>}<Space><CR><CR><++><Esc>kkF]i
-autocmd FileType rmd, markdown inoremap ,a [](<++>)<Space><++><Esc>F]i
-autocmd FileType rmd, markdown inoremap ,1 #<Space><CR><CR><++><Esc>2k<S-a>
-autocmd FileType rmd, markdown inoremap ,2 ##<Space><CR><CR><++><Esc>2k<S-a>
-autocmd FileType rmd, markdown inoremap ,3 ###<Space><CR><CR><++><Esc>2k<S-a>
-autocmd FileType rmd, markdown inoremap ,4 ####<Space><CR><CR><++><Esc>2k<S-a>
-autocmd FileType rmd, markdown inoremap ,5 #####<Space><CR><CR><++><Esc>2k<S-a>
-autocmd FileType rmd, markdown inoremap ,u +<Space><CR><++><Esc>1k<S-a>
-autocmd FileType rmd, markdown inoremap ,o 1.<Space><CR><++><Esc>1k<S-a>
-autocmd FileType rmd, markdown inoremap ,f +@fig:
-
+autocmd FileType rmd inoremap ,i ![]()<Left><Left><Left>
+autocmd FileType rmd inoremap ,a []()<Left><Left><Left>
+autocmd FileType rmd inoremap ,1 #<Space>
+autocmd FileType rmd inoremap ,2 ##<Space>
+autocmd FileType rmd inoremap ,3 ###<Space>
+autocmd FileType rmd inoremap ,4 ####<Space>
+autocmd FileType rmd inoremap ,5 #####<Space>
+autocmd FileType rmd inoremap ,u *<Space>
+autocmd FileType rmd inoremap ,o 1.<Space>
+autocmd FileType rmd inoremap ,f +@fig:
+autocmd FileType rmd inoremap <C-b> ****<Left><Left>
 
 " Shell
 autocmd FileType sh map <leader>b i#!/bin/sh<CR><CR>
