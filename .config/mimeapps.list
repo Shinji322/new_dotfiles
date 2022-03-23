@@ -10,7 +10,6 @@ image/jpeg=img.desktop;
 image/gif=img.desktop;
 video/x-matroska=video.desktop
 inode/directory=file.desktop
-
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/chrome=firefox.desktop
@@ -24,6 +23,9 @@ application/x-extension-xht=firefox.desktop
 x-scheme-handler/discord-712465656758665259=discord-712465656758665259.desktop
 x-scheme-handler/obsidian=obsidian.desktop
 x-scheme-handler/discord-719647875465871400=discord-719647875465871400.desktop
+x-scheme-handler/mailto=userapp-Thunderbird-VPH7I1.desktop
+message/rfc822=userapp-Thunderbird-VPH7I1.desktop
+x-scheme-handler/mid=userapp-Thunderbird-VPH7I1.desktop
 
 [Added Associations]
 x-scheme-handler/http=firefox.desktop;
@@ -35,3 +37,5 @@ application/x-extension-shtml=firefox.desktop;
 application/xhtml+xml=firefox.desktop;
 application/x-extension-xhtml=firefox.desktop;
 application/x-extension-xht=firefox.desktop;
+x-scheme-handler/mailto=userapp-Thunderbird-VPH7I1.desktop;
+x-scheme-handler/mid=userapp-Thunderbird-VPH7I1.desktop;

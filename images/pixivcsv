@@ -14,12 +14,15 @@ def main(file:str, opt:str):
     with open(file, 'r+') as f:
         reader = csv.DictReader(f)
 
+        # This is done to limit logins to pixiv
+        ids = []
         for line in reader:
             if str2bool(line["downloaded"]):
                 continue
-            cmd = f"echo \"{line['id']}\" | pixiv -s {opt}"
-            os.system(cmd)
-            line['downloaded'] = "True"
+            ids.append(line['id'])
+
+        cmd = f"echo \"{' '.join(ids)}\" | pixiv -s {opt}"
+        os.system(cmd)
 
 
 args = sys.argv
