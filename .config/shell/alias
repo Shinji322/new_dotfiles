@@ -56,6 +56,6 @@ alias f="$FILE"
 alias e="$EDITOR"
 alias v="$EDITOR"
 alias yt="yt-dlp --add-metadata -i"
+alias tsk="taskell"
 # Let zsh get the entire history 
 alias hist='history 1'
-
