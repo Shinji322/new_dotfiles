@@ -1,0 +1,11 @@
+#!/bin/sh
+# This script runs at startup, to be started by the Window Manager
+
+~/.scripts/system/wallpaper
+~/.scripts/alias/mpd
+
+
+KANBAN_FILE="~/documents/kanban/$(date '+%g-%m-%d')taskell.md"
+[ -z $KANBAN_FILE ] && touch $KANBAN_FILE
+kitty calcurse &!
+kitty taskell $KANBAN_FILE &!
