@@ -14,6 +14,7 @@ require "plugins"
 
 -- general
 lvim.log.level = "warn"
+-- important
 lvim.format_on_save = false
 lvim.colorscheme = "onedarker"
 
