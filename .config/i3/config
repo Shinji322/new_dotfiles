@@ -6,6 +6,8 @@ set $tab 0xff09
 # ~-|Startup Programs / Startup Scripts|-~
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec ~/.scripts/screenlayout/1080p-dual-screen.sh
+exec kitty taskell
+exec kitty calcurse
 
 # Default information
 set $refresh_i3status killall -SIGUSR1 i3status
