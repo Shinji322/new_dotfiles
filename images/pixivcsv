@@ -1,0 +1,53 @@
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# This is a simple script that reads the ids from a csv file 
+# and downloads them using PixivUtil2
+
+import csv
+import sys
+import os
+
+def str2bool(v):
+    return str(v).lower() in ("yes", "true", "t", "1", "y")
+
+def main(file:str, opt:str):
+    with open(file, 'r+') as f:
+        reader = csv.DictReader(f)
+
+        for line in reader:
+            if str2bool(line["downloaded"]):
+                continue
+            cmd = f"echo \"{line['id']}\" | pixiv -s {opt}"
+            os.system(cmd)
+            line['downloaded'] = "True"
+
+
+args = sys.argv
+if not args or len(args) > 3 or len(args) <= 1:
+    print("""
+        Usage: python pixivcsv *.csv {option}
+
+        Please enter a valid input.
+        Check pixiv -h for options.
+    """)
+    sys.exit(1)
+else:
+    filename = args[1]
+    # If we only have two arguments, let's interpret what the user wants
+    if len(args) == 2:
+        if "artworks" in filename:
+            # 2 downloads by image id
+            main(filename, '2')
+        elif "artists" in filename:
+            # 1 downloads by member id
+            main(filename, '1')
+        else:
+            print("""
+                Unable to determine if artwork or artists in determining filetype.
+                Maybe try passing in 3 arguments
+            """)
+            sys.exit(1)
+    else:
+        main(filename, args[2])
+
+sys.exit(0)
