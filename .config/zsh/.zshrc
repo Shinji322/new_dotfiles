@@ -8,7 +8,7 @@ for f (~/.scripts/shell/*) . $f
 
 # Colors
 autoload -U colors && colors
-PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}$%b "
+PS1="%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%M %{$fg[magenta]%}%~%{$fg[red]%}]%{$reset_color%}λ%b "
 setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
@@ -22,10 +22,15 @@ compinit
 _comp_options+=(globdots)		# Include hidden files
 
 # History in cache directory:
+# checks if history file exists an creates it 
+# History doesn't work if this file is not here
+[ -z "~/.cache/zsh/history" ] && /bin/touch ~/.cache/zsh/history
+export HISTFILE=~/.cache/zsh/history  
+
 setopt share_history
 HISTSIZE=10000000
 SAVEHIST=10000000
-export HISTFILE=~/.cache/zsh/history  # Make sure to create this file or else history will not be saved
+
 
 # ~/ Cleanup
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
