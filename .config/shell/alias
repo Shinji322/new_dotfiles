@@ -25,6 +25,7 @@ alias scim="sc-im"
 alias cat='bat'
 alias lf='~/.scripts/lf/lfrun'
 alias sxiv='sxiv -a'
+# alias diff="diff-so-fancy"
 # alias figlet='figlet -f ~/software/typefaces/figlet/doom.flf'
 alias strx='startx /home/mokou/.config/x11/xinitrc'
 alias locate="sudo updatedb && ~/.scripts/alias/locate.sh"
@@ -60,3 +61,4 @@ alias tsk="task" # that one character really helps
 # alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
 # Let zsh get the entire history 
 alias hist='history 1'
+alias "source .zshrc"="source ~/.config/zsh/zshrc"
