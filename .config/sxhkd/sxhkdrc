@@ -71,9 +71,9 @@ super + F10
     playerctl --player=mpd volume 0.05+ && notify-send "MPD Volume +0.05"
 
 super + shift + F9
-    amixer sset Master 5%- && notify-send "Volume -5%"
+    ~/.local/bin/changevolume down
 super + shift + F10
-    amixer sset Master 5%+ && notify-send "Volume +5%"
+    ~/.local/bin/changevolume up
 
 
 #  _           _   _                  

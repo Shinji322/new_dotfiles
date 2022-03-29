@@ -1,9 +1,29 @@
 #!/bin/bash
-# https://github.com/ericmurphyxyz/archrice/blob/master/.local/bin/changevolume
+# modified from: https://github.com/ericmurphyxyz/archrice/blob/master/.local/bin/changevolume
 
 function send_notification() {
 	volume=$(pamixer --get-volume)
-	dunstify -a "changevolume" -u low -r "9993" -h int:value:"$volume" -i "volume-$1" "Volume: ${volume}%" -t 2000
+
+    # change this depending on your icon theme
+    # This works with the paper icon theme
+    # /usr/share/icons/Paper
+    case $1 in 
+        up)
+            icon="stock_volume-max"
+            ;;
+        down)
+            icon="stock_volume-med"
+            ;;
+        mute)
+            icon="stock_volume-mute"
+            ;;
+    esac
+
+    # -a changes appname 
+    # -u urgency
+    # -r unique id (useful here because we will overwrite it!)
+    # -i icon
+	dunstify -a "changevolume" -u low -r "9993" -h int:value:"$volume" -i $icon "Volume: ${volume}%" -t 2000
 }
 
 case $1 in
