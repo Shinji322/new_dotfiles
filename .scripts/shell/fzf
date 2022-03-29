@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # This is a basic command that searches for scripts in the script directory
 # It opens them with $EDITOR. It only includes files (not directories)
 # It is piped into fzf where it is selected.
