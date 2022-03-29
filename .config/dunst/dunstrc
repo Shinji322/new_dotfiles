@@ -22,7 +22,7 @@
     font = JetBrains Mono Nerd Font Medium 10
     line_height = 0
     markup = full
-    format = "<b>%s</b>\n%b"
+    format = "<b>%s</b>\n<i>%b</i>"
     alignment = left
     vertical_alignment = center
     show_age_threshold = 60
@@ -65,7 +65,7 @@
 [urgency_critical]
     background = "#11121D"
     foreground = "#EE6D85"
-    timeout = 30
+    timeout = 0
 
 [history-ignore]
     # This will not be saved in history

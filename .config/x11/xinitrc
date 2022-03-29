@@ -45,7 +45,7 @@ dunst &
 blueberry-tray &
 sxhkd &
 ~/.scripts/alias/mpd
-/bin/bash -c "sleep 30 && python3 /home/mokou/.scripts/calcurse_reminders" &
+calcurse --daemon
 ~/.scripts/system/wallpaper
 
 exec i3

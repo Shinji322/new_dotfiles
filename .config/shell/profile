@@ -24,16 +24,17 @@ export PATH="$PATH:${HOME}/.local/bin"
 unsetopt PROMPT_SP
 
 
-# Default Programs
+# Default Programs (most are just for use in scripts)
 export TERMINAL="kitty"
 export EDITOR="lvim"
 export FILE="lf"
 export READER="zathura"
-export VISUAL="nvim"
+export VISUAL="lvim"
 export PAGER="less"
 export WM="i3"
 export SHELL="zsh"
 export BROWSER="firefox"
+export ICON_THEME="Paper"
 
 # Misc
 # blocks telemetry

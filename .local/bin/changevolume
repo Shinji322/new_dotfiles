@@ -23,6 +23,7 @@ function send_notification() {
     # -u urgency
     # -r unique id (useful here because we will overwrite it!)
     # -i icon
+    # -t time (in ms)
 	dunstify -a "changevolume" -u low -r "9993" -h int:value:"$volume" -i $icon "Volume: ${volume}%" -t 2000
 }
 
