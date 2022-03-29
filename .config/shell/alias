@@ -8,7 +8,7 @@ alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 # ~-=| Streamlining basic commands |=-~
-alias make='clear && make'
+# alias make='clear && make'
 alias rm='trash-put'
 alias cp='cpg -g'
 alias mv='mvg -g'
@@ -56,6 +56,7 @@ alias f="$FILE"
 alias e="$EDITOR"
 alias v="$EDITOR"
 alias yt="yt-dlp --add-metadata -i"
-alias tsk="taskell"
+alias tsk="task" # that one character really helps
+# alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
 # Let zsh get the entire history 
 alias hist='history 1'

@@ -14,9 +14,11 @@ export BINARIES_DIR="$HOME/software/binaries"
 #export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 export PATH="$PATH:${HOME}/.local/bin"
 . "$HOME/.local/share/cargo/env"
-export PATH="$PATH:${APPIMAGE_DIR}"
-export PATH="$PATH:${BINARIES_DIR}"
-export PATH="$PATH:$HOME/.local/share/npm/bin"
+. "${APPIMAGE_DIR}"
+. "${BINARIES_DIR}"
+. "${XDG_DATA_HOME:-$HOME/.local/share}/npm/bin"
+. "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/lsp_servers"
+# . "$HOME/.local/share/nvim/lsp_servers/go"
 
 # stuff
 unsetopt PROMPT_SP
@@ -36,7 +38,6 @@ export BROWSER="firefox"
 # Misc
 # blocks telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
-export $(dbus-launch)
 
 # ~/ Cleanup
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"

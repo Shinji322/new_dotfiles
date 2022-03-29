@@ -1,11 +1,13 @@
 #!/bin/sh
 # This script runs at startup, to be started by the Window Manager
 
-~/.scripts/system/wallpaper
 ~/.scripts/alias/mpd
 
 
-KANBAN_FILE="~/documents/kanban/$(date '+%g-%m-%d')taskell.md"
-[ -z $KANBAN_FILE ] && touch $KANBAN_FILE
+KANBAN_FILE="$HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
+[ -z $KANBAN_FILE ] && cat ~/.config/taskell/template.md > $KANBAN_FILE
 kitty calcurse &!
 kitty taskell $KANBAN_FILE &!
+kitty lvim ~/vimwiki/better_learning/how_to_learn.rmd &!
+
+notify-send "Good luck! Remember you have to be great"
