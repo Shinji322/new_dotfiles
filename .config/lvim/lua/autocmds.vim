@@ -23,3 +23,6 @@ autocmd FileType sh inoremap ,ca )<Space><++><Space>;;<CR><++><Esc>?)<CR>i
 
 " Calcurse
 autocmd BufRead,BufNewFile /tmp/calcurse*,~/.local/share/calcurse/notes/* set filetype=markdown
+
+" Read rc files as cfg
+autocmd BufRead,BufNewFile *rc set filetype=cfg
