@@ -1,5 +1,0 @@
-#!/bin/sh
-
-function yt-notif {
-    dunstify -u low -i 'youtube-dl' -a 'youtube-dl-notification' $1 $2
-}
