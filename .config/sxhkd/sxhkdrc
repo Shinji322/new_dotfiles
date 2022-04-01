@@ -66,9 +66,9 @@ super + F8
 super + F5
     playerctl --player=mpd stop 
 super + F9
-    playerctl --player=mpd volume 0.05- && notify-send "MPD Volume -0.05"
+    ~/.local/bin/mpdvolume down
 super + F10
-    playerctl --player=mpd volume 0.05+ && notify-send "MPD Volume +0.05"
+    ~/.local/bin/mpdvolume up
 
 super + shift + F9
     ~/.local/bin/changevolume down
