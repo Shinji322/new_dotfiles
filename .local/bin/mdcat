@@ -1,0 +1,57 @@
+#!/bin/bash -x
+# This was made by Shinji322/Fujiwara no Mokou/other weebish names
+# This simple script cats or opens the file in the editor at the specified line
+# It depends on fzf and bat
+
+
+# Determines if we cat or edit
+EDITING=false
+CATTING=true # default bat
+while getopts e:c:f: options; do
+    case $options in 
+        e) EDITING=true && CATTING=false;; 
+        c) CATTING=true && EDITING=false;;
+        f) FILE=${OPTARG};;
+    esac
+done
+
+
+# Error checking
+if [ -z "$FILE" ]
+then
+    echo -e "Usage:\tmdgrep -f [ FILE ] [ -e EDIT ] [ -c CAT ]"
+    exit 1
+fi
+
+
+# -n specifies to explictly allow line number in output
+# output like "24:fi"
+CHOICES=$(rg -n "#" "$FILE")
+# Starting line 
+START=$(rg -n "#" "$FILE" | fzf)
+# Get number
+START=${START%%:*}
+
+for CHOICE in ${CHOICES[@]};
+do
+    # Get only number
+    CHOICE=$(echo $CHOICE | sed "s/[^0-9]//g")
+    [ -z "$CHOICE" ] && continue
+
+    # this weird string subtitution is used to get the line number
+    if [ $CHOICE -gt $START ]; then
+        END="$CHOICE"
+        break
+    fi
+done
+
+
+# works for vim/nvim
+# $EDITOR +"$LINE" "$FILE"
+if [ -z "$END" ] 
+then
+    bat --line-range "$START:" "$FILE"
+else
+    # Go from this line to the line before the new heading
+    bat --line-range "$START:$(( END - 1))" "$FILE"
+fi
