@@ -10,4 +10,10 @@ lvim.plugins = {
   {"junegunn/fzf"},
   {"junegunn/fzf.vim"},
   {"dhruvasagar/vim-table-mode"},
+  {
+    "nvim-orgmode/orgmode",
+    config = function()
+        require('orgmode').setup{}
+    end
+  }
 }
