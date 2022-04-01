@@ -3,32 +3,27 @@
 # This simple script cats or opens the file in the editor at the specified line
 # It depends on fzf and bat
 
-
-# Determines if we cat or edit
-EDITING=false
-CATTING=true # default bat
-while getopts e:c:f: options; do
-    case $options in 
-        e) EDITING=true && CATTING=false;; 
-        c) CATTING=true && EDITING=false;;
-        f) FILE=${OPTARG};;
-    esac
-done
-
+usage() {
+    echo -e "Usage:\tmdcat [ FILE ]"
+}
 
 # Error checking
-if [ -z "$FILE" ]
+if [ -z "$1" ]
 then
-    echo -e "Usage:\tmdgrep -f [ FILE ] [ -e EDIT ] [ -c CAT ]"
-    exit 1
-fi
+    usage && exit 1
+fi 
 
+if [ ! -f "$1" ]
+then
+    echo "Gimme an actual file please"
+    usage && exit 2
+fi
 
 # -n specifies to explictly allow line number in output
 # output like "24:fi"
-CHOICES=$(rg -n "#" "$FILE")
+CHOICES=$(rg -n "#" "$1")
 # Starting line 
-START=$(rg -n "#" "$FILE" | fzf)
+START=$(rg -n "#" "$1" | fzf)
 # Get number
 START=${START%%:*}
 
@@ -45,13 +40,12 @@ do
     fi
 done
 
-
-# works for vim/nvim
-# $EDITOR +"$LINE" "$FILE"
 if [ -z "$END" ] 
 then
-    bat --line-range "$START:" "$FILE"
+    bat --line-range "$START:" "$1"
+    exit 0
 else
     # Go from this line to the line before the new heading
-    bat --line-range "$START:$(( END - 1))" "$FILE"
+    bat --line-range "$START:$(( END - 1))" "$1"
+    exit 0
 fi
