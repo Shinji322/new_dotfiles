@@ -1,3 +1,3 @@
 # This excludes timeshift folders from the output of locate
 
-locate $1 | grep -v timeshift
+locate -i $1 | grep -v timeshift

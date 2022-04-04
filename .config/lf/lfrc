@@ -295,7 +295,8 @@ map gck  cd ~/.config/sxhkd
 map gL  cd ~/literature
 
 map gl. cd ~/.local
-map gls cd ~/.local/share
+map gls cd ~/.local/src
+map glS cd ~/.local/share
 map gE  cd /etc
 map gU. cd /usr
 map gUs cd /usr/share

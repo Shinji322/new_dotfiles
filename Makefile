@@ -49,28 +49,28 @@ pacman: # Configures pacman with colors
 
 
 # Programming stuff
-node:
+node: base pacman 
 	$(INSTALL) nodejs npm
 
-python:
+python: base pacman
 	$(INSTALL) python-pip
 
-pipkgs: python
+pipkgs: base pacman python
 	$(PIPINSTALL) beautifulsoup4 bs4 requests lxml pipenv
 
-rust:
+rust: base pacman
 	$(INSTALL) rustup
 	rustup default stable
 	rustup component add rls rust-analysis rust-src
 
-go:
+go: base pacman
 	$(INSTALL) go
 
 programming: node python pipkgs rust go
 
 
 # CLI utilties
-cliutils: base
+cliutils: base pacman
 	$(INSTALL) $(CLI_PACKAGES)
 
 advcpmv: base # an advanced version of cp and mv that adds a progress bar
@@ -78,7 +78,7 @@ advcpmv: base # an advanced version of cp and mv that adds a progress bar
 	sudo mv $(PWD)/advcpmv/advcp /usr/local/bin/cpg
 	sudo mv $(PWD)/advcpmv/advmv /usr/local/bin/mvg
 
-shell: base
+shell: base aur
 	$(INSTALL) zsh
 	$(INSTALL) zsh-autosuggestions zsh-completions
 	$(AUR) zsh-fast-syntax-highlighting
@@ -87,75 +87,75 @@ allcli: cliutils advcpmv shell
 	
 
 # Programming libraries
-sdl: 
+sdl: base pacman
 	$(INSTALL) sdl sdl_image sdl_mixer 
 	$(INSTALL) lib32-sdl_image lib32-sdl_mixer
 
-rmarkdown:
+rmarkdown: base pacman
 	$(INSTALL) r gcc-fortran tk
 
 libraries: sdl rmarkdown
 
 # Personal
-pkgs: 
+pkgs: base pacman 
 	$(INSTALL) $(PACKAGES)
 
-terminal:
+terminal: base pacman
 	$(INSTALL) kitty
 
-fonts:
+fonts: base pacman aur
 	$(INSTALL) ttf-ubuntu-font-family
 	$(INSTALL) otf-ipafont
 	$(AUR) ttf-fira-code
 
-texteditor:
+texteditor: base pacman aur
 	$(INSTALL) neovim
 	$(AUR) lunarvim-git
 	$(AUR) sc-im-git
 
-browser:
+browser: aur
 	$(AUR) librewolf-bin 
 	$(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-loaclcdn
 
-gaming:
+gaming: base
 	$(INSTALL) steam 
 	$(INSTALL) wine winetricks
 	$(INSTALL) lutris
 
-emulators:
+emulators: aur
 	$(AUR) citra-qt-git
 
 # hardware dependent
-nvidia:
+nvidia: base pacman
 	$(INSTALL) nvidia nvidia-dkms nvidia-prime 
 	$(INSTALL) nvidia-settings nvidia-utils lib32-nvidia-utils
 
-socialmedia:
+socialmedia: base pacman
 	$(INSTALL) discord
 
-programs: pkgs terminal fonts texteditor browser gaming emulators 
+programs: pkgs terminal fonts texteditor browser gaming emulators  socialmedia
 drivers: nvidia
 
 # Configs
-bluetooth:
+bluetooth: base pacman
 	$(INSTALL) bluez bluez-utils
 	$(SYSTEMD_ENABLE) bluetooth.service
 
-network:
+network: base pacman
 	$(INSTALL) networkmanager
 	$(SYSTEMD_ENABLE) NetworkManager.service
 
-automount: # Automount hard drives on connect
+automount: base pacman # Automount hard drives on connect
 	$(INSTALL) udiskie
 	$(SYSTEMD_ENABLE) udisks2.service
 
 PTHEMES := python-qdarkstyle
 ATHEMES := gtk-theme-arc-gruvbox-git orchis-theme-git
-themes: 
+themes: base pacman aur
 	$(INSTALL) $(PTHEMES)
 	$(AUR) $(ATHEMES)
 
-cron: base
+cron: base pacman
 	$(INSTALL) cronie
 
 
