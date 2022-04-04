@@ -179,10 +179,10 @@ cmd copy-file-path &{{
 }}
 
 cmd dragon-drag %{{
-    dragon-drag-and-drop "$f"
+    dragon-drop "$f"
 }}
 cmd dragon-drag-all %{{
-    dragon-drag-and-drop --all "$f"
+    dragon-drop --all "$f"
 }}
 
 cmd fzf-open ${{
