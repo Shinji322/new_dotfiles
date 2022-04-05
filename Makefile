@@ -12,7 +12,7 @@ CLI_PACKAGES     += ripgrep fd exa fzf git-delta
 CLI_PACKAGES     += unzip unrar xclip atool mediainfo task-spooler moreutils tar untar gzip
 CLI_PACKAGES     += nodedjs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
-CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager
+CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc
 CLI_PACKAGES     += pass passotp rsync
 
 AUR_HELPER       := yay
@@ -48,6 +48,12 @@ aur:
 pacman: # Configures pacman with colors
 	sudo sed -i "s/^#Color/Color/" /etc/pacman.conf
 
+sudo:
+	sudo echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+
+# Changable stuff
+windowmanager:
+	$(INSTALL) i3-gaps i3blocks
 
 # Programming stuff
 node: base pacman 
