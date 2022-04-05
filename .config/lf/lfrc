@@ -1,6 +1,7 @@
 # Basic Settings
 set previewer ~/.scripts/lf/lfpreviewer
 set cleaner ~/.scripts/lf/lfcleaner
+set shell zsh
 set preview 
 set hidden true
 set drawbox true
@@ -13,6 +14,28 @@ cmd open ${{
         # text/*|application/json) $EDITOR "$f";;
         *) xdg-open "$f" &;;
     esac
+}}
+
+cmd paste-async &{{
+    mode="$(cat ~/.local/share/lf/files | head -1)"
+    case "$mode" in
+        copy) 
+            while IFS= read -r line
+            do 
+                cp -rn -- "$line" .
+            done  < "$HOME/.local/share/lf/files"
+            ;;
+        move) 
+            while IFS= read -r line
+            do 
+                mv -n -- "$line" .
+            done  < "$HOME/.local/share/lf/files"
+            ;;
+    esac
+
+    dunstify "Succesful file transfer!" "$files" -i folder
+    rm ~/.local/share/lf/files
+    lf -remote "send reload"
 }}
 
 cmd mkdir ${{
@@ -228,7 +251,8 @@ map ss stripspace
 # Basic Functions
 map . set hidden!
 map DD delete
-map p paste
+map p paste-async
+map P paste 
 map x cut
 map y copy
 map <enter> open
@@ -244,10 +268,8 @@ map cc copy-file-contents
 map cn copy-file-name
 map cf copy-file-path
 map bg setwallpaper
-map o open_config
-map br broot_jump
 map r rename
-map R $vidir
+map R $ vidir .
 map H top
 map L bottom
 map R reload
