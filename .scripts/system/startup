@@ -4,4 +4,8 @@
 kitty calcurse &!
 kitty lvim ~/vimwiki/better_learning/how_to_learn.rmd &!
 
-notify-send "Good luck! Remember you have to be great"
+QUOTES="$HOME/documents/quotes/quotes"
+NOOFQUOTES=$(wc -l $QUOTES | awk '{print $1}')
+QUOTELINE="(( $RANDOM % $NOOFQUOTES + 1))"
+QUOTE=$(sed -n ${QUOTELINE}p $QUOTES)
+dunstify "$QUOTE" -a 'quote-notificaiton' -u critical

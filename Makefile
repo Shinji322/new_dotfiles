@@ -26,6 +26,7 @@ INSTALL        := sudo pacman --noconfirm --needed
 AUR            := yay -S --noconfirm
 SYSTEMD_ENABLE := sudo systemctl --now enable
 PIPINSTALL     := pip install --user
+GOINSTALL      := go get 
 
 
 # Necessities: Non debatable stuff
@@ -55,7 +56,7 @@ node: base pacman
 python: base pacman
 	$(INSTALL) python-pip
 
-pipkgs: base pacman python
+pipkgs: python
 	$(PIPINSTALL) beautifulsoup4 bs4 requests lxml pipenv
 
 rust: base pacman
@@ -65,6 +66,9 @@ rust: base pacman
 
 go: base pacman
 	$(INSTALL) go
+
+gopkgs: go 
+	$(GOINSTALL) github.com/PuerkitoBio/goquery
 
 programming: node python pipkgs rust go
 
