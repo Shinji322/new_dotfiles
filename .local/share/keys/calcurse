@@ -8,3 +8,4 @@ calcurse is the calendar and schedule manager.
 	tab - Switch from calendar to todo to appointments
 	h/j/k/l - Move left/down/up/right
     ! - Mark todo as completed
+    Ctrl+P - Show all completed todos
