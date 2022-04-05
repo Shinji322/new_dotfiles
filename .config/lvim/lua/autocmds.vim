@@ -31,3 +31,5 @@ autocmd BufRead,BufNewFile /tmp/calcurse*,~/.local/share/calcurse/notes/* set fi
 autocmd BufRead,BufNewFile *rc set filetype=cfg
 " Some files may be xyzrc.bak for example
 autocmd BufRead,BufNewFile *rc.* set filetype=cfg
+" Except these ones
+autocmd BufRead,BufNewFile lfrc* set filetype=sh
