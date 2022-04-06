@@ -90,7 +90,7 @@ advcpmv: base # an advanced version of cp and mv that adds a progress bar
 	sudo mv $(PWD)/advcpmv/advcp /usr/local/bin/cpg
 	sudo mv $(PWD)/advcpmv/advmv /usr/local/bin/mvg
 
-shell: base aur
+shell: base 
 	$(INSTALL) zsh
 	$(INSTALL) zsh-autosuggestions zsh-completions
 	$(AUR) zsh-fast-syntax-highlighting
@@ -115,17 +115,17 @@ pkgs: base pacman
 terminal: base pacman
 	$(INSTALL) kitty
 
-fonts: base pacman aur
+fonts: base pacman 
 	$(INSTALL) ttf-ubuntu-font-family
 	$(INSTALL) otf-ipafont
 	$(AUR) ttf-fira-code
 
-texteditor: base pacman aur
+texteditor: base pacman 
 	$(INSTALL) neovim
-	$(AUR) lunarvim-git
 	$(AUR) sc-im-git
+	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 
-browser: aur
+browser: 
 	$(AUR) librewolf-bin 
 	$(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-loaclcdn
 
@@ -134,7 +134,7 @@ gaming: base
 	$(INSTALL) wine winetricks
 	$(INSTALL) lutris
 
-emulators: aur
+emulators: 
 	$(AUR) citra-qt-git
 
 # hardware dependent
@@ -163,7 +163,7 @@ automount: base pacman # Automount hard drives on connect
 
 PTHEMES := python-qdarkstyle
 ATHEMES := gtk-theme-arc-gruvbox-git orchis-theme-git
-themes: base pacman aur
+themes: base pacman 
 	$(INSTALL) $(PTHEMES)
 	$(AUR) $(ATHEMES)
 
