@@ -4,7 +4,7 @@ source $HOME/.config/lf/LF_ICONS
 
 # Source scripts directory
 set -o extendedglob
-for f (~/.scripts/shell/*) . $f
+for f ($SCRIPT_DIR/shell/*) . $f
 
 # Colors
 autoload -U colors && colors
@@ -15,6 +15,7 @@ setopt interactive_comments
 
 
 # Basic auto/tab complete:
+fpath+=($XDG_DATA_HOME/zsh/autocompletions)
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -24,8 +25,8 @@ _comp_options+=(globdots)		# Include hidden files
 # History in cache directory:
 # checks if history file exists an creates it 
 # History doesn't work if this file is not here
-[ -z "~/.cache/zsh/history" ] && /bin/touch ~/.cache/zsh/history
-export HISTFILE=~/.cache/zsh/history  
+[ -z "$XDG_CACHE_HOME/zsh/history" ] && /bin/touch $XDG_CACHE_HOME/zsh/history
+export HISTFILE=$XDG_CACHE_HOME/zsh/history  
 
 setopt share_history
 HISTSIZE=10000000

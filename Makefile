@@ -27,28 +27,29 @@ AUR            := yay -S --noconfirm
 SYSTEMD_ENABLE := sudo systemctl --now enable
 PIPINSTALL     := pip install --user
 GOINSTALL      := go get 
+LN             := ln -vsf
 
 
 # Necessities: Non debatable stuff
 base:
 	$(INSTALL) $(BASE_PKGS)	
 
-xorg: 
+xorg: base
 	$(INSTALL) xorg-server xorg-xwininfo xorg-xinit xorg-twm xorg-xev
 	$(INSTALL) xorg-xrandr xcompmgr xorg-xprop xorg-dpyinfo
 	$(INSTALL) xclip
 
-aur:
+aur: base sudo
 	cd /opt
 	sudo git clone https://aur.archlinux.org/yay.git 
 	cd yay
 	makepkg -si
 	cd $(PWD)
 
-pacman: # Configures pacman with colors
+pacman: base sudo # Configures pacman with colors
 	sudo sed -i "s/^#Color/Color/" /etc/pacman.conf
 
-sudo:
+sudo: base
 	sudo echo "%wheel ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
 # Changable stuff

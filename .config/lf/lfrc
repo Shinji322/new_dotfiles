@@ -22,12 +22,16 @@ cmd paste-async &{{
         copy) 
             while IFS= read -r line
             do 
+                # [[ "$line" == "copy" ]] && continue
+                dunstify "Started transferring file: " "$line"
                 cp -rn -- "$line" .
             done  < "$HOME/.local/share/lf/files"
             ;;
         move) 
             while IFS= read -r line
             do 
+                # [[ "$line" == "move" ]] && continue
+                dunstify "Started transferring file: " "$line"
                 mv -n -- "$line" .
             done  < "$HOME/.local/share/lf/files"
             ;;
@@ -105,27 +109,11 @@ cmd fzf_jump ${{
   lf -remote "send $id $cmd \"$res\""
 }}
 
-cmd broot_jump ${{
-  f=$(mktemp)
-  res="$(broot --outcmd $f && cat $f | sed 's/cd //')"
-  rm -f "$f"
-  if [ -f "$res" ]; then
-    cmd="select"
-  elif [ -d "$res" ]; then
-    cmd="cd"
-  fi
-  lf -remote "send $id $cmd \"$res\""
-}}
-
-cmd open_config  ${{
-  $EDITOR $(bookmenu -b ~/.config/bookmenu/configs -f fzf -o)
-}}
-
 # Archive bindings
 cmd extract ${{
   case "$f" in
     *.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
-        tar -xjvf "$f" ;;
+        tar -xjvf ./"$f" ;;
     *.lzma)      
         unlzma ./"$f"      ;;
     *.zip) 
@@ -149,9 +137,9 @@ cmd extract ${{
     *.cba|*.ace)      
         unace x ./"$f"      ;;
     *.tar.gz) 
-        tar -xzvf "$f" ;;
+        tar -xzvf ./"$f" ;;
     *.tar) 
-        tar -xvf "$f" ;;
+        tar -xvf ./"$f" ;;
     *) 
         echo "Unsupported format" ;;
   esac
@@ -299,7 +287,6 @@ map gG   cd ~/games
 map gS   cd ~/.scripts
 map gs.  cd ~/software
 map gsa  cd ~/software/app-images
-map gss  cd ~/software/source 
 
 map gp.  cd ~/code
 map gpl  cd ~/code/learning
@@ -319,6 +306,8 @@ map gL  cd ~/literature
 map gl. cd ~/.local
 map gls cd ~/.local/src
 map glS cd ~/.local/share
+map glr cd ~/.local/repos
+map glb cd ~/.local/bin
 map gE  cd /etc
 map gU. cd /usr
 map gUs cd /usr/share

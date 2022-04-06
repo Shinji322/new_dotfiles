@@ -23,3 +23,20 @@ function hf {
 function fcd {
     cd $(ls | fzf)
 }
+
+# serach man pages
+# function fzman {
+#     OLDIFS="$IFS"
+#     IFS=":"
+#     MANPATHS=($(manpath))
+#     IFS=$OLDIFS
+
+#     MANS=()
+#     for MAN in $MANPATHS
+#     do
+#         MANTOADD=$(/bin/ls $MAN/man*)
+#         MANS+=${MANTOADD%%.*}
+#     done
+
+#     man $(echo ${MANS} | fzf)
+# }
