@@ -9,11 +9,12 @@ BASE_PKGS        += man-db curl entr
 
 CLI_PACKAGES     := neovim
 CLI_PACKAGES     += ripgrep fd exa fzf git-delta 
-CLI_PACKAGES     += unzip unrar xclip atool mediainfo task-spooler moreutils tar untar gzip
-CLI_PACKAGES     += nodedjs npm python-pip valgrind cronie
+CLI_PACKAGES     += unzip unrar xclip mediainfo task-spooler moreutils tar untar gzip
+CLI_PACKAGES     += nodejs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
 CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc
-CLI_PACKAGES     += pass passotp rsync
+CLI_PACKAGES     += pass rsync
+AUR_PACKAGES     := atool task-spooler passotp
 
 AUR_HELPER       := yay
 
@@ -22,7 +23,7 @@ PACKAGES        := calcurse syncthing qbittorrent rofi sxiv sxhkd
 
 
 # Functions
-INSTALL        := sudo pacman --noconfirm --needed 
+INSTALL        := sudo pacman --noconfirm --needed -S
 AUR            := yay -S --noconfirm
 SYSTEMD_ENABLE := sudo systemctl --now enable
 PIPINSTALL     := pip install --user
@@ -36,12 +37,11 @@ base:
 
 xorg: base
 	$(INSTALL) xorg-server xorg-xwininfo xorg-xinit xorg-twm xorg-xev
-	$(INSTALL) xorg-xrandr xcompmgr xorg-xprop xorg-dpyinfo
+	$(INSTALL) xorg-xrandr xcompmgr xorg-xprop 
 	$(INSTALL) xclip
 
-aur: base sudo
-	cd /opt
-	sudo git clone https://aur.archlinux.org/yay.git 
+aur: base 
+	git clone https://aur.archlinux.org/yay.git 
 	cd yay
 	makepkg -si
 	cd $(PWD)
@@ -83,6 +83,7 @@ programming: node python pipkgs rust go
 # CLI utilties
 cliutils: base pacman
 	$(INSTALL) $(CLI_PACKAGES)
+	$(AUR)
 
 advcpmv: base # an advanced version of cp and mv that adds a progress bar
 	curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
