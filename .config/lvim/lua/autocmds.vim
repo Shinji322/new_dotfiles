@@ -13,6 +13,7 @@ autocmd FileType rmd inoremap ,o 1.<Space>
 autocmd FileType rmd inoremap ,f +@fig:
 autocmd FileType rmd inoremap <C-b> ****<Left><Left>
 
+autocmd FileType markdown map <F5> :!pandoc -f markdown -t html '%' > "$(extensionless '%').html"<CR>
 
 " Shell
 autocmd FileType sh map <leader>b i#!/bin/sh<CR><CR>
@@ -21,6 +22,9 @@ autocmd FileType sh inoremap ,i if<Space>[<Space>];<Space>then<CR><++><CR>fi<CR>
 autocmd FileType sh inoremap ,ei elif<Space>[<Space>];<Space>then<CR><++><CR><Esc>?];<CR>hi<Space>
 autocmd FileType sh inoremap ,sw case<Space>""<Space>in<CR><++>)<Space><++><Space>;;<CR><++><CR>esac<CR><CR><++><Esc>?"<CR>i
 autocmd FileType sh inoremap ,ca )<Space><++><Space>;;<CR><++><Esc>?)<CR>i
+
+" Html
+autocmd FileType markdown map <F5> :!pandoc -f html -t markdown '%' > "$(extensionless '%').md"<CR>
 
 
 " Calcurse

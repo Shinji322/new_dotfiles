@@ -74,7 +74,6 @@ bindkey '^e' edit-command-line
 # eval "$(starship init zsh)"
 
 # plugins
-source $XDG_CONFIG_HOME/broot/launcher/bash/br
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
 

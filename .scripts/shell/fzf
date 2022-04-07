@@ -4,14 +4,14 @@
 # It opens them with $EDITOR. It only includes files (not directories)
 # It is piped into fzf where it is selected.
 function se {
-    CHOICE=$(fd . $SCRIPT_DIR -t f | sed "s|$HOME/||g" | fzf) 
-    [ -n "$CHOICE" ] && $EDITOR ~/$CHOICE
+    CHOICE=$(fd . $XDG_SOURCE_HOME/examples/bash -t f | sed "s|$HOME/||g" | fzf) 
+    [ -n "$CHOICE" ] && $EDITOR $HOME/$CHOICE
 }
 
 # Instead executes script
 function sx {
-    CHOICE=$(fd . $SCRIPT_DIR -t f | sed "s|$HOME/||g" | fzf) 
-    [ -n "$CHOICE" ] && ~/$CHOICE
+    CHOICE=$(fd . $XDG_SOURCE_HOME/examples/bash -t f | sed "s|$HOME/||g" | fzf) 
+    [ -n "$CHOICE" ] && $HOME/$CHOICE
 }
 
 # searches history
