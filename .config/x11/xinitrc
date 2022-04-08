@@ -40,7 +40,7 @@ setxkbmap -option caps:escape
 
 # startup apps
 udiskie &
-picom &
+picom --experimental-backends -b &
 dunst &
 blueberry-tray &
 sxhkd &
