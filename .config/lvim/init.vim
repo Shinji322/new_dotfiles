@@ -49,3 +49,6 @@ autocmd FileType md set tabstop=2 softtabstop=2 shiftwidth=2
 
 " For <C-e> in terminal, make sure it uses shell script
 autocmd BufRead,BufNewFile zsh* set filetype=sh
+
+" Conf files don't work sometimes?
+autocmd BufRead,BufNewFile *.conf set filetype=conf
