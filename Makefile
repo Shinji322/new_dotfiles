@@ -151,6 +151,7 @@ texteditor:
 	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 
 browser: 
+	$(AUR) waterfox-g4-bin
 	$(AUR) librewolf-bin 
 	$(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-localcdn
 	$(AUR) brave-bin
