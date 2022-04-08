@@ -13,13 +13,14 @@ CLI_PACKAGES     += unzip unrar xclip mediainfo moreutils tar gzip
 CLI_PACKAGES     += nodejs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
 CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc
-CLI_PACKAGES     += pass rsync  bat
+CLI_PACKAGES     += pass rsync bat sox
 AUR_CLI_PACKAGES     := atool task-spooler passotp lf-git
 
 AUR_HELPER       := yay
 
 # Packages relevant to me
 PACKAGES        := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
+PACKAGES        += picom
 AUR_PACKAGES    := hydrus imgbrd-grabber pixivutil2-git
 
 
@@ -30,6 +31,12 @@ SYSTEMD_ENABLE := sudo systemctl --now enable
 PIPINSTALL     := pip install --user
 GOINSTALL      := go get 
 LN             := ln -vsf
+MKDIR          := mkdir -pv
+
+# repos
+DOTFILES_REPO  := https://github.com/Shinji322/new_dotfiles.git
+FILE_TREE      := https://github.com/Shinji322/file-tree.git
+
 
 
 # Necessities: Non debatable stuff
@@ -64,24 +71,46 @@ node:
 python: 
 	$(INSTALL) python-pip
 
-pipkgs: 
-	$(PIPINSTALL) beautifulsoup4 bs4 requests lxml pipenv
 
 rust: 
 	$(INSTALL) rustup
 	rustup default stable
 	rustup component add rls rust-analysis rust-src
 	mv .rustup $(XDG_DATA_HOME)/rustup
-	mkdir -p $(XDG_DATA_HOME)/cargo/env
+	$(MKDIR) $(XDG_DATA_HOME)/cargo/env
 
 go: 
 	$(INSTALL) go
 
-gopkgs: 
-	$(GOINSTALL) github.com/PuerkitoBio/goquery
-
 programming: node python rust go 
-pkgs: pipkgs gopkgs
+
+
+# Programming libraries
+sdl: 
+	$(INSTALL) sdl sdl_image sdl_mixer 
+	$(INSTALL) lib32-sdl_image lib32-sdl_mixer
+raylib:
+	$(INSTALL) raylib
+	$(MKDIR) /usr/include/raylib_extras
+	curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/physac.h > /usr/include/raylib_extras/physac.h
+	curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/easings.h > /usr/include/raylib_extras/easings.h
+	curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/raygui.h > /usr/include/raylib_extras/raygui.h
+	curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/rmem.h > /usr/include/raylib_extras/rmem.h
+rmarkdown: 
+	$(INSTALL) r gcc-fortran tk
+pipkgs: 
+	$(PIPINSTALL) beautifulsoup4 bs4 requests lxml pipenv
+monogame:
+	$(INSTALl) ca-certificates
+	dotnet new --install MonoGame.Templates.CSharp
+	dotnet tool install --global dotnet-mgcb-editor
+	mgcb-editor --register
+# gopkgs: 
+	# $(GOINSTALL) github.com/PuerkitoBio/goquery
+	# $(GOINSTALL) -v -u github.com/gen2brain/raylib-go/raylib
+
+libraries: pipkgs sdl raylib monogame rmarkdown
+
 
 
 # CLI utilties
@@ -103,16 +132,6 @@ shell:
 allcli: cliutils advcpmv shell
 	
 
-# Programming libraries
-sdl: 
-	$(INSTALL) sdl sdl_image sdl_mixer 
-	$(INSTALL) lib32-sdl_image lib32-sdl_mixer
-
-rmarkdown: 
-	$(INSTALL) r gcc-fortran tk
-
-libraries: sdl rmarkdown
-
 # Personal
 pkgs: 
 	$(INSTALL) $(PACKAGES)
@@ -126,7 +145,7 @@ fonts:
 	$(INSTALL) otf-ipafont
 	$(AUR) ttf-fira-code
 
-texteditor: base pacman 
+texteditor: 
 	$(INSTALL) neovim
 	$(AUR) sc-im-git
 	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
@@ -134,14 +153,30 @@ texteditor: base pacman
 browser: 
 	$(AUR) librewolf-bin 
 	$(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-localcdn
+	$(AUR) brave-bin
 
-gaming: base
+gaming: 
 	$(INSTALL) steam 
 	$(INSTALL) wine winetricks
 	$(INSTALL) lutris
 
 emulators: 
 	$(AUR) citra-qt-git
+
+filetree:
+	cd $(HOME)
+	git init .
+	git remote add origin $(FILE_TREE)
+	git pull origin master
+	rm -rf $(HOME)/.git
+
+dotfiles:
+	cd $(HOME)
+	git init .
+	git remote add origin $(DOTFILES_REPO)
+	git pull origin main
+	rm -rf $(HOME)/.git
+
 
 # hardware dependent
 nvidia: base pacman
@@ -150,32 +185,34 @@ nvidia: base pacman
 
 socialmedia: base pacman
 	$(INSTALL) discord
-	$(AUR) wecase bilili
+	$(AUR) bilili
 
 programs: pkgs terminal fonts texteditor browser gaming emulators  socialmedia
 drivers: nvidia
 
 # Configs
-bluetooth: base pacman
+bluetooth: 
 	$(INSTALL) bluez bluez-utils
 	$(SYSTEMD_ENABLE) bluetooth.service
 
-network: base pacman
+network: 
 	$(INSTALL) networkmanager
 	$(SYSTEMD_ENABLE) NetworkManager.service
 
-automount: base pacman # Automount hard drives on connect
+automount: # Automount hard drives on connect
 	$(INSTALL) udiskie
 	$(SYSTEMD_ENABLE) udisks2.service
 
 PTHEMES := python-qdarkstyle
 ATHEMES := gtk-theme-arc-gruvbox-git orchis-theme-git
-themes: base pacman 
+themes: 
 	$(INSTALL) $(PTHEMES)
 	$(AUR) $(ATHEMES)
 
-cron: base pacman
+cron: 
 	$(INSTALL) cronie
+	$(SYSTEMD_ENABLE) cronie.service
+	cat $(XDG_CONFIG_HOME)/cron/crontab 
 
 
 # main stuff
