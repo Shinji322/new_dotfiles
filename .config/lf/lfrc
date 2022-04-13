@@ -277,6 +277,7 @@ map gva  cd ~/video/anime
 map gi.  cd ~/images
 map gis  cd ~/images/screenshots
 map giw  cd ~/images/wallpapers
+map gia  cd ~/images/anime
 
 map gD   cd ~/documents
 map gd   cd ~/downloads

@@ -156,6 +156,9 @@ browser:
 	$(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-localcdn
 	$(AUR) brave-bin
 
+data-hoarder:
+	$(AUR) gallery-dl-bin twint
+
 gaming: 
 	$(INSTALL) steam 
 	$(INSTALL) wine winetricks

@@ -8,6 +8,8 @@
 # sxhkd stuff
 super + shift + r
     pkill sxhkd && notify-send "sxhkd config reloaded" && sxhkd &
+super + x
+    xkill
 
 ##             _    _    _  __ _   
 ##  _ _ ___ __| |__| |_ (_)/ _| |_ 

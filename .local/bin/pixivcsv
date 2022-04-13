@@ -17,8 +17,8 @@ def main(file:str, opt:str):
         # This is done to limit logins to pixiv
         ids = []
         for line in reader:
-            if str2bool(line["downloaded"]):
-                continue
+            # if str2bool(line["downloaded"]):
+            #     continue
             ids.append(line['id'])
 
         if opt == '1':
@@ -51,7 +51,7 @@ else:
         if "artworks" in filename:
             # 2 downloads by image id
             main(filename, '2')
-        elif "artists" in filename:
+        elif "artists" in filename or "arts" in filename:
             # 1 downloads by member id
             main(filename, '1')
         else:

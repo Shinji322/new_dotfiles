@@ -40,5 +40,5 @@ autocmd BufRead,BufNewFile lfrc* set filetype=sh
 
 
 " Autocompile
-autocmd FileType c map <F5> :!make && ./a.out 2>&1<CR>
-autocmd FileType c map <F6> :!make <CR>
+autocmd FileType cpp map <F5> :!make && ./build/* 2>&1<CR>
+autocmd FileType c map <F5> :!make<CR>
