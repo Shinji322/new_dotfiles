@@ -39,10 +39,6 @@ DOTFILES_REPO  := https://github.com/Shinji322/new_dotfiles.git
 FILE_TREE      := https://github.com/Shinji322/file-tree.git
 
 
-.PHONY: all allinstall nextinstall allupdate allbackup
-
-
-
 # System related stuff
 ${HOME}/.local:
 	$(MKDIR) $<
@@ -194,6 +190,8 @@ nvidia:
 
 
 # Final words
+.PHONY: basic configs programming systemd packages all
+
 basic: base install $(AUR_HELPER) pacman shell sudo xorg windowmanager
 configs: filetree dotfiles
 programming: languages libraries
