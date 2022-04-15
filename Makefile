@@ -14,14 +14,14 @@ CLI_PACKAGES     += nodejs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
 CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc
 CLI_PACKAGES     += pass rsync bat sox
-AUR_CLI_PACKAGES     := atool task-spooler passotp lf-git
+AUR_CLI_PACKAGES := atool task-spooler passotp lf-git
 
 AUR_HELPER       := yay
 
 # Packages relevant to me
 PACKAGES        := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
 PACKAGES        += picom
-AUR_PACKAGES    := hydrus imgbrd-grabber pixivutil2-git
+AUR_PACKAGES    := hydrus imgbrd-grabber pixivutil2-git tachidesk
 
 
 # Functions
@@ -151,6 +151,7 @@ texteditor:
 	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
 
 browser: 
+	# just better firefox
 	$(AUR) waterfox-g4-bin
 	$(AUR) librewolf-bin 
 	$(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-localcdn

@@ -51,7 +51,6 @@ alias irssi='irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HO
 
 
 # Let's move faster
-alias g="git"
 alias p="sudo pacman"
 alias y="yay"
 alias f="$FILE"
@@ -65,4 +64,7 @@ alias hist='history 1'
 alias "source .zshrc"="source ~/.config/zsh/zshrc"
 
 # Git commands
-alias gm='git commit -m '
+alias g="git"
+alias gm='git commit -m'
+alias ga='git add'
+alias gs='git status'
