@@ -64,7 +64,8 @@ alias hist='history 1'
 alias "source .zshrc"="source ~/.config/zsh/zshrc"
 
 # Git commands
-alias g="git"
+alias g="lazygit"
 alias gm='git commit -m'
+alias gc='git clone'
 alias ga='git add'
 alias gs='git status'

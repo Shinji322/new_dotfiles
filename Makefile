@@ -24,6 +24,7 @@ AUR_HELPER       := yay
 PACKAGES        := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
 PACKAGES        += picom
 PACKAGES        += docker docker-compose
+PACKAGES        += zoxide lazygit
 AUR_PACKAGES    := hydrus imgbrd-grabber pixivutil2-git tachidesk
 
 

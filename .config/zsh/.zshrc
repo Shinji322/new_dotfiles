@@ -1,6 +1,7 @@
 source $HOME/.config/shell/profile
 source $HOME/.config/shell/alias
 source $HOME/.config/lf/LF_ICONS
+source $ZDOTDIR/zsh_functions
 
 # Source scripts directory
 set -o extendedglob
@@ -15,7 +16,7 @@ setopt interactive_comments
 
 
 # Basic auto/tab complete:
-fpath+=($XDG_DATA_HOME/zsh/autocompletions)
+fpath+=($ZDOTDIR/completion)
 autoload -U compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
@@ -32,6 +33,8 @@ setopt share_history
 HISTSIZE=10000000
 SAVEHIST=10000000
 
+# Autocompletions
+[ -f $ZDOTDIR/completion/_docker ] && fpath+="$ZDOTDIR/completion/"
 
 # ~/ Cleanup
 compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
@@ -70,12 +73,10 @@ preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 
-# Starship
-# eval "$(starship init zsh)"
+# keybindings
+bindkey -s '^o' 'exit\n'
+
 
 # plugins
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-
-# Startup
-# echo "lets all love lain"

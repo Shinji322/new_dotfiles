@@ -38,8 +38,24 @@ autocmd BufRead,BufNewFile *rc.* set filetype=cfg
 " Except these ones
 autocmd BufRead,BufNewFile sxhkdrc* set filetype=sh
 autocmd BufRead,BufNewFile lfrc* set filetype=sh
+autocmd BufRead,BufNewFile .zshrc set filetype=sh
 
 
 " Autocompile
 autocmd FileType cpp map <F5> :!make && ./build/* 2>&1<CR>
 autocmd FileType c map <F5> :!make<CR>
+
+
+" Ensure files are read as I want
+autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+" 2 tabs on html
+autocmd FileType html set tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType rmd set tabstop=2 softtabstop=2 shiftwidth=2
+autocmd FileType md set tabstop=2 softtabstop=2 shiftwidth=2
+
+" For <C-e> in terminal, make sure it uses shell script
+autocmd BufRead,BufNewFile zsh* set filetype=sh
+
+" Conf files don't work sometimes?
+autocmd BufRead,BufNewFile *.conf set filetype=conf

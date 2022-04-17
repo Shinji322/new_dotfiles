@@ -39,16 +39,3 @@ set wildmenu
 " Make wildmenu behave like similar to Bash completion
 set wildmode=list:longest
 
-" Ensure files are read as I want
-autocmd BufRead,BufNewFile *.md set filetype=markdown
-
-" 2 tabs on html
-autocmd FileType html set tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType rmd set tabstop=2 softtabstop=2 shiftwidth=2
-autocmd FileType md set tabstop=2 softtabstop=2 shiftwidth=2
-
-" For <C-e> in terminal, make sure it uses shell script
-autocmd BufRead,BufNewFile zsh* set filetype=sh
-
-" Conf files don't work sometimes?
-autocmd BufRead,BufNewFile *.conf set filetype=conf

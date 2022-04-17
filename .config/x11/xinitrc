@@ -47,5 +47,6 @@ sxhkd &
 ~/.scripts/alias/mpd
 calcurse --daemon
 ~/.scripts/system/wallpaper
+~/.scripts/alias/searx
 
 exec i3
