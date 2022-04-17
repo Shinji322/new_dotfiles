@@ -23,6 +23,7 @@ AUR_HELPER       := yay
 # Packages relevant to me
 PACKAGES        := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
 PACKAGES        += picom
+PACKAGES        += docker docker-compose
 AUR_PACKAGES    := hydrus imgbrd-grabber pixivutil2-git tachidesk
 
 
@@ -159,6 +160,8 @@ emulators:
 social-media:
 	$(INSTALL) discord
 	$(AUR) bilili
+searx:
+	docker pull searx/searx
 PTHEMES := python-qdarkstyle
 ATHEMES := gtk-theme-arc-gruvbox-git orchis-theme-git
 themes: 
@@ -181,7 +184,11 @@ cron:
 	$(INSTALL) cronie
 	$(SYSTEMD_ENABLE) cronie.service
 	cat $(XDG_CONFIG_HOME)/cron/crontab 
-
+docker:
+	$(INSTALL) docker docker-compose
+	$(SYSTEMD_ENABLE) docker.service
+	sudo groupadd docker
+	sudo usermod -aG docker $(USER)
 
 # Hardware dependent
 nvidia:
