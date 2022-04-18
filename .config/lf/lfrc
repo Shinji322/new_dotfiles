@@ -1,12 +1,12 @@
 # Basic Settings
-set previewer ~/.scripts/lf/lfpreviewer
-set cleaner ~/.scripts/lf/lfcleaner
 set shell zsh
 set preview 
 set hidden true
 set drawbox true
 set icons true
 set ignorecase true
+set cleaner '~/.config/lf/cleaner'
+set previewer '~/.config/lf/scope'
 
 # Custom Functions
 cmd open ${{

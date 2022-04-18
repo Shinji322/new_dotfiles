@@ -1,11 +1,5 @@
-source $HOME/.config/shell/profile
-source $HOME/.config/shell/alias
-source $HOME/.config/lf/LF_ICONS
 source $ZDOTDIR/zsh_functions
 
-# Source scripts directory
-set -o extendedglob
-for f ($SCRIPT_DIR/shell/*) . $f
 
 # Colors
 autoload -U colors && colors
@@ -15,68 +9,18 @@ stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
 
-# Basic auto/tab complete:
-fpath+=($ZDOTDIR/completion)
-autoload -U compinit
-zstyle ':completion:*' menu select
-zmodload zsh/complist
-compinit
-_comp_options+=(globdots)		# Include hidden files
+# Source all other files
+zsh_add_file "shell/profile" # needs to be set before alias
+zsh_add_file "shell/alias"
+source $HOME/.config/lf/LF_ICONS
 
-# History in cache directory:
-# checks if history file exists an creates it 
-# History doesn't work if this file is not here
-[ -z "$XDG_CACHE_HOME/zsh/history" ] && /bin/touch $XDG_CACHE_HOME/zsh/history
-export HISTFILE=$XDG_CACHE_HOME/zsh/history  
-
-setopt share_history
-HISTSIZE=10000000
-SAVEHIST=10000000
-
-# Autocompletions
-[ -f $ZDOTDIR/completion/_docker ] && fpath+="$ZDOTDIR/completion/"
-
-# ~/ Cleanup
-compinit -d $XDG_CACHE_HOME/zsh/zcompdump-$ZSH_VERSION
-zstyle ':completion:*' cache-path $XDG_CACHE_HOME/zsh/zcompcache
+zsh_add_file "zsh_history"
+zsh_add_file "zsh_completions" # Completions
+zsh_add_file "zsh_cleanup" # Compinit (needs to be set before vi mode)
+zsh_add_file "zsh_keybindings"
+zsh_add_file "zsh_vi_mode"
 
 
-# vi mode
-bindkey -v
-export KEYTIMEOUT=1
-
-# Use vim keys in tab complete menu:
-bindkey -M menuselect 'h' vi-backward-char
-bindkey -M menuselect 'k' vi-up-line-or-history
-bindkey -M menuselect 'l' vi-forward-char
-bindkey -M menuselect 'j' vi-down-line-or-history
-bindkey -v '^?' backward-delete-char
-
-# Change cursor shape for different vi modes.
-function zle-keymap-select () {
-    case $KEYMAP in
-        vicmd) echo -ne '\e[1 q';;      # block
-        viins|main) echo -ne '\e[5 q';; # beam
-    esac
-}
-zle -N zle-keymap-select
-zle-line-init() {
-    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
-    echo -ne "\e[5 q"
-}
-zle -N zle-line-init
-echo -ne '\e[5 q' # Use beam shape cursor on startup.
-preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
-
-
-# Edit line in vim with ctrl+e
-autoload edit-command-line; zle -N edit-command-line
-bindkey '^e' edit-command-line
-
-# keybindings
-bindkey -s '^o' 'exit\n'
-
-
-# plugins
+# Plugins installed by package manager
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
