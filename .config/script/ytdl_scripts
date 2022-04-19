@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOWNLOADER="yt-dlp-old"
+DOWNLOADER="yt-dlp"
 COOKIES="~/.local/share/yt-dlp/cookies.txt"
 
 function yt_notif {

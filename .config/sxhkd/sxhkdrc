@@ -94,7 +94,7 @@ super + w
 super + a 
     ~/.scripts/sxhkd/search-appimages &
 super + f 
-    kitty ~/.scripts/lf/lfrun
+    kitty ~/.local/bin/lfub
 super + r
     kitty ncmpcpp 
 

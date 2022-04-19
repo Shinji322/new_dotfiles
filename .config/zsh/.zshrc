@@ -12,11 +12,12 @@ setopt interactive_comments
 # Source all other files
 zsh_add_file "shell/profile" # needs to be set before alias
 zsh_add_file "shell/alias"
+zsh_add_file "shell/startup"
 source $HOME/.config/lf/LF_ICONS
 
-zsh_add_file "zsh_history"
-zsh_add_file "zsh_completions" # Completions
+zsh_add_file "zsh_completions" # Calls  compinit
 zsh_add_file "zsh_cleanup" # Compinit (needs to be set before vi mode)
+zsh_add_file "zsh_history"
 zsh_add_file "zsh_keybindings"
 zsh_add_file "zsh_vi_mode"
 
