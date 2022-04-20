@@ -2,10 +2,10 @@
 	# On NVIDIA laptops: make all && make nvidia
 
 # Packages
-BASE_PKGS	     := filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext 
-BASE_PKGS	     += pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman 
-BASE_PKGS	     += iputils iproute2 autoconf sudo automake binutils bison fakeroot flex gcc groff libtool m4 
-BASE_PKGS	     += make patch pkgconf texinfo which 
+BASE_PKGS        := filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext 
+BASE_PKGS        += pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman 
+BASE_PKGS        += iputils iproute2 autoconf sudo automake binutils bison fakeroot flex gcc groff libtool m4 
+BASE_PKGS        += make patch pkgconf texinfo which 
 BASE_PKGS        += systemd systemd-sysvcompat 
 BASE_PKGS        += man-db curl entr
 
@@ -20,26 +20,26 @@ AUR_CLI_PACKAGES := atool task-spooler passotp lf-git
 
 AUR_HELPER       := yay
 
-# Packages relevant to me
-PACKAGES        := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
-PACKAGES        += picom
-PACKAGES        += docker docker-compose
-PACKAGES        += zoxide lazygit
-PACKAGES        += nmap
-AUR_PACKAGES    := hydrus imgbrd-grabber pixivutil2-git tachidesk safeeyes
+# Personal Packages relevant to me
+PACKAGES         := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
+PACKAGES         += picom
+PACKAGES         += docker docker-compose
+PACKAGES         += zoxide lazygit
+PACKAGES         += nmap
+AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk safeeyes
 
 
 # Functions
-INSTALL        := sudo pacman --noconfirm --needed -S
-AUR            := yay -S --noconfirm
-SYSTEMD_ENABLE := sudo systemctl --now enable
-PIPINSTALL     := pip install --user
-LN             := ln -vsf
-MKDIR          := mkdir -pv
+INSTALL          := sudo pacman --noconfirm --needed -S
+AUR              := yay -S --noconfirm
+SYSTEMD_ENABLE   := sudo systemctl --now enable
+PIPINSTALL       := pip install --user
+LN               := ln -vsf
+MKDIR            := mkdir -pv
 
 # repos
-DOTFILES_REPO  := https://github.com/Shinji322/new_dotfiles.git
-FILE_TREE      := https://github.com/Shinji322/file-tree.git
+DOTFILES_REPO    := https://github.com/Shinji322/new_dotfiles.git
+FILE_TREE        := https://github.com/Shinji322/file-tree.git
 
 
 # System related stuff
