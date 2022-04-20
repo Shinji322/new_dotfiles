@@ -30,6 +30,7 @@ alias locate="sudo updatedb && ~/.scripts/alias/locate.sh"
 #  ~-=| Others |=-~
 #alias 'pacman -Sy'='pacman -Syu'
 alias con='/usr/bin/lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 
 #  ~-=| $HOME ~ Cleanup |=-~
