@@ -90,11 +90,11 @@ super + shift + F10
 super + Return
     kitty
 super + w
-    firefox
+    waterfox-g4
 super + a 
     ~/.scripts/sxhkd/search-appimages &
 super + f 
-    kitty ~/.local/bin/lfub
+    kitty ~/.local/bin/lfup
 super + r
     kitty ncmpcpp 
 

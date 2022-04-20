@@ -19,7 +19,6 @@ export PATH="$PATH:${HOME}/.local/bin"
 # . "${BINARIES_DIR}"
 # . "${XDG_DATA_HOME:-$HOME/.local/share}/npm/bin"
 # . "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/lsp_servers"
-# . "$HOME/.local/share/nvim/lsp_servers/go"
 
 # stuff
 unsetopt PROMPT_SP
@@ -28,13 +27,13 @@ unsetopt PROMPT_SP
 # Default Programs (most are just for use in scripts)
 export TERMINAL="kitty"
 export EDITOR="lvim"
-export FILE="lfub"
+export FILE="lfup"
 export READER="zathura"
 export VISUAL="lvim"
 export PAGER="less"
 export WM="i3"
 export SHELL="zsh"
-export BROWSER="firefox"
+export BROWSER="waterfox-g4"
 export ICON_THEME="Paper"
 
 # Misc
