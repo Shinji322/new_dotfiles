@@ -48,5 +48,6 @@ sxhkd &
 calcurse --daemon
 ~/.scripts/system/wallpaper
 ~/.scripts/alias/searx
+safeeyes &
 
 exec i3
