@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Search contents of all files for argument 
+function catsearch {
+    # check if running zsh
+    if [[ -n "$ZSH_VERSION" ]]; then
+        # prefer ripgrep
+        # if ripgrep is found, use that, otherwise use grep
+        [[ $(builtin whence rg) ]] && rg -i $1 * || { grep -iR $1 * }
+    else # bash
+        [[ $(builtin type -P rg) ]] && rg -i $1 * || { grep -iR $1 * }
+    fi
+}
+
+catsearch "$@"
