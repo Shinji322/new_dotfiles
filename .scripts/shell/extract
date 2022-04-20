@@ -43,3 +43,4 @@ fi
 
 IFS=$SAVEIFS
 
+extract "$@"
