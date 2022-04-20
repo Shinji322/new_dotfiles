@@ -1,4 +1,5 @@
 source $ZDOTDIR/zsh_functions
+set -o extendedglob # make glob matching more epic
 
 
 # Colors
