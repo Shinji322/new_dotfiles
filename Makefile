@@ -24,9 +24,11 @@ AUR_HELPER       := yay
 PACKAGES         := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
 PACKAGES         += picom
 PACKAGES         += docker docker-compose
-PACKAGES         += zoxide lazygit
-PACKAGES         += nmap
-AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk safeeyes
+PACKAGES         += zoxide lazygit gendesk
+PACKAGES         += nmap tmux
+AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk 
+AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center 
+AUR_PACKAGES     += qdirstat-bin
 
 
 # Functions
@@ -35,7 +37,7 @@ AUR              := yay -S --noconfirm
 SYSTEMD_ENABLE   := sudo systemctl --now enable
 PIPINSTALL       := pip install --user
 LN               := ln -vsf
-MKDIR            := mkdir -pv
+MKDIR            := mkdir -p
 
 # repos
 DOTFILES_REPO    := https://github.com/Shinji322/new_dotfiles.git
@@ -116,7 +118,8 @@ raylib:
 rmarkdown: 
 	$(INSTALL) r gcc-fortran tk
 pipkgs: 
-	$(PIPINSTALL) beautifulsoup4 bs4 requests lxml pipenv
+	$(PIPINSTALL) pipenv
+	$(PIPINSTALL) beautifulsoup4 bs4 requests lxml autoscraper
 monogame:
 	$(INSTALl) ca-certificates
 	dotnet new --install MonoGame.Templates.CSharp
