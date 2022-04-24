@@ -24,7 +24,7 @@ autocmd FileType sh inoremap ,sw case<Space>""<Space>in<CR><++>)<Space><++><Spac
 autocmd FileType sh inoremap ,ca )<Space><++><Space>;;<CR><++><Esc>?)<CR>i
 
 " Html
-autocmd FileType markdown map <F5> :!pandoc -f html -t markdown '%' > "$(extensionless '%').md"<CR>
+autocmd FileType html map <F5> :!pandoc -f html -t markdown '%' > "$(extensionless '%').md"<CR>
 
 
 " Calcurse
@@ -42,7 +42,7 @@ autocmd BufRead,BufNewFile *zshrc* set filetype=sh
 
 
 " Autocompile
-autocmd FileType cpp map <F5> :!make && ./build/* 2>&1<CR>
+autocmd FileType cpp map <F5> :!make clean && make && ./build/* 2>&1<CR>
 autocmd FileType c map <F5> :!make<CR>
 
 
