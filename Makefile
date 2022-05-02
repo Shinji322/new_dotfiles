@@ -118,7 +118,7 @@ raylib:
 rmarkdown: 
 	$(INSTALL) r gcc-fortran tk
 pipkgs: 
-	$(PIPINSTALL) pipenv
+	$(PIPINSTALL) pipenv virtualenv
 	$(PIPINSTALL) beautifulsoup4 bs4 requests lxml autoscraper
 monogame:
 	$(INSTALl) ca-certificates
