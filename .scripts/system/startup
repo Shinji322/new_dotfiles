@@ -8,3 +8,4 @@ NOOFQUOTES=$(wc -l $QUOTES | awk '{print $1}')
 QUOTELINE=$(echo "$RANDOM % $NOOFQUOTES + 1" | bc)
 QUOTE=$(sed -n ${QUOTELINE}p $QUOTES)
 dunstify "$QUOTE" -a 'quote-notificaiton' -u critical
+feh --no-fehbg --bg-fill "~/images/wallpapers/稲葉曇『ラグトレイン』Vo. 歌愛ユキ - 稲葉曇 - 20200716 [UnIhRpIT7nc].webp"
