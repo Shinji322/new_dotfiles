@@ -144,7 +144,7 @@ terminal:
 fonts: 
 	$(INSTALL) ttf-ubuntu-font-family
 	$(INSTALL) otf-ipafont
-	$(AUR) ttf-fira-code
+	$(AUR) nerd-fonts-noto-sans-regular-complete
 text-editor: 
 	$(INSTALL) neovim
 	$(AUR) sc-im-git
