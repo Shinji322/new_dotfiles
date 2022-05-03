@@ -1,0 +1,5 @@
+#!/bin/bash 
+# Dependencies: docker docker-compose
+
+export PORT=80
+docker run --rm -d -v ${XDG_CONFIG_HOME:-$HOME/.config}/searx:/etc/searx -p $PORT:8080 -e BASE_URL=http://localhost:$PORT/ searx/searx --name searx_instance &!

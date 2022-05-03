@@ -15,18 +15,17 @@ CLI_PACKAGES     += unzip unrar xclip mediainfo moreutils tar gzip
 CLI_PACKAGES     += nodejs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
 CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc
-CLI_PACKAGES     += pass rsync bat sox
-AUR_CLI_PACKAGES := atool task-spooler passotp lf-git
+CLI_PACKAGES     += pass rsync bat sox pass-otp pkgfile trash-cli ueberzug
+AUR_CLI_PACKAGES := atool task-spooler lf-git
 
 AUR_HELPER       := yay
 
 # Personal Packages relevant to me
 PACKAGES         := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
-PACKAGES         += picom
 PACKAGES         += docker docker-compose
 PACKAGES         += zoxide lazygit gendesk
 PACKAGES         += nmap tmux
-AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk 
+AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk picom-git
 AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center 
 AUR_PACKAGES     += qdirstat-bin
 
@@ -51,7 +50,7 @@ base:
 	$(INSTALL) $(BASE_PKGS)
 $(AUR_HELPER):
 	git clone https://aur.archlinux.org/yay.git
-	cd yay
+	cd yay # make doesn't allow you to cd
 	makepkg -si
 	cd ..
 install: ## Install my packages
@@ -135,6 +134,7 @@ libraries: sdl raylib rmarkdown pipkgs monogame
 pkginstall:
 	$(INSTALL) $(PACKAGES)
 	$(AUR) $(AUR_PACKAGES)
+# This actually fails because if executed as sudo, then the owner of the repo is sudo
 advcpmv:
 	curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
 	sudo mv $(PWD)/advcpmv/advcp /usr/local/bin/cpg
@@ -152,9 +152,9 @@ text-editor:
 browser: 
 	# just better firefox
 	$(AUR) waterfox-g4-bin
-	$(AUR) librewolf-bin 
-	$(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-localcdn
 	$(AUR) brave-bin
+	# $(AUR) librewolf-bin 
+	# $(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-localcdn
 data-hoarder:
 	$(AUR) gallery-dl-bin twint
 gaming: 
@@ -189,7 +189,7 @@ automount: # Automount hard drives on connect
 cron: 
 	$(INSTALL) cronie
 	$(SYSTEMD_ENABLE) cronie.service
-	cat $(XDG_CONFIG_HOME)/cron/crontab 
+	cat $(XDG_CONFIG_HOME)/cron/crontab#Fix this 
 docker:
 	$(INSTALL) docker docker-compose
 	$(SYSTEMD_ENABLE) docker.service
