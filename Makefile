@@ -61,6 +61,7 @@ install: ## Install my packages
 pacman:
 	sudo sed -i "s/^#Color/Color/" /etc/pacman.conf
 	sudo sed -i "/#VerbosePkgLists/a ILoveCandy" /etc/pacman.conf 
+	sudo echo -e "[multilib]\nInlcude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 sudo:
 	sudo echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 xorg:
@@ -199,6 +200,18 @@ docker:
 nvidia:
 	$(INSTALL) nvidia nvidia-dkms nvidia-prime 
 	$(INSTALL) nvidia-settings nvidia-utils lib32-nvidia-utils
+amd_gpu:
+	$(INSTALL) mesa lib32-mesa 
+	$(INSTALL) xf86-video-amdgpu
+	$(INSTALL) vulkan-radeon amdvlk lib32-vulkan-radeon lib32-amdvlk
+# Microcode
+amd_cpu:
+	$(INSTALL) amd-ucode
+	grub-mkconfig -o /boot/grub/grub.cfg# Let's assume we use grub
+intel_cpu:
+	$(INSTALL) intel-ucode
+	grub-mkconfig -o /boot/grub/grub.cfg# Let's assume grub
+
 
 
 # Final words
