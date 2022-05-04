@@ -294,7 +294,7 @@ map gpl  cd ~/code/learning
 map gpp  cd ~/code/projects
 
 map gc.  cd ~/.config
-map gcn  cd ~/.config/nvim
+map gce  cd ~/.config/lvim ***REMOVED*** Supposed to mean gc Editor
 map gcl  cd ~/.config/lf
 map gcs  cd ~/.config/shell
 map gcz  cd ~/.config/zsh
