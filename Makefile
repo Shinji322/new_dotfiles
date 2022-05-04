@@ -15,7 +15,7 @@ CLI_PACKAGES     += unzip unrar xclip mediainfo moreutils tar gzip
 CLI_PACKAGES     += nodejs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
 CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc
-CLI_PACKAGES     += pass rsync bat sox pass-otp pkgfile trash-cli ueberzug
+CLI_PACKAGES     += pass rsync bat sox pass-otp pkgfile trash-cli ueberzug 
 AUR_CLI_PACKAGES := atool task-spooler lf-git
 
 AUR_HELPER       := yay
@@ -179,6 +179,9 @@ ATHEMES := gtk-theme-arc-gruvbox-git orchis-theme-git paper-icon-theme-git candy
 themes: 
 	$(INSTALL) $(PTHEMES)
 	$(AUR) $(ATHEMES)
+mpd:
+	$(INSTALL) mpd
+	touch ~/.cache/mpd.db
 
 
 
