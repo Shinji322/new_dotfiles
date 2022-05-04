@@ -45,7 +45,7 @@ dunst &
 blueberry-tray &
 sxhkd &
 calcurse --daemon
-~/.scripts/alias/mpd &
+***REMOVED***~/.scripts/alias/mpd &
 ~/.scripts/system/wallpaper &
 ~/.scripts/alias/searx &
 ~/.scripts/alias/redshift &
