@@ -39,6 +39,7 @@ autocmd BufRead,BufNewFile *rc.* set filetype=cfg
 autocmd BufRead,BufNewFile sxhkdrc* set filetype=sh
 autocmd BufRead,BufNewFile lfrc* set filetype=sh
 autocmd BufRead,BufNewFile *zshrc* set filetype=sh
+autocmd BufRead,BufNewFile *xinitrc* set filetype=sh
 
 
 " Autocompile

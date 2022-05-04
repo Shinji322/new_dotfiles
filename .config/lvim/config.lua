@@ -1,3 +1,4 @@
+-- Sometimes these lines won't appear for whatever reason
 require "mappings"
 require "plugins"
 
