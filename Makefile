@@ -23,8 +23,8 @@ AUR_HELPER       := yay
 # Personal Packages relevant to me
 PACKAGES         := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
 PACKAGES         += docker docker-compose
-PACKAGES         += zoxide lazygit gendesk
-PACKAGES         += nmap tmux
+PACKAGES         += zoxide lazygit gendesk flameshot
+PACKAGES         += nmap tmux jq redshift
 AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk picom-git
 AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center 
 AUR_PACKAGES     += qdirstat-bin
@@ -89,6 +89,11 @@ dotfiles:
 	git remote add origin $(DOTFILES_REPO)
 	git pull origin main
 	rm -rf $(HOME)/.git
+dotrepos:
+	cd $(HOME)
+	git init --bare ~/.dotfiles
+	alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+	config config status.showUntrackedFiles no
 
 
 # Programming stuff
@@ -119,6 +124,7 @@ rmarkdown:
 	$(INSTALL) r gcc-fortran tk
 pipkgs: 
 	$(PIPINSTALL) pipenv virtualenv
+	$(PIPINSTALL) rnnoise-cli
 	$(PIPINSTALL) beautifulsoup4 bs4 requests lxml autoscraper
 monogame:
 	$(INSTALl) ca-certificates
@@ -148,7 +154,7 @@ fonts:
 text-editor: 
 	$(INSTALL) neovim
 	$(AUR) sc-im-git
-	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh)
+	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) -y # needs to be installed after node, rust, and python
 browser: 
 	# just better firefox
 	$(AUR) waterfox-g4-bin
@@ -169,7 +175,7 @@ social-media:
 searx:
 	docker pull searx/searx
 PTHEMES := python-qdarkstyle
-ATHEMES := gtk-theme-arc-gruvbox-git orchis-theme-git
+ATHEMES := gtk-theme-arc-gruvbox-git orchis-theme-git paper-icon-theme-git candy-icons-git
 themes: 
 	$(INSTALL) $(PTHEMES)
 	$(AUR) $(ATHEMES)
