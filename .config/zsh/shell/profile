@@ -1,0 +1,90 @@
+***REMOVED***!/bin/zsh
+
+***REMOVED*** XDG Base directories
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_SOURCE_HOME="$HOME/.local/src"
+
+***REMOVED*** Useful Env Variables
+export SCRIPT_DIR="$HOME/.scripts"
+export APPIMAGE_DIR="$HOME/software/app-images"
+export BINARIES_DIR="$HOME/software/binaries"
+
+***REMOVED*** Add ~/.local/bin to PATH
+***REMOVED***export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+export PATH="$PATH:${HOME}/.local/bin"
+. "$HOME/.local/share/cargo/env"
+***REMOVED*** . "${APPIMAGE_DIR}"
+***REMOVED*** . "${BINARIES_DIR}"
+***REMOVED*** . "${XDG_DATA_HOME:-$HOME/.local/share}/npm/bin"
+***REMOVED*** . "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/lsp_servers"
+
+***REMOVED*** stuff
+unsetopt PROMPT_SP
+
+
+***REMOVED*** Default Programs (most are just for use in scripts)
+export TERMINAL="kitty"
+export EDITOR="lvim"
+export FILE="lfup"
+export READER="zathura"
+export VISUAL="lvim"
+export PAGER="less"
+export WM="i3"
+export SHELL="zsh"
+export BROWSER="waterfox-g4"
+export ICON_THEME="Paper"
+
+***REMOVED*** Misc
+***REMOVED*** blocks telemetry
+export DOTNET_CLI_TELEMETRY_OPTOUT=1
+
+***REMOVED*** ~/ Cleanup
+export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
+
+export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
+export GTK_THEME="Sweet"
+export LESSHISTFILE="-"
+export WGETRC="${XDG_CONFIG_HOME:-$HOME/.config}/wget/wgetrc"
+export INPUTRC="${XDG_CONFIG_HOME:-$HOME/.config}/shell/inputrc"
+export ZDOTDIR="${XDG_CONFIG_HOME:-$HOME/.config}/zsh"
+export WINEPREFIX="${XDG_DATA_HOME:-$HOME/.local/share}/wineprefixes/default"
+export GNUPGHOME="${XDG_DATA_HOME:-$HOME/.local/share}/gnupg"
+export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
+export TERMINFO="${XDG_DATA_HOME:-$HOME/.local/share}/terminfo"
+export TERMINFO_DIRS="${XDG_DATA_HOME:-$HOME/.local/share}/terminfo:/usr/share/terminfo"
+export FFMPEG_DATADIR="${XDG_CONFIG_HOME:-$HOME/.config}/ffmpeg"
+export CUDA_CACHE_PATH="${XDG_DATA_HOME:-$HOME/.local/share}/nv"
+export DOCKER_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/docker"
+export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
+export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
+export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
+export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
+export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
+export NUGET_PACKAGES="${XDG_DATA_HOME:-$HOME/.local/share}/NuGetPackages"
+export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
+export SQLITE_HISTORY="${XDG_CACHE_HOME:-$HOME/.cache}/sqlite_history"
+
+export FZF_DEFAULT_OPTS="--margin 5% --border"
+
+
+***REMOVED*** Less  - check `man terminfo`
+***REMOVED***
+export LESS=-R
+
+***REMOVED*** Blink Mode
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 2) ***REMOVED*** green
+***REMOVED*** Start bold
+export LESS_TERMCAP_md=$(tput bold; tput setaf 2) ***REMOVED*** green
+***REMOVED*** Start stand out
+export LESS_TERMCAP_so=$(tput bold; tput rev; tput setaf 3) ***REMOVED*** yellow
+***REMOVED*** End stand out
+export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
+***REMOVED*** Start underline
+export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 1) ***REMOVED*** red
+***REMOVED*** End underline
+export LESS_TERMCAP_ue=$(tput rmul; tput bold; tput sgr0)
+***REMOVED*** End bold, blinking, standout, underline
+export LESS_TERMCAP_me=$(tput sgr0) 
+

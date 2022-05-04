@@ -1,0 +1,4 @@
+***REMOVED***!/bin/bash
+
+mpd --systemd &
+mpDris2 &

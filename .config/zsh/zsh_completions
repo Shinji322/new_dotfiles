@@ -1,0 +1,7 @@
+***REMOVED*** Basic auto/tab complete:
+fpath+="$ZDOTDIR/completion/"
+autoload -U compinit
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+compinit
+_comp_options+=(globdots) ***REMOVED*** Include hidden files

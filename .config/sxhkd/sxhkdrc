@@ -1,0 +1,143 @@
+***REMOVED***           _     _       _          
+***REMOVED***          | |   | |     | |         
+***REMOVED***  _____  _| |__ | | ____| |_ __ ___ 
+***REMOVED*** / __\ \/ / '_ \| |/ / _` | '__/ __|
+***REMOVED*** \__ \>  <| | | |   < (_| | | | (__ 
+***REMOVED*** |___/_/\_\_| |_|_|\_\__,_|_|  \___|
+***REMOVED***                                    
+***REMOVED*** sxhkd stuff
+super + shift + r
+    pkill sxhkd && notify-send "sxhkd config reloaded" && sxhkd &
+super + x
+    xkill
+
+***REMOVED******REMOVED***             _    _    _  __ _   
+***REMOVED******REMOVED***  _ _ ___ __| |__| |_ (_)/ _| |_ 
+***REMOVED******REMOVED*** | '_/ -_) _` (_-< ' \| |  _|  _|
+***REMOVED******REMOVED*** |_| \___\__,_/__/_||_|_|_|  \__|
+***REMOVED******REMOVED***                                 
+***REMOVED******REMOVED*** Redshift
+***REMOVED***super + r; {a,2,3,4,5} 
+***REMOVED***    [ -n "$(pgrep reshift)" ] && pkill redshift
+***REMOVED***    {redshift -P -t 5000:4000, \
+***REMOVED***     redshift -P -O 2500, \
+***REMOVED***     redshift -P -O 3000, \
+***REMOVED***     redshift -P -O 4000, \
+***REMOVED***     redshift -P -O 5000}
+
+***REMOVED***                                   _          _
+***REMOVED***  ___ ___  _ _  ___  ___ ._ _  ___| |_  ___ _| |_ 
+***REMOVED*** <_-</ | '| '_>/ ._>/ ._>| ' |<_-<| . |/ . \ | |  
+***REMOVED*** /__/\_|_.|_|  \___.\___.|_|_|/__/|_|_|\___/ |_|  
+***REMOVED***                                                  
+***REMOVED*** Flameshot
+super + s
+    flameshot gui -p ~/images/screenshots/ -s
+super + shift + s
+    flameshot gui 
+***REMOVED*** super + s
+***REMOVED***     flameshot screen -p ~/images/screenshots/games/
+
+
+***REMOVED***           __ _ 
+***REMOVED***  _ _ ___ / _(_)
+***REMOVED*** | '_/ _ \  _| |
+***REMOVED*** |_| \___/_| |_|
+***REMOVED***                
+***REMOVED*** Rofi
+super + p 
+    rofi -show drun
+super + d 
+    dmenu_run
+***REMOVED*** alt_l + tab
+Alt_L + tab
+    rofi -show window
+
+
+***REMOVED***                _  _                        _             _     
+***REMOVED*** ._ _ _  ___  _| |<_> ___   ___  ___ ._ _ _| |_ _ _  ___ | | ___
+***REMOVED*** | ' ' |/ ._>/ . || |<_> | / | '/ . \| ' | | | | '_>/ . \| |<_-<
+***REMOVED*** |_|_|_|\___.\___||_|<___| \_|_.\___/|_|_| |_| |_|  \___/|_|/__/
+***REMOVED***                                                                
+super + F7
+    playerctl --player=mpd play-pause
+super + F6
+    playerctl --player=mpd previous
+super + F8
+    playerctl --player=mpd next
+super + F5
+    playerctl --player=mpd stop 
+super + F9
+    ~/.local/bin/mpdvolume down
+super + F10
+    ~/.local/bin/mpdvolume up
+
+super + shift + F9
+    ~/.local/bin/changevolume down
+super + shift + F10
+    ~/.local/bin/changevolume up
+
+
+***REMOVED***  _           _   _                  
+***REMOVED*** | |         | | | |                 
+***REMOVED*** | |__   ___ | |_| | _____ _   _ ___ 
+***REMOVED*** | '_ \ / _ \| __| |/ / _ \ | | / __|
+***REMOVED*** | | | | (_) | |_|   <  __/ |_| \__ \
+***REMOVED*** |_| |_|\___/ \__|_|\_\___|\__, |___/
+***REMOVED***                            __/ |    
+***REMOVED***                           |___/     
+***REMOVED*** hotkeys. These are keybindings that are used to launch applications
+super + Return
+    kitty
+super + w
+    waterfox-g4
+super + a 
+    ~/.scripts/sxhkd/search-appimages &
+super + f 
+    kitty ~/.local/bin/lfup
+super + r
+    kitty ncmpcpp 
+
+***REMOVED***  _  _____                    __ _       
+***REMOVED*** (_)|____ |                  / _(_)      
+***REMOVED***  _     / /   ___ ___  _ __ | |_ _  __ _ 
+***REMOVED*** | |    \ \  / __/ _ \| '_ \|  _| |/ _` |
+***REMOVED*** | |.___/ / | (_| (_) | | | | | | | (_| |
+***REMOVED*** |_|\____/   \___\___/|_| |_|_| |_|\__, |
+***REMOVED***                                    __/ |
+***REMOVED***                                   |___/ 
+***REMOVED*** i3 related config
+super + {h,j,k,l}
+    i3-msg focus {left,down,up,right}
+
+super + shift + {h,j,k,l}
+    i3-msg move {left,down,up,right}
+
+super + t
+    i3-msg split toggle
+
+super + {0-9}
+    i3-msg workspace number {0-9}
+
+super + shift + {0-9}
+    i3-msg move container to workspace number {0-9}
+
+super + m
+    i3-msg fullscreen toggle 
+
+super + {y,u,i,o}
+    { i3-msg resize grow width 10 px or 10 ppt, \
+      i3-msg resize shrink height 10 px or 10 ppt, \
+      i3-msg resize grow height 10 px or 10 ppt, \
+      i3-msg resize shrink width 10 px or 10 ppt } 
+
+super + shift + semicolon 
+    i3-msg reload
+
+super + z
+    i3-msg "gaps outer current plus 5; gaps inner current plus 5;"
+super + shift + z
+    i3-msg "gaps outer current minus 5; gaps inner current minus 5;"
+
+super + shift + c
+    i3-msg kill

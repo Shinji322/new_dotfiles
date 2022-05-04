@@ -1,0 +1,5 @@
+***REMOVED***!/bin/zsh
+
+choice=$(fd . ***REMOVED***/software/app-images -x echo {/} | rofi -dmenu -l 20 -p 'AppImages: ' -i)
+[ -n "$choice" ] && ***REMOVED***/software/app-images/$choice &!
+

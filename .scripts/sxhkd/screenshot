@@ -1,0 +1,12 @@
+***REMOVED***!/bin/bash
+***REMOVED*** This is a simple script that takes a screenshot 
+***REMOVED*** as well as copies the file path to the clipboard
+
+IMAGE_PATH="$HOME/documents/obsidian/ComputerScience/CS50/"
+
+flameshot gui -p ~/images/screenshots/ -s
+new_shot=$(echo ~/images/screenshots/* | awk '{print $1}') 
+mv $new_shot $IMAGE_PATH
+
+FILE_IMAGE="./$(cd $IMAGE_PATH && /bin/ls -c | head -n1)"
+echo $FILE_IMAGE | awk "{print $1}" | xclip -sel c

@@ -1,0 +1,42 @@
+***REMOVED***!/bin/sh
+
+***REMOVED*** This is a basic command that searches for scripts in the script directory
+***REMOVED*** It opens them with $EDITOR. It only includes files (not directories)
+***REMOVED*** It is piped into fzf where it is selected.
+function se {
+    CHOICE=$(fd . $XDG_SOURCE_HOME/examples/bash -t f | sed "s|$HOME/||g" | fzf) 
+    [ -n "$CHOICE" ] && $EDITOR $HOME/$CHOICE
+}
+
+***REMOVED*** Instead executes script
+function sx {
+    CHOICE=$(fd . $XDG_SOURCE_HOME/examples/bash -t f | sed "s|$HOME/||g" | fzf) 
+    [ -n "$CHOICE" ] && $HOME/$CHOICE
+}
+
+***REMOVED*** searches history
+function hf {
+    print -z $( ([ -n "$ZSH_NAME" ] && fc -l 1 || history) | fzf +s --tac --height "50%" | sed -E 's/ *[0-9]*\*? *//' | sed -E 's/\\/\\\\/g')
+}
+
+***REMOVED*** fzfcd
+function fcd {
+    cd $(ls | fzf)
+}
+
+***REMOVED*** serach man pages
+***REMOVED*** function fzman {
+***REMOVED***     OLDIFS="$IFS"
+***REMOVED***     IFS=":"
+***REMOVED***     MANPATHS=($(manpath))
+***REMOVED***     IFS=$OLDIFS
+
+***REMOVED***     MANS=()
+***REMOVED***     for MAN in $MANPATHS
+***REMOVED***     do
+***REMOVED***         MANTOADD=$(/bin/ls $MAN/man*)
+***REMOVED***         MANS+=${MANTOADD%%.*}
+***REMOVED***     done
+
+***REMOVED***     man $(echo ${MANS} | fzf)
+***REMOVED*** }

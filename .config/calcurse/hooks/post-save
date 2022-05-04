@@ -1,0 +1,4 @@
+***REMOVED***!/bin/sh
+
+DATE="$(date '+%d%m%Y')"
+calcurse -x > "$HOME/sync/org/${DATE}_calendar.ical"

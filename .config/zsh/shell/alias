@@ -1,0 +1,69 @@
+***REMOVED*** ~-=| Built in Aliases |=-~
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+alias l='exa -laG --icons --color=always --group-directories-first'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+***REMOVED*** ~-=| Streamlining basic commands |=-~
+alias rm='trash-put'
+alias cp='cpg -g'
+alias mv='mvg -g'
+alias du='du -h' 
+alias df='df -h' 
+alias grep='grep -i --color=auto'
+alias mkdir='mkdir -p'
+
+***REMOVED*** ~-=| Shortcuts |=-~
+alias nvim="lvim"
+alias vim="lvim"
+alias vi="lvim"
+alias scim="sc-im"
+alias cat='bat'
+alias sxiv='sxiv -a'
+***REMOVED*** alias figlet='figlet -f ~/software/typefaces/figlet/doom.flf'
+alias strx='startx ***REMOVED***/.config/x11/xinitrc'
+alias locate="sudo updatedb && ~/.scripts/alias/locate.sh"
+
+***REMOVED***  ~-=| Others |=-~
+***REMOVED***alias 'pacman -Sy'='pacman -Syu'
+alias con='/usr/bin/lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+
+
+***REMOVED***  ~-=| $HOME ~ Cleanup |=-~
+alias newsboat='newsboat --url-file="$XDG_CONFIG_HOME/newsboat/urls" --config-file="$XDG_CONFIG_HOME/newsboat/config" --cache-file="$XDG_CACHE_HOME/newsboat/cache"'
+alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia/settings/.nvidia-settings-rc"'
+alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
+alias gpg2='gpg2 --homedir "$XDG_DATA_HOME/gnupg""'
+alias anki='anki --no-sandbox -b "$XDG_DATA_HOME"/Anki'
+alias feh='feh --no-fehbg'
+alias codium='codium --extensions-dir $XDG_DATA_HOME/vscode'
+alias vscodium='vscodium --extensions-dir $XDG_DATA_HOME/vscode'
+alias sqlite3="sqlite3 -init $XDG_CONFIG_HOME/sqlite/sqliterc" 
+alias mdanki="mdanki --config $XDG_CONFIG_HOME/mdanki/settings.json"
+alias irssi='irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi'
+
+
+***REMOVED*** Let's move faster
+alias p="sudo pacman"
+alias y="yay"
+alias f="$FILE"
+alias e="$EDITOR"
+alias v="$EDITOR"
+alias yt="yt-dlp --add-metadata -i"
+alias ca="calcurse"
+***REMOVED*** alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
+***REMOVED*** Let zsh get the entire history 
+alias hist='history 1'
+alias "source .zshrc"="source ~/.config/zsh/zshrc"
+alias rshift="~/.scripts/alias/redshift"
+
+***REMOVED*** Git commands
+alias g="lazygit"
+alias gm='git commit -m'
+alias gc='git clone'
+alias ga='git add'
+alias gs='git status'

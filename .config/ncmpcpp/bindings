@@ -1,0 +1,479 @@
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED******REMOVED*** This is the example bindings file. Copy it to            ***REMOVED******REMOVED***
+***REMOVED******REMOVED*** ~/.ncmpcpp/bindings or $XDG_CONFIG_HOME/ncmpcpp/bindings ***REMOVED******REMOVED***
+***REMOVED******REMOVED*** and set up your preferences                              ***REMOVED******REMOVED***
+***REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED******REMOVED***
+***REMOVED***
+***REMOVED***def_key "mouse"
+***REMOVED***  mouse_event
+***REMOVED***
+***REMOVED***def_key "up"
+***REMOVED***  scroll_up
+***REMOVED***
+***REMOVED***def_key "shift-up"
+***REMOVED***  select_item
+***REMOVED***  scroll_up
+***REMOVED***
+***REMOVED***def_key "down"
+***REMOVED***  scroll_down
+***REMOVED***
+***REMOVED***def_key "shift-down"
+***REMOVED***  select_item
+***REMOVED***  scroll_down
+***REMOVED***
+***REMOVED***def_key "["
+***REMOVED***  scroll_up_album
+***REMOVED***
+***REMOVED***def_key "]"
+***REMOVED***  scroll_down_album
+***REMOVED***
+***REMOVED***def_key "{"
+***REMOVED***  scroll_up_artist
+***REMOVED***
+***REMOVED***def_key "}"
+***REMOVED***  scroll_down_artist
+***REMOVED***
+***REMOVED***def_key "page_up"
+***REMOVED***  page_up
+***REMOVED***
+***REMOVED***def_key "page_down"
+***REMOVED***  page_down
+***REMOVED***
+***REMOVED***def_key "home"
+***REMOVED***  move_home
+***REMOVED***
+***REMOVED***def_key "end"
+***REMOVED***  move_end
+***REMOVED***
+***REMOVED***def_key "insert"
+***REMOVED***  select_item
+***REMOVED***
+***REMOVED***def_key "enter"
+***REMOVED***  enter_directory
+***REMOVED***
+***REMOVED***def_key "enter"
+***REMOVED***  toggle_output
+***REMOVED***
+***REMOVED***def_key "enter"
+***REMOVED***  run_action
+***REMOVED***
+***REMOVED***def_key "enter"
+***REMOVED***  play_item
+***REMOVED***
+***REMOVED***def_key "space"
+***REMOVED***  add_item_to_playlist
+***REMOVED***
+***REMOVED***def_key "space"
+***REMOVED***  toggle_lyrics_update_on_song_change
+***REMOVED***
+***REMOVED***def_key "space"
+***REMOVED***  toggle_visualization_type
+***REMOVED***
+***REMOVED***def_key "delete"
+***REMOVED***  delete_playlist_items
+***REMOVED***
+***REMOVED***def_key "delete"
+***REMOVED***  delete_browser_items
+***REMOVED***
+***REMOVED***def_key "delete"
+***REMOVED***  delete_stored_playlist
+***REMOVED***
+***REMOVED***def_key "right"
+***REMOVED***  next_column
+***REMOVED***
+***REMOVED***def_key "right"
+***REMOVED***  slave_screen
+***REMOVED***
+***REMOVED***def_key "right"
+***REMOVED***  volume_up
+***REMOVED***
+***REMOVED***def_key "+"
+***REMOVED***  volume_up
+***REMOVED***
+***REMOVED***def_key "left"
+***REMOVED***  previous_column
+***REMOVED***
+***REMOVED***def_key "left"
+***REMOVED***  master_screen
+***REMOVED***
+***REMOVED***def_key "left"
+***REMOVED***  volume_down
+***REMOVED***
+***REMOVED***def_key "-"
+***REMOVED***  volume_down
+***REMOVED***
+***REMOVED***def_key ":"
+***REMOVED***  execute_command
+***REMOVED***
+***REMOVED***def_key "tab"
+***REMOVED***  next_screen
+***REMOVED***
+***REMOVED***def_key "shift-tab"
+***REMOVED***  previous_screen
+***REMOVED***
+***REMOVED***def_key "f1"
+***REMOVED***  show_help
+***REMOVED***
+***REMOVED***def_key "1"
+***REMOVED***  show_playlist
+***REMOVED***
+***REMOVED***def_key "2"
+***REMOVED***  show_browser
+***REMOVED***
+***REMOVED***def_key "2"
+***REMOVED***  change_browse_mode
+***REMOVED***
+***REMOVED***def_key "3"
+***REMOVED***  show_search_engine
+***REMOVED***
+***REMOVED***def_key "3"
+***REMOVED***  reset_search_engine
+***REMOVED***
+***REMOVED***def_key "4"
+***REMOVED***  show_media_library
+***REMOVED***
+***REMOVED***def_key "4"
+***REMOVED***  toggle_media_library_columns_mode
+***REMOVED***
+***REMOVED***def_key "5"
+***REMOVED***  show_playlist_editor
+***REMOVED***
+***REMOVED***def_key "6"
+***REMOVED***  show_tag_editor
+***REMOVED***
+***REMOVED***def_key "7"
+***REMOVED***  show_outputs
+***REMOVED***
+***REMOVED***def_key "8"
+***REMOVED***  show_visualizer
+***REMOVED***
+***REMOVED***def_key "="
+***REMOVED***  show_clock
+***REMOVED***
+***REMOVED***def_key "@"
+***REMOVED***  show_server_info
+***REMOVED***
+***REMOVED***def_key "s"
+***REMOVED***  stop
+***REMOVED***
+***REMOVED***def_key "p"
+***REMOVED***  pause
+***REMOVED***
+***REMOVED***def_key ">"
+***REMOVED***  next
+***REMOVED***
+***REMOVED***def_key "<"
+***REMOVED***  previous
+***REMOVED***
+***REMOVED***def_key "ctrl-h"
+***REMOVED***  jump_to_parent_directory
+***REMOVED***
+***REMOVED***def_key "ctrl-h"
+***REMOVED***  replay_song
+***REMOVED***
+***REMOVED***def_key "backspace"
+***REMOVED***  jump_to_parent_directory
+***REMOVED***
+***REMOVED***def_key "backspace"
+***REMOVED***  replay_song
+***REMOVED***
+***REMOVED***def_key "f"
+***REMOVED***  seek_forward
+***REMOVED***
+***REMOVED***def_key "b"
+***REMOVED***  seek_backward
+***REMOVED***
+***REMOVED***def_key "r"
+***REMOVED***  toggle_repeat
+***REMOVED***
+***REMOVED***def_key "z"
+***REMOVED***  toggle_random
+***REMOVED***
+***REMOVED***def_key "y"
+***REMOVED***  save_tag_changes
+***REMOVED***
+***REMOVED***def_key "y"
+***REMOVED***  start_searching
+***REMOVED***
+***REMOVED***def_key "y"
+***REMOVED***  toggle_single
+***REMOVED***
+***REMOVED***def_key "R"
+***REMOVED***  toggle_consume
+***REMOVED***
+***REMOVED***def_key "Y"
+***REMOVED***  toggle_replay_gain_mode
+***REMOVED***
+***REMOVED***def_key "T"
+***REMOVED***  toggle_add_mode
+***REMOVED***
+***REMOVED***def_key "|"
+***REMOVED***  toggle_mouse
+***REMOVED***
+***REMOVED***def_key "***REMOVED***"
+***REMOVED***  toggle_bitrate_visibility
+***REMOVED***
+***REMOVED***def_key "Z"
+***REMOVED***  shuffle
+***REMOVED***
+***REMOVED***def_key "x"
+***REMOVED***  toggle_crossfade
+***REMOVED***
+***REMOVED***def_key "X"
+***REMOVED***  set_crossfade
+***REMOVED***
+***REMOVED***def_key "u"
+***REMOVED***  update_database
+***REMOVED***
+***REMOVED***def_key "ctrl-s"
+***REMOVED***  sort_playlist
+***REMOVED***
+***REMOVED***def_key "ctrl-s"
+***REMOVED***  toggle_browser_sort_mode
+***REMOVED***
+***REMOVED***def_key "ctrl-s"
+***REMOVED***  toggle_media_library_sort_mode
+***REMOVED***
+***REMOVED***def_key "ctrl-r"
+***REMOVED***  reverse_playlist
+***REMOVED***
+***REMOVED***def_key "ctrl-f"
+***REMOVED***  apply_filter
+***REMOVED***
+***REMOVED***def_key "ctrl-_"
+***REMOVED***  select_found_items
+***REMOVED***
+***REMOVED***def_key "/"
+***REMOVED***  find
+***REMOVED***
+***REMOVED***def_key "/"
+***REMOVED***  find_item_forward
+***REMOVED***
+***REMOVED***def_key "?"
+***REMOVED***  find
+***REMOVED***
+***REMOVED***def_key "?"
+***REMOVED***  find_item_backward
+***REMOVED***
+***REMOVED***def_key "."
+***REMOVED***  next_found_item
+***REMOVED***
+***REMOVED***def_key ","
+***REMOVED***  previous_found_item
+***REMOVED***
+***REMOVED***def_key "w"
+***REMOVED***  toggle_find_mode
+***REMOVED***
+***REMOVED***def_key "e"
+***REMOVED***  edit_song
+***REMOVED***
+***REMOVED***def_key "e"
+***REMOVED***  edit_library_tag
+***REMOVED***
+***REMOVED***def_key "e"
+***REMOVED***  edit_library_album
+***REMOVED***
+***REMOVED***def_key "e"
+***REMOVED***  edit_directory_name
+***REMOVED***
+***REMOVED***def_key "e"
+***REMOVED***  edit_playlist_name
+***REMOVED***
+***REMOVED***def_key "e"
+***REMOVED***  edit_lyrics
+***REMOVED***
+***REMOVED***def_key "i"
+***REMOVED***  show_song_info
+***REMOVED***
+***REMOVED***def_key "I"
+***REMOVED***  show_artist_info
+***REMOVED***
+***REMOVED***def_key "g"
+***REMOVED***  jump_to_position_in_song
+***REMOVED***
+***REMOVED***def_key "l"
+***REMOVED***  show_lyrics
+***REMOVED***
+***REMOVED***def_key "ctrl-v"
+***REMOVED***  select_range
+***REMOVED***
+***REMOVED***def_key "v"
+***REMOVED***  reverse_selection
+***REMOVED***
+***REMOVED***def_key "V"
+***REMOVED***  remove_selection
+***REMOVED***
+***REMOVED***def_key "B"
+***REMOVED***  select_album
+***REMOVED***
+***REMOVED***def_key "a"
+***REMOVED***  add_selected_items
+***REMOVED***
+***REMOVED***def_key "c"
+***REMOVED***  clear_playlist
+***REMOVED***
+***REMOVED***def_key "c"
+***REMOVED***  clear_main_playlist
+***REMOVED***
+***REMOVED***def_key "C"
+***REMOVED***  crop_playlist
+***REMOVED***
+***REMOVED***def_key "C"
+***REMOVED***  crop_main_playlist
+***REMOVED***
+***REMOVED***def_key "m"
+***REMOVED***  move_sort_order_up
+***REMOVED***
+***REMOVED***def_key "m"
+***REMOVED***  move_selected_items_up
+***REMOVED***
+***REMOVED***def_key "n"
+***REMOVED***  move_sort_order_down
+***REMOVED***
+***REMOVED***def_key "n"
+***REMOVED***  move_selected_items_down
+***REMOVED***
+***REMOVED***def_key "M"
+***REMOVED***  move_selected_items_to
+***REMOVED***
+***REMOVED***def_key "A"
+***REMOVED***  add
+***REMOVED***
+***REMOVED***def_key "S"
+***REMOVED***  save_playlist
+***REMOVED***
+***REMOVED***def_key "o"
+***REMOVED***  jump_to_playing_song
+***REMOVED***
+***REMOVED***def_key "G"
+***REMOVED***  jump_to_browser
+***REMOVED***
+***REMOVED***def_key "G"
+***REMOVED***  jump_to_playlist_editor
+***REMOVED***
+***REMOVED***def_key "~"
+***REMOVED***  jump_to_media_library
+***REMOVED***
+***REMOVED***def_key "E"
+***REMOVED***  jump_to_tag_editor
+***REMOVED***
+***REMOVED***def_key "U"
+***REMOVED***  toggle_playing_song_centering
+***REMOVED***
+***REMOVED***def_key "P"
+***REMOVED***  toggle_display_mode
+***REMOVED***
+***REMOVED***def_key "\\"
+***REMOVED***  toggle_interface
+***REMOVED***
+***REMOVED***def_key "!"
+***REMOVED***  toggle_separators_between_albums
+***REMOVED***
+***REMOVED***def_key "L"
+***REMOVED***  toggle_lyrics_fetcher
+***REMOVED***
+***REMOVED***def_key "F"
+***REMOVED***  fetch_lyrics_in_background
+***REMOVED***
+***REMOVED***def_key "alt-l"
+***REMOVED***  toggle_fetching_lyrics_in_background
+***REMOVED***
+***REMOVED***def_key "ctrl-l"
+***REMOVED***  toggle_screen_lock
+***REMOVED***
+***REMOVED***def_key "`"
+***REMOVED***  toggle_library_tag_type
+***REMOVED***
+***REMOVED***def_key "`"
+***REMOVED***  refetch_lyrics
+***REMOVED***
+***REMOVED***def_key "`"
+***REMOVED***  add_random_items
+***REMOVED***
+***REMOVED***def_key "ctrl-p"
+***REMOVED***  set_selected_items_priority
+***REMOVED***
+***REMOVED***def_key "q"
+***REMOVED***  quit
+***REMOVED***
+***REMOVED***
+***REMOVED***def_key "f"
+***REMOVED***	find
+***REMOVED***def_key "f"
+***REMOVED***	find_item_forward
+
+def_key "+"
+    show_clock
+def_key "="
+    volume_up
+
+def_key "j"
+    scroll_down
+def_key "k"
+    scroll_up
+
+def_key "ctrl-u"
+    page_up
+***REMOVED***push_characters "kkkkkkkkkkkkkkk"
+def_key "ctrl-d"
+    page_down
+***REMOVED***push_characters "jjjjjjjjjjjjjjj"
+def_key "u"
+    page_up
+***REMOVED***push_characters "kkkkkkkkkkkkkkk"
+def_key "d"
+    page_down
+***REMOVED***push_characters "jjjjjjjjjjjjjjj"
+def_key "h"
+    previous_column
+def_key "l"
+    next_column
+
+def_key "."
+    show_lyrics
+
+def_key "n"
+    next_found_item
+def_key "N"
+    previous_found_item
+
+***REMOVED*** not used but bound
+def_key "J"
+    move_sort_order_down
+def_key "K"
+    move_sort_order_up
+def_key "h"
+  jump_to_parent_directory
+def_key "l"
+  enter_directory
+def_key "l"
+  run_action
+def_key "l"
+  play_item
+def_key "m"
+  show_media_library
+def_key "m"
+  toggle_media_library_columns_mode
+def_key "t"
+  show_tag_editor
+def_key "v"
+  show_visualizer
+def_key "G"
+  move_end
+def_key "g"
+  move_home
+***REMOVED***jump_to_position_in_song
+def_key "U"
+  update_database
+def_key "s"
+  reset_search_engine
+def_key "s"
+  show_search_engine
+def_key "f"
+  show_browser
+def_key "f"
+  change_browse_mode
+def_key "x"
+  delete_playlist_items
+def_key "P"
+  show_playlist

@@ -1,0 +1,13 @@
+***REMOVED***!/bin/sh
+
+***REMOVED*** search app image directory
+function sa {
+    choice=$(fd . $APPIMAGE_DIR -x echo {/} | fzf) 
+    [ -n "$choice" ] && $choice &!
+}
+
+function sar {
+***REMOVED*** additionally in this script ~/.scripts/sxhkd/search-appimages
+    choice=$(fd . $APPIMAGE_DIR -x echo {/} | rofi -dmenu -l 20 -p 'AppImages: ' -i)
+    [ -n "$choice" ] && $choice &!
+}

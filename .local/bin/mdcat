@@ -1,0 +1,51 @@
+***REMOVED***!/bin/bash
+***REMOVED*** This was made by Shinji322/Fujiwara no Mokou/other weebish names
+***REMOVED*** This simple script cats or opens the file in the editor at the specified line
+***REMOVED*** It depends on fzf and bat
+
+usage() {
+    echo -e "Usage:\tmdcat [ FILE ]"
+}
+
+***REMOVED*** Error checking
+if [ -z "$1" ]
+then
+    usage && exit 1
+fi 
+
+if [ ! -f "$1" ]
+then
+    echo "Gimme an actual file please"
+    usage && exit 2
+fi
+
+***REMOVED*** -n specifies to explictly allow line number in output
+***REMOVED*** output like "24:fi"
+CHOICES=$(rg -n "***REMOVED***" "$1")
+***REMOVED*** Starting line 
+START=$(rg -n "***REMOVED***" "$1" | fzf)
+***REMOVED*** Get number
+START=${START%%:*}
+
+for CHOICE in ${CHOICES[@]};
+do
+    ***REMOVED*** Get only number
+    CHOICE=$(echo $CHOICE | sed "s/[^0-9]//g")
+    [ -z "$CHOICE" ] && continue
+
+    ***REMOVED*** this weird string subtitution is used to get the line number
+    if [ $CHOICE -gt $START ]; then
+        END="$CHOICE"
+        break
+    fi
+done
+
+if [ -z "$END" ] 
+then
+    bat --line-range "$START:" "$1"
+    exit 0
+else
+    ***REMOVED*** Go from this line to the line before the new heading
+    bat --line-range "$START:$(( END - 1))" "$1"
+    exit 0
+fi
