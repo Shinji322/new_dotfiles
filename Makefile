@@ -15,7 +15,7 @@ CLI_PACKAGES     += unzip unrar xclip mediainfo moreutils tar gzip
 CLI_PACKAGES     += nodejs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
 CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc
-CLI_PACKAGES     += pass rsync bat sox pass-otp pkgfile trash-cli ueberzug 
+CLI_PACKAGES     += pass rsync bat sox pass-otp pkgfile trash-cli ueberzug mlocate
 AUR_CLI_PACKAGES := atool task-spooler lf-git
 
 AUR_HELPER       := yay
@@ -198,11 +198,11 @@ automount: ***REMOVED*** Automount hard drives on connect
 cron: 
 	$(INSTALL) cronie
 	$(SYSTEMD_ENABLE) cronie.service
-	cat $(XDG_CONFIG_HOME)/cron/crontab***REMOVED***Fix this 
+	cat $(XDG_CONFIG_HOME)/cron/crontab ***REMOVED***Fix this 
 docker:
 	$(INSTALL) docker docker-compose
 	$(SYSTEMD_ENABLE) docker.service
-	sudo groupadd docker
+	[ -z "$(shell groups | grep docker)" ] && sudo groupadd docker
 	sudo usermod -aG docker $(USER)
 
 ***REMOVED*** Hardware dependent
@@ -216,11 +216,12 @@ amd_gpu:
 ***REMOVED*** Microcode
 amd_cpu:
 	$(INSTALL) amd-ucode
-	grub-mkconfig -o /boot/grub/grub.cfg***REMOVED*** Let's assume we use grub
+	grub-mkconfig -o /boot/grub/grub.cfg ***REMOVED*** Let's assume we use grub
 intel_cpu:
 	$(INSTALL) intel-ucode
-	grub-mkconfig -o /boot/grub/grub.cfg***REMOVED*** Let's assume grub
-
+	grub-mkconfig -o /boot/grub/grub.cfg ***REMOVED*** Let's assume grub
+dual_boot:
+	$(INSTALL) ntfs-3g
 
 
 ***REMOVED*** Final words
