@@ -1,7 +1,7 @@
-***REMOVED***!/bin/bash -x
+***REMOVED***!/bin/bash 
 ***REMOVED*** This script runs at startup, to be started by the Window Manager
 
-***REMOVED*** kitty calcurse &!
+kitty calcurse &!
 
 ***REMOVED*** QUOTES="$HOME/documents/quotes/quotes"
 ***REMOVED*** NOOFQUOTES=$(wc -l $QUOTES | awk '{print $1}')
