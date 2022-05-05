@@ -15,7 +15,7 @@ CLI_PACKAGES     += unzip unrar xclip mediainfo moreutils tar gzip
 CLI_PACKAGES     += nodejs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
 CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc
-CLI_PACKAGES     += pass rsync bat sox pass-otp pkgfile trash-cli ueberzug mlocate
+CLI_PACKAGES     += pass rsync bat sox pass-otp pkgfile trash-cli ueberzug mlocate xdotool aria2
 AUR_CLI_PACKAGES := atool task-spooler lf-git
 
 AUR_HELPER       := yay
@@ -25,6 +25,7 @@ PACKAGES         := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
 PACKAGES         += docker docker-compose
 PACKAGES         += zoxide lazygit gendesk flameshot
 PACKAGES         += nmap tmux jq redshift
+PACKAGES         += exfat-utils
 AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk picom-git
 AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center 
 AUR_PACKAGES     += qdirstat-bin
@@ -46,12 +47,15 @@ FILE_TREE        := https://github.com/Shinji322/file-tree.git
 ***REMOVED*** System related stuff
 ${HOME}/.local:
 	$(MKDIR) $<
+	$(MKDIR) $</src
+	$(MKDIR) $</share
+	$(MKDIR) $</repos
 base:
 	$(INSTALL) $(BASE_PKGS)
 $(AUR_HELPER):
-	git clone https://aur.archlinux.org/yay.git
+	git clone https://aur.archlinux.org/$(AUR_HELPER).git
 	cd yay ***REMOVED*** make doesn't allow you to cd
-	makepkg -si
+	makepkg -si --noconfirm --needed
 	cd ..
 install: ***REMOVED******REMOVED*** Install my packages
 	$(INSTALL) $(CLI_PACKAGES)
@@ -74,7 +78,12 @@ shell:
 	$(INSTALL) zsh-autosuggestions zsh-completions
 	$(AUR) zsh-fast-syntax-highlighting
 	chsh -s /bin/zsh
-
+	$(MKDIR) $(XDG_CACHE_HOME)/zsh
+	touch $(XDG_CACHE_HOME)/zsh/history
+date: ***REMOVED*** Used to set date and time properly
+	$(INSTALL) ntp
+	sudo ntpdate ntp.ubuntu.com
+	sudo hwclock -w
 
 ***REMOVED*** Configs
 filetree:
@@ -148,8 +157,8 @@ advcpmv:
 terminal:
 	$(INSTALL) kitty
 fonts: 
-	$(INSTALL) ttf-ubuntu-font-family
-	$(INSTALL) otf-ipafont
+	$(INSTALL) ttf-ubuntu-font-family ttf-croscore
+	$(INSTALL) otf-ipafont 
 	$(AUR) nerd-fonts-noto-sans-regular-complete
 text-editor: 
 	$(INSTALL) neovim
@@ -181,8 +190,9 @@ themes:
 	$(AUR) $(ATHEMES)
 mpd:
 	$(INSTALL) mpd
-	touch ~/.cache/mpd.db
-
+	***REMOVED***touch ~/.cache/mpd.db
+	$(MKDIR) $(XDG_DATA_HOME)/mpd
+	touch $(XDG_DATA_HOME)/mpd/database
 
 
 ***REMOVED*** Systemd
@@ -202,8 +212,10 @@ cron:
 docker:
 	$(INSTALL) docker docker-compose
 	$(SYSTEMD_ENABLE) docker.service
-	[ -z "$(shell groups | grep docker)" ] && sudo groupadd docker
+	***REMOVED*** Idk if this will work
+	[ -z "$(groups | grep docker)" ] && sudo groupadd docker
 	sudo usermod -aG docker $(USER)
+
 
 ***REMOVED*** Hardware dependent
 nvidia:
@@ -221,7 +233,7 @@ intel_cpu:
 	$(INSTALL) intel-ucode
 	grub-mkconfig -o /boot/grub/grub.cfg ***REMOVED*** Let's assume grub
 dual_boot:
-	$(INSTALL) ntfs-3g
+	$(INSTALL) ntfs-3g nfs-utils
 
 
 ***REMOVED*** Final words
