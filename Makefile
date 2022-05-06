@@ -125,10 +125,10 @@ sdl:
 raylib:
 	$(INSTALL) raylib
 	sudo $(MKDIR) /usr/include/raylib_extras
-	curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/physac.h > /usr/include/raylib_extras/physac.h
-	curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/easings.h > /usr/include/raylib_extras/easings.h
-	curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/raygui.h > /usr/include/raylib_extras/raygui.h
-	curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/rmem.h > /usr/include/raylib_extras/rmem.h
+	sudo curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/physac.h > /usr/include/raylib_extras/physac.h
+	sudo curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/easings.h > /usr/include/raylib_extras/easings.h
+	sudo curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/raygui.h > /usr/include/raylib_extras/raygui.h
+	sudo curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/rmem.h > /usr/include/raylib_extras/rmem.h
 rmarkdown: 
 	$(INSTALL) r gcc-fortran tk
 pipkgs: 
@@ -157,8 +157,16 @@ advcpmv:
 terminal:
 	$(INSTALL) kitty
 fonts: 
+	***REMOVED*** Latin script
 	$(INSTALL) ttf-ubuntu-font-family ttf-croscore
+	***REMOVED*** Japanese
 	$(INSTALL) otf-ipafont 
+	***REMOVED*** Chinese
+	$(INSTALL) adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ***REMOVED*** Simplified
+	$(INSTALL) adobe-source-han-sans-tw-fonts adobe-source-han-serif-tw-fonts ***REMOVED*** Traditional 
+	***REMOVED*** Korean
+	$(INSTALL) adobe-source-han-sans-kr-fonts ttf-baekmuk
+	***REMOVED*** Nerd
 	$(AUR) nerd-fonts-noto-sans-regular-complete
 text-editor: 
 	$(INSTALL) neovim
@@ -193,6 +201,11 @@ mpd:
 	***REMOVED***touch ~/.cache/mpd.db
 	$(MKDIR) $(XDG_DATA_HOME)/mpd
 	touch $(XDG_DATA_HOME)/mpd/database
+codecs:
+	***REMOVED*** Audio codecs
+	$(INSTALL) flac wavpack opus libamd libvorbis
+	***REMOVED*** Video codecs
+	$(INSTALL) xvidcore x264 x265 libmpeg2  aom libvpx libtheora libdv schroedinger
 
 
 ***REMOVED*** Systemd
@@ -208,13 +221,13 @@ automount: ***REMOVED*** Automount hard drives on connect
 cron: 
 	$(INSTALL) cronie
 	$(SYSTEMD_ENABLE) cronie.service
-	cat $(XDG_CONFIG_HOME)/cron/crontab ***REMOVED***Fix this 
+	cat $(XDG_CONFIG_HOME)/cron/crontab ***REMOVED*** Fix this 
 docker:
 	$(INSTALL) docker docker-compose
 	$(SYSTEMD_ENABLE) docker.service
 	***REMOVED*** Idk if this will work
 	[ -z "$(groups | grep docker)" ] && sudo groupadd docker
-	sudo usermod -aG docker $(USER)
+	sudo usermod -aG docker $(USER) ***REMOVED*** Gimme docker perms
 
 
 ***REMOVED*** Hardware dependent
@@ -233,7 +246,9 @@ intel_cpu:
 	$(INSTALL) intel-ucode
 	grub-mkconfig -o /boot/grub/grub.cfg ***REMOVED*** Let's assume grub
 dual_boot:
+	$(INSTALL) os-prober
 	$(INSTALL) ntfs-3g nfs-utils
+	sudo grub-mkconfig -o /boot/grub/grub.cfg ***REMOVED*** Let's assume grub
 
 
 ***REMOVED*** Final words
