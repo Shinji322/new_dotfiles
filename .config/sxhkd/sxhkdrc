@@ -8,7 +8,7 @@
 ***REMOVED*** sxhkd stuff
 super + shift + r
     pkill sxhkd && notify-send "sxhkd config reloaded" && sxhkd &
-super + x
+super + shift + x
     xkill
 
 ***REMOVED******REMOVED***             _    _    _  __ _   
