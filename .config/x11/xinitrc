@@ -36,7 +36,7 @@ fi
 
 ***REMOVED*** keymap 
 setxkbmap -option caps:escape &
-syndaemon -i 0.3 -t -K -R & ***REMOVED*** disable keyboard for 0.3 seconds after touching the keyboard
+syndaemon -i 0.3 -t -K -R & ***REMOVED*** disable trackpad for 0.3 seconds after touching the keyboard
 
 ***REMOVED*** startup apps
 udiskie &
