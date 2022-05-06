@@ -45,7 +45,7 @@ super + shift + s
 ***REMOVED*** |_| \___/_| |_|
 ***REMOVED***                
 ***REMOVED*** Rofi
-super + p 
+super + r 
     rofi -show drun
 super + d 
     dmenu_run
@@ -97,6 +97,12 @@ super + f
     kitty ~/.local/bin/lfup
 super + r
     kitty ncmpcpp 
+
+
+***REMOVED*** Asusctl
+F5
+  asusctl profile -n && notify-send "Setting mode to:" "$(asusctl profile -p)"
+
 
 ***REMOVED***  _  _____                    __ _       
 ***REMOVED*** (_)|____ |                  / _(_)      
