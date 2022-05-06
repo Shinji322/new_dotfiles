@@ -37,6 +37,7 @@ autocmd BufRead,BufNewFile *rc set filetype=cfg
 autocmd BufRead,BufNewFile *rc.* set filetype=cfg
 " Except these ones
 autocmd BufRead,BufNewFile sxhkdrc* set filetype=sh
+autocmd BufWrite sxhkdrc* :!pkill sxhkd && notify-send "sxhkd config reloaded" && sxhkd &!
 autocmd BufRead,BufNewFile lfrc* set filetype=sh
 autocmd BufRead,BufNewFile *zshrc* set filetype=sh
 autocmd BufRead,BufNewFile *xinitrc* set filetype=sh
