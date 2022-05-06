@@ -249,6 +249,12 @@ dual_boot:
 	$(INSTALL) os-prober
 	$(INSTALL) ntfs-3g nfs-utils
 	sudo grub-mkconfig -o /boot/grub/grub.cfg ***REMOVED*** Let's assume grub
+asus_rog:
+	echo -e "[g14]\nSigLevel = DatabaseNever Optional TrustAll\nServer = https://arch.asus-linux.org" >> /etc/pacman.conf
+	pacman -Syu
+	$(INSTALL) asusctl supergfxctl
+	systemctl enable --now power-profiles-daemon.service
+	systemctl enable --now supergfxd
 
 
 ***REMOVED*** Final words
