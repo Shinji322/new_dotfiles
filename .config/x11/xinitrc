@@ -49,7 +49,5 @@ calcurse --daemon
 ~/.scripts/screenlayout/rog_zephyrus_dual.sh &
 ~/.scripts/system/wallpaper &
 ~/.scripts/alias/searx &
-~/.scripts/system/startup &
-redshift &
 safeeyes &
 exec i3
