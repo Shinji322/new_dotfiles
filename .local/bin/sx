@@ -1,0 +1,15 @@
+***REMOVED***!/bin/sh
+
+SCRIPT_DIR="$HOME/.scripts"
+sx ()
+{
+  ***REMOVED*** Find executable files in script dir
+  ***REMOVED*** Because of POSIX compliance, this is a bit messier than it should be
+  LENGTH=$(bc <<< "$(echo $SCRIPT_DIR | wc -c) + 1") ***REMOVED*** add 1 to get rid of /
+  SCRIPT=$(fd . -t x $SCRIPT_DIR | cut -c $LENGTH- | fzf)
+  [ -z "$SCRIPT" ] && return 1
+
+  $SCRIPT_DIR/$SCRIPT
+}
+
+sx
