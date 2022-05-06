@@ -5,7 +5,6 @@ set $tab 0xff09
 
 ***REMOVED*** ~-|Startup Programs / Startup Scripts|-~
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-exec ~/.scripts/screenlayout/1080p-dual-screen.sh
 exec ~/.scripts/system/startup
 
 ***REMOVED*** Default information
@@ -14,7 +13,7 @@ bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
-font pango:monospace 8
+font pango:monospace 10
 ***REMOVED*** Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -26,9 +25,9 @@ gaps inner 5
 gaps outer 5
 
 ***REMOVED*** change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+***REMOVED***bindsym $mod+s layout stacking
+***REMOVED***bindsym $mod+w layout tabbed
+***REMOVED***bindsym $mod+e layout toggle split
 
 ***REMOVED*** toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
