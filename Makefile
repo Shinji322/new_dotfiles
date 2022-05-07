@@ -64,7 +64,7 @@ install: ***REMOVED******REMOVED*** Install my packages
 pacman:
 	sudo sed -i "s/^***REMOVED***Color/Color/" /etc/pacman.conf
 	sudo sed -i "/***REMOVED***VerbosePkgLists/a ILoveCandy" /etc/pacman.conf 
-	sudo echo -e "[multilib]\nInlcude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+	sudo echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 sudo:
 	sudo echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 xorg:
@@ -103,6 +103,9 @@ dotrepos:
 	git init --bare ~/.dotfiles
 	alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 	config config status.showUntrackedFiles no
+gpg:
+	$(INSTALL) gpg-tui pass pass-otp
+	$(MKDIR) $(HOME)/.local/share/gnupg
 
 
 ***REMOVED*** Programming stuff
@@ -149,11 +152,12 @@ libraries: sdl raylib rmarkdown pipkgs monogame
 pkginstall:
 	$(INSTALL) $(PACKAGES)
 	$(AUR) $(AUR_PACKAGES)
-***REMOVED*** This actually fails because if executed as sudo, then the owner of the repo is sudo
+***REMOVED*** It worked actually for some reason (maybe because I'm a part of the wheel group now?)
 advcpmv:
 	curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
 	sudo mv $(PWD)/advcpmv/advcp /usr/local/bin/cpg
 	sudo mv $(PWD)/advcpmv/advmv /usr/local/bin/mvg
+	rm -rf advcpmv
 terminal:
 	$(INSTALL) kitty
 fonts: 
@@ -253,8 +257,8 @@ asus_rog:
 	echo -e "[g14]\nSigLevel = DatabaseNever Optional TrustAll\nServer = https://arch.asus-linux.org" >> /etc/pacman.conf
 	pacman -Syu
 	$(INSTALL) asusctl supergfxctl
-	systemctl enable --now power-profiles-daemon.service
-	systemctl enable --now supergfxd
+	$(SYSTEMD_ENABLE) power-profiles-daemon.service
+	$(SYSTEMD_ENABLE) supergfxd
 
 
 ***REMOVED*** Final words

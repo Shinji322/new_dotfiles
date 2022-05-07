@@ -1,0 +1,12 @@
+***REMOVED***compdef asusctl
+
+__asusctl_subcommands() {
+    local -a _asusctl_subcommands
+    _asusctl_subcommands=(
+        "led-mode:Set the keyboard lighting from built-in modes"
+        "profile:Set or select platform_profile"
+        "fan-curve:Set, select, or modify fan curves if supported"
+        "anime:Manage AniMe Matrix"
+        "bios:Change bios settings"
+    )
+}

@@ -40,12 +40,15 @@ bindsym $mod+space focus mode_toggle
 
 
 ***REMOVED*** restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+$alt+r restart
 ***REMOVED*** exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 ***REMOVED*** Start i3bar to display a workspace bar (plus the system information i3status
 ***REMOVED*** finds out, if available)
 bar {
-    status_command i3blocks -c $XDG_CONFIG_HOME/i3blocks/i3blocks.conf
+  font pango:mono 12
+  status_command i3blocks
+  mode dock
+  modifier None
 }
