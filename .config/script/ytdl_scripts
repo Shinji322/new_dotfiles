@@ -1,7 +1,7 @@
 ***REMOVED***!/bin/sh
 
 DOWNLOADER="yt-dlp"
-COOKIES="~/.local/share/yt-dlp/cookies.txt"
+COOKIES="~/.local/share/cookies/youtube/cookies.txt"
 
 function yt_notif {
     dunstify -u low -i 'youtube-dl' -a 'youtube-dl-notification' $1 $2
