@@ -59,7 +59,7 @@ alias ca="calcurse"
 ***REMOVED*** Let zsh get the entire history 
 alias hist='history 1'
 alias "source .zshrc"="source ~/.config/zsh/zshrc"
-alias rshift="~/.scripts/alias/redshift"
+alias iost='iostat -sxmhtc --dec=0'
 
 ***REMOVED*** Git commands
 alias g="lazygit"
