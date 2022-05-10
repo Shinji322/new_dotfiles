@@ -24,11 +24,15 @@ AUR_HELPER       := yay
 PACKAGES         := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
 PACKAGES         += docker docker-compose
 PACKAGES         += zoxide lazygit gendesk flameshot
-PACKAGES         += nmap tmux jq redshift htmlq
+PACKAGES         += nmap tmux jq redshift htmlq glow tealdeer dust bottom difftastic
+***REMOVED*** glow: tui Markdown Previewer
+***REMOVED*** tealdeer: A very fast implementation of tldr in Rust: Simplified, example based and community-driven man pages. 
+***REMOVED*** dust: du on steroids
+***REMOVED*** bottom: system monitoring tool
 PACKAGES         += exfat-utils streamlink sysstat
 AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk picom-git
 AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center 
-AUR_PACKAGES     += qdirstat-bin
+***REMOVED***AUR_PACKAGES     += qdirstat-bin
 
 
 ***REMOVED*** Functions
@@ -54,7 +58,7 @@ base:
 	$(INSTALL) $(BASE_PKGS)
 $(AUR_HELPER):
 	git clone https://aur.archlinux.org/$(AUR_HELPER).git
-	cd yay ***REMOVED*** make doesn't allow you to cd
+	cd $(AUR_HELPER) ***REMOVED*** make doesn't allow you to cd
 	makepkg -si --noconfirm --needed
 	cd ..
 install: ***REMOVED******REMOVED*** Install my packages
@@ -111,6 +115,8 @@ gpg:
 ***REMOVED*** Programming stuff
 node: 
 	$(INSTALL) nodejs npm
+vue:
+	$(AUR) vue-cli
 python: 
 	$(INSTALL) python-pip
 rust: 
@@ -152,6 +158,7 @@ libraries: sdl raylib rmarkdown pipkgs monogame
 pkginstall:
 	$(INSTALL) $(PACKAGES)
 	$(AUR) $(AUR_PACKAGES)
+	tldr --update
 ***REMOVED*** It worked actually for some reason (maybe because I'm a part of the wheel group now?)
 advcpmv:
 	curl https://raw.githubusercontent.com/jarun/advcpmv/master/install.sh --create-dirs -o ./advcpmv/install.sh && (cd advcpmv && sh install.sh)
@@ -172,10 +179,11 @@ fonts:
 	$(INSTALL) adobe-source-han-sans-kr-fonts ttf-baekmuk
 	***REMOVED*** Nerd
 	$(AUR) nerd-fonts-noto-sans-regular-complete
-text-editor: 
+lunarvim:
 	$(INSTALL) neovim
-	$(AUR) sc-im-git
 	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) -y ***REMOVED*** needs to be installed after node, rust, and python
+text-editor: lunarvim
+	$(AUR) sc-im-git
 browser: 
 	***REMOVED*** just better firefox
 	$(AUR) waterfox-g4-bin
