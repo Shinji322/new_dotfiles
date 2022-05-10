@@ -1,4 +1,12 @@
--- Sometimes these lines won't appear for whatever reason
+--[[
+lvim is the global options object
+
+Linters should be
+filled in as strings with either
+a global executable or a path to
+an executable
+]]
+-- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
 require "mappings"
 require "plugins"
 
@@ -6,6 +14,8 @@ require "plugins"
 lvim.log.level = "warn"
 lvim.format_on_save = false
 lvim.colorscheme = "onedarker"
+-- to disable icons and use a minimalist setup, uncomment the following
+-- lvim.use_icons = false
 
 -- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
