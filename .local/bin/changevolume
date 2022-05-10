@@ -28,23 +28,27 @@ function send_notification() {
 }
 
 case $1 in
-up)
-	***REMOVED*** Set the volume on (if it was muted)
-	pamixer -u
-	pamixer -i 5 --allow-boost
-	send_notification $1
-	;;
-down)
-	pamixer -u
-	pamixer -d 5 --allow-boost
-	send_notification $1
-	;;
-mute)
-	pamixer -t
-	if $(pamixer --get-mute); then
-		dunstify -i volume-mute -a "changevolume" -t 2000 -r 9993 -u low "Muted"
-	else
-		send_notification up
-	fi
-	;;
+  up)
+    ***REMOVED*** Set the volume on (if it was muted)
+    pamixer -u
+    pamixer -i 5 --allow-boost
+    send_notification $1
+    ;;
+  down)
+    pamixer -u
+    pamixer -d 5 --allow-boost
+    send_notification $1
+    ;;
+  mute)
+    pamixer -t
+    if $(pamixer --get-mute); then
+      dunstify -i volume-mute -a "changevolume" -t 2000 -r 9993 -u low "Muted"
+    else
+      send_notification up
+    fi
+    ;;
+  *)
+    echo "Command not in: [up, down, mute]" 
+    return 1
+    ;;
 esac
