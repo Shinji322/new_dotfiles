@@ -8,5 +8,10 @@ grabber_instance() {
   $HOME/software/bin/appimages/Grabber_v7.8.1-x86_64.AppImage
 }
 
+if [[ "$1" == "stop" ]];
+then
+  docker stop danbooru-cron-1 danbooru-iqdb-1 danbooru-postgres-1 danbooru-redis-1 danbooru-jobs-1 danbooru-danbooru-1 && exit 1
+fi
+
 danbooru &
-grabber_instance &
+***REMOVED*** grabber_instance &
