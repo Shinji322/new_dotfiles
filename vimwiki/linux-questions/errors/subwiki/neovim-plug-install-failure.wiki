@@ -1,0 +1,8 @@
+* Using Plug Install might give a "git fatal error for terminal prompts" or "fatal: could not read username for https://github.com". This happens because it uses your github account for some reason
+	* To fix this, you need to generate an ssh-key
+		* run `ssh-keygen -t ed25519 -C "your_email@example.com"`
+		* Essentially, you just need to start the ssh-agent => `eval "$(ssh-agent -s)"`
+		* ssh-add ~/.ssh/id_ed25519
+	* https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+* After doing that I got another error with something regarding permissions to access the repository
+  * Unsure why but cloning another repository fixed this

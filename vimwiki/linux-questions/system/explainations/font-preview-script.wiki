@@ -1,0 +1,12 @@
+= Contents =
+
+```bash
+choice=$(fc-list | awk '{print $1}' | sed 's/://g' | rofi -dmenu -l 20 -p 'Fonts: ')
+
+display "$choice"
+``` 
+
+* `fc-list` returns the list of installed fonts
+* `awk '{print 1}'` returns the first item of the installed fonts
+* `sed 's/://g'` replaces all instances of *':'* with nothing
+* `rofi -dmenu -l 20 -p 'Fonts: '` instructs rofi to function like dmenu, with 20 lines, and a prompt of _"Fonts"_.

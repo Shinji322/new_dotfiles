@@ -1,0 +1,8 @@
+This relies on the program xclip.
+
+= Command =
+{{{bash
+xclip -sel c < input_file
+}}}
+
+where input_file is the given_file

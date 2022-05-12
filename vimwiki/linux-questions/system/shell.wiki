@@ -1,0 +1,1 @@
+For zsh plugins, you have zinit installed. It has some data at the end of `.zshrc` and files are located at ~/.local/share/zinit/

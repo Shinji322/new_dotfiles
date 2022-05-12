@@ -1,0 +1,28 @@
+---
+title: More Efficient Reading
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+***REMOVED*** Source
+
+![How To Read](./assets/4 Tips to read without losing focus [4YF3_fw1Jko].webm)
+
+
+***REMOVED*** My Notes
+
+* Priming yourself
+  * Skim the paragraph first, look for keywords
+* Figure out relevant sentences
+  * Not all sentences are important. Be sure to skim through non important sentences
+  * Slow down on important sentences
+    * Think about how it relates to the **big picture**
+
+
+***REMOVED*** TL;DR
+
+S1: Keywords
+S2 : Sentence Relevancy
+S3 : Think about important sentences
+S4: Make it click

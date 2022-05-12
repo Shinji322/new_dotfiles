@@ -1,0 +1,12 @@
+= Local Host Setup =
+This allows you to run html files on the local host
+
+== Install ==
+{{{bash
+npm install http-server -g
+}}}
+
+== Running ==
+{{{bash
+http-server <filename>.html
+}}}

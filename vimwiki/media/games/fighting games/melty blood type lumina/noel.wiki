@@ -1,0 +1,24 @@
+= Things to keep in mind =
+
+* [c]2C -> 6C -> 5A  
+* 5A -> 5B -> 3C 
+
+
+= Good Gattlings =
+* Jc can be cancelled by aerial A
+* Jc -> Air A -> 50 / 50 low or IAD Jc -> Air A again.
+
+* Always Reverse beat B's and C's.
+
+
+= Combos =
+
+* 2B -> 2C -> 214BB -> 214AA -> 236C -> J.c [Charge] -> 5B -> 3C -> Rapid Beat
+
+* 2A -> 2B -> 5C -> 2C -> 214BB -> 214A
+* 4B+C -> 5A -> 5C -> J.c -> J.b -> etc.
+* Jc -> Ja -> 2A -> 2B[1] -> 5C -> 2C -> 214BB -> 214A
+* Shield B+C -> 5C -> 236BB -> 2C -> 214BB -> 6C -> 5A -> 5B -> 3C
+
+== Fatal Counter ==
+* Jc -> 5C -> 236BB -> 2C -> 214BB -> 214A 

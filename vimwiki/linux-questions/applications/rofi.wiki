@@ -1,0 +1,2 @@
+= -dmenu =
+-i:: search case insensitively

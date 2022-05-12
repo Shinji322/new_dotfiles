@@ -1,0 +1,28 @@
+= Wget =
+
+
+= Examples =
+
+{{{bash
+wget [URL]
+}}}
+>Generic file download
+
+
+= Website download =
+{{{bash
+wget --mirror [URL]
+}}}
+>Downloads entire website (recursively searches everything)
+>Notably, this may not download css files and hyperlinks will redirect to website itself
+
+{{{bash
+wget --mirror \ 
+    --page-requisites \ ***REMOVED*** gets css and javascript files 
+    --convert-link \ ***REMOVED*** changes hyperlinks to link to local files
+    --no-clobber \ ***REMOVED*** don't duplicate
+    --no-parent \ ***REMOVED*** if in subdirectory, don't go to parents
+    --domains cereal.guru ***REMOVED*** if there's a subdomain or a link to google, don't download 
+    https://cereal.guru
+}}}
+>Downloads entire website

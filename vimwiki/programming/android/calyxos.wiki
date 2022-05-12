@@ -1,0 +1,30 @@
+keystore password = 6gUx0c6bmZVJiCjrXpbENtOoSUPfzu
+
+
+== Uninstalling Default Apps ==
+* Dependencies: `android-tools`
+
+`adb shell` must be used in the command line to connect to the device.
+
+1. Enable USB debugging
+2. Connect device to computer
+3. Run `adb shell` in terminal
+
+{{{
+pm uninstall -k --user 0 com.android.gallery3d
+pm uninstall -k --user 0 org.calyxos.eleven
+}}}
+
+== Reinstalling ==
+For reinstalling programs deleted through the above method
+
+{{{
+adb shell cmd package install-exisiting com.android.documentsui
+}}}
+
+== Installing Foreign Apps == 
+1. Get the link for the app
+2. Hold click on it
+3. Click 'open in external app'
+4. Click 'Aurora Store'
+5. Click install

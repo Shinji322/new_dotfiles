@@ -1,0 +1,6 @@
+= RUNNING bat scripts =
+
+{{{bash
+wine cmd
+cd path/to/script
+}}}

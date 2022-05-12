@@ -1,0 +1,15 @@
+= LARBS =
+A bootstrapping script for deploying to arch quickly.
+[[file:~/code/learning/example-scripts/larbs.sh|LARBS]]
+
+= stdout manipulation =
+
+== sed/awk ==
+[[file:~/code/learning/example-scripts/find-colors-from-alacritty.sh|Find Colors From Config File]]
+[[file:~/code/learning/example-scripts/ensure-all-text-objects-get-opened-with-textdesktop.sh|Edit Mimeapps List]]
+
+== without sed/awk ==
+* This is some hacky echo bs. I thought it was cool.
+[[file:~/code/learning/example-scripts/find_video_duration.sh|Get Video Duration]]
+[[file:~/code/learning/example-scripts/bash-tricks.sh|Luke Smith Bash Tricks String Substitution]]
+

@@ -1,0 +1,23 @@
+= Filename =
+
+This has a parent folder of "copyright"
+As for the image itself, if it contains "yuri", it will be prefixed with "yuri--" for regex purposes
+Prefixing and postfixing each character is an "=" sign. 
+If you have nerd font enabled, this may look weird
+All characters will be seperated with "="
+Then, there will be double underscore before an md5
+{{{
+%copyright:underscores%/<"yuri"-->=%character:separator==%=__%md5%.%ext%
+}}}
+
+
+= Danbooru Instance =
+
+Execute the following script to start local danbooru
+{{{bash
+~/.local/bin/danbooru &!
+}}}
+
+Then, you must navigate to ~/software/bin/appimages and start Grabber with the appimage:
+{{{
+}}}

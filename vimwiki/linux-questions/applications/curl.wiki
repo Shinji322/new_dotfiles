@@ -1,0 +1,31 @@
+= cURL =
+
+cURL can be used for a variety of different web requests.
+
+
+= Examples =
+
+{{{bash
+curl --include https://localhost:5000/test-json
+}}}
+>Gives request headers in addition to output
+
+== Requests ==
+
+{{{bash
+curl https://localhost/which-method
+}}}
+>This is a GET request
+
+{{{bash
+curl --data "first=Minako&last=Arisato" https://localhost/which-method
+}}}
+>This is a post request
+
+{{{bash
+curl -X PUT -d "first=Minako&last=Arisato" https://localhost/which-method
+}}}
+
+{{{bash
+curl -X DELETE https://localhost/which-method
+}}}

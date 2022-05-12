@@ -1,0 +1,49 @@
+= Purpose =
+
+Rsync is useful for syncing files across two different folders. Those folders may be anywhere, from local directory to ssh connections.
+It is more effective than copy pasting because it skips files that have been unchanged.
+
+= Examples =
+
+{{{bash
+rsync Original/* Backup/
+}}}
+>This syncs files from "Original" to "Backup"
+
+
+{{{bash
+rsync -r Original/ Backup/
+}}}
+>Recursively sync (include all files and subdirectories)
+
+
+{{{bash
+rsync Original Backup/
+}}}
+>Creates an "Original" folder in Backup
+
+
+{{{bash
+rsync -a
+}}}
+>Archival copy
+Used for archival purposes but does not preserve hard links.
+
+
+{{{bash
+rsync --dry-run -v
+}}}
+>Instead of making changes, it simply tells us what files we are going to copy before we do it
+
+
+{{{bash
+rsync --delete 
+}}}
+>Ensures two folders are mirrored
+This is a dangerous option but it ensures the two directories are perfectly synced
+
+
+{{{bash
+rsync -P
+}}}
+>Progress bar

@@ -1,0 +1,32 @@
+= Commands =
+
+== Find and Replace Text ==
+
+```:%s/search/replacement/g```
+
+* search - the word that you are trying to replace
+* replacement - the new word
+
+
+= Bindings =
+:map <c-s> means ctrl + s
+`:Files<CR>`:: Write the command and enter
+
+
+
+== Useful Bindings ==
+`gd`:: Go to definition
+`F2`:: rename
+`K`:: show tooltip
+`c-k`:: Show information on the given word
+`gf`:: Go to file
+`:Files<CR>`::
+:: Press `<C-x>` for horizontal split
+:: Press `<C-v>` for vertical split   
+
+
+
+= Plugins =
+[[./nvim-plugins.wiki|Plugin Wiki]]
+* For more information regarding plugins suhc as their bindings, activation etc.
+ 

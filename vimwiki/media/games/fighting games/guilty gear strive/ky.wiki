@@ -1,0 +1,19 @@
+One interesting thing to note about Ky is that he can quickly create space on block by using a standard combo finisher like Dire Eclat. Only to punish the opponent from a distance with his projectile.
+
+***REMOVED*** Corner
+Whenever Ky has the opponent in the corner, he can create space and then get back that space with either stun dipper or foudre arc.
+After either, a RRC can be done -> run up 6H -> Dire Eclat -> 5K -> Wall Splat
+
+***REMOVED******REMOVED*** Meterless Wall Break
+2K -> 2D -> 214S -> 6HS -> 214K -> 2HS > 214K -> 623H -- You do not need to get hits on 2K and 2D. Dire Eclat is the only necessary option.
+c.S -> 6HS -> 214K -> c.S -> 6HS -> 214S -> 623H -- Close Slash would be hard to get but this is the easiest combo to perform.
+c.S -> 5H -> 214K -> 5K -> 6HS -> 214S -- Doesn't Wallbreak
+214K -> 5H -> 214K -> 5K -> 6H -> 623H 
+
+***REMOVED*** Neutral
+
+***REMOVED******REMOVED*** Pressure Resets
+
+2K -> 2D -> 2S -> 236K -- The delay occurrs at 2S
+c.S -> 6K -> 2K -> 2D -> 236S -- The delay occurs after c.S
+c.S -> 5H -> 214K -> 2K -> 2D -> 236S -- The delay occurs after 5H

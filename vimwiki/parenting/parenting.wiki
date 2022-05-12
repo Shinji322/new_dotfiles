@@ -1,0 +1,7 @@
+= What's This About =
+If you're reading this you're either me or an unwanted spy, in which case I applaud you for figuring out how to get here. 
+This is a simple wiki I made to keep notes on how to be a better parent/brother
+
+
+= Teaching =
+[[./teaching.wiki***REMOVED***Discipline|Discipline]]

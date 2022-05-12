@@ -1,0 +1,18 @@
+= error twint requires python version 3.6+ =
+
+{{{bash
+vi $HOME/.local/lib/python3.10/site-packages/twint/cli.py
+}}}
+OR
+{{{bash
+vi /usr/lib/python3.10/site-packages/twint/cli.py
+}}}
+
+Comment out the following lines:
+
+{{{python
+version = ".".join(str(v) for v in sys.version_info[:2])
+if float(version) < 3.6:
+    print("[-] TWINT requires Python version 3.6+.")
+    sys.exit(0)
+}}}

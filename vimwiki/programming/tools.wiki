@@ -1,0 +1,51 @@
+= Cmake =
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/tools/learn-cmake|Where X=CMake]]
+CMake is a cross-platform, open-source build system. This tool allows you to test, compile, and create packages of your source code.
+
+The problem that CMake tries to solve is the problem of Makefiles and Autoconfigure on cross-platforms (different make interpreters have different commands) and the ease-of-use on linking 3rd party libraries.
+
+CMake is an extensible, open-source system that manages the build process in an operating system and compiler-agnostic manner. Unlike many cross-platform systems, CMake is designed to be used in conjunction with the native build environment. Simple configuration files placed in each source directory (called CMakeLists.txt files) are used to generate standard build files (e.g., makefiles on Unix and projects/workspaces in Windows MSVC) which are used in the usual way.
+
+
+= OpenCV =
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/tools/learn-opencv.py|Where X=OpenCV]]
+OpenCV (Open Source Computer Vision) is a library of programming functions mainly aimed at real-time computer vision. Originally developed by Intel, it was later supported by Willow Garage then Itseez (which was later acquired by Intel). Opencv currently supports wide variety of languages like, C++, Python, Java etc
+
+= OpenGL =
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/tools/learn-opengl.cpp|Where X=OpenGL]]
+Open Graphics Library (OpenGL) is a cross-language cross-platform application programming interface (API) for rendering 2D computer graphics and 3D vector graphics.[1] In this tutorial we will be focusing on modern OpenGL from 3.3 and above, ignoring “immediate-mode”, Displaylists and VBO’s without use of Shaders. I will be using C++ with SFML for window, image and context creation aswell as GLEW for modern OpenGL extensions, though there are many other librarys available.
+
+
+= Docker = 
+[[file:~/code/learning/quickstart/awesome-cheatsheet/docker.sh/Awesome Cheatsheet Docker]]
+* This one (above) is better
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/tools/learn-docker.bat|Where X=Docker]]
+
+
+= Vim =
+[[file:~/code/learning/quickstart/awesome-cheatsheet/vim.txt|Awesome Cheatsheet Vim]]
+
+
+= Makefile =
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/tools/learn-opencv.py|Where X=OpenCV]]
+A Makefile defines a graph of rules for creating a target (or targets). Its purpose is to do the minimum amount of work needed to update a target to the most recent version of the source. Famously written over a weekend by Stuart Feldman in 1976, it is still widely used (particularly on Unix and Linux) despite many competitors and criticisms.
+
+There are many varieties of make in existence, however this article assumes that we are using GNU make which is the standard on Linux.
+
+
+= Qt =
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/tools/learn-qt.cpp|Where X=Qt]]
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/tools/learn-pyqt.py|Where X=PyQt]]
+Qt is a widely-known framework for developing cross-platform software that can be run on various software and hardware platforms with little or no change in the code, while having the power and speed of native applications. Though Qt was originally written in C++.
+
+This is an adaption on the C++ intro to QT by Aleksey Kholovchuk, some of the code examples should result in the same functionality this version just having been done using pyqt! 
+
+
+= Raylib =
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/tools/learn-raylib.c|Where X=Raylib]]
+raylib is a cross-platform easy-to-use graphics library, built around OpenGL 1.1, 2.1, 3.3 and OpenGL ES 2.0. Even though it is written in C it has bindings to over 50 different languages. This tutorial will use C, more specifically C99.
+
+= Tmux =
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/tools/learn-tmux.txt|Where X=Tmux]]
+tmux is a terminal multiplexer: it enables a number of terminals to be created, accessed, and controlled from a single screen. tmux may be detached from a screen and continue running in the background then later reattached.
+

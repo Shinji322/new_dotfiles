@@ -1,0 +1,31 @@
+= Math Symbols =
+
+== Calculus ==
+
+Integral::
+:: \int
+
+Logarithms::
+:: \log_{n} x
+
+Exponents::
+:: nx^{n-1}
+
+nth Root::
+:: \sqrt[n]{arg}
+
+== Brackets ==
+
+right square bracket::
+:: [\,
+right square bracket::
+:: ]\,
+
+
+== Multiline Braces == 
+`\usepackage{amssymb, amsmath}`
+
+{{{
+$$ f(x) = \begin{cases} 2cx - 6 &\mbox{if } n < 3 \\ x^2 + cx &\mbox{if } x >= 3 \end{cases} $$
+}}}
+

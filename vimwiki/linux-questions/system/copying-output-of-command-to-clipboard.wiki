@@ -1,0 +1,5 @@
+To get output of a cat command
+
+{{{bash
+cat file | xclip -selection clipboard
+}}}

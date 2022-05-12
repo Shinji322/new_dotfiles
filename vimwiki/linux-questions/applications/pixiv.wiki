@@ -1,0 +1,28 @@
+= Installation =
+
+{{{bash
+yay -S pixivutil2
+}}}
+
+= Running =
+
+{{{bash
+pixiv
+}}}
+
+
+= Config =
+
+Check [config.ini](~/.local/share/PixivUtil2/config.ini)
+
+* Make sure to change `[Authentication]` section
+
+
+= Cookies =
+
+Cookies need to be updated every 2 months roughly
+
+1. Login to pixiv
+2. Inspect element -> Storage -> Cookies
+3. Look for the value of "PHPSESSID"
+    a. Copy paste that into authentication 

@@ -1,0 +1,133 @@
+= MoreInfo =
+`:h VimwikiSyntax`
+
+= Links =
+[[learning/Link]]
+[[learning/Link|Description of Link]]
+* Pressing `enter` on the above link will take you to the file (if it doesn't exist, vimwiki will create it)
+* `Backspace` can also be pressed to take you back to the previous file that you were in
+
+
+= Headers 1 =
+== Headers 2 ==
+=== Headers 3 === 
+
+
+
+= Lists =
+- Bullet 
+* Also Bullet
+
+1. Number
+1) Also number
+a) Same idea
+A) And again
+i) again...
+I) again.......
+***REMOVED*** Finally this
+ 
+- This is level 1
+  * Level 2 
+		* Level 3 
+	1. Level 2 as well
+		1. Level 3
+			* Level 4 and so forth 
+			 
+			 
+Term:: Definition
+Term2::
+:: Definition1
+:: Definition2
+
+
+
+== Togglable List ==
+Press ctrl + Space
+
+* [X] Togglebale list item
+* [ ] text
+* [ ] more text
+	* [ ] child item
+
+
+= Text Formatting =
+
+== Styles ==
+Regular
+*Bold*
+_Italic_
+super^2^ 
+sub,,2,,
+
+== Highlighting ==
+{{{
+	Ignores
+		Formatting defined 
+	By Syntax
+		Can space however you want
+	}}}
+
+=== Syntax Highlighting ===
+You need to exit the vim for the syntax highlighting to start
+
+{{{bash
+
+html=$(curl $1)
+
+}}}
+
+
+
+= Tables =
+* Vimwiki also automatically adjusts the table in case you edit it. 
+* You can also press enter at the last pipe character in the table (bottom right) to add another table
+
+| this  | is  | a    | table |         |
+|-------|-----|------|-------|---------|
+|       | yep |      | here  |         |
+| is    |     | some |       | padding |
+|       |     |      |       |         |
+
+
+= Key Words =
+TODO, DONE, STARTED, FIXME, FIXED, XXX
+
+
+= Anchor =
+* These take you to specific parts of a file. For example, below will take you to the "tables" category. 
+[[***REMOVED***Tables]]
+
+* whereas, the below will take you to a specific file heading of a specific file:
+[[index.wiki***REMOVED***Programming]]
+[[index.wiki***REMOVED***Programming|You can of course add a description like so!]]
+
+
+= Raw URLS =
+https://www.youtube.com
+mailto:fake@email.com
+ftp:thisisaftplink
+
+
+= External Files =
+[[file:~/.scripts/script-dependencies.txt]]
+[[file:~/.scripts/script-dependencies.txt|The pipe character is awesome!]]
+
+
+= Transclusion =
+* Useful when working with HTML
+{{https://www.fightersgeneration.com/nz4/char/undernight/eltnum-uniel-chibi-artwork.png}}
+{{https://www.fightersgeneration.com/nz4/char/undernight/eltnum-uniel-chibi-artwork.png|Eltnum}}
+
+
+= Misc =
+%% This is a comment and won't show up in HTML
+
+== Horizontal Line ==
+----
+
+== Converting To HTML ==
+
+* Single file: `:Vimwiki2HTML`
+* Entire Wiki: `:VimwikiAll2HTML`
+ 
+ This can also be chugged straight into w3m, since there is little to no CSS! 

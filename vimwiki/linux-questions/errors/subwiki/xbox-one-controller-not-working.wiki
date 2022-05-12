@@ -1,0 +1,8 @@
+I forgot about this to be honest.
+
+I believe there was a file related to the *xone driver* in one of the *root directories*. It contained the line:
+{{{
+blacklist xpad
+}}}
+
+I think I deleted the file or removed that line.

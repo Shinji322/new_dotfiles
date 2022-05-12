@@ -1,0 +1,29 @@
+= Sound Issues =
+
+There are a variety of sources of this problem. 
+
+== Dumb Issues ==
+
+* Keyboard Mute Button 
+  * `Fn+F1` to toggle
+* Headphones mute button
+  * Check to see if your headphones are muted
+* Check hardware volume switches (M1 + M2)
+
+
+= Screen =
+
+== Screen Brightness ==
+
+{{{bash
+sudo echo $1 > brightness
+}}}
+
+== Screen Resolution ==
+
+Usually issues happen because screen resolution is too high.
+
+Personally, I went to about:config in Waterfox and set:
+{{{
+layout.css.devPixelsPerPx = 1.5
+}}}

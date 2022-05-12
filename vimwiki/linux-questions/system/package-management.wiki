@@ -1,0 +1,43 @@
+[[***REMOVED***Packages]]
+[[***REMOVED***Pacman]]
+[[***REMOVED******REMOVED***Pacman Practice]]
+[[***REMOVED******REMOVED***WARNINGS]]
+
+
+= Packages =
+
+A *package* is an archive containing:
+* all of the (compiled) files of an application
+* metadata about the application, such as application name, version, dependencies, etc.
+* installation files and directives for pacman
+* (optionally) extra files to make your life easier, such as a start/stop script
+
+
+
+= Pacman =
+
+Arch's package manager pacman can install, update, and remove those packages. Using packages instead of compiling and installing programs yourself has various benefits:
+
+* *easily updatable*: pacman will update existing packages as soon as updates are available
+* *dependency checks*: pacman handles dependencies for you, you only need to specify the program and pacman installs it together with every other program it needs
+* *clean removal*: pacman has a list of every file in a package; this way, no files are unintentionally left behind when you decide to remove a package.
+
+
+== WARNINGS ==
+* Run pacman -Syu instead of pacman -Sy. Check Arch wiki for more. 
+[[https://wiki.archlinux.org/title/Pacman***REMOVED***Usage]] 
+`pacman -Syu`
+
+
+== Pacman Practice ==
+
+=== Install all Optional Dependencies ===
+{{{bash
+sudo pacman -S --asdeps --needed $(pacman -Si package_name | sed -n '/^Opt/,/^Conf/p' | sed '$d' | sed 's/^Opt.*://g' | sed 's/^\s*//g' | tr '\n' ' ')
+}}}
+
+=== Purge (remove unnedded dependencies) ===
+{{{bash
+sudo pacman -Rs package_name
+}}} 
+

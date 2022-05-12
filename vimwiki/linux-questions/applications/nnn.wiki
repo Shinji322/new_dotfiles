@@ -1,0 +1,37 @@
+***REMOVED*** Most Important Binding!
+
+* ?
+  * Will tell you about which bidnings do what
+
+***REMOVED******REMOVED*** Bindings
+
+***REMOVED******REMOVED******REMOVED*** Dealing with Files
+* e
+	* Edit selected file	
+* l
+  * Run XDG Open
+
+
+***REMOVED******REMOVED******REMOVED*** Movement
+* /
+	* Search for file in current dir
+  * Ctrl + i
+		* Toggle mode that automatically goes to selected directory
+
+
+***REMOVED******REMOVED******REMOVED*** Selecting files
+* Space
+	* Select File
+* Y
+  * Allows you to select files from where you first pressed Y to the next place you press Y (kind of like visual mode)
+* y
+  * Show selected files
+
+
+***REMOVED******REMOVED******REMOVED*** Dealing With Files
+* V
+  * Paste out selected files to current dir
+* P
+  * Copy selected files to current dir
+* r
+  * Opens vidir, which allows you to see all the files in a directory like a text file that you can edit. Afterwards, the changes will be applied.

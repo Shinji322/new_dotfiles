@@ -1,0 +1,27 @@
+[[***REMOVED***Preface]]
+[[***REMOVED***Intended Route Order]]
+[[***REMOVED***Route Walkthroughs]]
+
+= Preface =
+A 100% walkthrough for all routes of the Tsukihime visual novel including all CGs, full endings, and Bad Ends.
+
+These are not the only ways to get through, of course, but I picked the paths that give pretty much the most exciting and useful scenes. I will not be listing what all choices “don’t matter,” because if you were going to pick every option possible, why are you reading this anyway? If there is a choice that basically equates to do nothing and watch TV, I’m not going to have anyone make it who are just trying to get through. On that note, there is more than one, and sometimes several, way to reach specific Ciel-Sensei’s Lessons, but I listed the simplest ways to reach them, or, in a case of equal simplicity, the most interesting.
+
+I do not entirely recommend using a walkthrough for this visual novel since it’s pretty easy to get through anyway. I compiled this originally from my notes I made for myself years ago on all the different ways to cause specific things to happen and reach all the Bad Ends. So only use this if you’re still having trouble or if you’re a completionist trying to get all the Ciel-Sensei’s Lessons.
+
+If you are going for 100% completion with all regular endings, Bad Ends, and CGs as quickly as possible, I would recommend saving at each choice that I have a “Note” under that indicates a different option, following that advice, then continuing from the “correct” option for your main save.
+
+Note you *must* finish *either* *_Arc_* or *_Ciel_* _before_ you can unlock *_Akiha_* and *_Hisui_*, and you must complete *_Hisui_* before you can unlock *_Kohaku_*. 
+
+
+= Intended Route Order =
+*_Arc -> Ciel -> Akiha -> Hisui -> Kohaku_*
+
+
+= Route Walkthroughs =
+[[./tsukihime/arcueid-route.wiki|Arcueid]]
+[[./tsukihime/ciel-route.wiki|Ciel]]
+[[./tsukihime/akiha-route.wiki|Akiha]]
+[[./tsukihime/hisui-route.wiki|Hisui]]
+[[./tsukihime/kohaku-route.wiki|Kohaku]]
+

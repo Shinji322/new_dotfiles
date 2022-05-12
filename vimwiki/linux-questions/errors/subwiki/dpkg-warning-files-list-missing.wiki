@@ -1,0 +1,15 @@
+= Solution =
+
+Run: 
+
+{{{bash
+sudo apt reinstall <package_name_1>
+}}}
+
+{{{bash
+for package in $(apt-get upgrade 2>&1 | grep "warning: files list file for package '" | grep -Po "[^'\n ]+'" | grep -Po "[^']+"); do apt-get install --reinstall "$package"; done
+}}}
+
+
+= Cause =
+Unknown. Perhaps some dependancy hell with apt?

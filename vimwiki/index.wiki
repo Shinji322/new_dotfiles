@@ -1,0 +1,40 @@
+= Programming =
+
+== Quickstart ==
+[[./programming/quickstart.wiki|Quickstart Wiki]]
+[[./programming/makefiles.wiki|Makefiles Wiki]]
+[[./programming/shell/shell.wiki|Shell Scripting]]
+
+== Linux ==
+[[./linux-questions/questions.wiki|Linux Related Questions]]
+[[./vimwiki-syntax.wiki|VimWiki Syntax]]
+
+== Homebrew ==
+[[./programming/android/calyxos.wiki|Calyx Os]]
+[[./programming/android/switch.wiki|Nintendo Switch]]
+
+= Media =
+[[./media/favorite-media.wiki|My Favorite Media]]
+
+= Hardware =
+[[./hardware/ROG_Zephyrus_G14.wiki|ROG Zephyrus G14]]
+
+== Games ==
+[[./media/games.wiki|Games Wiki]]
+[[./media/mods.wiki|Mods Wiki]]
+
+== Anime ==
+[[./media/anime.wiki|Anime Wiki]]
+
+
+= Ideas =
+[[./ideas/storys.wiki|Story Ideas]]
+
+
+= Parenting =
+[[./parenting/parenting.wiki|Parenting Wiki]]
+
+= Studying =
+[[./learning/anki.wiki|Anki]]
+[[./learning/how-to-learn-anything.wiki|How To Learn Anything]]
+

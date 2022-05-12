@@ -1,0 +1,68 @@
+= Day 1 =
+1. There’s only a few minutes until homeroom. I have to head there right away.
+3. Eat lunch in class.
+1. Get a hold of myself and head back to the mansion.
+1. About my little sister Akiha.
+1. Go to the sitting room and talk with Akiha.
+2. Go to sleep.
+
+= Day 2 =
+1. Greet Akiha.
+1. Ask about Yumizuka Satsuki.
+1. Go and look.
+(Note: Choice 2 here “Don’t go and look.” leads to Ciel-Sensei’s Lesson 22)
+
+= Day 3 =
+3. Search around the city.
+1. Go look for Yumizuka.
+(Note: Choice 2 here “I can’t do something that dangerous.” leads to Ciel-Sensei’s Lesson 23 later in the day)
+1. I like her.
+
+= Day 4 =
+2. Of course I agree.
+
+= Day 5 =
+1. Ask her why she transferred to this school.
+2. Go to Akiha’s classroom.
+1. Go to the sitting room.
+1. Go to the detached building.
+
+= Day 6 =
+1. Calm down a little, then head to the sitting room.
+1. Akiha’s current uniform suits her better.
+2. Go and help Kohaku-san.
+
+= Day 7 =
+1. Still, I can at least say good morning to Akiha.
+1. Go to Akiha’s classroom.
+1. Talk to Ciel about last night.
+(Note: Choice 2 here “..... That would just be a waste of my time.” leads to Ciel-Sensei’s Lesson 24)
+
+= Day 8 =
+No choices
+
+= Day 9 =
+1. ...... Go and determine my own fate.
+(Note: Choice 2 here “No, I’ll stay at the mansion.” leads to Ciel-Sensei’s Lesson 25)
+2. ...... I can’t do it.
+(Note: Choice 1 here “..... I have to live.” leads to Ciel-Sensei’s Lesson 26)
+
+= Day 10 =
+3. East wing, second floor.
+1. Take off my glasses and get ready to kill.
+
+= Day 11 =
+No choices
+
+= Day 12 =
+2. Take a breath, calm down, and then pursue him.
+(Note: Choice 1 here “Pursue him right now.” leads to Ciel-Sensei’s Lesson 27)
+1. ...... Stop.
+(Note: Choice 2 here “...... I won’t let his words trick me.” leads to Ciel-Sensei’s Lesson 28)
+1. ...... Chase after Akiha.
+(Note: Choice 2 here “...... I can’t do it.” leads to Ciel-Sensei’s Lesson 29. Which is incredibly annoying. Seriously, even if you’re trying to see all of them for whatever reason, just skip this one. It’s not worth it.)
+2. ...... I can’t do that.
+(Note: Choice 1 here “..... Keep my promise.” leads to Ciel-Sensei’s Lesson 30)
+1. ...... Give Akiha back this life. -> TRUE END
+OR
+2. ...... I can’t do that. -> NORMAL END

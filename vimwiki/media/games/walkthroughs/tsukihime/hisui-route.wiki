@@ -1,0 +1,92 @@
+= Day 1 =
+1. There’s only a few minutes until homeroom. I have to head there right away.
+1. Go out into the hallway to think about it.
+1. Get a hold of myself and head back to the mansion.
+2. About the cheerful girl.
+2. Stay in my own room.
+2. Go to sleep.
+
+= Day 2 =
+3. Greet both of them.
+2. ...... Just sit silently.
+2. ...... No, I really don’t feel well.
+1. Go see Hisui.
+1. Go and look.
+
+= Day 3 =
+2. I hate her.
+
+= Day 4 =
+2. Of course I agree.
+2. Go and help Hisui.
+
+= Day 5 =
+1. Go see Hisui.
+
+= Day 6 =
+1. Talk with her about it.
+1. Go to my old man’s room.
+(Note: Choice 2 here “Stay in my room.” leads to Ciel-Sensei’s Lesson 18)
+1. Go to the nighttime city.
+
+= Day 7 =
+2. Ask Hisui to make something.
+
+= Day 8 =
+No choices.
+
+= Day 9 =
+No choices.
+
+= Day 10 =
+No choices.
+
+= Day 11 =
+No choices.
+
+= Day 12 =
+1. ..... Just this isn’t enough at all.
+1. Unlock the door.
+
+= Day 13 =
+1. Call out Akiha’s name. -> TRUE END
+OR
+2. Call out Kohaku’s name. -> GOOD END
+(Note: Final choice only appears if you’ve reached the True End at least once)
+
+
+= Ciel-Sensei’s Lesson 19: =
+
+= Day 1 =
+1. There’s only a few minutes until homeroom. I have to head there right away.
+1. Go out into the hallway to think about it.
+1. Get a hold of myself and head back to the mansion.
+2. About the cheerful girl.
+3. Go watch TV in Kohaku-san’s room.
+2. Go to sleep.
+
+= Day 2 =
+3. Greet both of them.
+2. ...... Just sit silently.
+2. ...... No, I really don’t feel well.
+3. Stay in my room.
+1. Go and look.
+
+= Day 3 =
+2. I hate her.
+
+= Day 4 =
+1. No, I really don’t feel like it.
+
+= Day 5 =
+2. Go help Kohaku-san.
+
+= Day 6 =
+1. Talk with her about it.
+1. Go to my old man’s room.
+2. Don’t sleep and wait until morning.
+
+= Day 7 =
+1. Get Kohaku-san to make something.
+
+End on Day 13 

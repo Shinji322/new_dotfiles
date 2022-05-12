@@ -1,0 +1,72 @@
+= Errors = 
+I expect this wiki would be fairly large so it is put in a subwiki
+[[./errors/errors.wiki|Errors Wiki]]
+
+
+= Application Specific =
+Specific application questions. These can be related to configuration, shortcuts, or simply personal notes.
+
+== CLI ==
+[[./applications/nvim.wiki|Neovim/nvim/vim cli text editor]] 
+[[./applications/mpd.wiki|MPD media player daemon]] 
+[[./applications/rofi.wiki|rofi - an app launcher, dmenu replacement, and more]]
+[[./system/git.wiki|git - Version Control System]]
+[[./applications/pixiv.wiki|pixivUtil2 - A tool for archiving data from pixiv users]]
+[[./applications/taskell.wiki|Taskell, a cli kanban board tool]]
+[[./applications/wine.wiki|Wine is not an Emulator! Run Windows Apps]]
+[[./applications/pass.wiki|GNU Pass, the best password manager]]
+[[./applications/rsync.wiki|Rsync, a tool for syncing files across directories or ssh]]
+[[./applications/weechat.wiki|Weechat - a curses based IRC client]]
+[[./applications/curl.wiki|cURL command - Web Requests Command]]
+[[./applications/wget.wiki|Wget command - Download files over http]]
+[[./applications/docker.wiki|Docker - lightweight virtualization]]
+[[./applications/searx.wiki|Searx - a search aggregator for all major search engines]]
+
+
+== GUI ==
+[[./applications/anki.wiki|Anki - A flashcard tool]]
+[[./applications/better-discord.wiki|Better Discord Chat Client]]
+[[./applications/dunst.wiki|Dunst Notification Daemon]]
+[[./applications/imgbrd-grabber.wiki|Imgbrd Grabber - A tool for downloading off of Booru based sites]]
+[[./applications/vscode.wiki|VSCode - Debugger/Text editor]] 
+
+
+= System =
+For questions on configuring system related stuff, such as typefaces. 
+
+== Terminal Work ==
+[[./system/shell.wiki|Shell Config]]
+[[./system/package-management.wiki|Package Management]]
+[[./system/regex.wiki|Using regex in terminal]]
+
+== Graphics ==
+[[./system/nvidia.wiki|Changing NVidia stuff up to work]]
+
+== Startup Services ==
+[[./system/startup-service.wiki|Creating A Startup Service]]
+[[./system/cronjobs.wiki|Cron jobs]]
+
+=== Misc ===
+[[./system/copying-contents-of-file-to-clipboard.wiki|Copy Contents of File to Clipboard]]
+[[./system/copying-output-of-command-to-clipboard.wiki|Copy Output of Command to Clipboard]]
+[[./system/turn-display-off.wiki|Turn Display off]]
+[[./system/searching-files.wiki|Searching Contents of file]]
+[[./system/HID.wiki|HID devices such as XBox Controllers]]
+
+== Network ==
+[[./system/connecting-to-wifi.wiki|Network Connection]]
+
+== Fonts ==
+[[./system/installing-fonts.wiki|Installation]]
+[[./system/installing-microsoft-fonts.wiki|Installing Microsoft Fonts]]
+[[./system/configuring-fonts.wiki|Config]]
+
+
+== Development ==
+[[./system/npm.wiki|Running html files on local host]]
+
+
+== Windows ==
+For when you want to work with windows related programs, software, or hardware
+[[./windows/mounting_windows.wiki|Mounting Windows File Systems]]
+

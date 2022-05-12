@@ -1,0 +1,60 @@
+= Packages =
+
+Only for arch
+{{{bash
+sudo pacman -S cronie
+}}}
+
+
+= Creating cron jobs =
+
+To edit cronjobs, run the following command
+{{{bash
+crontab -e
+}}}
+
+That will edit a file with contents like the following:
+
+{{{crontab
+* * * * * /usr/bin/mpc update
+*/15 * * * * /usr/bin/newsboat -x reload
+}}}
+
+== Reading config file ==
+
+The `*`'s indicate how many times that script should be run. 
+{{{crontab
+* * * * * /usr/bin/mpc update
+*/15 * * * 1-5 /usr/bin/newsboat -x reload
+0,15,30,45 * * * * ***REMOVED***/.scripts/datelog
+@reboot ***REMOVED***/software/app-images/Obsidian-0.13.23.AppImage
+MIN HOUR DAY MONTH DoW
+}}}
+
+* `mpc` update is run every minute 
+* `newsboat -x reload` is run 
+    * every 15 minutes 
+    * Monday through Friday
+* `datelog` is also run every 15 minutes
+* Obsidian is run every reboot
+
+= Misc =
+
+* root crontab jobs can be found with
+{{{bash
+sudo crontab -e
+}}} 
+
+* the / operator
+    * The / operator indicates "the value before the slash plus a multiple of the number after"
+        * `*/2` for months means 1,3,5,7,9,11 
+
+
+== Enabling cronjobs ==
+
+For system-d users:
+
+{{{bash
+systemctl enable cronie.service
+systemctl start cronie.service
+}}}

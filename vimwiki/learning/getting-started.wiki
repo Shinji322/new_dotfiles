@@ -1,0 +1,40 @@
+= Decks =
+Decks are best used to hold boroad categories of cards, rather than specific topics such as "food verbs" or "lesson 1". 
+
+= Notes & Fields =
+When making flashcards, it's often desirable to make more than one card that relates to some information. For example:
+* If you're learning French and you learn that the word “bonjour” means “hello”, you may wish to create one card that shows you “bonjour” and asks you to remember “hello”, and another card that shows you “hello” and asks you to remember “bonjour”. 
+    * One card is testing your ability to recognize the foreign word, and the other card is testing your ability to produce it.
+
+
+= Card Types =
+Card types and templates can be created like so: 
+
+{{{
+Q: {{French}}
+A: {{English}}<br>
+   Page ***REMOVED***{{Page}}
+}}}  
+
+{{{
+Q: {{English}}
+A: {{French}}<br>
+   Page ***REMOVED***{{Page}}
+}}}  
+
+* <br> is a special character that tells Anki to move to the next line
+
+To add and edit card types, click the “Cards…” button while adding or editing notes
+
+= Note Types =
+Basic:: 
+:: Has front and back fields; will create one card.
+    * Front: Question; Back: Answer
+
+Basic (and reversed card)::
+:: Like basic but creates two cards for the text you enter: 
+   * one from front -> back
+   * one from back  -> front
+
+Cloze::
+:: A note type that allows you to hide information.

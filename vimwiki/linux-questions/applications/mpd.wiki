@@ -1,0 +1,20 @@
+= MPD =
+
+The systemd service doesn't work for whatever reason. The application must be run like so: 
+`mpd --systemd`
+
+
+= Playlists =
+
+Saving / Exporting Playlists::
+:: `mpc save <name>`
+
+Loading Playlist::
+:: `mpc load <name>`
+
+Removing Playlists::
+:: `mpc rm <name>`
+
+= Updating =
+Updating::
+::`mpc update`

@@ -1,0 +1,36 @@
+= Prereq =
+
+{{{bash
+gpg --full-gen-key
+}}}
+>From there, you can just enter the default options 
+
+There will be a prompt for your email. This is ONLY used as an *identifier*.
+
+
+Now, you may run:
+{{{bash
+pass init $EMAIL
+}}}
+
+
+= Creating Passwords =
+
+{{{bash
+pass add <CATEGORY>
+}}}
+>Where category is the identifier for the password like "School Email" or something
+
+
+= Neat Commands =
+
+{{{bash
+pass ls
+}}}
+>Will list all of your passwords
+
+
+{{{bash
+passmenu
+}}}
+>Dmenu browse your passwords

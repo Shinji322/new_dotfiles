@@ -1,0 +1,16 @@
+= Main Tools =
+* Windows 7 VM
+* Mod Compendium v1.6.1
+* UMDGen
+
+
+= General Instructions =
+
+* Extract games umd0.cpk with UMDGen
+* Put mods in mod compendium mods subfolder. 
+* Use Mod Compendium to generate a new umd0.cpk
+    * you can select mods to apply there
+    * Click Build
+* Open the game again in UMDGen
+* Replace the umd0.cpk with the newly created cpk
+* Build the game again

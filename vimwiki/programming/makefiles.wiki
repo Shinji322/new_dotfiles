@@ -1,0 +1,121 @@
+= Assignment Operators =
+
+{{{make
+SRCS = main.c
+SRCS := $(wildcard *.c) ***REMOVED*** evaluates the expression
+SRCS != find . -name '*.c' ***REMOVED*** shell output
+SRCS := $(shell find . -name '*.c') ***REMOVED*** also shell output
+CC_FLAGS += -Wextra ***REMOVED*** Append to
+CFLAGS ?= $(CC_FLAGS) ***REMOVED*** Conditional assignment (if null, assign)
+FOO := $(BAR)   ***REMOVED*** the whitespace between the comment and expression is included in make
+}}}
+
+
+= Built in Functions = 
+
+{{{make
+$(SRCS:.c=.o) ***REMOVED*** replaces .c with .o
+$(addprefix build/,$(OBJS)) ***REMOVED*** add a build directory
+$(if ...) $(or ..) $(and ..) ***REMOVED*** conditional functions (almost never used)
+$(foreach var,list,text)
+$(value (VARIABLE)) ***REMOVED*** prints variable
+$(shell ..) ***REMOVED*** shell commands
+$(error ..) ***REMOVED*** will exit and print the string argument
+$(warning ..) ***REMOVED*** !! but doesn't exit and says "warning"
+$(info ..)  ***REMOVED*** !! but says "info"
+}}}
+
+
+= Rules =
+
+{{{make
+***REMOVED*** target: prereq
+    ***REMOVED*** rules
+    
+***REMOVED*** $< = prereq
+***REMOVED*** $@ = target
+%.o: %.c
+    $(CC) -c $(CFLAGS) -o $@ $<
+    
+%.o: $.cpp 
+    $(CXX) -c $(CXXFLAGS) -o $@ 
+}}}
+
+
+= Recipes =
+
+{{{make
+SRCS = main.c
+OBJS := $(SRCS:.c=.o)
+
+TARGET := foo
+
+***REMOVED*** .PHONY is used so make knows that it doesn't need to create a file called 'all'
+.PHONY: all clean
+
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+    ***REMOVED*** gcc -o foo main.c foo.c bar.c
+    $(CC) -o $@ $^
+    
+clean: 
+    rm -f $(OBJS)
+}}}
+
+
+= Automatic Variables =
+
+{{{make
+SRCS = main.c
+OBJS := $(SRCS:.c=.o)
+DIR  := build
+OBJS := $(addprefix $(DIR), $(OBJS))
+
+TARGET := foo
+
+.PHONY: clean
+
+$(DIR)/%.o: %.c
+    $(CC) -c $(CFLAGS) -o $@ $<
+    
+$(TARGET): $(OBJS) | $(DIR) 
+    $(CC) -o $@ $^
+    
+$(DIR): 
+    mkdir -p $@
+}}}
+>"$@" refers to current target
+>"$<" refers to the first pre-req
+>"$^" refers to all pre-req
+>"$?" refers to pre-reqs that have changed
+>"$|" refers to Order-only pre-req
+>>That means that it won't rebuild any parents in the build hiearchy
+>>>Make, by default rebuilds the parents, whenever the children have been updated
+
+
+= Template =
+
+{{{make
+SRCS := $(wildcard *.c)
+OBJDIR = .build
+OBJS := $(SRCS:%.c=$(OBJDIR)/%.o)
+
+.PHONY clean
+
+$(OBJDIR)/%.o: %.c
+    @echo [CC] $@
+    @$(CC) -c $(CFLAGS) -o $@ $<
+    
+$(TARGET): $(OBJS) 
+    @echo [LD] $@
+    @$(CC) $(LDFLAGS) -o $@ $^
+    
+$(OBJDIR):
+    @mkdir -p $@
+    
+clean:
+    @rm -rf $(OBJDIR) $(TARGET)
+
+}}}
+>The precedeing "@" indicates that make shouldn't print it to the screen

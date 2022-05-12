@@ -1,0 +1,56 @@
+---
+title: More Efficient Studying
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+***REMOVED*** Encoding
+
+Encoding is the technique of putting information into long-term memory, essentially. After learning a piece of information, the optimal time to encode that is only a couple seconds. 
+In order to effectively do this, whenever consuming some information, you must be sure to **always relate it to the big picture** and create an organizational system so that each picture knows where to fit.
+
+
+Doing all of this in such a small time is, of course, unrealistic. As such, it is better to simply jump to the later stages in Bloom's Taxonomy:
+
+![An Illustration of Bloom's Taxonomy](./assets/blooms_taxonomy.png)
+
+
+***REMOVED******REMOVED*** Bloom's Taxonmy
+
+If you just jump to the later stages, specifically the evaluation step (big picture), then you will be much more productive.
+
+
+***REMOVED******REMOVED*** Things To Avoid!
+
+* Taking notes right away
+  * Organize the concepts in your head first (in relation to other concepts as well as the big picture)
+  * Your notes should be written in a [mindmap](./assets/mindmap.rmd) instead
+* Writing linear, wordy notes
+  * This makes it so that you don't encode that memory into your head
+  * Practice holding on to that information, taking in a little bit more information, and ask yourself **"How does this relate to the big picture?"**
+    * If there are an overwhelming amount of connections, instead try the application step
+
+
+***REMOVED*** Creating Notes
+
+![Conceptual Mindmapping Technique](./assets/The Perfect Mindmap - 6 Step Checklist [5zT_2aBP6vM].webm)
+![Practical Mindmapping Technique](./assets/Let Me Change The Way You Write Notes Forever _ Correct Mindmapping Technique [BZOqDpZK7rw].webm)
+
+
+***REMOVED*** TL;DR
+
+* Before reading, prime yourself by asking what are the **main concepts** 
+  * Try to figure out what is relevant
+* Try learning one thing, then a little bit about another topic, then think about how they relate to each other
+* Create a Mind Map linking these two
+  * Mindmaps should intentionally leave out words and information
+
+* Step 1: Priming = 
+  * look through the contents and make basic framework (it is gonna be uncomfortable) 
+  * It is not about memorizing, it is about being comfortable with the discomfort and confusion
+* Step 2: Organize = 
+  * how does it fit here, and why should you know this and
+  * what is the priority (simplify it to key takeaway) = how to apply, how to simplify
+* Step 3: Relating = 
+  * to the concepts you know, or something unrelated which seems like it

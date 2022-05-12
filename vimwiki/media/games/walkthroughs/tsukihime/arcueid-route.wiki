@@ -1,0 +1,95 @@
+= Day 1 =
+2. ...... I’m curious, so I’ll go take a look.
+3. Eat lunch in class.
+2. Stay in school for a little longer.
+1. About my little sister Akiha.
+(Note: This choice only appears if you’ve cleared at least one ending)
+2. Stay in my own room.
+
+= Day 2 =
+3. Greet both of them.
+1. In the classroom.
+1. This is just a bad dream.
+
+= Day 3 =
+3. Talk about the mansion.
+1. ...... I’ll cooperate.
+2. ..... Still, I can’t leave her alone.
+(Note: Choice 1 here “I should be escaping after all.” followed by Choice 1 “I think I’ll go back to the mansion.” leads to Ciel-Sensei’s Lesson 1)
+1. ...... Fine, but just for a little bit.
+1. ---I should go check out what’s happening outside.
+(Note: Choice 2 here “I’ll stay inside the room for now and keep watch.” leads to Ciel-Sensei’s Lesson 2)
+
+= Day 4 =
+1. I’d like to refuse, but---
+2. ...... No, it’s still too early.
+1. Dash towards Nrvnqsr.
+(Note: Choice 2 here “...... It’s still too early.” leads to Ciel-Sensei’s Lesson 4)
+2. I have to destroy the main body.
+
+= Day 5 =
+1. I can’t explain the circumstances, so I’ll at least apologize.
+1. ....... Go into the city and look for her.
+1. It might be Arcueid.
+(Note: Every single alternate choice gives extra CGs)
+(Note: 2 extra choices, for 5 total, that still give more CGs, only appear if you’ve already cleared at least one ending)
+
+= Day 6 =
+1. I’ll go into the hallway and talk to her.
+2. Return to the mansion.
+
+= Day 7 =
+1. I should smooth things over with a cheerful greeting.
+1. Go to the courtyard now.
+1. Still, I’ll tell Hisui the truth.
+(Note: Choice 2 here “No, I can’t let anyone know.” leads to Ciel-Sensei’s Lesson 5 after another scene)
+
+= Day 8 =
+1. ...... Do as Akiha says.
+(Note: Choice 2 here “No, I have to push myself to see Arcueid.” leads to Ciel-Sensei’s Lesson 6)
+
+= Day 9 =
+1. ...... It can’t be helped. I’ll go with Arcueid.
+2. Well, it’s because you hate me, right?
+1. Go for the usual, take her to the movie theater.
+3. Well, I have to question her about her hobbies, history, and her three sizes!
+2. Look in the commercial district.
+(Note: Choice 3 here “...... The school, perhaps?” leads to Ciel-Sensei’s Lesson 7)
+1. I can’t do something she doesn’t want.
+(Note: Choice 2 here “I just... want her, that’s all.” gives you an extra CG and leads to Ciel-Sensei’s Lesson 9 on the next day)
+
+= Day 10 =
+2. ...... Still wait.
+(Note: Choice 1 here “...... Return to the mansion.” leads to Ciel-Sensei’s Lesson 8)
+1. ...... Still wait.
+1. ...... Still wait.
+2. ...... Wait here in the park.
+
+= Day 11 =
+1. Even if it’s useless, I’ll look for Arcueid.
+1. I will keep my promise. -> TRUE END
+OR
+2. I will never forget Arcueid. -> GOOD END
+(Note: Final choice only appears if you’ve reached the True End at least once)
+
+= Ciel-Sensei’s Lesson 3: =
+
+= Day 1 =
+2. ...... I’m curious, so I’ll go take a look.
+3. Go out into the hallway to think about it.
+2. Stay in school for a little longer.
+1. About my little sister Akiha.
+(Note: This choice only appears if you’ve cleared at least one ending)
+2. Stay in my own room.
+
+=Day 2=
+3. Greet Kohaku-san.
+2. Go to the cafeteria.
+1. This is just a bad dream.
+
+=Day 3=
+2. Talk about Kohaku-san.
+2. No, I won’t cooperate.
+1. I should be escaping after all.
+2. I think I’ll go back to the hotel.
+1. ---I should go check out what’s happening outside.

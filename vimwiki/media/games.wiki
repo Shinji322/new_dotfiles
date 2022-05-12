@@ -1,0 +1,13 @@
+= Thoughts =
+
+
+= Fighting Games =
+[[./games/fighting games/guilty gear strive/guilty gear strive.wiki|Guilty Gear Strive]]
+
+
+= Visual Novels =
+[[./games/vns/sci-adv.wiki|Science Adventure Series]]
+
+[[./games/vns/tsukihime.wiki|Tsukihime]]
+[[./games/walkthroughs/tsukihime-walkthrough.wiki|Tsukihime Walkthrough]]
+

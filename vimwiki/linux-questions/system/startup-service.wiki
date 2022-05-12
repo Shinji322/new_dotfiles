@@ -1,0 +1,41 @@
+= File Location =
+
+The location for the service file is below:
+
+{{{bash
+sudo touch /etc/systemd/system/<your-name>.service
+}}}
+
+
+== File Contents ==
+
+Basic service files look like the following:
+
+{{{bash
+[Unit]
+Description=My Startup
+
+[Service]
+ExecStart=/location/to/my/script.sh
+
+[Install]
+WantedBy=multi-user.target
+}}}
+
+
+Description::
+:: A description for the file
+
+ExecStart::
+:: Path to the script (or rather what to execute)
+
+WantedBy::
+:: Start right before the user starts the graphics
+
+
+= Enabling the Service =
+
+{{{bash
+systemctl status my-startup.service
+sudo systemctl enable my-startup.service
+}}}

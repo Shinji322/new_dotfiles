@@ -1,0 +1,109 @@
+= Tools =
+[[./tools.wiki|Tools Wiki]]
+[[./projects.wiki|Projects Wiki]]
+
+
+= Programming Languages =
+
+== Bash ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-bash.sh|Where X=Bash]]
+[[file:~/code/learning/quickstart/awesome-cheatsheet/bash.sh|Awesome Bash]]
+* More shortcut oriented
+[[./example-scripts.wiki|Example Scripts]]
+
+== SQL ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-sql.sql|Where X=SQL]]
+Structured Query Language (SQL) is an ISO/IEC 9075 standard language for creating and working with databases stored in a set of tables. Implementations usually add their own extensions to the language; Comparison of different SQL implementations is a good reference on product differences.
+
+Implementations typically provide a command line prompt where you can enter the commands shown here interactively, and they also offer a way to execute a series of these commands stored in a script file. (Showing that you’re done with the interactive prompt is a good example of something that isn’t standardized–most SQL implementations support the keywords QUIT, EXIT, or both.)
+
+Several of these sample commands assume that the MySQL employee sample database available on github has already been loaded. The github files are scripts of commands, similar to the relevant commands below, that create and populate tables of data about a fictional company’s employees. The syntax for running these scripts will depend on the SQL implementation you are using. A utility that you run from the operating system prompt is typical.
+
+== C ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-c.c|Where X=C]]
+
+
+== C++ ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-cpp.cpp|Where X=C++]]
+
+
+== CSharp ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-csharp.cs|Where X=C***REMOVED***]]
+
+
+== CSS ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-css.css|Where X=CSS]]
+
+
+== GDScript ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-gdscript.gd|Where X=GDScript]]
+
+
+== Golang ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-go.go|Where X=Go]]
+
+
+== HTML ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-html.html|Where X=HTML]]
+HTML stands for HyperText Markup Language.
+
+It is a language which allows us to write pages for the world wide web. It is a markup language, it enables us to write webpages using code to indicate how text and data should be displayed. In fact, html files are simple text files.
+
+What is this markup? It is a method of organising the page’s data by surrounding it with opening tags and closing tags. This markup serves to give significance to the text that it encloses. Like other computer languages, HTML has many versions. Here we will talk about HTML5.
+
+NOTE : You can test the different tags and elements as you progress through the tutorial on a site like codepen in order to see their effects, understand how they work and familiarise yourself with the language. This article is concerned principally with HTML syntax and some useful tips.
+
+
+== JavaScript ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-javascript.js|Where X=JavaScript]]
+JavaScript was created by Netscape’s Brendan Eich in 1995. It was originally intended as a simpler scripting language for websites, complementing the use of Java for more complex web applications, but its tight integration with Web pages and built-in support in browsers has caused it to become far more common than Java in web frontends.
+
+JavaScript isn’t just limited to web browsers, though: Node.js, a project that provides a standalone runtime for Google Chrome’s V8 JavaScript engine, is becoming more and more popular.
+
+JavaScript has a C-like syntax, so if you’ve used languages like C or Java, a lot of the basic syntax will already be familiar. Despite this, and despite the similarity in name, JavaScript’s object model is significantly different to Java’s.
+
+
+== JSON == 
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-json.json|Where X=JSON]]
+
+JSON is an extremely simple data-interchange format. As json.org says, it is easy for humans to read and write and for machines to parse and generate.
+
+A piece of JSON must represent either:
+    A collection of name/value pairs ({ }). In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.
+    An ordered list of values ([ ]). In various languages, this is realized as an array, vector, list, or sequence.
+
+JSON in its purest form has no actual comments, but most parsers will accept C-style (//, /* */) comments. Some parsers also tolerate a trailing comma (i.e. a comma after the last element of an array or the after the last property of an object), but they should be avoided for better compatibility.
+
+For the purposes of this tutorial, everything is going to be 100% valid JSON. Luckily, it kind of speaks for itself.
+
+Supported data types:
+    Strings: "hello", "\"A quote.\"", "\u0abe", "Newline.\n"
+    Numbers: 23, 0.11, 12e10, 3.141e-10, 1.23e+4
+    Objects: { "key": "value" }
+    Arrays: ["Values"]
+    Miscellaneous: true, false, null
+    
+    
+== Latex == 
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/latex/learn-latex.tex|Where X=Latex]]
+
+
+== Lua == 
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-lua.lua|Where X=Lua]]
+
+
+== Markdown == 
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-markdown.md|Where X=Markdown]]
+
+
+== Rust == 
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-rust.rs|Where X=Rust]]
+
+
+== SQL == 
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-sql.sql|Where X=SQL]]
+
+
+== Haskell ==
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-haskell.hs|Where X=Haskell]]
+

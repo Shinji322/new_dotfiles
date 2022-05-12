@@ -1,0 +1,33 @@
+= Why =
+In general, games need these fonts, especially *Windows exclusive* games.
+
+In order to install these fonts, you must extract the ttfs and paste them in `/usr/share/fonts`
+
+
+= Extracting Fonts = 
+* Download a Windows ISO File. Check `My Passport/software/firmware` for the appropriate isos. 
+* Install `p7zip` if not already installed
+* Run the following commands on the ISO: 
+
+
+{{{bash
+7z e <WINDOWS 10 ISO> sources/install.wim
+}}}
+
+{{{bash
+7z e install.wim 1/Windows/{Fonts/"*".{ttf,ttc},System32/Licenses/neutral/"*"/"*"/license.rtf} -ofonts/
+}}}
+
+{{{bash
+7z e install.wim Windows/{Fonts/"*".{ttf,ttc},System32/Licenses/neutral/"*"/"*"/license.rtf} -ofonts/ ***REMOVED*** Windows 7
+}}}
+
+*The last command only needs to be run on Windows 7 ISO images.* 
+
+= Installing =
+* Now, there should be a *fonts* directory. From that directory, copy and paste all fonts to `/usr/share/fonts`.
+* Then, run: 
+
+{{{bash
+sudo fc-cache -fv
+}}}

@@ -1,0 +1,4 @@
+= Bindings =
+
+`~/.config/taskell/bindings.ini`
+>Through here, you will be able to find all of the informatioon that you need

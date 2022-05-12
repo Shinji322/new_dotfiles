@@ -1,0 +1,7 @@
+= Poor performance on linux apps =
+
+This is because linux apps need to be run like so to utilize the d-GPU
+
+{{{bash
+prime-run $1
+}}}

@@ -1,0 +1,26 @@
+= Installation =
+
+* Simply copy the font files to /usr/share/fonts
+* Run:
+```bash
+sudo fc-cache -fv
+```
+
+
+= Previewing Fonts =
+
+* Since ttf files are just images, this can work
+{{{bash
+display *.ttf
+}}}
+
+
+== [[file:~/.scripts/system/rofi-font-preview|User Made Script that uses rofi]] ==
+ 
+=== [[./explainations/font-preview-script.wiki|Script Explaination]] === 
+ 
+{{{bash
+choice=$(fc-list | awk '{print $1}' | sed 's/://g' | rofi -dmenu -l 20 -p 'Fonts: ')
+
+display "$choice"
+}}} 

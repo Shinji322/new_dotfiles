@@ -1,0 +1,33 @@
+= Current Configuration =
+You have emuMMC set up. 
+90dns is set up
+
+= Installing NSPs =
+In the switch pc tools, run ns-usbloader with sudo.
+`sudo java -jar ns-usbloader.jar`
+
+* Don't update sigpatches with Awoo.
+
+For some reason, installing nsps sometimes doesn't work if I log in with Hekate. When installing nsps, use sd::/bootloader/fusee.bin
+* This can be accessed without shutting down by using aio-switch-updater 
+
+
+= Sigpatches =
+[[https://github.com/ITotalJustice/patches/releases|link]]
+
+
+= PPSSPP =
+[[./switch/ppsspp.wiki|PPSSPP]]
+
+
+= Booting Into RCM = 
+
+* Insert RCM jig into right joy con rail
+    * Press volume up + power
+
+
+= Decompressing NSZ =
+
+{{{bash
+nsz -D 
+}}}

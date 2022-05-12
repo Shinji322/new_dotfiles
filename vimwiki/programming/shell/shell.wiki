@@ -1,0 +1,42 @@
+**DONT INCLUDE DASHES IN VARIABLE NAME**
+
+= IFS =
+
+IFS is an environment variable that bash uses as word/item boundaries when processing character strings
+
+== Example 1==
+{{{bash
+string="first second:third forth:fifth"
+
+for item in $string; do
+    echo "$item"
+done
+}}}
+
+*Output*:
+{{{
+first
+second:third
+forth:fifth
+}}}
+
+
+== Example 2 ==
+
+{{{bash
+***REMOVED*** Set the IFS to collon (:) character
+IFS=:
+
+string="first second:third forth:fifth"
+
+for item in $string; do
+    echo "$item"
+done
+}}}
+
+*Output*:
+{{{
+first second  
+third forth  
+fifth
+}}}

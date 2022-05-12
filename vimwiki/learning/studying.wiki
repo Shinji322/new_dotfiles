@@ -1,0 +1,19 @@
+= Questions =
+After the answer is shown, it's okay if it takes you alittle while to recall the answer, but as a general rule if you can't answer within about 10 seconds, it's probably better to give up and show the answer than keep struggling to remember.
+
+When the answer is shown, you should compare the answer you thought of with the answer shown and tell Anki how well you remembered. If you don't trust yourself, you can ask Anki to prompt you to type in the answer rather than just showing it to you. 
+
+= Learning Cards =
+When learning cards, Anki will show you the cards one or more times to help you memoorize them. Each time is called a 'learning step'.
+
+Again::
+:: moves the card back to the first step.
+
+Hard::
+:: repeats the current step after the first step.
+
+Good::
+:: moves the card to the next step. If the card was on the final step, it is converted to a review card.
+
+Easy::
+:: immediately converts the card into a review card, even if there were steps remaining

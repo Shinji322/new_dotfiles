@@ -1,0 +1,83 @@
+= Example Commands =
+
+== Cloning specific branch ==
+{{{bash 
+git clone --single-branch --branch <BRANCH_NAME> <remote-repo>
+}}}
+
+= Errors =  
+
+== failed to push some refs to <REPO> ==
+`git push -u origin <BRANCH_NAME> --force`
+
+
+= Dotfile Management =
+
+Run the following commands:
+{{{bash
+
+git init --bare ~/.dotfiles
+alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+echo "/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME" >> ~/.config/shell/alias
+
+}}}
+
+From then on, you can add files to the directory by running the following commands:
+{{{bash
+
+config add .zshenv
+config commit -m "Message"
+***REMOVED*** Create a new repository on github or gitlab
+config remote add origin git@github.com:<USERNAME>/<REPONAME>.git
+config push --set-upstream origin <BRANCH_NAME>
+
+}}}
+
+
+== Setting Up ==
+
+{{{bash
+ssh-keygen -t rsa -C "you@example.com"
+}}}
+* Go to [[github account settings|https://github.com/settings/profile]]
+* Click "SSH-Keys" on the left
+* Click "Add SSH Key"
+* Add a label and follow instructions
+* Then, execute teh following
+{{{bash
+ssh -T git@github.com
+}}}
+
+== Errors ==
+
+=== publickey permission denied ===
+[[https://docs.github.com/en/authentication/troubleshooting-ssh/error-permission-denied-publickey|Article that explains more]]
+{{{bash
+
+git@github.com: Permission denied (publickey).
+    fatal: Could not read from remote repository.
+
+    Please make sure you have the correct access rights
+    and the repository exists.
+    
+}}}
+
+===== Solution =====
+{{{
+
+eval "$(ssh-agent -s)"
+ssh-add -l -E md5
+
+}}}
+Might give the below error.
+
+
+=== The Agent Has No Identities ===
+You might need to regenerate an sshkey
+
+`ssh-keygen -t rsa`
+`ssh-add ~/.ssh/id_rsa`
+`ssh-add -l -E md5`
+
+Afterwards, simply add the ssh key to github (check the contents of ~/.ssh/id_rsa)
+

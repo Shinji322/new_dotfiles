@@ -1,0 +1,3 @@
+= Anime Wiki =
+
+[[./anime/ass-class.wiki|Assasination Classroom]]

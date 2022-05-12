@@ -1,0 +1,18 @@
+= Sources =
+
+[[https://searx.github.io/searx/admin/installation-docker.html***REMOVED***installation-docker|Official Searx Docker Documentation]]
+
+
+= Installation =
+
+{{{bash
+sudo pacman -S docker docker-compose
+export PORT=80 
+docker pull searx/searx
+docker run --rm -d -v ${PWD}/searx:/etc/searx -p $PORT:8080 -e BASE_URL=http://localhost:$PORT/ searx/searx
+}}}
+
+
+= Docker Specific Stuff =
+
+[[./docker.wiki|Docker Wiki]]

@@ -1,0 +1,110 @@
+= Find out your default fonts =
+
+{{{bash
+for family in serif sans-serif monospace Arial Helvetica Verdana "Times New Roman" "Courier New"; do
+  echo -n "$family: "
+  fc-match "$family"
+done
+}}}
+
+
+= Font Config Files =
+
+== Location ==
+* Fonts are installed to /usr/share/fonts/
+* Font configuration files reside:
+    * *System-wide*   : /etc/fonts
+    * *User-specific* : ~/.config/fontconfig/fonts.conf
+
+
+== Setting Fonts == 
+* *fonts.conf* might need to be created if it does not exist
+
+It uses the following skeleton structure for confgiuration:
+{{{xml
+<?xml version='1.0'?>
+<!DOCTYPE fontconfig SYSTEM 'fonts.dtd'>
+<fontconfig>
+</fontconfig>
+}}}
+
+=== Example ===
+* The following config must be placed in the fontconfig tag (fonts are offered by the `ttf-croscore` package)
+* Either follow your previous config file or use the following as a base: 
+
+{{{xml
+  <!-- Set preferred serif, sans serif, and monospace fonts. -->
+  <alias>
+    <family>serif</family>
+    <prefer><family>Tinos</family></prefer>
+  </alias>
+  <alias>
+    <family>sans-serif</family>
+    <prefer><family>Arimo</family></prefer>
+  </alias>
+  <alias>
+    <family>sans</family>
+    <prefer><family>Arimo</family></prefer>
+  </alias>
+  <alias>
+    <family>monospace</family>
+    <prefer><family>Cousine</family></prefer>
+  </alias>
+}}} 
+
+=== Aliasing Microsfot fonts ===
+* Microsoft has copyright on their fonts. Unless you have a windows partition, they must be aliased like so:
+* Note: aliasing to generic families (serif, sans-serif) may or may not work depending on the config in /etc/fonts
+
+{{{xml
+  <!-- Aliases for commonly used MS fonts. -->
+  <match>
+    <test name="family"><string>Arial</string></test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>Arimo</string>
+    </edit>
+  </match>
+  <match>
+    <test name="family"><string>Helvetica</string></test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>Arimo</string>
+    </edit>
+  </match>
+  <match>
+    <test name="family"><string>Verdana</string></test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>Arimo</string>
+    </edit>
+  </match>
+  <match>
+    <test name="family"><string>Tahoma</string></test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>Arimo</string>
+    </edit>
+  </match>
+  <match>
+    <!-- Insert joke here -->
+    <test name="family"><string>Comic Sans MS</string></test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>Arimo</string>
+    </edit>
+  </match>
+  <match>
+    <test name="family"><string>Times New Roman</string></test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>Tinos</string>
+    </edit>
+  </match>
+  <match>
+    <test name="family"><string>Times</string></test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>Tinos</string>
+    </edit>
+  </match>
+  <match>
+    <test name="family"><string>Courier New</string></test>
+    <edit name="family" mode="assign" binding="strong">
+      <string>Cousine</string>
+    </edit>
+  </match>
+}}}

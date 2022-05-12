@@ -1,0 +1,39 @@
+= XBOX CONTROLLERS =
+
+`/usr/src/xone-<version>/install`
+
+In there, there might be a file called modprobe.conf with "blacklist xpad". Remove that line
+
+
+= NOISE CANCELLING = 
+
+{{{bash
+pip install rnnoise-cli
+}}}
+
+Add the following to `xinitrc`:
+{{{bash
+rnnoise activate &
+}}}
+
+In `~/.config/rnnoise_cli/rnnoise_cli.conf`, add whichever device you want in the device section.
+e.g.
+{{{config
+[activate]
+***REMOVED*** device to use, omitted by default
+***REMOVED*** `rnnoise activate` will prompt for it if omitted (and provide a list of options)
+***REMOVED*** Check the output of rnnoise list for more info
+device = some.device.name
+***REMOVED*** control level (0-100), 50 by default
+control = 50
+}}}
+
+
+= Audio not playing through HDMI =
+
+{{{bash
+pactl set-card-profile 0 output:hdmi-stereo
+}}}
+
+
+or, scroll through the "Cards" section in `pulsemixer`

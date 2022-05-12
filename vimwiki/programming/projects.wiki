@@ -1,0 +1,4 @@
+= Rust =
+
+[[file:~/software/source/learning-projects/stackoverflow-scraping-with-rust|StackOverflow Scraper]]
+[[file:~/software/source/learning-projects/octofetch|Git API Scraper]]

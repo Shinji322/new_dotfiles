@@ -1,0 +1,53 @@
+= Creating Anki Cards from Markdown =
+
+By default, simply run 
+
+{{{bash
+npm install -g mdanki
+}}}
+>Make sure `~/.local/share/npm/bin` is in your path
+
+Then, they can be created like so:
+{{{bash
+mdanki library.md anki.apkg --config settings.json
+}}}
+
+== Config ==
+Using settings.json, we can configure how we make the anki card.
+
+{{{json
+{
+"template": {
+    "formats": {
+        "question": "{{Front}}",
+        "answer"  : "{{FrontSide}}\n\n<hr id=\"answer\">\n\n{{Back}}",
+         "css"     : ".card {\n font-family: arial;\n font-size: 20px;\n text-align: center;\n color: black;\n background-color: white;\n}"
+               }
+            }
+}
+}}}
+
+
+== Formatting ==
+
+By default, anki cards must be formated like so:
+
+{{{markdown
+***REMOVED******REMOVED*** What's the Markdown?
+
+Markdown is a lightweight markup language with plain-text-formatting syntax.
+Its design allows it to be converted to many output formats,
+but the original tool by the same name only supports HTML.
+
+***REMOVED******REMOVED*** Who created Markdown?
+
+John Gruber created the Markdown language in 2004 in collaboration with
+Aaron Swartz on the syntax.
+
+***REMOVED******REMOVED*** Binary tree
+
+In computer science, a binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child.
+
+[***REMOVED***algorithms](./algorityms.md) [***REMOVED***OOP]() [***REMOVED***binary tree]()
+}}}
+>Binary tree has tags

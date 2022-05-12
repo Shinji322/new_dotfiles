@@ -1,0 +1,33 @@
+= TL;DR Command =
+
+{{{bash
+HARD_DRIVE_PARTITION="/dev/sdb1" ***REMOVED*** example
+sudo pacman -S ntfs-3g nfs-utils
+mount -t ntfs $HARD_DRIVE_PARTITION /mnt
+}}}
+
+
+= Errors =
+
+== Windows is hibernated, refused to mount ==
+{{{
+Error mounting /dev/sda2/
+The NTFS partition is in unsafe state
+Windows is hibernated, refused to mount
+}}}
+This happens because Windows hibernates instead of shutting down for faster boot times
+
+
+This may wipe data that is not saved so do this scarcely:
+{{{bash
+sudo ntfs-3g -o remove_hiberfile $HARD_DRIVE_PARTITION /mnt
+}}}
+
+
+In windows, you should shut down like so:
+{{{powershell
+shutdown /s 
+}}}
+>`/t 0` may be added for immediate shutdown
+
+A simpler approach to actually shutting down Windows is to 'restart' (rather than 'shutdown'), but then intercept the boot process and boot Linux instead of letting it boot Windows.

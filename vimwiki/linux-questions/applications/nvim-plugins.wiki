@@ -1,0 +1,14 @@
+= Convenience =
+
+== tpope/vim-surround ==
+
+[[file:~/vimwiki/linux-questions/applications/nvim-plugins/vim-surround.md|Vim Surround Wiki]]
+* For keybindings on vim-surround
+ 
+ 
+== Table Mode ==
+
+Enter table mode like so:
+{{{vimscript
+<leader>tm
+}}}

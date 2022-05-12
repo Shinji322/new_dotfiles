@@ -1,0 +1,13 @@
+= grep =
+{{{bash
+grep -E
+}}}
+}}
+For extended regex
+
+= fd =
+For some reason grep doesn't work, so simply use a flag in the `fd` command:
+
+{{{bash
+fd --regex '<regexp>'
+}}}

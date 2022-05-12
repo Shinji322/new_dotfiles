@@ -1,0 +1,41 @@
+= Installation =
+
+{{{bash
+sudo pacman -S --needed docker docker-compose
+}}}
+>The packages should be called docker and docker-compose for whatever package manager you are using
+
+
+== Docker User ==
+
+If you get some permissions error like: "`Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.39/containers/json: dial unix /var/run/docker.sock: connect: permission denied`", you may need to run this command
+
+{{{bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+}}}
+>This will allow you to run docker commands
+You will have to restart if you run these commands.
+
+
+== Systemd Service ==
+
+After installing docker, you will need to do the following:
+* Enable systemd service
+* Start the systemd service
+* Run the docker command
+* You may have to restart your machine after users and groups have been set
+ 
+You can do so by running the following commands: 
+{{{bash
+systemctl enable docker.service
+systemctl start docker.service
+}}}
+
+
+== Executing shell Commands in Docker ==
+
+{{{bash
+docker exec -it ${NAME} ${SHELL}
+docker exec -it searx_instance bash
+}}}

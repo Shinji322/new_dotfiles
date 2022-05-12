@@ -1,0 +1,58 @@
+[[https://weechat.org/files/doc/stable/weechat_quickstart.en.html]]
+
+= Adding an IRC server =
+
+{{{bash
+/server add libera irc.libera.chat/6697 -ssl
+}}}
+>In this command libera is the internal server name used by WeeChat used when you are connecting [[***REMOVED***Connecting to an IRC server]]
+
+For more info, run `help server`
+
+
+= Connecting to an IRC server =
+
+{{{bash
+/connect libera
+}}}
+
+
+= Custom IRC server options =
+
+== Nicknames ==
+
+{{{bash
+/set irc.server.libera.nicks "mynick,mynick2,mynick3,mynick4,mynick5"
+}}}
+
+== Set Real and Usernames ==
+
+{{{bash
+/set irc.server.libera.username "My user name"
+/set irc.server.libera.realname "My real name"
+}}}
+
+
+= Joining / Parting from IRC channels =
+
+{{{bash
+/join ***REMOVED***channel
+/part [quit message]
+}}}
+>Join joins the channel
+>Part keeps the buffer open
+
+{{{bash
+/close
+/disconnect
+}}}
+>Close closes the buffer
+>Disconnect from the irc server
+
+
+= Searching irc networks =
+
+{{{bash
+/list
+/list -re <regex>
+}}}

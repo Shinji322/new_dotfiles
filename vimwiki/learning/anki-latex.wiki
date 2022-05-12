@@ -1,0 +1,19 @@
+[[~/vimwiki/programming/markup/latex.wiki]]
+
+= Other Packages =
+To add other packages in Anki, follow the following steps:
+
+1. *Open* Anki
+2. Hit *_CTRL+SHIFT+N_* to go to manage note types
+3. Click *"Options..."*
+4. Add packages to the *preamble*
+
+{{{LaTeX
+\documentclass[12pt]{article}
+\special{papersize=3in,5in}
+\usepackage[utf8]{inputenc}
+\usepackage{amssymb,amsmath,soul}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+\begin{document}
+}}}
