@@ -23,7 +23,7 @@ AUR_HELPER       := yay
 ***REMOVED*** Personal Packages relevant to me
 PACKAGES         := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
 PACKAGES         += docker docker-compose
-PACKAGES         += zoxide lazygit gendesk flameshot
+PACKAGES         += zoxide lazygit gendesk flameshot pandoc
 PACKAGES         += nmap tmux jq redshift htmlq glow tealdeer dust bottom difftastic
 ***REMOVED*** glow: tui Markdown Previewer
 ***REMOVED*** tealdeer: A very fast implementation of tldr in Rust: Simplified, example based and community-driven man pages. 
@@ -116,7 +116,9 @@ gpg:
 node: 
 	$(INSTALL) nodejs npm
 vue:
+	$(INSTALL) sassc
 	$(AUR) vue-cli
+	npm install -D sass-loader node-sass
 python: 
 	$(INSTALL) python-pip
 rust: 
@@ -192,6 +194,7 @@ browser:
 	***REMOVED*** $(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-localcdn
 data-hoarder:
 	$(AUR) gallery-dl-bin twint
+	$(AUR) cyberdropdownloader 
 gaming: 
 	$(INSTALL) steam 
 	$(INSTALL) wine winetricks
@@ -201,8 +204,6 @@ emulators:
 social-media:
 	$(INSTALL) discord
 	$(AUR) bilili
-searx:
-	docker pull searx/searx
 PTHEMES := python-qdarkstyle
 ATHEMES := gtk-theme-arc-gruvbox-git orchis-theme-git paper-icon-theme-git candy-icons-git
 themes: 
@@ -217,8 +218,17 @@ codecs:
 	***REMOVED*** Audio codecs
 	$(INSTALL) flac wavpack opus libamd libvorbis
 	***REMOVED*** Video codecs
-	$(INSTALL) xvidcore x264 x265 libmpeg2  aom libvpx libtheora libdv schroedinger
+	$(INSTALL) xvidcore x264 x265 libmpeg2 aom libvpx libtheora libdv schroedinger
 
+***REMOVED*** Local servers
+searx:
+	docker pull searx/searx
+***REMOVED*** This sets up danbooru with grabber configs 
+danbooru:
+	***REMOVED*** Fix this
+	curl -LO https://bionus.github.io/imgbrd-grabber/docs/commands/danbooru.js $(XDG_CONFIG_HOME)/Bionusdanbooru.js
+	npm install -g axios form-data open
+	echo 'node danbooru.js "YuriLover" "V2Y5dPSpMxKxHLiCS8KrUrgC" "%all:includenamespace,unsafe,underscores%" "%rating%" "%source:raw%" "%path:nobackslash%"'
 
 ***REMOVED*** Systemd
 bluetooth: 
