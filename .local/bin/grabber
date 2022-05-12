@@ -1,0 +1,12 @@
+***REMOVED***!/bin/sh
+
+danbooru() {
+  docker-compose -f $XDG_DATA_HOME/danbooru/docker-compose.yaml up
+}
+
+grabber_instance() {
+  $HOME/software/bin/appimages/Grabber_v7.8.1-x86_64.AppImage
+}
+
+danbooru &
+grabber_instance &
