@@ -27,7 +27,7 @@ unsetopt PROMPT_SP
 ***REMOVED*** Default Programs (most are just for use in scripts)
 export TERMINAL="kitty"
 export EDITOR="lvim"
-export FILE="lfup"
+export FILE="lfcd"
 export READER="zathura"
 export VISUAL="lvim"
 export PAGER="less"

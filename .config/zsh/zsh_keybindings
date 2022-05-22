@@ -1,1 +1,3 @@
-bindkey -s '^o' 'exit\n'
+***REMOVED*** bindkey -s '^o' 'exit\n'
+bindkey -s '^O' '^ulfcd\n'
+bindkey -s '^f' '^ucd "$(dirname $(fzf))"\n'

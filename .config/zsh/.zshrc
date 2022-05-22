@@ -11,18 +11,19 @@ setopt interactive_comments
 
 
 ***REMOVED*** Source all other files
-zsh_add_file "shell/profile" ***REMOVED*** needs to be set before alias
-zsh_add_file "shell/alias"
-zsh_add_file "shell/startup"
-zsh_add_file "shell/zshdirs"
+zsh_add_file "$ZDOTDIR/shell/profile" ***REMOVED*** needs to be set before alias
+zsh_add_file "$ZDOTDIR/shell/alias"
+zsh_add_file "$ZDOTDIR/shell/startup"
 source $HOME/.config/lf/LF_ICONS
 
-zsh_add_file "zsh_completions" ***REMOVED*** Calls  compinit
-zsh_add_file "zsh_cleanup" ***REMOVED*** Compinit (needs to be set before vi mode)
-zsh_add_file "zsh_history"
-zsh_add_file "zsh_keybindings"
-zsh_add_file "zsh_vi_mode"
+zsh_add_file "$ZDOTDIR/zsh_completions" ***REMOVED*** Calls  compinit
+zsh_add_file "$ZDOTDIR/zsh_cleanup" ***REMOVED*** Compinit (needs to be set before vi mode)
+zsh_add_file "$ZDOTDIR/zsh_history"
+zsh_add_file "$ZDOTDIR/zsh_vi_mode"
 
+zsh_add_file "$ZDOTDIR/shell/shortcut"
+zsh_add_file "$ZDOTDIR/shell/functions"
+zsh_add_file "$ZDOTDIR/zsh_keybindings"
 
 ***REMOVED*** Plugins installed by package manager
 source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh

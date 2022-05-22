@@ -63,17 +63,16 @@ alias iost='iostat -sxmhtc --dec=0'
 
 ***REMOVED*** Git commands
 alias g="lazygit"
-alias gm='git commit -m'
-alias gc='git clone'
-alias ga='git add'
-alias gs='git status'
+***REMOVED*** alias gim='git commit -m'
+***REMOVED*** alias gc='git clone'
+***REMOVED*** alias gia='git add'
+***REMOVED*** alias gis='git status'
 
 
 ***REMOVED*** Aliasing core utils
 ***REMOVED*** This is a bad idea but ehhh
 alias cd="z"
 alias du="dust"
-
 
 ***REMOVED*** For when keys breaek
 alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"

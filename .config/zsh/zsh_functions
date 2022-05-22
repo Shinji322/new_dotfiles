@@ -1,5 +1,6 @@
 function zsh_add_file() {
-    [ -f "$ZDOTDIR/$1" ] && source "$ZDOTDIR/$1"
+    [ -f "$1" ] && source "$1"
+    [ ! -f "$1" ] && echo "$f not found"
 }
 
 function zsh_add_plugin() {
