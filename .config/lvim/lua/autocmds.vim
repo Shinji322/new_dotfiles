@@ -41,6 +41,7 @@ autocmd BufWrite sxhkdrc* :!pkill sxhkd && notify-send "sxhkd config reloaded" &
 autocmd BufRead,BufNewFile lfrc* set filetype=sh
 autocmd BufRead,BufNewFile *zshrc* set filetype=sh
 autocmd BufRead,BufNewFile *xinitrc* set filetype=sh
+autocmd BufWrite bm-dirs,bm-files | !~/.local/bin/shortcuts
 
 
 " Autocompile
