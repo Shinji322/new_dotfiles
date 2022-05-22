@@ -1,6 +1,6 @@
 ***REMOVED***!/bin/sh
 
-***REMOVED*** This is a wrapper script for lb that allows it to create image previews with
+***REMOVED*** This is a wrapper script for lf that allows it to create image previews with
 ***REMOVED*** ueberzug. This works in concert with the lf configuration file and the
 ***REMOVED*** lf-cleaner script.
 
