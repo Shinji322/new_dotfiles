@@ -1,7 +1,13 @@
 ***REMOVED***!/bin/sh
 
+download_danbooru() {
+  mkdir -pv "$XDG_CONFIG_HOME/danbooru"
+  wget --output-document "$XDG_CONFIG_HOME/danbooru/docker-compose.yaml" https://raw.githubusercontent.com/danbooru/danbooru/master/docker-compose.yaml 
+}
+
 danbooru() {
-  docker-compose -f $XDG_DATA_HOME/danbooru/docker-compose.yaml up
+  [ ! -f "$XDG_CONFIG_HOME/danbooru/docker-compose.yaml" ] && download_danbooru
+  docker-compose -f "$XDG_CONFIG_HOME/danbooru/docker-compose.yaml" up
 }
 
 grabber_instance() {
@@ -10,8 +16,8 @@ grabber_instance() {
 
 if [[ "$1" == "stop" ]];
 then
-  docker stop danbooru-cron-1 danbooru-iqdb-1 danbooru-postgres-1 danbooru-redis-1 danbooru-jobs-1 danbooru-danbooru-1 && exit 1
+  docker stop danbooru-cron-1 danbooru-iqdb-1 danbooru-postgres-1 danbooru-redis-1 danbooru-jobs-1 danbooru-danbooru-1 && exit 0
 fi
 
-danbooru &
+danbooru
 ***REMOVED*** grabber_instance &

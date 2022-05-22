@@ -1,6 +1,9 @@
 ***REMOVED*** Basic Settings
+set shellopts '-eu'
+set ifs "\n"
+set scrolloff 10
+set period 1
 set shell zsh
-set preview 
 set hidden true
 set drawbox true
 set icons true
@@ -12,37 +15,35 @@ set previewer '~/.config/lf/scope'
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         ***REMOVED*** text/*|application/json) $EDITOR "$f";;
-        *) xdg-open "$f" &;;
+        *) xdg-open "$f" &!;;
     esac
 }}
 
 cmd paste-async &{{
-    mode="$(cat ~/.local/share/lf/files | head -1)"
+    set -- $(cat ~/.local/share/lf/files)
+    mode="$1"
+    shift
     case "$mode" in
         copy) 
-            while IFS= read -r line
-            do 
-                ***REMOVED*** [[ "$line" == "copy" ]] && continue
-                dunstify "Started transferring file: " "$line"
-                cp -rn -- "$line" .
-            done  < "$HOME/.local/share/lf/files"
+            tmux splitw -h -p 20 -- "cpg -g -rn $@ ."
+            dunstify "Started transferring file: " "$@"
+            ***REMOVED*** cp -rn -- "$line" .
             ;;
         move) 
-            while IFS= read -r line
-            do 
-                ***REMOVED*** [[ "$line" == "move" ]] && continue
-                dunstify "Started transferring file: " "$line"
-                mv -n -- "$line" .
-            done  < "$HOME/.local/share/lf/files"
+            ***REMOVED*** [[ "$line" == "move" ]] && continue
+            tmux splitw -h -p 20 -- "mvg -g -n $@ ."
+            dunstify "Started transferring file: " "$@"
+            ***REMOVED*** mv -n -- "$line" .
             ;;
     esac
 
-    dunstify "Succesful file transfer!" "$files" -i folder
+    dunstify "Succesful file transfer!" "$@" -i folder
     rm ~/.local/share/lf/files
-    lf -remote "send reload"
+    lf -remote "send clear"
 }}
 
 cmd mkdir ${{
+	clear; tput bold
   printf "Directory Name: "
   read ans
   mkdir -p $ans
@@ -52,25 +53,6 @@ cmd mkfile ${{
   printf "File Name: "
   read ans
   touch $ans
-}}
-
-cmd mkgitkeep ${{
-    touch .gitkeep
-}}
-
-cmd mknewassignement ${{
-    printf "Assignment Name: "
-    read assignment_name
-
-    new_assignment_name=$(echo $assignment_name | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g')
-    number_prefixes="($(ls | sed 's/[^0-9]*//g'))"
-    largest_file_prefix="1"
-    IFS=$'\n'
-    largest_file_prefix=$(echo "${number_prefixes[*]}" | sort -nr | head -n1 | sed "s/)//g")
-    ((largest_file_prefix++))
-
-    filename="$largest_file_prefix-$new_assignment_name.html"
-    touch $filename && $EDITOR $filename
 }}
 
 cmd mkbakup ${{
@@ -87,12 +69,6 @@ cmd chmod ${{
   done
 
   lf -remote 'send reload'
-}}
-
-cmd sudomkfile ${{
-  printf "File Name: "
-  read ans
-  sudo $EDITOR $ans
 }}
 
 cmd setwallpaper ${{ 
@@ -147,22 +123,18 @@ cmd extract ${{
 
 ***REMOVED*** Trash cli bindings
 cmd trash ${{
-  files=$(printf "$fx" | tr '\n' ';')
-  while [ "$files" ]; do
-    ***REMOVED*** extract the substring from start of string up to delimiter.
-    ***REMOVED*** this is the first "element" of the string.
-    file=${files%%;*}
-
-    trash-put "$(basename "$file")"
-    ***REMOVED*** if there's only one element left, set `files` to an empty string.
-    ***REMOVED*** this causes us to exit this `while` loop.
-    ***REMOVED*** else, we delete the first "element" of the string from files, and move onto the next.
-    if [ "$files" = "$file" ]; then
-      files=''
-    else
-      files="${files***REMOVED****;}"
-    fi
-  done
+	clear; tput bold
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "delete?[y/N]"
+	read ans
+  if [ $ans = "y" ] 
+  then
+    for file in "$fx"
+    do
+      trash-put "$file"
+    done
+  fi
 }}
 
 cmd clear_trash %trash-empty
@@ -170,8 +142,6 @@ cmd clear_trash %trash-empty
 cmd restore_trash ${{
   trash-restore
 }}
-
-cmd stripspace %stripspace "$f"
 
 cmd copy-file-contents &{{
     xclip -sel c < "$f"
@@ -181,13 +151,9 @@ cmd copy-file-path &{{
     echo "$f" | xclip -sel c
 }}
 
-cmd copy-file-name &{{
-    echo "${f***REMOVED******REMOVED****/}" | xclip -sel c
-}}
-
-cmd copy-file-path &{{
-    echo "$f" | xclip -sel c
-}}
+***REMOVED*** cmd copy-file-name &{{
+***REMOVED***     echo "${f***REMOVED******REMOVED****/}" | xclip -sel c
+***REMOVED*** }}
 
 cmd dragon-drag %{{
     dragon-drop "$f"
@@ -203,8 +169,11 @@ cmd fzf-open ${{
 
 cmd fzf-dir-open ${{
     choice=$(fd . --type d | fzf)
-    [ -n '$choice' ] && cd ./$choice
+    [ -n "$choice" ] && cd ./$choice
 }}
+
+cmd bulkrename $vidir
+cmd copy_filename $printf "%s" "$fx" | xclip -selection clipboard
 
 ***REMOVED*** Bindings
 ***REMOVED*** Remove some defaults
@@ -217,13 +186,14 @@ map d
 map c
 map e
 map f
+map t
 
 ***REMOVED*** File Openers
 map ee $$EDITOR "$f"
-map u $view "$f"
 
 ***REMOVED*** Archive Mappings
 map ex extract "$f"
+map br bulkrename
 
 ***REMOVED*** Trash Mappings
 map dd trash
@@ -301,6 +271,7 @@ map gcz  cd ~/.config/zsh
 map gct  cd ~/.config/kitty
 map gcx  cd ~/.config/x11
 map gck  cd ~/.config/sxhkd
+map gcw  cd ~/.config/i3
 
 map gL  cd ~/literature
 
@@ -314,5 +285,3 @@ map gU. cd /usr
 map gUs cd /usr/share
 
 map gw  cd ~/vimwiki
-
-map \;j cd ~

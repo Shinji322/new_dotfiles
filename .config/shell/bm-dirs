@@ -1,0 +1,14 @@
+***REMOVED*** These are some usefule directories!
+cac ${XDG_CACHE_HOME:-$HOME/.cache}
+cf  ${XDG_CONFIG_HOME:-$HOME/.config}
+w   ${XDG_DOWNLOAD_DIR:-$HOME/downloads}
+d   ${XDG_DOCUMENTS_DIR:-$HOME/documents}
+dt  ${XDG_DATA_HOME:-$HOME/.local/share}
+lr  $HOME/.local/src
+lb  $HOME/.local/bin
+lR  $HOME/.local/repos
+h   $HOME
+m   ${XDG_MUSIC_DIR:-$HOME/music}
+mn  /run/media/$USER
+ii  ${XDG_PICTURES_DIR:-$HOME/images}
+vv  ${XDG_VIDEOS_DIR:-$HOME/videos}

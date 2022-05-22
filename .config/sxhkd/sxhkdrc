@@ -102,7 +102,9 @@ super + r
 ***REMOVED*** Asusctl
 F5
   asusctl profile -n && notify-send "Setting mode to:" "$(asusctl profile -p)"
-
+***REMOVED*** Enable noise cancelling
+F1
+  ~/.scripts/sxhkd/noise_cancelling
 
 ***REMOVED***  _  _____                    __ _       
 ***REMOVED*** (_)|____ |                  / _(_)      

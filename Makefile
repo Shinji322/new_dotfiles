@@ -14,7 +14,7 @@ CLI_PACKAGES     += ripgrep fd exa fzf git-delta
 CLI_PACKAGES     += unzip unrar xclip mediainfo moreutils tar gzip
 CLI_PACKAGES     += nodejs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
-CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc
+CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc acpi
 CLI_PACKAGES     += pass rsync bat sox pass-otp pkgfile trash-cli ueberzug mlocate xdotool aria2
 AUR_CLI_PACKAGES := atool task-spooler lf-git
 
@@ -29,9 +29,10 @@ PACKAGES         += nmap tmux jq redshift htmlq glow tealdeer dust bottom diffta
 ***REMOVED*** tealdeer: A very fast implementation of tldr in Rust: Simplified, example based and community-driven man pages. 
 ***REMOVED*** dust: du on steroids
 ***REMOVED*** bottom: system monitoring tool
-PACKAGES         += exfat-utils streamlink sysstat
+PACKAGES         += exfat-utils streamlink sysstat 
 AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk picom-git
-AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center 
+AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center zap-bin
+AUR_PACKAGES     += dragon-drop
 ***REMOVED***AUR_PACKAGES     += qdirstat-bin
 
 
@@ -40,6 +41,7 @@ INSTALL          := sudo pacman --noconfirm --needed -S
 AUR              := yay -S --noconfirm
 SYSTEMD_ENABLE   := sudo systemctl --now enable
 PIPINSTALL       := pip install --user
+NPM              := npm install -g
 LN               := ln -vsf
 MKDIR            := mkdir -p
 
@@ -74,7 +76,7 @@ sudo:
 xorg:
 	$(INSTALL) xorg-server xorg-xwininfo xorg-xinit xorg-twm xorg-xev
 	$(INSTALL) xorg-xrandr xcompmgr xorg-xprop 
-	$(INSTALL) xclip
+	$(INSTALL) xclip xcolor xsel
 windowmanager:
 	$(INSTALL) i3-gaps i3blocks
 shell:
@@ -115,10 +117,10 @@ gpg:
 ***REMOVED*** Programming stuff
 node: 
 	$(INSTALL) nodejs npm
-vue:
+web-dev:
 	$(INSTALL) sassc
 	$(AUR) vue-cli
-	npm install -D sass-loader node-sass
+	npm install -D sass-loader node-sass typescript
 python: 
 	$(INSTALL) python-pip
 rust: 
@@ -181,9 +183,12 @@ fonts:
 	$(INSTALL) adobe-source-han-sans-kr-fonts ttf-baekmuk
 	***REMOVED*** Nerd
 	$(AUR) nerd-fonts-noto-sans-regular-complete
+	***REMOVED*** Emoji
+	$(INSTALL) noto-fonts-emoji
 lunarvim:
 	$(INSTALL) neovim
 	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) -y ***REMOVED*** needs to be installed after node, rust, and python
+	$(NPM) bash-language-server
 text-editor: lunarvim
 	$(AUR) sc-im-git
 browser: 
@@ -195,9 +200,14 @@ browser:
 data-hoarder:
 	$(AUR) gallery-dl-bin twint
 	$(AUR) cyberdropdownloader 
-gaming: 
-	$(INSTALL) steam 
+wine: 
 	$(INSTALL) wine winetricks
+	$(MKDIR) $(XDG_DATA_HOME)/wineprefixes
+	$(AUR) bottles-git
+	***REMOVED*** These aren't included as dependencies for whatever reason
+	$(INSTALL) python-markdown gtk4 gtksourceview4
+gaming: wine proton-ge
+	$(INSTALL) steam 
 	$(INSTALL) lutris
 emulators: 
 	$(AUR) citra-qt-git
@@ -214,11 +224,15 @@ mpd:
 	***REMOVED***touch ~/.cache/mpd.db
 	$(MKDIR) $(XDG_DATA_HOME)/mpd
 	touch $(XDG_DATA_HOME)/mpd/database
+musikcube: 
+	$(AUR) musikcube
 codecs:
 	***REMOVED*** Audio codecs
 	$(INSTALL) flac wavpack opus libamd libvorbis
 	***REMOVED*** Video codecs
 	$(INSTALL) xvidcore x264 x265 libmpeg2 aom libvpx libtheora libdv schroedinger
+mkv:
+	$(AUR) mkvtoolnix-gui
 
 ***REMOVED*** Local servers
 searx:
@@ -228,7 +242,6 @@ danbooru:
 	***REMOVED*** Fix this
 	curl -LO https://bionus.github.io/imgbrd-grabber/docs/commands/danbooru.js $(XDG_CONFIG_HOME)/Bionusdanbooru.js
 	npm install -g axios form-data open
-	echo 'node danbooru.js "YuriLover" "V2Y5dPSpMxKxHLiCS8KrUrgC" "%all:includenamespace,unsafe,underscores%" "%rating%" "%source:raw%" "%path:nobackslash%"'
 
 ***REMOVED*** Systemd
 bluetooth: 
@@ -260,13 +273,16 @@ amd_gpu:
 	$(INSTALL) mesa lib32-mesa 
 	$(INSTALL) xf86-video-amdgpu
 	$(INSTALL) vulkan-radeon amdvlk lib32-vulkan-radeon lib32-amdvlk
+	$(INSTALL) vulkan-tools vulkan-mesa-layers 
 ***REMOVED*** Microcode
 amd_cpu:
 	$(INSTALL) amd-ucode
 	grub-mkconfig -o /boot/grub/grub.cfg ***REMOVED*** Let's assume we use grub
 intel_cpu:
-	$(INSTALL) intel-ucode
+	$(INSTALL) intel-ucode 
 	grub-mkconfig -o /boot/grub/grub.cfg ***REMOVED*** Let's assume grub
+intel_gpu:
+	$(INSTALL) vulkan-intel lib32-vulkan-intel
 dual_boot:
 	$(INSTALL) os-prober
 	$(INSTALL) ntfs-3g nfs-utils
@@ -277,6 +293,8 @@ asus_rog:
 	$(INSTALL) asusctl supergfxctl
 	$(SYSTEMD_ENABLE) power-profiles-daemon.service
 	$(SYSTEMD_ENABLE) supergfxd
+android:
+	$(INSTALL) android-tools mtpfs
 
 
 ***REMOVED*** Final words

@@ -15,9 +15,9 @@ export BINARIES_DIR="$HOME/software/binaries"
 ***REMOVED***export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 export PATH="$PATH:${HOME}/.local/bin"
 . "$HOME/.local/share/cargo/env"
+***REMOVED*** . "${XDG_DATA_HOME:-$HOME/.local/share}/npm/bin"
 ***REMOVED*** . "${APPIMAGE_DIR}"
 ***REMOVED*** . "${BINARIES_DIR}"
-***REMOVED*** . "${XDG_DATA_HOME:-$HOME/.local/share}/npm/bin"
 ***REMOVED*** . "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/lsp_servers"
 
 ***REMOVED*** stuff

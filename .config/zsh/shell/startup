@@ -1,1 +1,2 @@
 eval "$(zoxide init zsh)"
+[ -z "$TMUX" ] && tmux

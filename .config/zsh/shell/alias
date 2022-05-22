@@ -73,3 +73,7 @@ alias gs='git status'
 ***REMOVED*** This is a bad idea but ehhh
 alias cd="z"
 alias du="dust"
+
+
+***REMOVED*** For when keys breaek
+alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"

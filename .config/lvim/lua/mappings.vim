@@ -23,7 +23,7 @@ vmap s <Plug>(easymotion-bd-f)
 " Replace all
 nnoremap <A-s> :%s//gI<Left><Left><Left>
 " Copy all
-nnoremap <C-a> ggVGy
+nnoremap <leader><C-a> ggVGy
 
 " Fix Y behaviour
 " nmap Y y$

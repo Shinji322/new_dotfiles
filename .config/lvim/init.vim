@@ -39,3 +39,5 @@ set wildmenu
 " Make wildmenu behave like similar to Bash completion
 set wildmode=list:longest
 
+" This doesn't work for some reason
+set autochdir

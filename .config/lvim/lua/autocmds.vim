@@ -44,8 +44,12 @@ autocmd BufRead,BufNewFile *xinitrc* set filetype=sh
 
 
 " Autocompile
-autocmd FileType cpp map <F5> :!make clean && make && ./build/* 2>&1<CR>
-autocmd FileType c map <F5> :!make<CR>
+autocmd FileType cpp map <F4> :!make clean && make && ./build/* 2>&1<CR>
+autocmd FileType c map <F4> :!make<CR>
+" huzzah this works! 
+" autocmd FileType scss map <F4> :set autochdir | !sassc '%' > ../css/style.css 
+" autocmd BufWrite style.scss set autochdir | !sassc '%' > ../css/style.css 
+" autocmd BufWrite *tmux.conf* | !tmux kill-server && tmux start-server
 
 
 " Ensure files are read as I want

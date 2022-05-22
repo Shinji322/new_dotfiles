@@ -14,6 +14,7 @@ setopt interactive_comments
 zsh_add_file "shell/profile" ***REMOVED*** needs to be set before alias
 zsh_add_file "shell/alias"
 zsh_add_file "shell/startup"
+zsh_add_file "shell/zshdirs"
 source $HOME/.config/lf/LF_ICONS
 
 zsh_add_file "zsh_completions" ***REMOVED*** Calls  compinit

@@ -20,4 +20,5 @@ Execute the following script to start local danbooru
 
 Then, you must navigate to ~/software/bin/appimages and start Grabber with the appimage:
 {{{
+./Grabber-ver.AppImage
 }}}

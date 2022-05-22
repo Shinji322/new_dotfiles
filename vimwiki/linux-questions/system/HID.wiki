@@ -37,3 +37,10 @@ pactl set-card-profile 0 output:hdmi-stereo
 
 
 or, scroll through the "Cards" section in `pulsemixer`
+
+
+= EJECTING EXTERNAL MEDIA =
+
+{{{bash
+sudo eject /dev/sdX
+}}}

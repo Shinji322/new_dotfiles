@@ -17,5 +17,5 @@ function ytc {
 }
 
 ***REMOVED*** Sets DOWNLOADER and COOKIES as well as yt_notif
-CONFIG="$XDG_CONFIG_HOME/script/ytdl_scripts" 
+CONFIG="$XDG_CONFIG_HOME/scripts/ytdl_scripts" 
 source $CONFIG && ytc "$@"
