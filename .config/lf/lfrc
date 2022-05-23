@@ -20,35 +20,38 @@ cmd open ${{
 }}
 
 cmd paste-async &{{
-  mode="$(cat ~/.local/share/lf/files | head -1)"
-  ***REMOVED*** COLS=$((tput cols)/3)
-  case "$mode" in
-    copy) 
-      ***REMOVED*** tmux splitw -h -p $(($(tput cols)/3)) -- "cpg -g -rn \"$@\" ."
-      tmux splitw -h -p 30 -- bash -c 'for f in $(cat ~/.local/share/lf/files | tail +2); do cpg -g -ri "$f" .; done'
-      tmux select-pane -l ***REMOVED*** switch to last pane
-      ;;
-    move) 
-      ***REMOVED*** tmux splitw -h -p $(($(tput cols)/3)) -- "mvg -g -n \"$@\" ."
-      tmux splitw -h -p 30 -- bash -c 'for f in $(cat ~/.local/share/lf/files | tail +2); do mvg -g -i "$f" .; done'
-      tmux select-pane -l ***REMOVED*** switch to last pane
-      ;;
-  esac
+  ***REMOVED*** mode="$(cat ~/.local/share/lf/files | head -1)"
+  ***REMOVED*** ***REMOVED*** COLS=$((tput cols)/3)
+  ***REMOVED*** case "$mode" in
+  ***REMOVED***   copy) 
+  ***REMOVED***     ***REMOVED*** tmux splitw -h -p $(($(tput cols)/3)) -- "cpg -g -rn \"$@\" ."
+  ***REMOVED***     tmux splitw -h -p 30 -- bash -c '~/.local/bin/tmux/lf-paste-async.sh'
+  ***REMOVED***     tmux select-pane -l ***REMOVED*** switch to last pane
+  ***REMOVED***     ;;
+  ***REMOVED***   move) 
+  ***REMOVED***     ***REMOVED*** tmux splitw -h -p $(($(tput cols)/3)) -- "mvg -g -n \"$@\" ."
+  ***REMOVED***     tmux splitw -h -p 30 -- bash -c 'for f in $(cat ~/.local/share/lf/files | tail +2); do mvg -g -i "$f" .; done'
+  ***REMOVED***     tmux select-pane -l ***REMOVED*** switch to last pane
+  ***REMOVED***     ;;
+  ***REMOVED*** esac
 
+  ~/.local/bin/tmux/lf-paste-async.sh
   dunstify "Succesful file transfer!" "$@" -i folder
+  cp ~/.local/share/lf/files ~/.local/share/lf/files.prev
   rm ~/.local/share/lf/files
   lf -remote "send clear"
 }}
 
 cmd mkdir ${{
-	clear; tput bold
+	clear; tput bold; tput setaf 4;
+
   printf "Directory Name: "
   read ans
   mkdir -p $ans
 }}
 
 cmd mkfile ${{
-	clear; tput bold
+	clear; tput bold; tput setaf 2;
   printf "File Name: "
   read ans
   touch $ans
@@ -129,7 +132,8 @@ cmd extract ${{
 
 ***REMOVED*** Trash cli bindings
 cmd trash ${{
-	clear; tput bold
+  ***REMOVED*** fails on large files
+	clear; tput bold; 
 	set -f
   files=$(printf "$fx" | tr '\n' ';')
 	printf "%s\n\t" "$fx"
@@ -179,12 +183,7 @@ cmd dragon-drag-all %{{
 
 cmd fzf-open ${{
     choice=$(fzf)
-    [ -n "$choice" ] && xdg-open $choice
-}}
-
-cmd fzf-dir-open ${{
-    choice=$(fd . --type d | fzf)
-    [ -n "$choice" ] && cd ./$choice
+    [ -n "$choice" ] && cd "$(dirname $choice)"
 }}
 
 cmd bulkrename $vidir

@@ -11,7 +11,7 @@ BASE_PKGS        += man-db curl entr
 
 CLI_PACKAGES     := neovim
 CLI_PACKAGES     += ripgrep fd exa fzf git-delta 
-CLI_PACKAGES     += unzip unrar xclip mediainfo moreutils tar gzip
+CLI_PACKAGES     += unzip unrar xclip mediainfo moreutils tar gzip lesspipe
 CLI_PACKAGES     += nodejs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
 CLI_PACKAGES     += pamixer libnotify dunst maim feh networkmanager bc acpi
@@ -173,7 +173,7 @@ terminal:
 	$(INSTALL) kitty
 fonts: 
 	***REMOVED*** Latin script
-	$(INSTALL) ttf-ubuntu-font-family ttf-croscore
+	$(INSTALL) ttf-ubuntu-font-family ttf-croscore ttf-fira-code
 	***REMOVED*** Japanese
 	$(INSTALL) otf-ipafont 
 	***REMOVED*** Chinese
