@@ -133,7 +133,7 @@ cmd extract ${{
 ***REMOVED*** Trash cli bindings
 cmd trash ${{
   ***REMOVED*** fails on large files
-	clear; tput bold; 
+	clear; tput bold; tput setaf 4; 
 	set -f
   files=$(printf "$fx" | tr '\n' ';')
 	printf "%s\n\t" "$fx"
@@ -144,7 +144,7 @@ cmd trash ${{
     ***REMOVED*** idk why we have to do all of this
     while [ "$files" ]; do 
       file="${files%%;*}" 
-      trash-put "$(basename "$file")"
+      trash-put -- "$(basename "$file")"
 
       ***REMOVED*** if last element
       if [ "$files" = "$file" ]; then

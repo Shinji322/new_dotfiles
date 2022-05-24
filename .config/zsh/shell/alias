@@ -9,8 +9,8 @@ alias egrep='egrep --color=auto'
 
 ***REMOVED*** ~-=| Streamlining basic commands |=-~
 alias rm='trash-put'
-alias cp='cpg -g'
-alias mv='mvg -g'
+alias cp='cpg -g -i'
+alias mv='mvg -g -i'
 alias du='du -h' 
 alias df='df -h' 
 alias grep='grep -i --color=auto'

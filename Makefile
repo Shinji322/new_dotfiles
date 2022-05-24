@@ -206,7 +206,11 @@ wine:
 	$(AUR) bottles-git
 	***REMOVED*** These aren't included as dependencies for whatever reason
 	$(INSTALL) python-markdown gtk4 gtksourceview4
-gaming: wine proton-ge
+***REMOVED*** proton-ge:
+***REMOVED*** 	$(AUR) protonup-git
+***REMOVED*** 	$(MKDIR) ~/.steam/root/compatibilitytools.d
+***REMOVED*** 	protonup -y
+gaming: wine 
 	$(INSTALL) steam 
 	$(INSTALL) lutris
 emulators: 
