@@ -1,9 +1,11 @@
 ***REMOVED*** Basic Settings
-set shellopts '-eu'
+set shell zsh
+set shellopts '-euy'
 set ifs "\n"
+set filesep "\n"  ***REMOVED*** default already
+
 set scrolloff 10
 set period 1
-set shell zsh
 set hidden true
 set drawbox true
 set icons true
@@ -11,81 +13,79 @@ set ignorecase true
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 
-***REMOVED*** Custom Functions
+***REMOVED*** ==================== Commands ==========================================
 cmd open ${{
-  case $(file --mime-type "$f" -bL) in
-    ***REMOVED*** text/*|application/json) $EDITOR "$f";;
-    *) xdg-open "$f" &!;;
-  esac
+  case $(file --mime-type "$(readlink -f $f)" -b) in
+	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
+	image/vnd.djvu|application/pdf|application/octet-stream|application/postscript) setsid -f zathura $fx >/dev/null 2>&1 ;;
+        text/*|application/json|inode/x-empty) $EDITOR $fx;;
+	image/x-xcf) setsid -f gimp $f >/dev/null 2>&1 ;;
+	image/svg+xml) display -- $f ;;
+	image/*) rotdir $f | grep -i "\.\(png\|jpg\|jpeg\|gif\|webp\|tif\|ico\)\(_large\)*$" |
+		setsid -f sxiv -aio 2>/dev/null | while read -r file; do
+			[ -z "$file" ] && continue
+			lf -remote "send select \"$file\""
+			lf -remote "send toggle"
+		done &
+		;;
+	audio/*) mpv --audio-display=no $f ;;
+	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
+	application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
+	application/pgp-encrypted) $EDITOR $fx ;;
+        *) for f in $fx; do setsid -f $OPENER $f >/dev/null 2>&1; done;;
+    esac
 }}
 
-cmd paste-async &{{
-  ***REMOVED*** mode="$(cat ~/.local/share/lf/files | head -1)"
-  ***REMOVED*** ***REMOVED*** COLS=$((tput cols)/3)
-  ***REMOVED*** case "$mode" in
-  ***REMOVED***   copy) 
-  ***REMOVED***     ***REMOVED*** tmux splitw -h -p $(($(tput cols)/3)) -- "cpg -g -rn \"$@\" ."
-  ***REMOVED***     tmux splitw -h -p 30 -- bash -c '~/.local/bin/tmux/lf-paste-async.sh'
-  ***REMOVED***     tmux select-pane -l ***REMOVED*** switch to last pane
-  ***REMOVED***     ;;
-  ***REMOVED***   move) 
-  ***REMOVED***     ***REMOVED*** tmux splitw -h -p $(($(tput cols)/3)) -- "mvg -g -n \"$@\" ."
-  ***REMOVED***     tmux splitw -h -p 30 -- bash -c 'for f in $(cat ~/.local/share/lf/files | tail +2); do mvg -g -i "$f" .; done'
-  ***REMOVED***     tmux select-pane -l ***REMOVED*** switch to last pane
-  ***REMOVED***     ;;
-  ***REMOVED*** esac
-
-  ~/.local/bin/tmux/lf-paste-async.sh
-  dunstify "Succesful file transfer!" "$@" -i folder
-  cp ~/.local/share/lf/files ~/.local/share/lf/files.prev
-  rm ~/.local/share/lf/files
-  lf -remote "send clear"
+cmd mkdir $mkdir -p "$(echo $* | tr ' ' '\ ')"
+cmd paste &{{
+    set -- $(cat ~/.local/share/lf/files)
+    mode="$1"
+    shift
+    case "$mode" in
+        copy)
+            rsync -av --ignore-existing --progress -- "$@" . |
+            stdbuf -i0 -o0 -e0 tr '\r' '\n' |
+            while IFS= read -r line; do
+                lf -remote "send $id echo $line"
+            done
+            ;;
+        move) mvg -g -i -n -- "$@" .;;
+    esac
+    rm ~/.local/share/lf/files
+    lf -remote "send clear"
+}}
+cmd extract ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "extract?[y/N]"
+	read ans
+	[ $ans = "y" ] && aunpack $fx
 }}
 
-cmd mkdir ${{
-	clear; tput bold; tput setaf 4;
-
-  printf "Directory Name: "
-  read ans
-  mkdir -p $ans
+cmd trash ${{
+  ~/.local/bin/lf/trash $fx
 }}
-
-cmd mkfile ${{
-	clear; tput bold; tput setaf 2;
-  printf "File Name: "
-  read ans
-  touch $ans
+cmd clear_trash %trash-empty
+cmd restore_trash ${{
+  ids="$(echo -ne '\n'              | \
+    trash-restore                   | \
+    awk '$1 ~ /^[0-9]+/ {print $0}' | \
+    fzf --multi                     | \
+    awk '{print $1}'                | \
+    sed -z 's/\n/,/g;s/,$/\n/')"
+  echo $ids | trash-restore 
+  clear
 }}
-
-cmd mkbakup ${{
-    cp -r "$f" "$f.bak"
+cmd dragon-drag %{{
+    dragon-drop "$f"
 }}
-
-cmd chmod ${{
-	clear; tput bold
-  printf "Mode Bits: "
-  read ans
-
-  for file in "$fx"
-  do
-    ***REMOVED*** let's just make sure it's valid so we don't screw up the file
-    if [ "$ans" = "+x" ]; then
-      chmod +x $file
-    fi
-    if [ "$ans" = "-x" ]; then
-      chmod -x $file
-    fi
-  done
-
-  lf -remote 'send reload'
-}}
-
 cmd setwallpaper ${{ 
   feh --no-fehbg --bg-fill -r -z "$f"
 }}
 
 cmd fzf_jump ${{
-  res="$(find . -maxdepth 3 | fzf --reverse --header='Jump to location')"
+  res="$(fd . --max-depth=3 | fzf --header='Jump to location')"
   if [ -f "$res" ]; then
     cmd="select"
   elif [ -d "$res" ]; then
@@ -94,152 +94,28 @@ cmd fzf_jump ${{
   lf -remote "send $id $cmd \"$res\""
 }}
 
-***REMOVED*** Archive bindings
-cmd extract ${{
-  case "$f" in
-    *.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
-        tar -xjvf ./"$f" ;;
-    *.lzma)      
-        unlzma ./"$f"      ;;
-    *.zip) 
-        unzip "$f" ;;
-    *.cbr|*.rar)       
-        unrar x -ad ./"$f" ;;
-    *.gz)        
-        gunzip ./"$f"      ;;
-    *.cbz|*.epub|*.zip)       
-        unzip ./"$f"       ;;
-    *.z)         
-        uncompress ./"$f"  ;;
-    *.7z|*.arj|*.cab|*.cb7|*.chm|*.deb|*.dmg|*.iso|*.lzh|*.msi|*.pkg|*.rpm|*.udf|*.wim|*.xar)
-        7z x ./"$f"        ;;
-    *.xz)        
-        unxz ./"$f"        ;;
-    *.exe)       
-        cabextract ./"$f"  ;;
-    *.cpio)      
-        cpio -id < ./"$f"  ;;
-    *.cba|*.ace)      
-        unace x ./"$f"      ;;
-    *.tar.gz) 
-        tar -xzvf ./"$f" ;;
-    *.tar) 
-        tar -xvf ./"$f" ;;
-    *) 
-        echo "Unsupported format" ;;
-  esac
-}}
 
-***REMOVED*** Trash cli bindings
-cmd trash ${{
-  ***REMOVED*** fails on large files
-	clear; tput bold; tput setaf 4; 
-	set -f
-  files=$(printf "$fx" | tr '\n' ';')
-	printf "%s\n\t" "$fx"
-	printf "delete?[y/N] "
-	read ans
-  if [ $ans = "y" ] 
-  then
-    ***REMOVED*** idk why we have to do all of this
-    while [ "$files" ]; do 
-      file="${files%%;*}" 
-      trash-put -- "$(basename "$file")"
-
-      ***REMOVED*** if last element
-      if [ "$files" = "$file" ]; then
-        files='' ***REMOVED*** exit while loop
-      else
-        files="${files***REMOVED****;}"
-      fi
-    done
-  fi
-}}
-
-cmd clear_trash %trash-empty
-
-cmd restore_trash ${{
-  trash-restore
-}}
-
-cmd copy-file-contents &{{
-    xclip -sel c < "$f"
-}}
-
-cmd copy-file-path &{{
-    echo "$f" | xclip -sel c
-}}
-
-***REMOVED*** cmd copy-file-name &{{
-***REMOVED***     echo "${f***REMOVED******REMOVED****/}" | xclip -sel c
-***REMOVED*** }}
-
-cmd dragon-drag %{{
-    dragon-drop "$f"
-}}
-cmd dragon-drag-all %{{
-    dragon-drop --all "$f"
-}}
-
-cmd fzf-open ${{
-    choice=$(fzf)
-    [ -n "$choice" ] && cd "$(dirname $choice)"
-}}
-
-cmd bulkrename $vidir
-cmd copy_filename $printf "%s" "$fx" | xclip -selection clipboard
-
-***REMOVED*** Bindings
-***REMOVED*** Remove some defaults
-map m
-map o
-map n
-map "'"
-map '"'
-map d
-map c
-map e
-map f
-map t
-map C
-
-***REMOVED*** File Openers
-map ee $$EDITOR "$f"
-
-***REMOVED*** Archive Mappings
-map ex extract "$f"
-map B bulkrename
-
-***REMOVED*** Trash Mappings
-map dd trash
-map tc clear_trash
-map tr restore_trash
-
-***REMOVED*** Dragon Mapping
-map dr dragon-drag
-map da dragon-drag-all
-
-
-***REMOVED*** Basic Functions
-map . set hidden!
-map p paste-async
-map P paste 
+***REMOVED*** ==================== Remaps ==================================
 map x cut
-map y copy
-map mf mkfile
-map md mkdir
-map mb mkbakup
-map ch chmod
-map bg setwallpaper
-map r rename
-map H top
-map L bottom
-map R reload
-map C clear
-map U unselect
-map fj fzf_jump
+map c
+map m
 
-***REMOVED*** Movement
+***REMOVED*** ==================== Command Bindings ==================================
+cmap <up> cmd-history-prev
+cmap <down> cmd-history-next
+map D trash
+map U restore_trash
+map P paste
+
+***REMOVED*** ==================== Other Bindings ==================================
+map E $$EDITOR "$f"
+map B $vidir
+map Y $printf "%s" "$fx" | xclip -selection clipboard
+map C $xclip -selection clipboard < "$f"
+map mb $cp "$f" "$f.bak"
+
+
+***REMOVED*** ==================== cd to common directories ==================================
 map gtr  cd ~/.local/share/Trash/files
 map gm   cd /run/media/mokou
 

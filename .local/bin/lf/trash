@@ -1,0 +1,16 @@
+***REMOVED***!/bin/sh
+
+lf_trash() {
+  clear; tput bold; tput setaf 4;
+  printf "%s\n\t" "$@"	
+  printf "delete?[y/N] "
+  read ans
+
+  if [ $ans = "y" ]; then
+    for file in $@; do
+      trash-put -- "$file"
+    done
+  fi
+}
+
+lf_trash $@
