@@ -162,4 +162,6 @@ ex=:\
 *.nix=:\
 *.vue=﵂:\
 *.scss=:\
+Cargo.lock=:\
+Cargo.toml=:\
 "

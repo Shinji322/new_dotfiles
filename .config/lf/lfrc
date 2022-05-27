@@ -77,9 +77,9 @@ cmd restore_trash ${{
   echo $ids | trash-restore 
   clear
 }}
-cmd dragon-drag %{{
-    dragon-drop "$f"
-}}
+***REMOVED*** cmd dragon-drag %{{
+***REMOVED***     dragon-drop "$f"
+***REMOVED*** }}
 cmd setwallpaper ${{ 
   feh --no-fehbg --bg-fill -r -z "$f"
 }}
@@ -99,6 +99,8 @@ cmd fzf_jump ${{
 map x cut
 map c
 map m
+map f
+map d
 
 ***REMOVED*** ==================== Command Bindings ==================================
 cmap <up> cmd-history-prev
@@ -106,13 +108,16 @@ cmap <down> cmd-history-next
 map D trash
 map U restore_trash
 map P paste
+map bg setwallpaper
+map dr $dragon-drop "$f"
+map f fzf_jump
 
 ***REMOVED*** ==================== Other Bindings ==================================
 map E $$EDITOR "$f"
 map B $vidir
 map Y $printf "%s" "$fx" | xclip -selection clipboard
 map C $xclip -selection clipboard < "$f"
-map mb $cp "$f" "$f.bak"
+map mb $cp -ri "$f" "$f.bak"
 
 
 ***REMOVED*** ==================== cd to common directories ==================================
