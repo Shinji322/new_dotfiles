@@ -55,7 +55,7 @@ alias e="$EDITOR"
 alias v="$EDITOR"
 alias yt="yt-dlp --add-metadata -i"
 alias ca="calcurse"
-***REMOVED*** alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
+alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
 ***REMOVED*** Let zsh get the entire history 
 alias hist='history 1'
 alias "source .zshrc"="source ~/.config/zsh/zshrc"
@@ -75,4 +75,4 @@ alias cd="z"
 alias du="dust"
 
 ***REMOVED*** For when keys breaek
-alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
+alias archlinux-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
