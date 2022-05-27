@@ -1,2 +1,5 @@
 eval "$(zoxide init zsh)"
-[ -z "$TMUX" ] && tmux
+
+if [[ ! $(tmux list-sessions) ]]; then
+  tmux
+fi
