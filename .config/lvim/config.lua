@@ -1,160 +1,98 @@
---[[
-lvim is the global options object
+-- Neovim (my default settings)
+-- =========================================
+require("user.neovim").config()
 
-Linters should be
-filled in as strings with either
-a global executable or a path to
-an executable
-]]
--- THESE ARE EXAMPLE CONFIGS FEEL FREE TO CHANGE TO WHATEVER YOU WANT
-require "mappings"
-require "plugins"
 
--- general
+-- General
+-- =========================================
 lvim.log.level = "warn"
+lvim.builtin.notify.active = true
 lvim.format_on_save = false
 lvim.colorscheme = "onedarker"
--- to disable icons and use a minimalist setup, uncomment the following
--- lvim.use_icons = false
-
--- keymappings [view all the defaults by pressing <leader>Lk]
 lvim.leader = "space"
--- add your own keymapping
-lvim.keys.normal_mode["<C-s>"] = ":w<cr>"
--- unmap a default keymapping
--- lvim.keys.normal_mode["<C-Up>"] = false
--- edit a default keymapping
--- lvim.keys.normal_mode["<C-q>"] = ":q<cr>"
+lvim.keys.normal_mode[";"] = ":"
 
--- Change Telescope navigation to use j and k for navigation and n and p for history in both input and normal mode.
--- we use protected-mode (pcall) just in case the plugin wasn't loaded yet.
--- local _, actions = pcall(require, "telescope.actions")
--- lvim.builtin.telescope.defaults.mappings = {
---   -- for input mode
---   i = {
---     ["<C-j>"] = actions.move_selection_next,
---     ["<C-k>"] = actions.move_selection_previous,
---     ["<C-n>"] = actions.cycle_history_next,
---     ["<C-p>"] = actions.cycle_history_prev,
---   },
---   -- for normal mode
---   n = {
---     ["<C-j>"] = actions.move_selection_next,
---     ["<C-k>"] = actions.move_selection_previous,
---   },
--- }
-
--- Use which-key to add extra bindings with the leader-key prefix
--- lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<CR>", "Projects" }
--- lvim.builtin.which_key.mappings["t"] = {
---   name = "+Trouble",
---   r = { "<cmd>Trouble lsp_references<cr>", "References" },
---   f = { "<cmd>Trouble lsp_definitions<cr>", "Definitions" },
---   d = { "<cmd>Trouble document_diagnostics<cr>", "Diagnostics" },
---   q = { "<cmd>Trouble quickfix<cr>", "QuickFix" },
---   l = { "<cmd>Trouble loclist<cr>", "LocationList" },
---   w = { "<cmd>Trouble workspace_diagnostics<cr>", "Wordspace Diagnostics" },
--- }
-
--- TODO: User Config for predefined plugins
--- After changing plugin config exit and reopen LunarVim, Run :PackerInstall :PackerCompile
-lvim.builtin.alpha.active = true
-lvim.builtin.alpha.mode = "dashboard"
-lvim.builtin.notify.active = true
-lvim.builtin.terminal.active = true
-lvim.builtin.nvimtree.setup.view.side = "left"
-lvim.builtin.nvimtree.show_icons.git = 0
-
--- if you don't want all the parsers change this to a table of the ones you want
-lvim.builtin.treesitter.ensure_installed = {
-  "bash",
-  "c",
-  "javascript",
-  "json",
-  "lua",
-  "python",
-  "typescript",
-  "tsx",
-  "css",
-  "rust",
-  "java",
-  "yaml",
+-- Customization
+-- =========================================
+-- Initialzing values (~/.local/repos/bloated-lvim-config for more)
+-- =========================================
+lvim.builtin.sell_your_soul_to_devil = { active = false, prada = false } -- if you want microsoft to abuse your soul
+lvim.builtin.lastplace = { active = false } -- change to false if you are jumping to future
+lvim.builtin.tabnine = { active = false } -- change to false if you don't like tabnine
+lvim.builtin.persistence = { active = false } -- change to false if you don't want persistence
+lvim.builtin.presence = { active = false } -- change to true if you want discord presence
+lvim.builtin.orgmode = { active = false } -- change to true if you want orgmode.nvim
+lvim.builtin.dap.active = false -- change this to enable/disable debugging
+lvim.builtin.fancy_statusline = { active = false } -- enable/disable fancy statusline
+lvim.builtin.fancy_wild_menu = { active = false } -- enable/disable cmp-cmdline
+lvim.builtin.fancy_diff = { active = false } -- enable/disable fancier git diff
+lvim.builtin.lua_dev = { active = false } -- change this to enable/disable folke/lua_dev
+lvim.builtin.test_runner = { active = false } -- change this to enable/disable vim-test, ultest
+lvim.builtin.cheat = { active = false } -- enable cheat.sh integration
+lvim.builtin.sql_integration = { active = false } -- use sql integration
+lvim.builtin.smooth_scroll = "cinnamon" -- for smoth scrolling, can be "cinnamon", "neoscroll" or ""
+lvim.builtin.neoclip = { active = false, enable_persistent_history = false }
+lvim.builtin.nonumber_unfocus = false -- diffrentiate between focused and non focused windows
+lvim.builtin.custom_web_devicons = false -- install https://github.com/Nguyen-Hoang-Nam/mini-file-icons
+lvim.builtin.harpoon = { active = false } -- use the harpoon plugin
+lvim.builtin.remote_dev = { active = false } -- enable/disable remote development
+lvim.builtin.cursorline = { active = false } -- use a bit fancier cursorline
+lvim.builtin.motion_provider = "hop" -- change this to use different motion providers ( hop or lightspeed )
+lvim.builtin.hlslens = { active = false } -- enable/disable hlslens
+lvim.builtin.csv_support = false -- enable/disable csv support
+lvim.builtin.sidebar = { active = false } -- enable/disable sidebar
+lvim.builtin.async_tasks = { active = false } -- enable/disable async tasks
+lvim.builtin.metals = {
+  active = false, -- enable/disable nvim-metals for scala development
+  fallbackScalaVersion = "2.13.7",
+  serverVersion = "0.10.9+271-a8bb69f6-SNAPSHOT",
 }
+lvim.builtin.collaborative_editing = { active = false } -- enable/disable collaborative editing
+lvim.builtin.file_browser = { active = false } -- enable/disable telescope file browser
+lvim.builtin.sniprun = { active = false } -- enable/disable sniprun
+lvim.builtin.tag_provider = "symbols-outline" -- change this to use different tag providers ( symbols-outline or vista )
+lvim.builtin.editorconfig = { active = false } -- enable/disable editorconfig
+lvim.builtin.global_statusline = false -- set true to use global statusline
+lvim.builtin.dressing = { active = false } -- enable to override vim.ui.input and vim.ui.select with telescope
+lvim.builtin.refactoring = { active = false } -- enable to use refactoring.nvim code_actions
 
-lvim.builtin.treesitter.ignore_install = { "haskell" }
-lvim.builtin.treesitter.highlight.enabled = true
+-- Setting values for user
+-- =========================================
+local user = os.getenv "USER"
+if user and user == "mokou" then
+  lvim.builtin.dap.active = true
+  lvim.builtin.csv_support = true
+  lvim.builtin.sql_integration.active = true
+  lvim.builtin.lastplace.active = true
+  lvim.builtin.test_runner.active = true
+  lvim.builtin.cheat.active = true
+  lvim.builtin.neoclip.active = true
+  lvim.builtin.sniprun.active = true
+  lvim.builtin.cursorline.active = true
+  lvim.builtin.hlslens.active = true
+  lvim.builtin.async_tasks.active = false
+end
+-- Global Lunarvim
+-- =========================================
+lvim.lsp.diagnostics.virtual_text = false -- I don't like virtual_text
 
--- generic LSP settings
 
--- ---@usage disable automatic installation of servers
--- lvim.lsp.automatic_servers_installation = false
+-- Sourcing other files
+-- =========================================
+if lvim.builtin.dap.active then
+  require("user.dap").config()
+end
 
--- ---configure a server manually. !!Requires `:LvimCacheReset` to take effect!!
--- ---see the full default list `:lua print(vim.inspect(lvim.lsp.automatic_configuration.skipped_servers))`
--- vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "pyright" })
--- local opts = {} -- check the lspconfig documentation for a list of all possible options
--- require("lvim.lsp.manager").setup("pyright", opts)
-
--- ---remove a server from the skipped list, e.g. eslint, or emmet_ls. !!Requires `:LvimCacheReset` to take effect!!
--- ---`:LvimInfo` lists which server(s) are skiipped for the current filetype
--- vim.tbl_map(function(server)
---   return server ~= "emmet_ls"
--- end, lvim.lsp.automatic_configuration.skipped_servers)
-
--- -- you can set a custom on_attach function that will be used for all the language servers
--- -- See <https://github.com/neovim/nvim-lspconfig***REMOVED***keybindings-and-completion>
--- lvim.lsp.on_attach_callback = function(client, bufnr)
---   local function buf_set_option(...)
---     vim.api.nvim_buf_set_option(bufnr, ...)
---   end
---   --Enable completion triggered by <c-x><c-o>
---   buf_set_option("omnifunc", "v:lua.vim.lsp.omnifunc")
--- end
-
--- -- set a formatter, this will override the language server formatting capabilities (if it exists)
--- local formatters = require "lvim.lsp.null-ls.formatters"
--- formatters.setup {
---   { command = "black", filetypes = { "python" } },
---   { command = "isort", filetypes = { "python" } },
---   {
---     -- each formatter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md***REMOVED***Configuration
---     command = "prettier",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--print-with", "100" },
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "typescript", "typescriptreact" },
---   },
--- }
-
--- -- set additional linters
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup {
---   { command = "flake8", filetypes = { "python" } },
---   {
---     -- each linter accepts a list of options identical to https://github.com/jose-elias-alvarez/null-ls.nvim/blob/main/doc/BUILTINS.md***REMOVED***Configuration
---     command = "shellcheck",
---     ---@usage arguments to pass to the formatter
---     -- these cannot contain whitespaces, options such as `--line-width 80` become either `{'--line-width', '80'}` or `{'--line-width=80'}`
---     extra_args = { "--severity", "warning" },
---   },
---   {
---     command = "codespell",
---     ---@usage specify which filetypes to enable. By default a providers will attach to all the filetypes it supports.
---     filetypes = { "javascript", "python" },
---   },
--- }
+require("user.null_ls").config()
 
 -- Additional Plugins
--- lvim.plugins = {
---     {"folke/tokyonight.nvim"},
---     {
---       "folke/trouble.nvim",
---       cmd = "TroubleToggle",
---     },
--- }
+-- =========================================
+require("user.plugins").config()
 
--- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- lvim.autocommands.custom_groups = {
---   { "BufWinEnter", "*.lua", "setlocal ts=8 sw=8" },
--- }
+-- Autocommands
+-- =========================================
+require("user.autocommands").config()
+
+-- Additional keybindings
+-- =========================================
+require("user.keybindings").config()
