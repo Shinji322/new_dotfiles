@@ -1,16 +1,20 @@
 ***REMOVED***!/bin/sh
 
+IFS=$'\n'
 lf_trash() {
   clear; tput bold; tput setaf 4;
-  printf "%s\n\t" "$@"	
-  printf "delete?[y/N] "
+  printf "\n%s" "$@"
+
+  ***REMOVED*** Set color to red
+  tput setaf 1;
+  printf "\n\tdelete?[y/N] "
   read ans
 
-  if [ $ans = "y" ]; then
-    for file in $@; do
-      trash-put -- "$file"
-    done
-  fi
+  [ "$ans" != "y" ] && exit
+  for file in "$@"; do
+    trash-put -- "$file"
+  done
 }
 
-lf_trash $@
+lf_trash "$@"
+clear
