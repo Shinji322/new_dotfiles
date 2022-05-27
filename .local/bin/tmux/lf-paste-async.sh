@@ -4,10 +4,11 @@
 copy() {
   while IFS="" read -r p || [ -n "$p" ]
   do
+    dunstify "Begun transferring" "$p"
     if [ -z "$(which cpg)" ]; then
-      cpg -g -ri "$p" $1
+      cpg -g -ri -- "$p" "$1"
     else
-      cp -ri "$p" $1
+      cp -ri -- "$p" "$1"
     fi
   done <<< "$(tail +2 ~/.local/share/lf/files)"
 }
@@ -15,10 +16,11 @@ copy() {
 move() {
   while IFS="" read -r p || [ -n "$p" ]
   do
+    dunstify "Begun transferring:" "$p"
     if [ -z "$(which mvg)" ]; then
-      mvg -g -i "$p" $1
+      mvg -g -i -- "$p" "$1"
     else
-      mv -i "$p" $1
+      mv -i -- "$p" "$1"
     fi
   done <<< "$(tail +2 ~/.local/share/lf/files)"
 }
@@ -26,9 +28,11 @@ move() {
 COLS=$(($(tput cols)/3))
 case "$(head -1 ~/.local/share/lf/files)" in
   copy)
-    tmux split-window -h -p $COLS -- move "$1"
+    ***REMOVED*** tmux split-window -h -p $COLS -- copy "$1"
+    tmux split-window -h -p 20 -- copy "$1"
     ;;
   move)
-    tmux split-window -h -p $COLS -- copy "$1"
+    ***REMOVED*** tmux split-window -h -p $COLS -- move "$1"
+    tmux split-window -h -p 20 -- move "$1"
     ;;
 esac
