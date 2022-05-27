@@ -178,17 +178,26 @@ fonts:
 	$(INSTALL) otf-ipafont 
 	***REMOVED*** Chinese
 	$(INSTALL) adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ***REMOVED*** Simplified
-	$(INSTALL) adobe-source-han-sans-tw-fonts adobe-source-han-serif-tw-fonts ***REMOVED*** Traditional 
+	$(INSTALL) adobe-source-han-sans-tw-fonts adobe-source-han-serif-tw-fonts ***REMOVED*** Traditional
 	***REMOVED*** Korean
 	$(INSTALL) adobe-source-han-sans-kr-fonts ttf-baekmuk
 	***REMOVED*** Nerd
 	$(AUR) nerd-fonts-noto-sans-regular-complete
 	***REMOVED*** Emoji
 	$(INSTALL) noto-fonts-emoji
+***REMOVED*** dap: ***REMOVED*** For vim debugging
+***REMOVED*** 	$(INSTALL) python-debugpy
+***REMOVED*** 	$(MKDIR) $(XDG_DATA_HOME)/virtualenvs
+***REMOVED*** 	python -m venv $(XDG_DATA_HOME)/virtualenvs/debugpy
+***REMOVED*** 	$(XDG_DATA_HOME)/virtualenvs/debugpy/bin/python -m pip install debugpy
 lunarvim:
 	$(INSTALL) neovim
 	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) -y ***REMOVED*** needs to be installed after node, rust, and python
-	$(NPM) bash-language-server
+	$(NPM) bash-language-server ***REMOVED*** Lsp Install doesn't work for some reason
+	$(INSTALL) luacheck
+	lvim +PackerSync +LvimSyncCorePlugins
+	***REMOVED*** lvim -c ":PackerSync | q"
+	***REMOVED*** lvim -c ":LvimSyncCorePlugins | q"
 text-editor: lunarvim
 	$(AUR) sc-im-git
 browser: 
@@ -199,21 +208,21 @@ browser:
 	***REMOVED*** $(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-localcdn
 data-hoarder:
 	$(AUR) gallery-dl-bin twint
-	$(AUR) cyberdropdownloader 
-wine: 
+	$(AUR) cyberdropdownloader
+wine:
 	$(INSTALL) wine winetricks
 	$(MKDIR) $(XDG_DATA_HOME)/wineprefixes
 	$(AUR) bottles-git
-	***REMOVED*** These aren't included as dependencies for whatever reason
+	***REMOVED*** These aren't included as dependencies for bottles for whatever reason
 	$(INSTALL) python-markdown gtk4 gtksourceview4
 ***REMOVED*** proton-ge:
 ***REMOVED*** 	$(AUR) protonup-git
 ***REMOVED*** 	$(MKDIR) ~/.steam/root/compatibilitytools.d
 ***REMOVED*** 	protonup -y
-gaming: wine 
-	$(INSTALL) steam 
+gaming: wine
+	$(INSTALL) steam
 	$(INSTALL) lutris
-emulators: 
+emulators:
 	$(AUR) citra-qt-git
 social-media:
 	$(INSTALL) discord
@@ -224,19 +233,21 @@ themes:
 	$(INSTALL) $(PTHEMES)
 	$(AUR) $(ATHEMES)
 mpd:
-	$(INSTALL) mpd
+	$(INSTALL) mpd timidity++
 	***REMOVED***touch ~/.cache/mpd.db
 	$(MKDIR) $(XDG_DATA_HOME)/mpd
+	$(MKDIR) $(XDG_DATA_HOME)/mpd/playlists
 	touch $(XDG_DATA_HOME)/mpd/database
-musikcube: 
+	touch $(XDG_DATA_HOME)/mpd/state
+musikcube:
 	$(AUR) musikcube
 codecs:
 	***REMOVED*** Audio codecs
 	$(INSTALL) flac wavpack opus libamd libvorbis
 	***REMOVED*** Video codecs
 	$(INSTALL) xvidcore x264 x265 libmpeg2 aom libvpx libtheora libdv schroedinger
-mkv:
-	$(AUR) mkvtoolnix-gui
+mkv: ***REMOVED*** Episode 6 of Cardcaptor Sakura had subtitles exactly 1.05 seconds off (subtitles were timed with the English Dub rather than the japanese dub)
+	$(AUR) mkvtoolnix-gui ***REMOVED*** This tool helped me fix that
 
 ***REMOVED*** Local servers
 searx:
@@ -244,7 +255,7 @@ searx:
 ***REMOVED*** This sets up danbooru with grabber configs 
 danbooru:
 	***REMOVED*** Fix this
-	curl -LO https://bionus.github.io/imgbrd-grabber/docs/commands/danbooru.js $(XDG_CONFIG_HOME)/Bionusdanbooru.js
+	curl -LO https://bionus.github.io/imgbrd-grabber/docs/commands/danbooru.js $(XDG_CONFIG_HOME)/Bionus/grabber/danbooru.js
 	npm install -g axios form-data open
 
 ***REMOVED*** Systemd
