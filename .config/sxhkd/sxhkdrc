@@ -60,13 +60,11 @@ Alt_L + tab
 ***REMOVED*** |_|_|_|\___.\___||_|<___| \_|_.\___/|_|_| |_| |_|  \___/|_|/__/
 ***REMOVED***                                                                
 super + F7
-    playerctl --player=mpd play-pause
+    mpc toggle
 super + F6
-    playerctl --player=mpd previous
+    mpc prev
 super + F8
-    playerctl --player=mpd next
-super + F5
-    playerctl --player=mpd stop 
+    mpc next
 super + F9
     ~/.local/bin/mpdvolume down
 super + F10
