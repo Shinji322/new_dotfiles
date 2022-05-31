@@ -81,7 +81,8 @@ cmd restore_trash ${{
 ***REMOVED***     dragon-drop "$f"
 ***REMOVED*** }}
 cmd setwallpaper ${{ 
-  feh --no-fehbg --bg-fill -r -z "$f"
+  ***REMOVED*** feh --no-fehbg --bg-fill -r -z "$f"
+  setbg "$f"
 }}
 
 cmd fzf_jump ${{
