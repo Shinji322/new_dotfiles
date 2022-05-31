@@ -45,7 +45,7 @@ dunst &
 blueberry-tray &
 sxhkd &
 calcurse --daemon
-***REMOVED***~/.scripts/alias/mpd &
+~/.scripts/alias/mpd &
 ***REMOVED***~/.scripts/screenlayout/rog_zephyrus_dual.sh &
 ~/.scripts/system/wallpaper &
 ~/.scripts/alias/searx &
