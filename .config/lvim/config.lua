@@ -37,7 +37,7 @@ lvim.builtin.custom_web_devicons = false -- install https://github.com/Nguyen-Ho
 lvim.builtin.harpoon = { active = false } -- use the harpoon plugin
 lvim.builtin.remote_dev = { active = false } -- enable/disable remote development
 lvim.builtin.cursorline = { active = false } -- use a bit fancier cursorline
-lvim.builtin.motion_provider = "hop" -- change this to use different motion providers ( hop or lightspeed )
+lvim.builtin.motion_provider = "hop"
 lvim.builtin.hlslens = { active = false } -- enable/disable hlslens
 lvim.builtin.csv_support = false -- enable/disable csv support
 lvim.builtin.sidebar = { active = false } -- enable/disable sidebar
@@ -71,10 +71,11 @@ if user and user == "mokou" then
   lvim.builtin.cursorline.active = true
   lvim.builtin.hlslens.active = true
   lvim.builtin.async_tasks.active = false
+  lvim.builtin.motion_provider = "hop"
 end
 -- Global Lunarvim
 -- =========================================
-lvim.lsp.diagnostics.virtual_text = false -- I don't like virtual_text
+lvim.lsp.diagnostics.virtual_text = false -- I don't like virtual_text fofr diagnostics
 
 
 -- Sourcing other files

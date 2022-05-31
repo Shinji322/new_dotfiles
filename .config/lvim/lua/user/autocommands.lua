@@ -49,67 +49,87 @@ augroup END
   end
 
   local codelens_viewer = "lua require('nvim-lightbulb').update_lightbulb()"
-  local user = os.getenv "USER"
-  if user and user == "abz" then
-    codelens_viewer = "lua require('user.codelens').show_line_sign()"
-  end
+  -- local user = os.getenv "USER"
+  -- if user and user == "abz" then
+  --   codelens_viewer = "lua require('user.codelens').show_line_sign()"
+  -- end
 
-  lvim.autocommands.custom_groups = {
-    { "CursorHold", "*.rs,*.go,*.ts,*.tsx", codelens_viewer },
-
-    -- toggleterm
-    { "TermOpen", "term://*", "lua require('user.keybindings').set_terminal_keymaps()" },
-
-    -- dashboard
-    { "FileType", "alpha", "nnoremap <silent> <buffer> q :q<CR>" },
-
-    -- c, cpp
-    { "Filetype", "c,cpp", "nnoremap <leader>H <Cmd>ClangdSwitchSourceHeader<CR>" },
-
-    -- go
+  -- I might need to remove the quotation marks around "command"
+  vim.api.nvim_create_autocmd(
+    { "CursorHold" },
     {
-      "Filetype",
-      "go",
-      "nnoremap <leader>H <cmd>lua require('lvim.core.terminal')._exec_toggle({cmd='go vet .;read',count=2,direction='float'})<CR>",
-    },
-
-    -- java
+      pattern = "*.rs,*.go,*.ts,*.tsx",
+      command = codelens_viewer
+    }
+  )
+  -- Terminal
+  vim.api.nvim_create_autocmd(
+    { "TermOpen" },
     {
-      "Filetype",
-      "java",
-      "nnoremap <leader>r <cmd>lua require('toggleterm.terminal').Terminal:new {cmd='mvn package;read', hidden =false}:toggle()<CR>",
-    },
+      pattern = "term://*",
+      command = "lua require('user.keybindings').set_terminal_keymaps()"
+    }
+  )
+  -- dashboard
+  vim.api.nvim_create_autocmd(
+    { "FileType" },
     {
-      "Filetype",
-      "java",
-      "nnoremap <leader>m <cmd>lua require('toggleterm.terminal').Terminal:new {cmd='mvn compile;read', hidden =false}:toggle()<CR>",
-    },
+      pattern = "alpha",
+      command = "nnoremap <silent> <buffer> q :q<CR>"
+    }
+  )
+  vim.api.nvim_create_autocmd(
+    { "FileType" },
     {
-      "Filetype",
-      "scala,sbt,java",
-      "lua require('user.metals').config()",
-    },
-
-    -- rust
+      pattern = {"*.c", "*.cpp"},
+      command = "nnoremap <leader>H <Cmd>ClangdSwitchSourceHeader<CR>"
+    }
+  )
+  vim.api.nvim_create_autocmd(
+    { "FileType" },
     {
-      "Filetype",
-      "rust",
-      "nnoremap <leader>H <cmd>lua require('lvim.core.terminal')._exec_toggle({cmd='cargo clippy;read',count=2,direction='float'})<CR>",
-    },
-    { "Filetype", "rust", "nnoremap <leader>lm <Cmd>RustExpandMacro<CR>" },
-    { "Filetype", "rust", "nnoremap <leader>lH <Cmd>RustToggleInlayHints<CR>" },
-    { "Filetype", "rust", "nnoremap <leader>le <Cmd>RustRunnables<CR>" },
-    { "Filetype", "rust", "nnoremap <leader>lh <Cmd>RustHoverActions<CR>" },
-    { "Filetype", "rust", "nnoremap <leader>lc <Cmd>RustOpenCargo<CR>" },
+      pattern = "*.go",
+      command = "nnoremap <leader>H <cmd>lua require('lvim.core.terminal')._exec_toggle({cmd='go vet .;read',count=2,direction='float'})<CR>"
+    }
+  )
+  vim.api.nvim_create_autocmd(
+    { "FileType" },
+    {
+      pattern = "*.rs",
+      command = "nnoremap <leader>H <cmd>lua require('lvim.core.terminal')._exec_toggle({cmd='cargo clippy;read',count=2,direction='float'})<CR>"
+    }
+  )
+  vim.api.nvim_create_autocmd({"FileType"}, {pattern="*.rs", command="nnoremap <leader>lm <Cmd>RustExpandMacro<CR>"})
+  vim.api.nvim_create_autocmd({"FileType"}, {pattern="*.rs", command="nnoremap <leader>lH <Cmd>RustToggleInlayHints<CR>"})
+  vim.api.nvim_create_autocmd({"FileType"}, {pattern="*.rs", command="nnoremap <leader>le <Cmd>RustRunnables<CR>"})
+  vim.api.nvim_create_autocmd({"FileType"}, {pattern="*.rs", command="nnoremap <leader>lh <Cmd>RustHoverActions<CR>"})
+  vim.api.nvim_create_autocmd({"FileType"}, {pattern="*.rs", command="nnoremap <leader>lc <Cmd>RustOpenCargo<CR>"})
 
-    -- typescript
-    { "Filetype", "typescript,typescriptreact", "nnoremap <leader>lA <Cmd>TSLspImportAll<CR>" },
-    { "Filetype", "typescript,typescriptreact", "nnoremap <leader>lR <Cmd>TSLspRenameFile<CR>" },
-    { "Filetype", "typescript,typescriptreact", "nnoremap <leader>lO <Cmd>TSLspOrganize<CR>" },
+  vim.api.nvim_create_autocmd(
+    {"FileType"},
+    {
+      pattern= {".ts", ".tsx"},
+      command = "nnoremap <leader>lA <Cmd>TSLspImportAll<CR>"
+    }
+  )
+  vim.api.nvim_create_autocmd(
+    {"FileType"},
+    {
+      pattern= {".ts", ".tsx"},
+      command = "nnoremap <leader>lR <Cmd>TSLspRenameFile<CR>"
+    }
+  )
+  vim.api.nvim_create_autocmd(
+    {"FileType"},
+    {
+      pattern= {".ts", ".tsx"},
+      command = "nnoremap <leader>lO <Cmd>TSLspOrganize<CR>"
+    }
+  )
 
-    -- uncomment the following if you want to show diagnostics on hover
-    -- { "CursorHold", "*", "lua vim.diagnostic.open_float(0,{scope='line'})" },
-  }
+  -- uncomment the following if you want to show diagnostics on hover
+  -- { "CursorHold", "*", "lua vim.diagnostic.open_float(0,{scope='line'})" },
+  -- }
 end
 
 M.make_run = function()

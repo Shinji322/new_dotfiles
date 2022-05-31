@@ -90,11 +90,12 @@ M.config = function()
       cmd = "Trouble",
     },
     {
-      "ggandor/lightspeed.nvim",
+      "phaazon/hop.nvim",
+      event = "BufRead",
       config = function()
-        require("user.lightspeed").config()
+        require("user.hop").config()
       end,
-      disable = lvim.builtin.motion_provider ~= "lightspeed",
+      -- disable = lvim.builtin.motion_provider ~= "hop",
     },
     {
       "lukas-reineke/indent-blankline.nvim",
@@ -160,6 +161,20 @@ M.config = function()
         require("user.zen").config()
       end,
       event = "BufRead",
+    },
+    {
+      "norcalli/nvim-colorizer.lua",
+      config = function()
+        require("colorizer").setup({ "*" }, {
+          RGB = true, -- ***REMOVED***RGB hex codes
+          RRGGBB = true, -- ***REMOVED***RRGGBB hex codes
+          RRGGBBAA = true, -- ***REMOVED***RRGGBBAA hex codes
+          rgb_fn = true, -- CSS rgb() and rgba() functions
+          hsl_fn = true, -- CSS hsl() and hsla() functions
+          css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
+          css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
+        })
+      end,
     },
     {
       -- A much more powerful find and replace function

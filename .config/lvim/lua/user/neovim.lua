@@ -34,6 +34,7 @@ M.config = function()
   vim.opt.confirm = true -- make vim prompt me to save before doing destructive things
   vim.opt.autowriteall = true -- automatically :write before running commands and changing files
   vim.opt.clipboard = "unnamedplus"
+  vim.opt.autochdir = true -- make sure we are in the correct path
   if vim.fn.has "nvim-0.7" ~= 0 then
     vim.opt.fillchars = {
       fold = " ",
