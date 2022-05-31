@@ -58,10 +58,8 @@ export PASSWORD_STORE_DIR="${XDG_DATA_HOME:-$HOME/.local/share}/password-store"
 export TERMINFO="${XDG_DATA_HOME:-$HOME/.local/share}/terminfo"
 export TERMINFO_DIRS="${XDG_DATA_HOME:-$HOME/.local/share}/terminfo:/usr/share/terminfo"
 export FFMPEG_DATADIR="${XDG_CONFIG_HOME:-$HOME/.config}/ffmpeg"
-export CUDA_CACHE_PATH="${XDG_DATA_HOME:-$HOME/.local/share}/nv"
 export DOCKER_CONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/docker"
 export TMUX_TMPDIR="$XDG_RUNTIME_DIR"
-export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 export CARGO_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/cargo"
 export RUSTUP_HOME="${XDG_DATA_HOME:-$HOME/.local/share}/rustup"
 export GOPATH="${XDG_DATA_HOME:-$HOME/.local/share}/go"
@@ -69,12 +67,18 @@ export NUGET_PACKAGES="${XDG_DATA_HOME:-$HOME/.local/share}/NuGetPackages"
 export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
 export SQLITE_HISTORY="${XDG_CACHE_HOME:-$HOME/.cache}/sqlite_history"
 
+
+***REMOVED*** Doesn't seem to work but let's try it anyway
+export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
+export CUDA_CACHE_PATH="${XDG_DATA_HOME:-$HOME/.local/share}/nv"
+
+
+***REMOVED*** Program options
 export FZF_DEFAULT_OPTS="--margin 5% --border"
-
-
 ***REMOVED*** Less  - check `man terminfo`
 ***REMOVED***
 export LESS=-R
+export LESSOPEN="|lesspipe.sh %s"
 
 ***REMOVED*** Blink Mode
 export LESS_TERMCAP_mb=$(tput bold; tput setaf 2) ***REMOVED*** green

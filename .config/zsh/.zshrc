@@ -11,18 +11,18 @@ setopt interactive_comments
 
 
 ***REMOVED*** Source all other files
-zsh_add_file "$ZDOTDIR/shell/profile" ***REMOVED*** needs to be set before alias
-zsh_add_file "$ZDOTDIR/shell/alias"
-zsh_add_file "$ZDOTDIR/shell/startup"
-source $HOME/.config/lf/LF_ICONS
+zsh_add_file "$HOME/.config/shell/profile" ***REMOVED*** needs to be set before alias
+zsh_add_file "$XDG_CONFIG_HOME/shell/alias"
+zsh_add_file "$XDG_CONFIG_HOME/shell/startup"
+source $XDG_CONFIG_HOME/lf/LF_ICONS
 
 zsh_add_file "$ZDOTDIR/zsh_completions" ***REMOVED*** Calls  compinit
 zsh_add_file "$ZDOTDIR/zsh_cleanup" ***REMOVED*** Compinit (needs to be set before vi mode)
 zsh_add_file "$ZDOTDIR/zsh_history"
 zsh_add_file "$ZDOTDIR/zsh_vi_mode"
 
-zsh_add_file "$ZDOTDIR/shell/shortcut"
-zsh_add_file "$ZDOTDIR/shell/functions"
+zsh_add_file "$XDG_CONFIG_HOME/shell/shortcut"
+zsh_add_file "$XDG_CONFIG_HOME/shell/functions"
 zsh_add_file "$ZDOTDIR/zsh_keybindings"
 
 ***REMOVED*** Plugins installed by package manager

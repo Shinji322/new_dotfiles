@@ -9,17 +9,14 @@ alias egrep='egrep --color=auto'
 
 ***REMOVED*** ~-=| Streamlining basic commands |=-~
 alias rm='trash-put'
-alias cp='cpg -g'
-alias mv='mvg -g'
+alias cp='cpg -g -i'
+alias mv='mvg -g -i'
 alias du='du -h' 
 alias df='df -h' 
 alias grep='grep -i --color=auto'
 alias mkdir='mkdir -p'
 
 ***REMOVED*** ~-=| Shortcuts |=-~
-alias nvim="lvim"
-alias vim="lvim"
-alias vi="lvim"
 alias scim="sc-im"
 alias cat='bat'
 alias sxiv='sxiv -a'
@@ -56,6 +53,7 @@ alias v="$EDITOR"
 alias yt="yt-dlp --add-metadata -i"
 alias ca="calcurse"
 alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
+***REMOVED*** alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
 ***REMOVED*** Let zsh get the entire history 
 alias hist='history 1'
 alias "source .zshrc"="source ~/.config/zsh/zshrc"
@@ -74,5 +72,13 @@ alias g="lazygit"
 alias cd="z"
 alias du="dust"
 
+***REMOVED*** Tmux
+alias ta='tmux attach -t'
+alias tad='tmux attach -d -t'
+alias ts='tmux new-session -s'
+alias tl='tmux list-sessions'
+alias tksv='tmux kill-server'
+alias tkss='tmux kill-session -t'
+
 ***REMOVED*** For when keys breaek
-alias archlinux-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
+alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
