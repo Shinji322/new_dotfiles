@@ -1,4 +1,0 @@
-***REMOVED***!/bin/sh
-***REMOVED*** This converts a bash array to valid JSON
-
-printf '%s\n' "$@" | jq -R . | jq -s .
