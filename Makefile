@@ -21,7 +21,8 @@ AUR_CLI_PACKAGES := atool task-spooler lf-git
 AUR_HELPER       := yay
 
 ***REMOVED*** Personal Packages relevant to me
-PACKAGES         := calcurse syncthing qbittorrent rofi sxiv sxhkd dmenu
+***REMOVED*** sxiv is archived so we use nsxiv instead
+PACKAGES         := calcurse syncthing qbittorrent rofi sxhkd dmenu
 PACKAGES         += docker docker-compose
 PACKAGES         += zoxide lazygit gendesk flameshot pandoc
 PACKAGES         += nmap tmux jq redshift htmlq glow tealdeer dust bottom difftastic
@@ -32,7 +33,7 @@ PACKAGES         += nmap tmux jq redshift htmlq glow tealdeer dust bottom diffta
 PACKAGES         += exfat-utils streamlink sysstat 
 AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk picom-git
 AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center zap-bin
-AUR_PACKAGES     += dragon-drop
+AUR_PACKAGES     += dragon-drop nsxiv
 ***REMOVED***AUR_PACKAGES     += qdirstat-bin
 
 
@@ -194,7 +195,8 @@ lunarvim:
 	$(INSTALL) neovim
 	bash <(curl -s https://raw.githubusercontent.com/lunarvim/lunarvim/master/utils/installer/install.sh) -y ***REMOVED*** needs to be installed after node, rust, and python
 	$(NPM) bash-language-server ***REMOVED*** Lsp Install doesn't work for some reason
-	$(INSTALL) luacheck
+	$(INSTALL) luacheck shellcheck
+	$(AUR) vale-git
 	lvim +PackerSync +LvimSyncCorePlugins
 	***REMOVED*** lvim -c ":PackerSync | q"
 	***REMOVED*** lvim -c ":LvimSyncCorePlugins | q"
@@ -207,6 +209,9 @@ browser:
 	***REMOVED*** $(AUR) librewolf-bin 
 	***REMOVED*** $(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-localcdn
 data-hoarder:
+	$(INSTALL) beets
+	$(MKDIR) $(XDG_DATA_HOME)/beets
+	touch $(XDG_DATA_HOME)/beets/library.db
 	$(AUR) gallery-dl-bin twint
 	$(AUR) cyberdropdownloader
 wine:
