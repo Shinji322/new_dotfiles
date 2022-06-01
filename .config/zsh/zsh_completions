@@ -1,7 +1,16 @@
 ***REMOVED*** Basic auto/tab complete:
 fpath+="$ZDOTDIR/completion/"
-autoload -U compinit
+***REMOVED*** Lazyload compinit
+autoload -Uz compinit
 zstyle ':completion:*' menu select
 zmodload zsh/complist
-compinit
+
+***REMOVED*** This is important for speed, we execute compinit in the background so as not to affect shell startup
+{
+  ***REMOVED*** Dramatically increases shell startup
+  zcompdump="${ZDOTDIR:-$HOME}/.zcompdump"
+  if [[ -s "$zcompdump" && (! -s "${zcompdump}.zwc" || "$zcompdump" -nt "${zcompdump}.zwc") ]]; then
+    zcompile "$zcompdump"
+  fi
+} &!
 _comp_options+=(globdots) ***REMOVED*** Include hidden files
