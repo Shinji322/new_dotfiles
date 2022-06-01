@@ -1,5 +1,0 @@
-eval "$(zoxide init zsh)"
-
-if [[ ! $(tmux list-sessions) ]]; then
-  tmux
-fi
