@@ -28,7 +28,7 @@ lvim.builtin.fancy_wild_menu = { active = false } -- enable/disable cmp-cmdline
 lvim.builtin.fancy_diff = { active = false } -- enable/disable fancier git diff
 lvim.builtin.lua_dev = { active = false } -- change this to enable/disable folke/lua_dev
 lvim.builtin.test_runner = { active = false } -- change this to enable/disable vim-test, ultest
-lvim.builtin.cheat = { active = false } -- enable cheat.sh integration
+lvim.builtin.cheat = { active = true } -- enable cheat.sh integration
 lvim.builtin.sql_integration = { active = false } -- use sql integration
 lvim.builtin.smooth_scroll = "cinnamon" -- for smoth scrolling, can be "cinnamon", "neoscroll" or ""
 lvim.builtin.neoclip = { active = false, enable_persistent_history = false }
