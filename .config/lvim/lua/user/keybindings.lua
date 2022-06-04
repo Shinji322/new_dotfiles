@@ -96,10 +96,11 @@ end
 M.config = function()
   -- Additional keybindings
   -- =========================================
-  lvim.keys.normal_mode["<CR>"] = {
-    "<cmd>lua require('user.neovim').maximize_current_split()<CR>",
-    { noremap = true, silent = true, nowait = true },
-  }
+  lvim.keys.normal_mode["<A-h>"] = "<C-w>h";
+  lvim.keys.normal_mode["<A-j>"] = "<C-w>j";
+  lvim.keys.normal_mode["<A-k>"] = "<C-w>k";
+  lvim.keys.normal_mode["<A-l>"] = "<C-w>l";
+
   lvim.keys.insert_mode["<A-a>"] = "<ESC>ggVG<CR>"
   lvim.keys.insert_mode["jk"] = "<ESC>:w<CR>"
   lvim.keys.insert_mode["<C-s>"] = "<cmd>lua vim.lsp.buf.signature_help()<cr>"
@@ -118,6 +119,9 @@ M.config = function()
   elseif vim.fn.has "linux" then
     lvim.keys.normal_mode["gx"] =
       [[<cmd>lua os.execute("xdg-open " .. vim.fn.shellescape(vim.fn.expand "<cWORD>")); vim.cmd "redraw!"<cr>]]
+  end
+  if lvim.builtin.cheat.active then
+    lvim.keys.normal_mode["?"] = "<cmd>Cheat<CR>";
   end
   if lvim.builtin.sidebar.active then
     lvim.keys.normal_mode["E"] = ":SidebarNvimToggle<cr>"

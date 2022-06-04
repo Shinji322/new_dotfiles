@@ -186,6 +186,13 @@ M.make_run = function()
 
     -- toml
     { "FileType", "toml", "lua require('cmp').setup.buffer { sources = { { name = 'crates' } } }" },
+
+    -- markdown
+    {
+      "FileType",
+      "markdown",
+      "setlocal spell"
+    }
   }
 end
 
