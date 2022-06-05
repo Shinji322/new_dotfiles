@@ -2,15 +2,15 @@
 	***REMOVED*** On NVIDIA laptops: make all && make nvidia
 
 ***REMOVED*** Packages
-BASE_PKGS        := filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext 
-BASE_PKGS        += pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman 
-BASE_PKGS        += iputils iproute2 autoconf sudo automake binutils bison fakeroot flex gcc groff libtool m4 
-BASE_PKGS        += make patch pkgconf texinfo which 
-BASE_PKGS        += systemd systemd-sysvcompat 
+BASE_PKGS        := filesystem gcc-libs glibc bash coreutils file findutils gawk grep procps-ng sed tar gettext
+BASE_PKGS        += pciutils psmisc shadow util-linux bzip2 gzip xz licenses pacman
+BASE_PKGS        += iputils iproute2 autoconf sudo automake binutils bison fakeroot flex gcc groff libtool m4
+BASE_PKGS        += make patch pkgconf texinfo which
+BASE_PKGS        += systemd systemd-sysvcompat
 BASE_PKGS        += man-db curl entr
 
 CLI_PACKAGES     := neovim
-CLI_PACKAGES     += ripgrep fd exa fzf git-delta 
+CLI_PACKAGES     += ripgrep fd exa fzf git-delta
 CLI_PACKAGES     += unzip unrar xclip mediainfo moreutils tar gzip lesspipe
 CLI_PACKAGES     += nodejs npm python-pip valgrind cronie
 CLI_PACKAGES     += mpd mpc ncmpcpp mpv newsboat yt-dlp zathura zathura-pdf-mupdf ffmpeg ffmpegthumbnailer
@@ -30,7 +30,7 @@ PACKAGES         += nmap tmux jq redshift htmlq glow tealdeer dust bottom diffta
 ***REMOVED*** tealdeer: A very fast implementation of tldr in Rust: Simplified, example based and community-driven man pages. 
 ***REMOVED*** dust: du on steroids
 ***REMOVED*** bottom: system monitoring tool
-PACKAGES         += exfat-utils streamlink sysstat 
+PACKAGES         += exfat-utils streamlink sysstat
 AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk picom-git
 AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center zap-bin
 AUR_PACKAGES     += dragon-drop nsxiv
@@ -49,6 +49,7 @@ MKDIR            := mkdir -p
 ***REMOVED*** repos
 DOTFILES_REPO    := https://github.com/Shinji322/new_dotfiles.git
 FILE_TREE        := https://github.com/Shinji322/file-tree.git
+USER := mokou
 
 
 ***REMOVED*** System related stuff
@@ -70,16 +71,19 @@ install: ***REMOVED******REMOVED*** Install my packages
 	sudo pkgfile --update
 pacman:
 	sudo sed -i "s/^***REMOVED***Color/Color/" /etc/pacman.conf
-	sudo sed -i "/***REMOVED***VerbosePkgLists/a ILoveCandy" /etc/pacman.conf 
+	sudo sed -i "/***REMOVED***VerbosePkgLists/a ILoveCandy" /etc/pacman.conf
 	sudo echo -e "[multilib]\nInclude = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 sudo:
 	sudo echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 xorg:
 	$(INSTALL) xorg-server xorg-xwininfo xorg-xinit xorg-twm xorg-xev
-	$(INSTALL) xorg-xrandr xcompmgr xorg-xprop 
+	$(INSTALL) xorg-xrandr xcompmgr xorg-xprop
 	$(INSTALL) xclip xcolor xsel
-windowmanager:
+i3:
 	$(INSTALL) i3-gaps i3blocks
+awesomewm:
+	$(INSTALL) dex rlwrap vicious
+	$(AUR) awesome-git
 shell:
 	$(INSTALL) zsh
 	$(INSTALL) zsh-autosuggestions zsh-completions
@@ -134,7 +138,7 @@ go:
 	$(INSTALL) go
 
 sdl:
-	$(INSTALL) sdl sdl_image sdl_mixer 
+	$(INSTALL) sdl sdl_image sdl_mixer
 	$(INSTALL) lib32-sdl_image lib32-sdl_mixer
 raylib:
 	$(INSTALL) raylib
@@ -143,19 +147,19 @@ raylib:
 	sudo curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/easings.h > /usr/include/raylib_extras/easings.h
 	sudo curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/raygui.h > /usr/include/raylib_extras/raygui.h
 	sudo curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/rmem.h > /usr/include/raylib_extras/rmem.h
-rmarkdown: 
+rmarkdown:
 	$(INSTALL) r gcc-fortran tk
-pipkgs: 
+pipkgs:
 	$(PIPINSTALL) pipenv virtualenv
 	$(PIPINSTALL) rnnoise-cli
-	$(PIPINSTALL) beautifulsoup4 bs4 requests lxml autoscraper
+	$(PIPINSTALL) beautifulsoup4 bs4 requests httpx lxml autoscraper
 monogame:
 	$(INSTALl) ca-certificates
 	dotnet new --install MonoGame.Templates.CSharp
 	dotnet tool install --global dotnet-mgcb-editor
 	mgcb-editor --register
 
-languages: node python rust go 
+languages: node python rust go
 libraries: sdl raylib rmarkdown pipkgs monogame
 
 
@@ -172,11 +176,11 @@ advcpmv:
 	rm -rf advcpmv
 terminal:
 	$(INSTALL) kitty
-fonts: 
+fonts:
 	***REMOVED*** Latin script
 	$(INSTALL) ttf-ubuntu-font-family ttf-croscore ttf-fira-code
 	***REMOVED*** Japanese
-	$(INSTALL) otf-ipafont 
+	$(INSTALL) otf-ipafont
 	***REMOVED*** Chinese
 	$(INSTALL) adobe-source-han-sans-cn-fonts adobe-source-han-serif-cn-fonts ***REMOVED*** Simplified
 	$(INSTALL) adobe-source-han-sans-tw-fonts adobe-source-han-serif-tw-fonts ***REMOVED*** Traditional
@@ -186,6 +190,8 @@ fonts:
 	$(AUR) nerd-fonts-noto-sans-regular-complete
 	***REMOVED*** Emoji
 	$(INSTALL) noto-fonts-emoji
+	***REMOVED*** Aesthetic fonts
+	$(AUR) cozette-otb ***REMOVED*** nice bitmap font
 ***REMOVED*** dap: ***REMOVED*** For vim debugging
 ***REMOVED*** 	$(INSTALL) python-debugpy
 ***REMOVED*** 	$(MKDIR) $(XDG_DATA_HOME)/virtualenvs
@@ -202,11 +208,11 @@ lunarvim:
 	***REMOVED*** lvim -c ":LvimSyncCorePlugins | q"
 text-editor: lunarvim
 	$(AUR) sc-im-git
-browser: 
+browser:
 	***REMOVED*** just better firefox
 	$(AUR) waterfox-g4-bin
 	$(AUR) brave-bin
-	***REMOVED*** $(AUR) librewolf-bin 
+	***REMOVED*** $(AUR) librewolf-bin
 	***REMOVED*** $(AUR) librewolf-ublock-origin librewolf-extension-dark-reader librewolf-extension-localcdn
 data-hoarder:
 	$(INSTALL) beets
@@ -234,7 +240,7 @@ social-media:
 	$(AUR) bilili
 PTHEMES := python-qdarkstyle
 ATHEMES := gtk-theme-arc-gruvbox-git orchis-theme-git paper-icon-theme-git candy-icons-git
-themes: 
+themes:
 	$(INSTALL) $(PTHEMES)
 	$(AUR) $(ATHEMES)
 mpd:
@@ -257,23 +263,23 @@ mkv: ***REMOVED*** Episode 6 of Cardcaptor Sakura had subtitles exactly 1.05 sec
 ***REMOVED*** Local servers
 searx:
 	docker pull searx/searx
-***REMOVED*** This sets up danbooru with grabber configs 
+***REMOVED*** This sets up danbooru with grabber configs
 danbooru:
 	***REMOVED*** Fix this
 	curl -LO https://bionus.github.io/imgbrd-grabber/docs/commands/danbooru.js $(XDG_CONFIG_HOME)/Bionus/grabber/danbooru.js
 	npm install -g axios form-data open
 
 ***REMOVED*** Systemd
-bluetooth: 
+bluetooth:
 	$(INSTALL) bluez bluez-utils
 	$(SYSTEMD_ENABLE) bluetooth.service
-network: 
+network:
 	$(INSTALL) networkmanager
 	$(SYSTEMD_ENABLE) NetworkManager.service
 automount: ***REMOVED*** Automount hard drives on connect
 	$(INSTALL) udiskie
 	$(SYSTEMD_ENABLE) udisks2.service
-cron: 
+cron:
 	$(INSTALL) cronie
 	$(SYSTEMD_ENABLE) cronie.service
 	cat $(XDG_CONFIG_HOME)/cron/crontab ***REMOVED*** Fix this 
@@ -287,19 +293,19 @@ docker:
 
 ***REMOVED*** Hardware dependent
 nvidia:
-	$(INSTALL) nvidia nvidia-dkms nvidia-prime 
+	$(INSTALL) nvidia nvidia-dkms nvidia-prime
 	$(INSTALL) nvidia-settings nvidia-utils lib32-nvidia-utils
 amd_gpu:
-	$(INSTALL) mesa lib32-mesa 
+	$(INSTALL) mesa lib32-mesa
 	$(INSTALL) xf86-video-amdgpu
 	$(INSTALL) vulkan-radeon amdvlk lib32-vulkan-radeon lib32-amdvlk
-	$(INSTALL) vulkan-tools vulkan-mesa-layers 
+	$(INSTALL) vulkan-tools vulkan-mesa-layers
 ***REMOVED*** Microcode
 amd_cpu:
 	$(INSTALL) amd-ucode
 	grub-mkconfig -o /boot/grub/grub.cfg ***REMOVED*** Let's assume we use grub
 intel_cpu:
-	$(INSTALL) intel-ucode 
+	$(INSTALL) intel-ucode
 	grub-mkconfig -o /boot/grub/grub.cfg ***REMOVED*** Let's assume grub
 intel_gpu:
 	$(INSTALL) vulkan-intel lib32-vulkan-intel
@@ -315,6 +321,10 @@ asus_rog:
 	$(SYSTEMD_ENABLE) supergfxd
 android:
 	$(INSTALL) android-tools mtpfs
+backlight:
+	***REMOVED*** By default, xbacklight doesn't work on AMD Gpus for some reason so I have to use my own script
+	sudo groupadd video ***REMOVED*** returns exit code 9 if group exists
+	sudo usermod -a -G $(MOKOU)
 
 
 ***REMOVED*** Final words
