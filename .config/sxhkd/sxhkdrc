@@ -10,20 +10,8 @@ super + shift + r
     pkill sxhkd && notify-send "sxhkd config reloaded" && sxhkd &
 super + shift + x
     xkill
-
-***REMOVED******REMOVED***             _    _    _  __ _   
-***REMOVED******REMOVED***  _ _ ___ __| |__| |_ (_)/ _| |_ 
-***REMOVED******REMOVED*** | '_/ -_) _` (_-< ' \| |  _|  _|
-***REMOVED******REMOVED*** |_| \___\__,_/__/_||_|_|_|  \__|
-***REMOVED******REMOVED***                                 
-***REMOVED******REMOVED*** Redshift
-***REMOVED***super + r; {a,2,3,4,5} 
-***REMOVED***    [ -n "$(pgrep reshift)" ] && pkill redshift
-***REMOVED***    {redshift -P -t 5000:4000, \
-***REMOVED***     redshift -P -O 2500, \
-***REMOVED***     redshift -P -O 3000, \
-***REMOVED***     redshift -P -O 4000, \
-***REMOVED***     redshift -P -O 5000}
+super + shift + c
+    xdo close
 
 ***REMOVED***                                   _          _
 ***REMOVED***  ___ ___  _ _  ___  ___ ._ _  ___| |_  ___ _| |_ 
@@ -34,9 +22,7 @@ super + shift + x
 super + s
     flameshot gui -p ~/images/screenshots/ -s
 super + shift + s
-    flameshot gui 
-***REMOVED*** super + s
-***REMOVED***     flameshot screen -p ~/images/screenshots/games/
+    flameshot gui
 
 
 ***REMOVED***           __ _ 
@@ -45,9 +31,9 @@ super + shift + s
 ***REMOVED*** |_| \___/_| |_|
 ***REMOVED***                
 ***REMOVED*** Rofi
-super + r 
+super + r
     rofi -show drun
-super + d 
+super + d
     dmenu_run
 ***REMOVED*** alt_l + tab
 Alt_L + tab
@@ -65,15 +51,10 @@ super + F6
     mpc prev
 super + F8
     mpc next
-super + F9
-    ~/.local/bin/mpdvolume down
-super + F10
-    ~/.local/bin/mpdvolume up
-
-super + shift + F9
-    ~/.local/bin/changevolume down
-super + shift + F10
-    ~/.local/bin/changevolume up
+super + {_, shift + } + F9
+    {~/.local/bin/mpdvolume, ~/.local/bin/changevolume} down
+super + {_, shift + } + F10
+    {~/.local/bin/mpdvolume, ~/.local/bin/changevolume} up
 
 
 ***REMOVED***  _           _   _                  
@@ -86,15 +67,15 @@ super + shift + F10
 ***REMOVED***                           |___/     
 ***REMOVED*** hotkeys. These are keybindings that are used to launch applications
 super + Return
-    kitty
+    $TERMINAL
 super + w
-    waterfox-g4
-super + a 
+    $BROWSER
+super + a
     ~/.scripts/sxhkd/search-appimages &
-super + f 
-    kitty ~/.local/bin/lfup
+super + f
+    kitty --class file_manager -e $FILE
 super + r
-    kitty ncmpcpp 
+    kitty --class music_player -e ncmpcpp
 
 
 ***REMOVED*** Asusctl
@@ -115,35 +96,25 @@ super + F1
 ***REMOVED*** i3 related config
 super + {h,j,k,l}
     i3-msg focus {left,down,up,right}
-
 super + shift + {h,j,k,l}
     i3-msg move {left,down,up,right}
-
 super + t
     i3-msg split toggle
-
 super + {0-9}
     i3-msg workspace number {0-9}
-
 super + shift + {0-9}
     i3-msg move container to workspace number {0-9}
-
 super + m
-    i3-msg fullscreen toggle 
-
+    i3-msg fullscreen toggle
 super + {y,u,i,o}
     { i3-msg resize grow width 10 px or 10 ppt, \
       i3-msg resize shrink height 10 px or 10 ppt, \
       i3-msg resize grow height 10 px or 10 ppt, \
       i3-msg resize shrink width 10 px or 10 ppt } 
-
-super + shift + semicolon 
+super + shift + semicolon
     i3-msg reload
-
 super + z
     i3-msg "gaps outer current plus 5; gaps inner current plus 5;"
 super + shift + z
     i3-msg "gaps outer current minus 5; gaps inner current minus 5;"
 
-super + shift + c
-    i3-msg kill

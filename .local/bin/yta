@@ -1,0 +1,21 @@
+***REMOVED***!/bin/sh
+***REMOVED*** Channel archive
+***REMOVED*** No Comments
+function yta {
+    [ -z "$1" ] && echo "This is for Channel Archives" && return 1
+    LINK="$@"
+    SUCCESS=false
+
+    $DOWNLOADER --format "(bestaudio[acodec^=opus]/bestaudio)/best" --verbose --force-ipv4 --sleep-requests 1 --sleep-interval 5 --max-sleep-interval 30 --ignore-errors --no-continue --no-overwrites --download-archive archive.log --add-metadata --parse-metadata "%(title)s:%(meta_title)s" --parse-metadata "%(uploader)s:%(meta_artist)s" --extract-audio --check-formats --concurrent-fragments 5 --output "%(uploader)s - %(upload_date)s - %(title)s [%(id)s].%(ext)s" --throttled-rate 100K "$LINK" 2>&1 | tee output.log
+
+    if $SUCCESS; then
+      yt_notif "Successfully downloaded!" "$1" && return 0
+    else
+      ***REMOVED*** This actually doesn't work because yt-dlp doesn't give sys exit codes for some reason
+      yt_notif "Error downloading!" "$1" && return 1
+    fi
+}
+
+***REMOVED*** Sets DOWNLOADER and COOKIES as well as yt_notif
+CONFIG="$XDG_CONFIG_HOME/scripts/ytdl_scripts" 
+source $CONFIG && yta "$@"

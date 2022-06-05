@@ -1,0 +1,3 @@
+***REMOVED***!/bin/sh
+
+fd -t f  $1 ~/images/anime/grabber 

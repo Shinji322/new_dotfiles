@@ -1,0 +1,8 @@
+***REMOVED***!/bin/sh
+
+***REMOVED*** This loop will update the mpd statusbar module whenever a command changes the
+***REMOVED*** music player's status. mpd must be running on X's start for this to work.
+
+while : ; do
+	mpc idle >/dev/null && kill -45 "$(pidof "${STATUSBAR:-i3blocks}")" || break
+done

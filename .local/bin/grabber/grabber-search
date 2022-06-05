@@ -1,0 +1,38 @@
+***REMOVED***!/bin/bash
+
+GRABBER_DIR="$HOME/images/anime/grabber"
+
+usage() { 
+  echo "Usage: $0 [ md5 ] [ -f ]"
+
+  printf "\n%s" "This script takes a search query (commonly a md5 hash) and returns the image with the next id. This is very useful when looking up doujins"
+  printf "\n\n\t%s" "f = include favorites folder"
+  ***REMOVED*** echo -e "\n\n\t"
+  ***REMOVED*** echo "f = include favorites folder"
+
+  ***REMOVED*** printf "\n\t%s" "n = include both sub folders of grabber"
+  ***REMOVED*** ***REMOVED*** echo -e "\n\n\t"
+  ***REMOVED*** ***REMOVED*** echo "n = include both sub folders of grabber"
+  exit $1
+}
+
+search() {
+  [ -z "$1" ] && usage 1 
+  RES="$(fd "$1" "$GRABBER_DIR" -x echo {/})"
+  ID=${RES%%__*} ***REMOVED*** At least according to my current file name
+  NEXT_ID=$((ID+1))
+
+  SEARCH_RESULTS="$(fd "$NEXT_ID" "$GRABBER_DIR")"
+
+  ***REMOVED*** Colors for fun!
+  tput bold; 
+  if [ -z "$SEARCH_RESULTS" ]; then
+    tput setaf 3;
+    echo "It doesn't look like there's a sequel ):"
+  fi
+
+  tput setaf 2;
+  echo $SEARCH_RESULTS
+}
+
+search $@
