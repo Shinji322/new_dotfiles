@@ -192,7 +192,7 @@ M.make_run = function()
       "FileType",
       "markdown",
       "setlocal spell"
-    }
+    },
   }
 end
 
