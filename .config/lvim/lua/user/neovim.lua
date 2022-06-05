@@ -19,7 +19,7 @@ M.config = function()
   vim.opt.ttimeoutlen = 10
   vim.opt.wrapscan = true -- Searches wrap around the end of the file
   vim.wo.foldmethod = "expr"
-  vim.wo.foldexpr = "nvim_treesitter***REMOVED***foldexpr()"
+  vim.wo.foldexpr = "nvim_treesitter#foldexpr()"
   vim.wo.foldlevel = 4
   vim.wo.foldtext = [[substitute(getline(v:foldstart),'\\t',repeat('\ ',&tabstop),'g').'...'.trim(getline(v:foldend)) . ' (' . (v:foldend - v:foldstart + 1) . ' lines)']]
   vim.wo.foldnestmax = 3
@@ -151,21 +151,21 @@ M.config = function()
     vim.cmd [[set linespace=1]]
     vim.cmd [[set guifont=FiraCode\ Nerd\ Font:h14]]
     vim.cmd [[NvuiPopupMenuDefaultIconFg white]]
-    vim.cmd [[NvuiCmdBg ***REMOVED***1e2125]]
-    vim.cmd [[NvuiCmdFg ***REMOVED***abb2bf]]
+    vim.cmd [[NvuiCmdBg #1e2125]]
+    vim.cmd [[NvuiCmdFg #abb2bf]]
     vim.cmd [[NvuiCmdBigFontScaleFactor 1.0]]
     vim.cmd [[NvuiCmdPadding 10]]
     vim.cmd [[NvuiCmdCenterXPos 0.5]]
     vim.cmd [[NvuiCmdTopPos 0.0]]
     vim.cmd [[NvuiCmdFontSize 20.0]]
     vim.cmd [[NvuiCmdBorderWidth 5]]
-    vim.cmd [[NvuiPopupMenuIconFg variable ***REMOVED***56b6c2]]
-    vim.cmd [[NvuiPopupMenuIconFg function ***REMOVED***c678dd]]
-    vim.cmd [[NvuiPopupMenuIconFg method ***REMOVED***c678dd]]
-    vim.cmd [[NvuiPopupMenuIconFg field ***REMOVED***d19a66]]
-    vim.cmd [[NvuiPopupMenuIconFg property ***REMOVED***d19a66]]
+    vim.cmd [[NvuiPopupMenuIconFg variable #56b6c2]]
+    vim.cmd [[NvuiPopupMenuIconFg function #c678dd]]
+    vim.cmd [[NvuiPopupMenuIconFg method #c678dd]]
+    vim.cmd [[NvuiPopupMenuIconFg field #d19a66]]
+    vim.cmd [[NvuiPopupMenuIconFg property #d19a66]]
     vim.cmd [[NvuiPopupMenuIconFg module white]]
-    vim.cmd [[NvuiPopupMenuIconFg struct ***REMOVED***e5c07b]]
+    vim.cmd [[NvuiPopupMenuIconFg struct #e5c07b]]
     vim.cmd [[NvuiCaretExtendTop 15]]
     vim.cmd [[NvuiCaretExtendBottom 8]]
     vim.cmd [[NvuiTitlebarFontSize 12]]

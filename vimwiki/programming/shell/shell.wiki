@@ -24,7 +24,7 @@ forth:fifth
 == Example 2 ==
 
 {{{bash
-***REMOVED*** Set the IFS to collon (:) character
+# Set the IFS to collon (:) character
 IFS=:
 
 string="first second:third forth:fifth"

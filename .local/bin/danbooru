@@ -1,4 +1,4 @@
-***REMOVED***!/bin/sh
+#!/bin/sh
 
 download_danbooru() {
   mkdir -pv "$XDG_CONFIG_HOME/danbooru"
@@ -20,4 +20,4 @@ then
 fi
 
 danbooru
-***REMOVED*** grabber_instance &
+# grabber_instance &

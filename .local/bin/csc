@@ -1,13 +1,13 @@
-***REMOVED***!/bin/sh
+#!/bin/sh
 
-***REMOVED*** Search contents of all files for argument 
+# Search contents of all files for argument 
 function catsearch {
-    ***REMOVED*** check if running zsh
+    # check if running zsh
     if [[ -n "$ZSH_VERSION" ]]; then
-        ***REMOVED*** prefer ripgrep
-        ***REMOVED*** if ripgrep is found, use that, otherwise use grep
+        # prefer ripgrep
+        # if ripgrep is found, use that, otherwise use grep
         [[ $(builtin whence rg) ]] && rg -i $1 * ||  grep -iR $1 * 
-    else ***REMOVED*** bash
+    else # bash
         [[ $(builtin type -P rg) ]] && rg -i $1 * ||  grep -iR $1 * 
     fi
 }

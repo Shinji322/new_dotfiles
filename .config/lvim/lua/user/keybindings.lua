@@ -66,9 +66,9 @@ M.set_hlslens_keymaps = function()
     opts
   )
   vim.api.nvim_set_keymap("n", "*", "*<Cmd>lua require('hlslens').start()<CR>", opts)
-  vim.api.nvim_set_keymap("n", "***REMOVED***", "***REMOVED***<Cmd>lua require('hlslens').start()<CR>", opts)
+  vim.api.nvim_set_keymap("n", "#", "#<Cmd>lua require('hlslens').start()<CR>", opts)
   vim.api.nvim_set_keymap("n", "g*", "g*<Cmd>lua require('hlslens').start()<CR>", opts)
-  vim.api.nvim_set_keymap("n", "g***REMOVED***", "g***REMOVED***<Cmd>lua require('hlslens').start()<CR>", opts)
+  vim.api.nvim_set_keymap("n", "g#", "g#<Cmd>lua require('hlslens').start()<CR>", opts)
 end
 
 M.set_async_tasks_keymaps = function()
@@ -198,7 +198,7 @@ M.config = function()
     r = { "<ESC><CMD>lua vim.lsp.buf.rename()<CR>", "Rename" },
   }
   lvim.builtin.which_key.mappings["lh"] = {
-    "<cmd>hi LspReferenceRead cterm=bold ctermbg=red guibg=***REMOVED***24283b<cr><cmd>hi LspReferenceText cterm=bold ctermbg=red guibg=***REMOVED***24283b<cr><cmd>hi LspReferenceWrite cterm=bold ctermbg=red guibg=***REMOVED***24283b<cr>",
+    "<cmd>hi LspReferenceRead cterm=bold ctermbg=red guibg=#24283b<cr><cmd>hi LspReferenceText cterm=bold ctermbg=red guibg=#24283b<cr><cmd>hi LspReferenceWrite cterm=bold ctermbg=red guibg=#24283b<cr>",
     "Clear HL",
   }
   if lvim.builtin.persistence then

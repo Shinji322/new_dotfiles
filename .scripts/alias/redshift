@@ -1,5 +1,5 @@
-***REMOVED***!/bin/sh
+#!/bin/sh
 
-***REMOVED*** [ -z "$(pidof redshift)" ] && pkill redshift
-***REMOVED*** redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"')
+# [ -z "$(pidof redshift)" ] && pkill redshift
+# redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"')
 redshift -l 10.375722:-61.233559 -t 6500:3600

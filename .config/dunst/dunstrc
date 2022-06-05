@@ -15,7 +15,7 @@
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 2
-    frame_color = "***REMOVED***4A5057"
+    frame_color = "#4A5057"
     separator_color = frame
     sort = yes
     idle_threshold = 120
@@ -53,21 +53,21 @@
     per_monitor_dpi = false
 
 [urgency_low]
-    background = "***REMOVED***11121D"
-    foreground = "***REMOVED***A0A8CD"
+    background = "#11121D"
+    foreground = "#A0A8CD"
     timeout = 10
 
 [urgency_normal]
-    background = "***REMOVED***11121D"
-    foreground = "***REMOVED***A0A8CD"
+    background = "#11121D"
+    foreground = "#A0A8CD"
     timeout = 10
 
 [urgency_critical]
-    background = "***REMOVED***11121D"
-    foreground = "***REMOVED***EE6D85"
+    background = "#11121D"
+    foreground = "#EE6D85"
     timeout = 0
 
 [history-ignore]
-    ***REMOVED*** This will not be saved in history
+    # This will not be saved in history
     appname = changevolume
     history_ignore = yes

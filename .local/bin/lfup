@@ -1,8 +1,8 @@
-***REMOVED***!/bin/sh
+#!/bin/sh
 
-***REMOVED*** This is a wrapper script for lf that allows it to create image previews with
-***REMOVED*** ueberzug. This works in concert with the lf configuration file and the
-***REMOVED*** lf-cleaner script.
+# This is a wrapper script for lf that allows it to create image previews with
+# ueberzug. This works in concert with the lf configuration file and the
+# lf-cleaner script.
 
 set -e
 

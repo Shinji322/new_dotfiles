@@ -1,4 +1,4 @@
-***REMOVED*** Basic Settings
+# Basic Settings
 set shell zsh
 set preview 
 set hidden true
@@ -8,10 +8,10 @@ set ignorecase true
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 
-***REMOVED*** Custom Functions
+# Custom Functions
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
-        ***REMOVED*** text/*|application/json) $EDITOR "$f";;
+        # text/*|application/json) $EDITOR "$f";;
         *) xdg-open "$f" &;;
     esac
 }}
@@ -22,7 +22,7 @@ cmd paste-async &{{
         copy) 
             while IFS= read -r line
             do 
-                ***REMOVED*** [[ "$line" == "copy" ]] && continue
+                # [[ "$line" == "copy" ]] && continue
                 dunstify "Started transferring file: " "$line"
                 cp -rn -- "$line" .
             done  < "$HOME/.local/share/lf/files"
@@ -30,7 +30,7 @@ cmd paste-async &{{
         move) 
             while IFS= read -r line
             do 
-                ***REMOVED*** [[ "$line" == "move" ]] && continue
+                # [[ "$line" == "move" ]] && continue
                 dunstify "Started transferring file: " "$line"
                 mv -n -- "$line" .
             done  < "$HOME/.local/share/lf/files"
@@ -109,7 +109,7 @@ cmd fzf_jump ${{
   lf -remote "send $id $cmd \"$res\""
 }}
 
-***REMOVED*** Archive bindings
+# Archive bindings
 cmd extract ${{
   case "$f" in
     *.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
@@ -145,22 +145,22 @@ cmd extract ${{
   esac
 }}
 
-***REMOVED*** Trash cli bindings
+# Trash cli bindings
 cmd trash ${{
   files=$(printf "$fx" | tr '\n' ';')
   while [ "$files" ]; do
-    ***REMOVED*** extract the substring from start of string up to delimiter.
-    ***REMOVED*** this is the first "element" of the string.
+    # extract the substring from start of string up to delimiter.
+    # this is the first "element" of the string.
     file=${files%%;*}
 
     trash-put "$(basename "$file")"
-    ***REMOVED*** if there's only one element left, set `files` to an empty string.
-    ***REMOVED*** this causes us to exit this `while` loop.
-    ***REMOVED*** else, we delete the first "element" of the string from files, and move onto the next.
+    # if there's only one element left, set `files` to an empty string.
+    # this causes us to exit this `while` loop.
+    # else, we delete the first "element" of the string from files, and move onto the next.
     if [ "$files" = "$file" ]; then
       files=''
     else
-      files="${files***REMOVED****;}"
+      files="${files#*;}"
     fi
   done
 }}
@@ -182,7 +182,7 @@ cmd copy-file-path &{{
 }}
 
 cmd copy-file-name &{{
-    echo "${f***REMOVED******REMOVED****/}" | xclip -sel c
+    echo "${f##*/}" | xclip -sel c
 }}
 
 cmd copy-file-path &{{
@@ -206,8 +206,8 @@ cmd fzf-dir-open ${{
     [ -n '$choice' ] && cd ./$choice
 }}
 
-***REMOVED*** Bindings
-***REMOVED*** Remove some defaults
+# Bindings
+# Remove some defaults
 map m
 map o
 map n
@@ -219,25 +219,25 @@ map e
 map f
 map t
 
-***REMOVED*** File Openers
+# File Openers
 map ee $$EDITOR "$f"
 map u $view "$f"
 
-***REMOVED*** Archive Mappings
+# Archive Mappings
 map ex extract "$f"
 
-***REMOVED*** Trash Mappings
+# Trash Mappings
 map dd trash
 map tc clear_trash
 map tr restore_trash
 
-***REMOVED*** Dragon Mapping
+# Dragon Mapping
 map dr dragon-drag
 map da dragon-drag-all
 
 map ss stripspace
 
-***REMOVED*** Basic Functions
+# Basic Functions
 map . set hidden!
 map DD delete
 map p paste-async
@@ -268,7 +268,7 @@ map ff fzf-open
 map fd fzf-dir-open
 map fj fzf_jump
 
-***REMOVED*** Movement
+# Movement
 map gtr  cd ~/.local/share/Trash/files
 map gm   cd /run/media/mokou
 
@@ -295,7 +295,7 @@ map gpl  cd ~/code/learning
 map gpp  cd ~/code/projects
 
 map gc.  cd ~/.config
-map gce  cd ~/.config/lvim ***REMOVED*** Supposed to mean gc Editor
+map gce  cd ~/.config/lvim # Supposed to mean gc Editor
 map gcl  cd ~/.config/lf
 map gcs  cd ~/.config/shell
 map gcz  cd ~/.config/zsh

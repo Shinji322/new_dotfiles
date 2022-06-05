@@ -24,7 +24,7 @@ M.config = function()
 
       local lnum, col = unpack(plist[idx])
       if nearest then
-        local cnt = ***REMOVED***plist
+        local cnt = #plist
         if indicator ~= "" then
           text = string.format("[%s %d/%d]", indicator, idx, cnt)
         else

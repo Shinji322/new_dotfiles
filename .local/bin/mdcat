@@ -1,13 +1,13 @@
-***REMOVED***!/bin/bash
-***REMOVED*** This was made by Shinji322/Fujiwara no Mokou/other weebish names
-***REMOVED*** This simple script cats or opens the file in the editor at the specified line
-***REMOVED*** It depends on fzf and bat
+#!/bin/bash
+# This was made by Shinji322/Fujiwara no Mokou/other weebish names
+# This simple script cats or opens the file in the editor at the specified line
+# It depends on fzf and bat
 
 usage() {
     echo -e "Usage:\tmdcat [ FILE ]"
 }
 
-***REMOVED*** Error checking
+# Error checking
 if [ -z "$1" ]
 then
     usage && exit 1
@@ -19,21 +19,21 @@ then
     usage && exit 2
 fi
 
-***REMOVED*** -n specifies to explictly allow line number in output
-***REMOVED*** output like "24:fi"
-CHOICES=$(rg -n "***REMOVED***" "$1")
-***REMOVED*** Starting line 
-START=$(rg -n "***REMOVED***" "$1" | fzf)
-***REMOVED*** Get number
+# -n specifies to explictly allow line number in output
+# output like "24:fi"
+CHOICES=$(rg -n "#" "$1")
+# Starting line 
+START=$(rg -n "#" "$1" | fzf)
+# Get number
 START=${START%%:*}
 
 for CHOICE in ${CHOICES[@]};
 do
-    ***REMOVED*** Get only number
+    # Get only number
     CHOICE=$(echo $CHOICE | sed "s/[^0-9]//g")
     [ -z "$CHOICE" ] && continue
 
-    ***REMOVED*** this weird string subtitution is used to get the line number
+    # this weird string subtitution is used to get the line number
     if [ $CHOICE -gt $START ]; then
         END="$CHOICE"
         break
@@ -45,7 +45,7 @@ then
     bat --line-range "$START:" "$1"
     exit 0
 else
-    ***REMOVED*** Go from this line to the line before the new heading
+    # Go from this line to the line before the new heading
     bat --line-range "$START:$(( END - 1))" "$1"
     exit 0
 fi

@@ -1,4 +1,4 @@
-***REMOVED*** bindkey -s '^o' 'exit\n'
+# bindkey -s '^o' 'exit\n'
 bindkey -s '^O' '^ulfcd\n'
 bindkey -s '^f' '^ucd "$(dirname $(fzf))"\n'
 bindkey -s '^w' '^ucht\n'

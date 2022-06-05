@@ -1,12 +1,12 @@
 There are two ways PSP emulation works on the switch:
 
-* [[***REMOVED***Retroarch Core]]
-* [[***REMOVED***Standalone]]
+* [[#Retroarch Core]]
+* [[#Standalone]]
 
 
 
 = Retroarch Core =
-* Latest Release Here: https://gbatemp.net/threads/ppsspp-switch-beta-release.535468/page-56***REMOVED***posts
+* Latest Release Here: https://gbatemp.net/threads/ppsspp-switch-beta-release.535468/page-56#posts
 
 `assets`::
 :: sd::/retroarch/cores/system/PPSSPP/

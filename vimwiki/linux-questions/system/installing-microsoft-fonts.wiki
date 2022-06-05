@@ -19,7 +19,7 @@ In order to install these fonts, you must extract the ttfs and paste them in `/u
 }}}
 
 {{{bash
-7z e install.wim Windows/{Fonts/"*".{ttf,ttc},System32/Licenses/neutral/"*"/"*"/license.rtf} -ofonts/ ***REMOVED*** Windows 7
+7z e install.wim Windows/{Fonts/"*".{ttf,ttc},System32/Licenses/neutral/"*"/"*"/license.rtf} -ofonts/ # Windows 7
 }}}
 
 *The last command only needs to be run on Windows 7 ISO images.* 

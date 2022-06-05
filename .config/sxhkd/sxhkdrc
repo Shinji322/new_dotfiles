@@ -1,11 +1,11 @@
-***REMOVED***           _     _       _          
-***REMOVED***          | |   | |     | |         
-***REMOVED***  _____  _| |__ | | ____| |_ __ ___ 
-***REMOVED*** / __\ \/ / '_ \| |/ / _` | '__/ __|
-***REMOVED*** \__ \>  <| | | |   < (_| | | | (__ 
-***REMOVED*** |___/_/\_\_| |_|_|\_\__,_|_|  \___|
-***REMOVED***                                    
-***REMOVED*** sxhkd stuff
+#           _     _       _          
+#          | |   | |     | |         
+#  _____  _| |__ | | ____| |_ __ ___ 
+# / __\ \/ / '_ \| |/ / _` | '__/ __|
+# \__ \>  <| | | |   < (_| | | | (__ 
+# |___/_/\_\_| |_|_|\_\__,_|_|  \___|
+#                                    
+# sxhkd stuff
 super + shift + r
     pkill sxhkd && notify-send "sxhkd config reloaded" && sxhkd &
 super + shift + x
@@ -13,38 +13,38 @@ super + shift + x
 super + shift + c
     xdo close
 
-***REMOVED***                                   _          _
-***REMOVED***  ___ ___  _ _  ___  ___ ._ _  ___| |_  ___ _| |_ 
-***REMOVED*** <_-</ | '| '_>/ ._>/ ._>| ' |<_-<| . |/ . \ | |  
-***REMOVED*** /__/\_|_.|_|  \___.\___.|_|_|/__/|_|_|\___/ |_|  
-***REMOVED***                                                  
-***REMOVED*** Flameshot
+#                                   _          _
+#  ___ ___  _ _  ___  ___ ._ _  ___| |_  ___ _| |_ 
+# <_-</ | '| '_>/ ._>/ ._>| ' |<_-<| . |/ . \ | |  
+# /__/\_|_.|_|  \___.\___.|_|_|/__/|_|_|\___/ |_|  
+#                                                  
+# Flameshot
 super + s
     flameshot gui -p ~/images/screenshots/ -s
 super + shift + s
     flameshot gui
 
 
-***REMOVED***           __ _ 
-***REMOVED***  _ _ ___ / _(_)
-***REMOVED*** | '_/ _ \  _| |
-***REMOVED*** |_| \___/_| |_|
-***REMOVED***                
-***REMOVED*** Rofi
+#           __ _ 
+#  _ _ ___ / _(_)
+# | '_/ _ \  _| |
+# |_| \___/_| |_|
+#                
+# Rofi
 super + r
     rofi -show drun
 super + d
     dmenu_run
-***REMOVED*** alt_l + tab
+# alt_l + tab
 Alt_L + tab
     rofi -show window
 
 
-***REMOVED***                _  _                        _             _     
-***REMOVED*** ._ _ _  ___  _| |<_> ___   ___  ___ ._ _ _| |_ _ _  ___ | | ___
-***REMOVED*** | ' ' |/ ._>/ . || |<_> | / | '/ . \| ' | | | | '_>/ . \| |<_-<
-***REMOVED*** |_|_|_|\___.\___||_|<___| \_|_.\___/|_|_| |_| |_|  \___/|_|/__/
-***REMOVED***                                                                
+#                _  _                        _             _     
+# ._ _ _  ___  _| |<_> ___   ___  ___ ._ _ _| |_ _ _  ___ | | ___
+# | ' ' |/ ._>/ . || |<_> | / | '/ . \| ' | | | | '_>/ . \| |<_-<
+# |_|_|_|\___.\___||_|<___| \_|_.\___/|_|_| |_| |_|  \___/|_|/__/
+#                                                                
 super + F7
     mpc toggle
 super + F6
@@ -57,15 +57,15 @@ super + {_, shift + } + F10
     {~/.local/bin/mpdvolume, ~/.local/bin/changevolume} up
 
 
-***REMOVED***  _           _   _                  
-***REMOVED*** | |         | | | |                 
-***REMOVED*** | |__   ___ | |_| | _____ _   _ ___ 
-***REMOVED*** | '_ \ / _ \| __| |/ / _ \ | | / __|
-***REMOVED*** | | | | (_) | |_|   <  __/ |_| \__ \
-***REMOVED*** |_| |_|\___/ \__|_|\_\___|\__, |___/
-***REMOVED***                            __/ |    
-***REMOVED***                           |___/     
-***REMOVED*** hotkeys. These are keybindings that are used to launch applications
+#  _           _   _                  
+# | |         | | | |                 
+# | |__   ___ | |_| | _____ _   _ ___ 
+# | '_ \ / _ \| __| |/ / _ \ | | / __|
+# | | | | (_) | |_|   <  __/ |_| \__ \
+# |_| |_|\___/ \__|_|\_\___|\__, |___/
+#                            __/ |    
+#                           |___/     
+# hotkeys. These are keybindings that are used to launch applications
 super + Return
     $TERMINAL
 super + w
@@ -78,22 +78,22 @@ super + r
     kitty --class music_player -e ncmpcpp
 
 
-***REMOVED*** Asusctl
+# Asusctl
 super + F5
   asusctl profile -n && notify-send "Setting mode to:" "$(asusctl profile -p)"
-***REMOVED*** Enable noise cancelling
+# Enable noise cancelling
 super + F1
   ~/.scripts/sxhkd/noise_cancelling
 
-***REMOVED***  _  _____                    __ _       
-***REMOVED*** (_)|____ |                  / _(_)      
-***REMOVED***  _     / /   ___ ___  _ __ | |_ _  __ _ 
-***REMOVED*** | |    \ \  / __/ _ \| '_ \|  _| |/ _` |
-***REMOVED*** | |.___/ / | (_| (_) | | | | | | | (_| |
-***REMOVED*** |_|\____/   \___\___/|_| |_|_| |_|\__, |
-***REMOVED***                                    __/ |
-***REMOVED***                                   |___/ 
-***REMOVED*** i3 related config
+#  _  _____                    __ _       
+# (_)|____ |                  / _(_)      
+#  _     / /   ___ ___  _ __ | |_ _  __ _ 
+# | |    \ \  / __/ _ \| '_ \|  _| |/ _` |
+# | |.___/ / | (_| (_) | | | | | | | (_| |
+# |_|\____/   \___\___/|_| |_|_| |_|\__, |
+#                                    __/ |
+#                                   |___/ 
+# i3 related config
 super + {h,j,k,l}
     i3-msg focus {left,down,up,right}
 super + shift + {h,j,k,l}

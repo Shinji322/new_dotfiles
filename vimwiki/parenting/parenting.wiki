@@ -4,4 +4,4 @@ This is a simple wiki I made to keep notes on how to be a better parent/brother
 
 
 = Teaching =
-[[./teaching.wiki***REMOVED***Discipline|Discipline]]
+[[./teaching.wiki#Discipline|Discipline]]

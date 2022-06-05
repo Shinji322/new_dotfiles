@@ -13,13 +13,13 @@ Card types and templates can be created like so:
 {{{
 Q: {{French}}
 A: {{English}}<br>
-   Page ***REMOVED***{{Page}}
+   Page #{{Page}}
 }}}  
 
 {{{
 Q: {{English}}
 A: {{French}}<br>
-   Page ***REMOVED***{{Page}}
+   Page #{{Page}}
 }}}  
 
 * <br> is a special character that tells Anki to move to the next line

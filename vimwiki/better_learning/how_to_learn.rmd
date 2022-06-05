@@ -5,7 +5,7 @@ output: html_document
 ---
 
 
-***REMOVED*** Encoding
+# Encoding
 
 Encoding is the technique of putting information into long-term memory, essentially. After learning a piece of information, the optimal time to encode that is only a couple seconds. 
 In order to effectively do this, whenever consuming some information, you must be sure to **always relate it to the big picture** and create an organizational system so that each picture knows where to fit.
@@ -16,12 +16,12 @@ Doing all of this in such a small time is, of course, unrealistic. As such, it i
 ![An Illustration of Bloom's Taxonomy](./assets/blooms_taxonomy.png)
 
 
-***REMOVED******REMOVED*** Bloom's Taxonmy
+## Bloom's Taxonmy
 
 If you just jump to the later stages, specifically the evaluation step (big picture), then you will be much more productive.
 
 
-***REMOVED******REMOVED*** Things To Avoid!
+## Things To Avoid!
 
 * Taking notes right away
   * Organize the concepts in your head first (in relation to other concepts as well as the big picture)
@@ -32,13 +32,13 @@ If you just jump to the later stages, specifically the evaluation step (big pict
     * If there are an overwhelming amount of connections, instead try the application step
 
 
-***REMOVED*** Creating Notes
+# Creating Notes
 
 ![Conceptual Mindmapping Technique](./assets/The Perfect Mindmap - 6 Step Checklist [5zT_2aBP6vM].webm)
 ![Practical Mindmapping Technique](./assets/Let Me Change The Way You Write Notes Forever _ Correct Mindmapping Technique [BZOqDpZK7rw].webm)
 
 
-***REMOVED*** TL;DR
+# TL;DR
 
 * Before reading, prime yourself by asking what are the **main concepts** 
   * Try to figure out what is relevant

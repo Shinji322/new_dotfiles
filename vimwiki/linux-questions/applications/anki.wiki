@@ -33,21 +33,21 @@ Using settings.json, we can configure how we make the anki card.
 By default, anki cards must be formated like so:
 
 {{{markdown
-***REMOVED******REMOVED*** What's the Markdown?
+## What's the Markdown?
 
 Markdown is a lightweight markup language with plain-text-formatting syntax.
 Its design allows it to be converted to many output formats,
 but the original tool by the same name only supports HTML.
 
-***REMOVED******REMOVED*** Who created Markdown?
+## Who created Markdown?
 
 John Gruber created the Markdown language in 2004 in collaboration with
 Aaron Swartz on the syntax.
 
-***REMOVED******REMOVED*** Binary tree
+## Binary tree
 
 In computer science, a binary tree is a tree data structure in which each node has at most two children, which are referred to as the left child and the right child.
 
-[***REMOVED***algorithms](./algorityms.md) [***REMOVED***OOP]() [***REMOVED***binary tree]()
+[#algorithms](./algorityms.md) [#OOP]() [#binary tree]()
 }}}
 >Binary tree has tags

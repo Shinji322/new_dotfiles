@@ -1,6 +1,6 @@
-***REMOVED***!/bin/bash
-***REMOVED*** This is a simple script that takes a screenshot 
-***REMOVED*** as well as copies the file path to the clipboard
+#!/bin/bash
+# This is a simple script that takes a screenshot 
+# as well as copies the file path to the clipboard
 
 IMAGE_PATH="$HOME/documents/obsidian/ComputerScience/CS50/"
 

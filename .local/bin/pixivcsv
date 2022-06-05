@@ -1,7 +1,7 @@
-***REMOVED***!/usr/bin/python
-***REMOVED*** -*- coding: utf-8 -*-
-***REMOVED*** This is a simple script that reads the ids from a csv file 
-***REMOVED*** and downloads them using PixivUtil2
+#!/usr/bin/python
+# -*- coding: utf-8 -*-
+# This is a simple script that reads the ids from a csv file 
+# and downloads them using PixivUtil2
 
 import csv
 import sys
@@ -14,15 +14,15 @@ def main(file:str, opt:str):
     with open(file, 'r+') as f:
         reader = csv.DictReader(f)
 
-        ***REMOVED*** This is done to limit logins to pixiv
+        # This is done to limit logins to pixiv
         ids = []
         for line in reader:
-            ***REMOVED*** if str2bool(line["downloaded"]):
-            ***REMOVED***     continue
+            # if str2bool(line["downloaded"]):
+            #     continue
             ids.append(line['id'])
 
         if opt == '1':
-            ***REMOVED*** This is done to avoid other options
+            # This is done to avoid other options
             cmd = f"echo -e \"{' '.join(ids)}\n\n\n\" | pixiv -s {opt}"
         else:  
             cmd = f"echo \"{' '.join(ids)}\" | pixiv -s {opt}"
@@ -40,19 +40,19 @@ if not args or len(args) > 3:
     """)
     sys.exit(1)
 else:
-    ***REMOVED*** just download the artist with the id if a csv file wasn't passed in
+    # just download the artist with the id if a csv file wasn't passed in
     if not "csv" in args[1]:
         os.system(f"echo \"{args[1]}\" | pixiv -s 1")
         sys.exit(1)
 
     filename = args[1]
-    ***REMOVED*** If we only have two arguments, let's interpret what the user wants
+    # If we only have two arguments, let's interpret what the user wants
     if len(args) == 2:
         if "artworks" in filename:
-            ***REMOVED*** 2 downloads by image id
+            # 2 downloads by image id
             main(filename, '2')
         elif "artists" in filename or "arts" in filename:
-            ***REMOVED*** 1 downloads by member id
+            # 1 downloads by member id
             main(filename, '1')
         else:
             print("""

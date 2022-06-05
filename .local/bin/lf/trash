@@ -1,11 +1,11 @@
-***REMOVED***!/bin/sh
+#!/bin/sh
 
 IFS=$'\n'
 lf_trash() {
   clear; tput bold; tput setaf 4;
   printf "\n%s" "$@"
 
-  ***REMOVED*** Set color to red
+  # Set color to red
   tput setaf 1;
   printf "\n\tdelete?[y/N] "
   read ans

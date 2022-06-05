@@ -1,8 +1,8 @@
-***REMOVED***!/bin/sh
+#!/bin/sh
 
 batinfo() {
   for battery in /sys/class/power_supply/BAT?*; do
-    ***REMOVED*** If this is one of multiple batteries (excluding first)
+    # If this is one of multiple batteries (excluding first)
     [ -n "${capacity+x}" ] && printf " "
     case "$(cat "$battery/status" 2>&1)" in
       "Full")
@@ -56,7 +56,7 @@ main() {
   if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/scripts/statusbar/battery-icons" ]; then
     source "${XDG_CONFIG_HOME:-$HOME/.config}/scripts/statusbar/battery-icons"
   else
-    ***REMOVED*** Default variables
+    # Default variables
     FULL=""
     DISCHARGING=""
     CHARGING=""
@@ -68,7 +68,7 @@ main() {
 
   batinfo
   case "$WM" in
-    ***REMOVED*** Some status bars might handle it differently
+    # Some status bars might handle it differently
     "i3")
       i3battery
       ;;

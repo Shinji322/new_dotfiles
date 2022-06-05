@@ -27,7 +27,7 @@ From then on, you can add files to the directory by running the following comman
 
 config add .zshenv
 config commit -m "Message"
-***REMOVED*** Create a new repository on github or gitlab
+# Create a new repository on github or gitlab
 config remote add origin git@github.com:<USERNAME>/<REPONAME>.git
 config push --set-upstream origin <BRANCH_NAME>
 

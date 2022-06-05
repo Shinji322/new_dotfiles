@@ -1,4 +1,4 @@
-***REMOVED***!/usr/bin/env bash
+#!/usr/bin/env bash
 
 CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/scripts/tmux"
 selected=`cat $CONFIG_DIR/cht.sh.languages $CONFIG_DIR/cht.sh.progs | fzf`

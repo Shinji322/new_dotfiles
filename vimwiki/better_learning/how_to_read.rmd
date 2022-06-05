@@ -5,12 +5,12 @@ output: html_document
 ---
 
 
-***REMOVED*** Source
+# Source
 
 ![How To Read](./assets/4 Tips to read without losing focus [4YF3_fw1Jko].webm)
 
 
-***REMOVED*** My Notes
+# My Notes
 
 * Priming yourself
   * Skim the paragraph first, look for keywords
@@ -20,7 +20,7 @@ output: html_document
     * Think about how it relates to the **big picture**
 
 
-***REMOVED*** TL;DR
+# TL;DR
 
 S1: Keywords
 S2 : Sentence Relevancy

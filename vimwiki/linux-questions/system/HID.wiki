@@ -20,11 +20,11 @@ In `~/.config/rnnoise_cli/rnnoise_cli.conf`, add whichever device you want in th
 e.g.
 {{{config
 [activate]
-***REMOVED*** device to use, omitted by default
-***REMOVED*** `rnnoise activate` will prompt for it if omitted (and provide a list of options)
-***REMOVED*** Check the output of rnnoise list for more info
+# device to use, omitted by default
+# `rnnoise activate` will prompt for it if omitted (and provide a list of options)
+# Check the output of rnnoise list for more info
 device = some.device.name
-***REMOVED*** control level (0-100), 50 by default
+# control level (0-100), 50 by default
 control = 50
 }}}
 

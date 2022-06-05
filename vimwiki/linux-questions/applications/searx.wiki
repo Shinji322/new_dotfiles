@@ -1,6 +1,6 @@
 = Sources =
 
-[[https://searx.github.io/searx/admin/installation-docker.html***REMOVED***installation-docker|Official Searx Docker Documentation]]
+[[https://searx.github.io/searx/admin/installation-docker.html#installation-docker|Official Searx Docker Documentation]]
 
 
 = Installation =

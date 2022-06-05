@@ -1,11 +1,11 @@
-***REMOVED***!/bin/bash 
-***REMOVED*** This script runs at startup, to be started by the Window Manager
+#!/bin/bash 
+# This script runs at startup, to be started by the Window Manager
 
 kitty calcurse &!
 
-***REMOVED*** QUOTES="$HOME/documents/quotes/quotes"
-***REMOVED*** NOOFQUOTES=$(wc -l $QUOTES | awk '{print $1}')
-***REMOVED*** QUOTELINE=$(echo "$RANDOM % $NOOFQUOTES + 1" | bc)
-***REMOVED*** QUOTE=$(sed -n ${QUOTELINE}p $QUOTES)
-***REMOVED*** dunstify "$QUOTE" -a 'quote-notificaiton' -u critical
-***REMOVED*** feh --no-fehbg --bg-fill "~/images/wallpapers/稲葉曇『ラグトレイン』Vo. 歌愛ユキ - 稲葉曇 - 20200716 [UnIhRpIT7nc].webp"
+# QUOTES="$HOME/documents/quotes/quotes"
+# NOOFQUOTES=$(wc -l $QUOTES | awk '{print $1}')
+# QUOTELINE=$(echo "$RANDOM % $NOOFQUOTES + 1" | bc)
+# QUOTE=$(sed -n ${QUOTELINE}p $QUOTES)
+# dunstify "$QUOTE" -a 'quote-notificaiton' -u critical
+# feh --no-fehbg --bg-fill "~/images/wallpapers/稲葉曇『ラグトレイン』Vo. 歌愛ユキ - 稲葉曇 - 20200716 [UnIhRpIT7nc].webp"

@@ -1,4 +1,4 @@
-notification.command=***REMOVED***/.scripts/productivity/calcurse_reminders
+notification.command=/home/mokou/.scripts/productivity/calcurse_reminders
 daemon.enable=yes
 notification.warning=300
 appearance.calendarview=monthly

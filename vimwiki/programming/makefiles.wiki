@@ -2,38 +2,38 @@
 
 {{{make
 SRCS = main.c
-SRCS := $(wildcard *.c) ***REMOVED*** evaluates the expression
-SRCS != find . -name '*.c' ***REMOVED*** shell output
-SRCS := $(shell find . -name '*.c') ***REMOVED*** also shell output
-CC_FLAGS += -Wextra ***REMOVED*** Append to
-CFLAGS ?= $(CC_FLAGS) ***REMOVED*** Conditional assignment (if null, assign)
-FOO := $(BAR)   ***REMOVED*** the whitespace between the comment and expression is included in make
+SRCS := $(wildcard *.c) # evaluates the expression
+SRCS != find . -name '*.c' # shell output
+SRCS := $(shell find . -name '*.c') # also shell output
+CC_FLAGS += -Wextra # Append to
+CFLAGS ?= $(CC_FLAGS) # Conditional assignment (if null, assign)
+FOO := $(BAR)   # the whitespace between the comment and expression is included in make
 }}}
 
 
 = Built in Functions = 
 
 {{{make
-$(SRCS:.c=.o) ***REMOVED*** replaces .c with .o
-$(addprefix build/,$(OBJS)) ***REMOVED*** add a build directory
-$(if ...) $(or ..) $(and ..) ***REMOVED*** conditional functions (almost never used)
+$(SRCS:.c=.o) # replaces .c with .o
+$(addprefix build/,$(OBJS)) # add a build directory
+$(if ...) $(or ..) $(and ..) # conditional functions (almost never used)
 $(foreach var,list,text)
-$(value (VARIABLE)) ***REMOVED*** prints variable
-$(shell ..) ***REMOVED*** shell commands
-$(error ..) ***REMOVED*** will exit and print the string argument
-$(warning ..) ***REMOVED*** !! but doesn't exit and says "warning"
-$(info ..)  ***REMOVED*** !! but says "info"
+$(value (VARIABLE)) # prints variable
+$(shell ..) # shell commands
+$(error ..) # will exit and print the string argument
+$(warning ..) # !! but doesn't exit and says "warning"
+$(info ..)  # !! but says "info"
 }}}
 
 
 = Rules =
 
 {{{make
-***REMOVED*** target: prereq
-    ***REMOVED*** rules
+# target: prereq
+    # rules
     
-***REMOVED*** $< = prereq
-***REMOVED*** $@ = target
+# $< = prereq
+# $@ = target
 %.o: %.c
     $(CC) -c $(CFLAGS) -o $@ $<
     
@@ -50,13 +50,13 @@ OBJS := $(SRCS:.c=.o)
 
 TARGET := foo
 
-***REMOVED*** .PHONY is used so make knows that it doesn't need to create a file called 'all'
+# .PHONY is used so make knows that it doesn't need to create a file called 'all'
 .PHONY: all clean
 
 all: $(TARGET)
 
 $(TARGET): $(OBJS)
-    ***REMOVED*** gcc -o foo main.c foo.c bar.c
+    # gcc -o foo main.c foo.c bar.c
     $(CC) -o $@ $^
     
 clean: 

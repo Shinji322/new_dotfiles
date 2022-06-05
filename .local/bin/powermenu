@@ -1,4 +1,4 @@
-***REMOVED***!/bin/bash
+#!/bin/bash
 
 function powermenu {
 	options="cancel\nshutdown\nreboot\nhibernate"

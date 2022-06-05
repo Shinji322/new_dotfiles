@@ -1,6 +1,6 @@
-[[***REMOVED***Preface]]
-[[***REMOVED***Intended Route Order]]
-[[***REMOVED***Route Walkthroughs]]
+[[#Preface]]
+[[#Intended Route Order]]
+[[#Route Walkthroughs]]
 
 = Preface =
 A 100% walkthrough for all routes of the Tsukihime visual novel including all CGs, full endings, and Bad Ends.

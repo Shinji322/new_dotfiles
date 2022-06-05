@@ -1,4 +1,4 @@
-***REMOVED***files: 970	version: 5.9
+#files: 970	version: 5.9
 
 _comps=(
 '-' '_precommand'
@@ -1775,7 +1775,7 @@ _services=(
 )
 
 _patcomps=(
-'*/(init|rc[0-9S]***REMOVED***).d/*' '_init_d'
+'*/(init|rc[0-9S]#).d/*' '_init_d'
 )
 
 _postpatcomps=(
@@ -1783,15 +1783,15 @@ _postpatcomps=(
 'c++-*' '_gcc'
 'g++-*' '_gcc'
 'gcc-*' '_gcc'
-'gem[0-9.]***REMOVED***' '_gem'
-'lua[0-9.-]***REMOVED******REMOVED***' '_lua'
+'gem[0-9.]#' '_gem'
+'lua[0-9.-]##' '_lua'
 '(p[bgpn]m*|*top[bgpn]m)' '_pbm'
 'php[0-9.-]' '_php'
-'pip[0-9.]***REMOVED***' '_pip'
-'pydoc[0-9.]***REMOVED***' '_pydoc'
-'python[0-9.]***REMOVED***' '_python'
+'pip[0-9.]#' '_pip'
+'pydoc[0-9.]#' '_pydoc'
+'python[0-9.]#' '_python'
 'qemu(|-system-*)' '_qemu'
-'(ruby|[ei]rb)[0-9.]***REMOVED***' '_ruby'
+'(ruby|[ei]rb)[0-9.]#' '_ruby'
 'shasum(|5).*' '_shasum'
 '(texi(2*|ndex))' '_texi'
 '(tiff*|*2tiff|pal2rgb)' '_tiff'

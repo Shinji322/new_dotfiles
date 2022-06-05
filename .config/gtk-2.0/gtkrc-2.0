@@ -1,7 +1,7 @@
-***REMOVED*** DO NOT EDIT! This file will be overwritten by LXAppearance.
-***REMOVED*** Any customization should be done in ~/.gtkrc-2.0.mine instead.
+# DO NOT EDIT! This file will be overwritten by LXAppearance.
+# Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-include "***REMOVED***/.gtkrc-2.0.mine"
+include "/home/mokou/.gtkrc-2.0.mine"
 gtk-theme-name="Orchis-pink-dark-compact"
 gtk-icon-theme-name="candy-icons"
 gtk-font-name="Ubuntu 12"

@@ -1,7 +1,7 @@
-***REMOVED***!/bin/sh
+#!/bin/sh
 
-***REMOVED*** Playlist Archive 
-***REMOVED*** No Comments
+# Playlist Archive 
+# No Comments
 function ytp {  
     [ -z "$1" ] && echo "This is for Channel Archives" && return 1
     LINK="$@"
@@ -16,6 +16,6 @@ function ytp {
     fi
 }
 
-***REMOVED*** Sets DOWNLOADER and COOKIES as well as yt_notif
+# Sets DOWNLOADER and COOKIES as well as yt_notif
 CONFIG="$XDG_CONFIG_HOME/scripts/ytdl_scripts" 
 source $CONFIG && ytp "$@"

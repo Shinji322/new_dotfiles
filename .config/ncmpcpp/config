@@ -1,4 +1,4 @@
-***REMOVED*** vim: filetype=conf
+# vim: filetype=conf
 
 ncmpcpp_directory = "~/.config/ncmpcpp"
 lyrics_directory = "~/.local/share/lyrics"
@@ -17,7 +17,7 @@ ignore_leading_the = yes
 external_editor = nvim
 use_console_editor = yes
 
-***REMOVED******REMOVED******REMOVED*** General Colors ***REMOVED******REMOVED******REMOVED***
+### General Colors ###
 colors_enabled = "yes"
 main_window_color = "white"
 header_window_color = "cyan"
@@ -29,27 +29,27 @@ progressbar_color = black:b
 progressbar_elapsed_color = blue:b
 statusbar_time_color = cyan:b
 
-***REMOVED******REMOVED******REMOVED*** Song List ***REMOVED******REMOVED******REMOVED***
-***REMOVED***song_status_format = $b{{$8"%t"}} $3by {$4%a{ $3in $7%b{ (%y)}} $3}|{$8%f}
+### Song List ###
+#song_status_format = $b{{$8"%t"}} $3by {$4%a{ $3in $7%b{ (%y)}} $3}|{$8%f}
 song_columns_list_format = "(10)[blue]{l} (30)[green]{t} (30)[magenta]{a} (30)[yellow]{b}"
 song_list_format = "{$4%a - }{%t}|{$8%f$9}$R{$3(%l)$9}"
 
 
-***REMOVED******REMOVED******REMOVED*** Alternative Interface ***REMOVED******REMOVED******REMOVED***
+### Alternative Interface ###
 user_interface = "alternative"
 alternative_header_first_line_format = "$0$aqqu$/a {$6%a$9 - }{$3%t$9}|{$3%f$9} $atqq$/a$9"
 alternative_header_second_line_format = "{{$4%b$9}{ [$8%y$9]}}|{$4%D$9}"
-***REMOVED***alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
-***REMOVED***alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
+#alternative_header_first_line_format = $b$1$aqqu$/a$9 {%t}|{%f} $1$atqq$/a$9$/b
+#alternative_header_second_line_format = {{$4$b%a$/b$9}{ - $7%b$9}{ ($4%y$9)}}|{%D}
 
 
-***REMOVED******REMOVED******REMOVED*** Current Item ***REMOVED******REMOVED******REMOVED***
+### Current Item ###
 current_item_prefix = $(cyan)$r$b
 current_item_suffix = $/r$(end)$/b
 current_item_inactive_column_prefix = $(magenta)$r
 current_item_inactive_column_suffix = $/r$(end)
 execute_on_song_change = "bash -c ~/.config/ncmpcpp/mpd-notification"
 
-***REMOVED******REMOVED******REMOVED*** Selected Item ***REMOVED******REMOVED******REMOVED***
+### Selected Item ###
 selected_item_prefix = "* "
 discard_colors_if_item_is_selected = "no"

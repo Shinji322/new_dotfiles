@@ -1,8 +1,8 @@
-***REMOVED***!/bin/sh
-***REMOVED*** This script does the following:
-***REMOVED***	Run by itself, set the wallpaper (at X start).
-***REMOVED***	If given a file, set that as the new wallpaper.
-***REMOVED***	If given a directory, choose random file in it.
+#!/bin/sh
+# This script does the following:
+#	Run by itself, set the wallpaper (at X start).
+#	If given a file, set that as the new wallpaper.
+#	If given a directory, choose random file in it.
 
 walls="$HOME/images/walls"
 bgloc="${XDG_DATA_HOME:-$HOME/.local/share}/bg"

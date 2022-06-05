@@ -1,4 +1,4 @@
-***REMOVED*** surround.vim
+# surround.vim
 
 Surround.vim is all about "surroundings": parentheses, brackets, quotes,
 XML tags, and more.  The plugin provides mappings to easily delete,
@@ -60,7 +60,7 @@ and removing pairs of tags simultaneously is a breeze.
 The `.` command will work with `ds`, `cs`, and `yss` if you install
 [repeat.vim](https://github.com/tpope/vim-repeat).
 
-***REMOVED******REMOVED*** Installation
+## Installation
 
 Install using your favorite package manager, or use Vim's built-in package
 support:
@@ -70,12 +70,12 @@ support:
     git clone https://tpope.io/vim/surround.git
     vim -u NONE -c "helptags surround/doc" -c q
 
-***REMOVED******REMOVED*** Contributing
+## Contributing
 
 See the contribution guidelines for
-[pathogen.vim](https://github.com/tpope/vim-pathogen***REMOVED***readme).
+[pathogen.vim](https://github.com/tpope/vim-pathogen#readme).
 
-***REMOVED******REMOVED*** Self-Promotion
+## Self-Promotion
 
 Like surround.vim?  Star the repository on
 [GitHub](https://github.com/tpope/vim-surround) and vote for it on
@@ -85,7 +85,7 @@ Love surround.vim?  Follow [tpope](http://tpo.pe/) on
 [GitHub](https://github.com/tpope) and
 [Twitter](http://twitter.com/tpope).
 
-***REMOVED******REMOVED*** License
+## License
 
 Copyright (c) Tim Pope.  Distributed under the same terms as Vim itself.
 See `:help license`.

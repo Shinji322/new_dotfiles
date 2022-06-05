@@ -26,8 +26,8 @@ The `*`'s indicate how many times that script should be run.
 {{{crontab
 * * * * * /usr/bin/mpc update
 */15 * * * 1-5 /usr/bin/newsboat -x reload
-0,15,30,45 * * * * ***REMOVED***/.scripts/datelog
-@reboot ***REMOVED***/software/app-images/Obsidian-0.13.23.AppImage
+0,15,30,45 * * * * /home/mokou/.scripts/datelog
+@reboot /home/mokou/software/app-images/Obsidian-0.13.23.AppImage
 MIN HOUR DAY MONTH DoW
 }}}
 

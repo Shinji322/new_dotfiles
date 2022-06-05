@@ -1,7 +1,7 @@
-***REMOVED***!/bin/sh
+#!/bin/sh
 
-***REMOVED*** Channel archive
-***REMOVED*** No Comments
+# Channel archive
+# No Comments
 function ytc {  
     [ -z "$1" ] && echo "This is for Channel Archives" && return 1
     LINK="$@"
@@ -16,6 +16,6 @@ function ytc {
     fi
 }
 
-***REMOVED*** Sets DOWNLOADER and COOKIES as well as yt_notif
+# Sets DOWNLOADER and COOKIES as well as yt_notif
 CONFIG="$XDG_CONFIG_HOME/scripts/ytdl_scripts" 
 source $CONFIG && ytc "$@"

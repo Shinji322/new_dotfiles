@@ -1,25 +1,25 @@
-***REMOVED*** Most Important Binding!
+# Most Important Binding!
 
 * ?
   * Will tell you about which bidnings do what
 
-***REMOVED******REMOVED*** Bindings
+## Bindings
 
-***REMOVED******REMOVED******REMOVED*** Dealing with Files
+### Dealing with Files
 * e
 	* Edit selected file	
 * l
   * Run XDG Open
 
 
-***REMOVED******REMOVED******REMOVED*** Movement
+### Movement
 * /
 	* Search for file in current dir
   * Ctrl + i
 		* Toggle mode that automatically goes to selected directory
 
 
-***REMOVED******REMOVED******REMOVED*** Selecting files
+### Selecting files
 * Space
 	* Select File
 * Y
@@ -28,7 +28,7 @@
   * Show selected files
 
 
-***REMOVED******REMOVED******REMOVED*** Dealing With Files
+### Dealing With Files
 * V
   * Paste out selected files to current dir
 * P

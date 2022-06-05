@@ -1,5 +1,5 @@
-***REMOVED***!/bin/sh
-***REMOVED*** $1 = path to copy to
+#!/bin/sh
+# $1 = path to copy to
 
 copy() {
   while IFS="" read -r p || [ -n "$p" ]
@@ -28,11 +28,11 @@ move() {
 COLS=$(($(tput cols)/3))
 case "$(head -1 ~/.local/share/lf/files)" in
   copy)
-    ***REMOVED*** tmux split-window -h -p $COLS -- copy "$1"
+    # tmux split-window -h -p $COLS -- copy "$1"
     tmux split-window -h -p 20 -- copy "$1"
     ;;
   move)
-    ***REMOVED*** tmux split-window -h -p $COLS -- move "$1"
+    # tmux split-window -h -p $COLS -- move "$1"
     tmux split-window -h -p 20 -- move "$1"
     ;;
 esac

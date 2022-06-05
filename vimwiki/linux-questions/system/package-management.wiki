@@ -1,7 +1,7 @@
-[[***REMOVED***Packages]]
-[[***REMOVED***Pacman]]
-[[***REMOVED******REMOVED***Pacman Practice]]
-[[***REMOVED******REMOVED***WARNINGS]]
+[[#Packages]]
+[[#Pacman]]
+[[##Pacman Practice]]
+[[##WARNINGS]]
 
 
 = Packages =
@@ -25,7 +25,7 @@ Arch's package manager pacman can install, update, and remove those packages. Us
 
 == WARNINGS ==
 * Run pacman -Syu instead of pacman -Sy. Check Arch wiki for more. 
-[[https://wiki.archlinux.org/title/Pacman***REMOVED***Usage]] 
+[[https://wiki.archlinux.org/title/Pacman#Usage]] 
 `pacman -Syu`
 
 

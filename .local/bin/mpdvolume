@@ -1,4 +1,4 @@
-***REMOVED***!/bin/bash
+#!/bin/bash
 
 function send_notification() {
     VOLUME=$(mpc status "%volume%" | sed "s/[^0-9]//g")
@@ -13,7 +13,7 @@ function get_icon() {
     FILEDIR="${FILEPATH%/*}"
     REGEX="cover"
 
-    ***REMOVED*** MUSIC_DIR="$(cat "$HOME/.config/mpd/mpd.conf" | /bin/grep 'music_directory' | head -n 1 | awk '{print $2}')"
+    # MUSIC_DIR="$(cat "$HOME/.config/mpd/mpd.conf" | /bin/grep 'music_directory' | head -n 1 | awk '{print $2}')"
     MUSIC_DIR="${HOME}/music"
 
     ICON_DIR="$MUSIC_DIR/$FILEDIR"

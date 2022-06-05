@@ -52,7 +52,7 @@ M.config = function()
       vim.cmd [[
           set foldlevel=4
           set foldmethod=expr
-          set foldexpr=nvim_treesitter***REMOVED***foldexpr()
+          set foldexpr=nvim_treesitter#foldexpr()
           lua require("user.zen").show_diagnostics()
           ]]
     end,

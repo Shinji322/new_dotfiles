@@ -1,47 +1,47 @@
-***REMOVED***compdef docker dockerd
-***REMOVED***
-***REMOVED*** zsh completion for docker (http://docker.com)
-***REMOVED***
-***REMOVED*** version:  0.3.0
-***REMOVED*** github:   https://github.com/felixr/docker-zsh-completion
-***REMOVED***
-***REMOVED*** contributors:
-***REMOVED***   - Felix Riedel
-***REMOVED***   - Steve Durrheimer
-***REMOVED***   - Vincent Bernat
-***REMOVED***   - Rohan Verma
-***REMOVED***
-***REMOVED*** license:
-***REMOVED***
-***REMOVED*** Copyright (c) 2013, Felix Riedel
-***REMOVED*** All rights reserved.
-***REMOVED***
-***REMOVED*** Redistribution and use in source and binary forms, with or without
-***REMOVED*** modification, are permitted provided that the following conditions are met:
-***REMOVED***     * Redistributions of source code must retain the above copyright
-***REMOVED***       notice, this list of conditions and the following disclaimer.
-***REMOVED***     * Redistributions in binary form must reproduce the above copyright
-***REMOVED***       notice, this list of conditions and the following disclaimer in the
-***REMOVED***       documentation and/or other materials provided with the distribution.
-***REMOVED***     * Neither the name of the <organization> nor the
-***REMOVED***       names of its contributors may be used to endorse or promote products
-***REMOVED***       derived from this software without specific prior written permission.
-***REMOVED***
-***REMOVED*** THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
-***REMOVED*** ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
-***REMOVED*** WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-***REMOVED*** DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
-***REMOVED*** DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-***REMOVED*** (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-***REMOVED*** LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-***REMOVED*** ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-***REMOVED*** (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
-***REMOVED*** SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-***REMOVED***
+#compdef docker dockerd
+#
+# zsh completion for docker (http://docker.com)
+#
+# version:  0.3.0
+# github:   https://github.com/felixr/docker-zsh-completion
+#
+# contributors:
+#   - Felix Riedel
+#   - Steve Durrheimer
+#   - Vincent Bernat
+#   - Rohan Verma
+#
+# license:
+#
+# Copyright (c) 2013, Felix Riedel
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above copyright
+#       notice, this list of conditions and the following disclaimer in the
+#       documentation and/or other materials provided with the distribution.
+#     * Neither the name of the <organization> nor the
+#       names of its contributors may be used to endorse or promote products
+#       derived from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+# WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+# DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
+# DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+# (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+# LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+# ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+# (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
+# SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+#
 
-***REMOVED*** Short-option stacking can be enabled with:
-***REMOVED***  zstyle ':completion:*:*:docker:*' option-stacking yes
-***REMOVED***  zstyle ':completion:*:*:docker-*:*' option-stacking yes
+# Short-option stacking can be enabled with:
+#  zstyle ':completion:*:*:docker:*' option-stacking yes
+#  zstyle ':completion:*:*:docker-*:*' option-stacking yes
 __docker_arguments() {
     if zstyle -t ":completion:${curcontext}:" option-stacking; then
         print -- -s
@@ -60,25 +60,25 @@ __docker_get_containers() {
 
     lines=(${(f)${:-"$(_call_program commands docker $docker_options ps --format 'table' --no-trunc $args)"$'\n'}})
 
-    ***REMOVED*** Parse header line to find columns
+    # Parse header line to find columns
     local i=1 j=1 k header=${lines[1]}
     declare -A begin end
-    while (( j < ${***REMOVED***header} - 1 )); do
+    while (( j < ${#header} - 1 )); do
         i=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 1 ))
         j=$(( i + ${${header[$i,-1]}[(i)  ]} - 1 ))
         k=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 2 ))
         begin[${header[$i,$((j-1))]}]=$i
         end[${header[$i,$((j-1))]}]=$k
     done
-    end[${header[$i,$((j-1))]}]=-1 ***REMOVED*** Last column, should go to the end of the line
+    end[${header[$i,$((j-1))]}]=-1 # Last column, should go to the end of the line
     lines=(${lines[2,-1]})
 
-    ***REMOVED*** Container ID
+    # Container ID
     if [[ $type = (ids|all) ]]; then
         for line in $lines; do
-            s="${${line[${begin[CONTAINER ID]},${end[CONTAINER ID]}]%% ***REMOVED******REMOVED***}[0,12]}"
-            s="$s:${(l:15:: :::)${${line[${begin[CREATED]},${end[CREATED]}]/ ago/}%% ***REMOVED******REMOVED***}}"
-            s="$s, ${${${line[${begin[IMAGE]},${end[IMAGE]}]}/:/\\:}%% ***REMOVED******REMOVED***}"
+            s="${${line[${begin[CONTAINER ID]},${end[CONTAINER ID]}]%% ##}[0,12]}"
+            s="$s:${(l:15:: :::)${${line[${begin[CREATED]},${end[CREATED]}]/ ago/}%% ##}}"
+            s="$s, ${${${line[${begin[IMAGE]},${end[IMAGE]}]}/:/\\:}%% ##}"
             if [[ ${line[${begin[STATUS]},${end[STATUS]}]} = (Exit*|Created*) ]]; then
                 stopped=($stopped $s)
             else
@@ -87,20 +87,20 @@ __docker_get_containers() {
         done
     fi
 
-    ***REMOVED*** Names: we only display the one without slash. All other names
-    ***REMOVED*** are generated and may clutter the completion. However, with
-    ***REMOVED*** Swarm, all names may be prefixed by the swarm node name.
+    # Names: we only display the one without slash. All other names
+    # are generated and may clutter the completion. However, with
+    # Swarm, all names may be prefixed by the swarm node name.
     if [[ $type = (names|all) ]]; then
         for line in $lines; do
             names=(${(ps:,:)${${line[${begin[NAMES]},${end[NAMES]}]}%% *}})
-            ***REMOVED*** First step: find a common prefix and strip it (swarm node case)
-            (( ${***REMOVED***${(u)names%%/*}} == 1 )) && names=${names***REMOVED***${names[1]%%/*}/}
-            ***REMOVED*** Second step: only keep the first name without a /
-            s=${${names:***REMOVED****/*}[1]}
-            ***REMOVED*** If no name, well give up.
-            (( $***REMOVED***s != 0 )) || continue
-            s="$s:${(l:15:: :::)${${line[${begin[CREATED]},${end[CREATED]}]/ ago/}%% ***REMOVED******REMOVED***}}"
-            s="$s, ${${${line[${begin[IMAGE]},${end[IMAGE]}]}/:/\\:}%% ***REMOVED******REMOVED***}"
+            # First step: find a common prefix and strip it (swarm node case)
+            (( ${#${(u)names%%/*}} == 1 )) && names=${names#${names[1]%%/*}/}
+            # Second step: only keep the first name without a /
+            s=${${names:#*/*}[1]}
+            # If no name, well give up.
+            (( $#s != 0 )) || continue
+            s="$s:${(l:15:: :::)${${line[${begin[CREATED]},${end[CREATED]}]/ ago/}%% ##}}"
+            s="$s, ${${${line[${begin[IMAGE]},${end[IMAGE]}]}/:/\\:}%% ##}"
             if [[ ${line[${begin[STATUS]},${end[STATUS]}]} = (Exit*|Created*) ]]; then
                 stopped=($stopped $s)
             else
@@ -145,7 +145,7 @@ __docker_complete_info_plugins() {
     emulate -L zsh
     setopt extendedglob
     local -a plugins
-    plugins=(${(ps: :)${(M)${(f)${${"$(_call_program commands docker $docker_options info)"***REMOVED******REMOVED****$'\n'Plugins:}%%$'\n'^ *}}:***REMOVED*** $1: *}***REMOVED******REMOVED*** $1: })
+    plugins=(${(ps: :)${(M)${(f)${${"$(_call_program commands docker $docker_options info)"##*$'\n'Plugins:}%%$'\n'^ *}}:# $1: *}## $1: })
     _describe -t plugins "$1 plugins" plugins && ret=0
     return ret
 }
@@ -154,7 +154,7 @@ __docker_complete_images() {
     [[ $PREFIX = -* ]] && return 1
     integer ret=1
     declare -a images
-    images=(${${${(f)${:-"$(_call_program commands docker $docker_options images)"$'\n'}}[2,-1]}/(***REMOVED***b)([^ ]***REMOVED******REMOVED***) ***REMOVED******REMOVED***([^ ]***REMOVED******REMOVED***) ***REMOVED******REMOVED***([^ ]***REMOVED******REMOVED***)*/${match[3]}:${(r:15:: :::)match[2]} in ${match[1]}})
+    images=(${${${(f)${:-"$(_call_program commands docker $docker_options images)"$'\n'}}[2,-1]}/(#b)([^ ]##) ##([^ ]##) ##([^ ]##)*/${match[3]}:${(r:15:: :::)match[2]} in ${match[1]}})
     _describe -t docker-images "images" images && ret=0
     __docker_complete_repositories_with_tags && ret=0
     return ret
@@ -165,7 +165,7 @@ __docker_complete_repositories() {
     integer ret=1
     declare -a repos
     repos=(${${${(f)${:-"$(_call_program commands docker $docker_options images)"$'\n'}}%% *}[2,-1]})
-    repos=(${repos***REMOVED***<none>})
+    repos=(${repos#<none>})
     _describe -t docker-repos "repositories" repos && ret=0
     return ret
 }
@@ -175,19 +175,19 @@ __docker_complete_repositories_with_tags() {
     integer ret=1
     declare -a repos onlyrepos matched
     declare m
-    repos=(${${${${(f)${:-"$(_call_program commands docker $docker_options images)"$'\n'}}[2,-1]}/ ***REMOVED******REMOVED***/:::}%% *})
-    repos=(${${repos%:::<none>}***REMOVED***<none>})
-    ***REMOVED*** Check if we have a prefix-match for the current prefix.
+    repos=(${${${${(f)${:-"$(_call_program commands docker $docker_options images)"$'\n'}}[2,-1]}/ ##/:::}%% *})
+    repos=(${${repos%:::<none>}#<none>})
+    # Check if we have a prefix-match for the current prefix.
     onlyrepos=(${repos%::*})
     for m in $onlyrepos; do
-        [[ ${PREFIX***REMOVED******REMOVED***${~~m}} != ${PREFIX} ]] && {
-            ***REMOVED*** Yes, complete with tags
+        [[ ${PREFIX##${~~m}} != ${PREFIX} ]] && {
+            # Yes, complete with tags
             repos=(${${repos/:::/:}/:/\\:})
             _describe -t docker-repos-with-tags "repositories with tags" repos && ret=0
             return ret
         }
     done
-    ***REMOVED*** No, only complete repositories
+    # No, only complete repositories
     onlyrepos=(${${repos%:::*}/:/\\:})
     _describe -t docker-repos "repositories" onlyrepos -qS : && ret=0
 
@@ -208,11 +208,11 @@ __docker_search() {
 
     local expl
     local -a result
-    if ( [[ ${(P)+cachename} -eq 0 ]] || _cache_invalid ${cachename***REMOVED***_} ) \
-        && ! _retrieve_cache ${cachename***REMOVED***_}; then
+    if ( [[ ${(P)+cachename} -eq 0 ]] || _cache_invalid ${cachename#_} ) \
+        && ! _retrieve_cache ${cachename#_}; then
         _message "Searching for ${searchterm}..."
         result=(${${${(f)${:-"$(_call_program commands docker $docker_options search $searchterm)"$'\n'}}%% *}[2,-1]})
-        _store_cache ${cachename***REMOVED***_} result
+        _store_cache ${cachename#_} result
     fi
     _wanted dockersearch expl 'available images' compadd -a result
 }
@@ -262,7 +262,7 @@ __docker_complete_log_options() {
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (syslog-format)
                 local opts=('rfc3164' 'rfc5424' 'rfc5424micro')
                 _describe -t syslog-format-opts "syslog format options" opts && ret=0
@@ -302,7 +302,7 @@ __docker_complete_pid() {
     vopts=('container')
 
     if compset -P '*:'; then
-        case "${${words[-1]%:*}***REMOVED****=}" in
+        case "${${words[-1]%:*}#*=}" in
             (container)
                 __docker_complete_running_containers && ret=0
                 ;;
@@ -325,7 +325,7 @@ __docker_complete_runtimes() {
     emulate -L zsh
     setopt extendedglob
     local -a runtimes_opts
-    runtimes_opts=(${(ps: :)${(f)${${"$(_call_program commands docker $docker_options info)"***REMOVED******REMOVED****$'\n'Runtimes: }%%$'\n'^ *}}})
+    runtimes_opts=(${(ps: :)${(f)${${"$(_call_program commands docker $docker_options info)"##*$'\n'Runtimes: }%%$'\n'^ *}}})
     _describe -t runtimes-opts "runtimes options" runtimes_opts && ret=0
 }
 
@@ -334,7 +334,7 @@ __docker_complete_ps_filters() {
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (ancestor)
                 __docker_complete_images && ret=0
                 ;;
@@ -385,7 +385,7 @@ __docker_complete_search_filters() {
     opts=('is-automated' 'is-official' 'stars')
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (is-automated|is-official)
                 _describe -t boolean-filter-opts "filter options" boolean_opts && ret=0
                 ;;
@@ -409,7 +409,7 @@ __docker_complete_images_filters() {
     opts=('before' 'dangling' 'label' 'reference' 'since')
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (before|reference|since)
                 __docker_complete_images && ret=0
                 ;;
@@ -435,7 +435,7 @@ __docker_complete_events_filter() {
     opts=('container' 'daemon' 'event' 'image' 'label' 'network' 'scope' 'type' 'volume')
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (container)
                 __docker_complete_containers && ret=0
                 ;;
@@ -444,8 +444,8 @@ __docker_complete_events_filter() {
                 setopt extendedglob
                 local -a daemon_opts
                 daemon_opts=(
-                    ${(f)${${"$(_call_program commands docker $docker_options info)"***REMOVED******REMOVED****$'\n'Name: }%%$'\n'^ *}}
-                    ${${(f)${${"$(_call_program commands docker $docker_options info)"***REMOVED******REMOVED****$'\n'ID: }%%$'\n'^ *}}//:/\\:}
+                    ${(f)${${"$(_call_program commands docker $docker_options info)"##*$'\n'Name: }%%$'\n'^ *}}
+                    ${${(f)${${"$(_call_program commands docker $docker_options info)"##*$'\n'ID: }%%$'\n'^ *}}//:/\\:}
                 )
                 _describe -t daemon-filter-opts "daemon filter options" daemon_opts && ret=0
                 ;;
@@ -494,7 +494,7 @@ __docker_complete_prune_filters() {
     opts=('until')
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             *)
                 _message 'value' && ret=0
                 ;;
@@ -506,7 +506,7 @@ __docker_complete_prune_filters() {
     return ret
 }
 
-***REMOVED*** BO checkpoint
+# BO checkpoint
 
 __docker_checkpoint_commands() {
     local -a _docker_checkpoint_subcommands
@@ -555,9 +555,9 @@ __docker_checkpoint_subcommand() {
     return ret
 }
 
-***REMOVED*** EO checkpoint
+# EO checkpoint
 
-***REMOVED*** BO container
+# BO container
 
 __docker_container_commands() {
     local -a _docker_container_subcommands
@@ -616,7 +616,7 @@ __docker_container_subcommand() {
         "($help)*--device-write-bps=[Limit the write rate (bytes per second) to a device]:device:IO rate: "
         "($help)*--device-write-iops=[Limit the write rate (IO per second) to a device]:device:IO rate: "
         "($help)--disable-content-trust[Skip image verification]"
-        "($help)*--dns=[Custom DNS servers]:DNS ***REMOVED*** "
+        "($help)*--dns=[Custom DNS servers]:DNS server: "
         "($help)*--dns-option=[Custom DNS options]:DNS option: "
         "($help)*--dns-search=[Custom DNS search domains]:DNS domains: "
         "($help)*--domainname=[Container NIS domain name]:domainname:_hosts"
@@ -960,9 +960,9 @@ __docker_container_subcommand() {
     return ret
 }
 
-***REMOVED*** EO container
+# EO container
 
-***REMOVED*** BO image
+# BO image
 
 __docker_image_commands() {
     local -a _docker_image_subcommands
@@ -1114,16 +1114,16 @@ __docker_image_subcommand() {
     return ret
 }
 
-***REMOVED*** EO image
+# EO image
 
-***REMOVED*** BO network
+# BO network
 
 __docker_network_complete_ls_filters() {
     [[ $PREFIX = -* ]] && return 1
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (driver)
                 __docker_complete_info_plugins Network && ret=0
                 ;;
@@ -1163,10 +1163,10 @@ __docker_get_networks() {
 
     lines=(${(f)${:-"$(_call_program commands docker $docker_options network ls)"$'\n'}})
 
-    ***REMOVED*** Parse header line to find columns
+    # Parse header line to find columns
     local i=1 j=1 k header=${lines[1]}
     declare -A begin end
-    while (( j < ${***REMOVED***header} - 1 )); do
+    while (( j < ${#header} - 1 )); do
         i=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 1 ))
         j=$(( i + ${${header[$i,-1]}[(i)  ]} - 1 ))
         k=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 2 ))
@@ -1176,22 +1176,22 @@ __docker_get_networks() {
     end[${header[$i,$((j-1))]}]=-1
     lines=(${lines[2,-1]})
 
-    ***REMOVED*** Network ID
+    # Network ID
     if [[ $type = (ids|all) ]]; then
         for line in $lines; do
-            s="${line[${begin[NETWORK ID]},${end[NETWORK ID]}]%% ***REMOVED******REMOVED***}"
-            s="$s:${(l:7:: :::)${${line[${begin[DRIVER]},${end[DRIVER]}]}%% ***REMOVED******REMOVED***}}"
-            s="$s, ${${line[${begin[SCOPE]},${end[SCOPE]}]}%% ***REMOVED******REMOVED***}"
+            s="${line[${begin[NETWORK ID]},${end[NETWORK ID]}]%% ##}"
+            s="$s:${(l:7:: :::)${${line[${begin[DRIVER]},${end[DRIVER]}]}%% ##}}"
+            s="$s, ${${line[${begin[SCOPE]},${end[SCOPE]}]}%% ##}"
             networks=($networks $s)
         done
     fi
 
-    ***REMOVED*** Names
+    # Names
     if [[ $type = (names|all) ]]; then
         for line in $lines; do
-            s="${line[${begin[NAME]},${end[NAME]}]%% ***REMOVED******REMOVED***}"
-            s="$s:${(l:7:: :::)${${line[${begin[DRIVER]},${end[DRIVER]}]}%% ***REMOVED******REMOVED***}}"
-            s="$s, ${${line[${begin[SCOPE]},${end[SCOPE]}]}%% ***REMOVED******REMOVED***}"
+            s="${line[${begin[NAME]},${end[NAME]}]%% ##}"
+            s="$s:${(l:7:: :::)${${line[${begin[DRIVER]},${end[DRIVER]}]}%% ##}}"
+            s="$s, ${${line[${begin[SCOPE]},${end[SCOPE]}]}%% ##}"
             networks=($networks $s)
         done
     fi
@@ -1315,16 +1315,16 @@ __docker_network_subcommand() {
     return ret
 }
 
-***REMOVED*** EO network
+# EO network
 
-***REMOVED*** BO node
+# BO node
 
 __docker_node_complete_ls_filters() {
     [[ $PREFIX = -* ]] && return 1
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (id)
                 __docker_complete_nodes_ids && ret=0
                 ;;
@@ -1356,7 +1356,7 @@ __docker_node_complete_ps_filters() {
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (desired-state)
                 state_opts=('accepted' 'running' 'shutdown')
                 _describe -t state-opts "desired state options" state_opts && ret=0
@@ -1384,10 +1384,10 @@ __docker_nodes() {
     [[ $filter != "none" ]] && args=("-f $filter")
 
     lines=(${(f)${:-"$(_call_program commands docker $docker_options node ls $args)"$'\n'}})
-    ***REMOVED*** Parse header line to find columns
+    # Parse header line to find columns
     local i=1 j=1 k header=${lines[1]}
     declare -A begin end
-    while (( j < ${***REMOVED***header} - 1 )); do
+    while (( j < ${#header} - 1 )); do
         i=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 1 ))
         j=$(( i + ${${header[$i,-1]}[(i)  ]} - 1 ))
         k=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 2 ))
@@ -1397,18 +1397,18 @@ __docker_nodes() {
     end[${header[$i,$((j-1))]}]=-1
     lines=(${lines[2,-1]})
 
-    ***REMOVED*** Node ID
+    # Node ID
     if [[ $type = (ids|all) ]]; then
         for line in $lines; do
-            s="${line[${begin[ID]},${end[ID]}]%% ***REMOVED******REMOVED***}"
+            s="${line[${begin[ID]},${end[ID]}]%% ##}"
             nodes=($nodes $s)
         done
     fi
 
-    ***REMOVED*** Names
+    # Names
     if [[ $type = (names|all) ]]; then
         for line in $lines; do
-            s="${line[${begin[HOSTNAME]},${end[HOSTNAME]}]%% ***REMOVED******REMOVED***}"
+            s="${line[${begin[HOSTNAME]},${end[HOSTNAME]}]%% ##}"
             nodes=($nodes $s)
         done
     fi
@@ -1526,16 +1526,16 @@ __docker_node_subcommand() {
     return ret
 }
 
-***REMOVED*** EO node
+# EO node
 
-***REMOVED*** BO plugin
+# BO plugin
 
 __docker_plugin_complete_ls_filters() {
     [[ $PREFIX = -* ]] && return 1
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (capability)
                 opts=('authz' 'ipamdriver' 'logdriver' 'metricscollector' 'networkdriver' 'volumedriver')
                 _describe -t capability-opts "capability options" opts && ret=0
@@ -1567,10 +1567,10 @@ __docker_plugins() {
 
     lines=(${(f)${:-"$(_call_program commands docker $docker_options plugin ls $args)"$'\n'}})
 
-    ***REMOVED*** Parse header line to find columns
+    # Parse header line to find columns
     local i=1 j=1 k header=${lines[1]}
     declare -A begin end
-    while (( j < ${***REMOVED***header} - 1 )); do
+    while (( j < ${#header} - 1 )); do
         i=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 1 ))
         j=$(( i + ${${header[$i,-1]}[(i)  ]} - 1 ))
         k=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 2 ))
@@ -1580,10 +1580,10 @@ __docker_plugins() {
     end[${header[$i,$((j-1))]}]=-1
     lines=(${lines[2,-1]})
 
-    ***REMOVED*** Name
+    # Name
     for line in $lines; do
-        s="${line[${begin[NAME]},${end[NAME]}]%% ***REMOVED******REMOVED***}"
-        s="$s:${(l:7:: :::)${${line[${begin[TAG]},${end[TAG]}]}%% ***REMOVED******REMOVED***}}"
+        s="${line[${begin[NAME]},${end[NAME]}]%% ##}"
+        s="$s:${(l:7:: :::)${${line[${begin[TAG]},${end[TAG]}]}%% ##}}"
         plugins=($plugins $s)
     done
 
@@ -1701,9 +1701,9 @@ __docker_plugin_subcommand() {
     return ret
 }
 
-***REMOVED*** EO plugin
+# EO plugin
 
-***REMOVED*** BO secret
+# BO secret
 
 __docker_secrets() {
     [[ $PREFIX = -* ]] && return 1
@@ -1715,10 +1715,10 @@ __docker_secrets() {
 
     lines=(${(f)${:-"$(_call_program commands docker $docker_options secret ls)"$'\n'}})
 
-    ***REMOVED*** Parse header line to find columns
+    # Parse header line to find columns
     local i=1 j=1 k header=${lines[1]}
     declare -A begin end
-    while (( j < ${***REMOVED***header} - 1 )); do
+    while (( j < ${#header} - 1 )); do
         i=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 1 ))
         j=$(( i + ${${header[$i,-1]}[(i)  ]} - 1 ))
         k=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 2 ))
@@ -1728,18 +1728,18 @@ __docker_secrets() {
     end[${header[$i,$((j-1))]}]=-1
     lines=(${lines[2,-1]})
 
-    ***REMOVED*** ID
+    # ID
     if [[ $type = (ids|all) ]]; then
         for line in $lines; do
-            s="${line[${begin[ID]},${end[ID]}]%% ***REMOVED******REMOVED***}"
+            s="${line[${begin[ID]},${end[ID]}]%% ##}"
             secrets=($secrets $s)
         done
     fi
 
-    ***REMOVED*** Names
+    # Names
     if [[ $type = (names|all) ]]; then
         for line in $lines; do
-            s="${line[${begin[NAME]},${end[NAME]}]%% ***REMOVED******REMOVED***}"
+            s="${line[${begin[NAME]},${end[NAME]}]%% ##}"
             secrets=($secrets $s)
         done
     fi
@@ -1803,16 +1803,16 @@ __docker_secret_subcommand() {
     return ret
 }
 
-***REMOVED*** EO secret
+# EO secret
 
-***REMOVED*** BO service
+# BO service
 
 __docker_service_complete_ls_filters() {
     [[ $PREFIX = -* ]] && return 1
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (id)
                 __docker_complete_services_ids && ret=0
                 ;;
@@ -1840,7 +1840,7 @@ __docker_service_complete_ps_filters() {
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (desired-state)
                 state_opts=('accepted' 'running' 'shutdown')
                 _describe -t state-opts "desired state options" state_opts && ret=0
@@ -1862,7 +1862,7 @@ __docker_service_complete_placement_pref() {
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (spread)
                 opts=('engine.labels' 'node.labels')
                 _describe -t spread-opts "spread options" opts -qS "." && ret=0
@@ -1889,10 +1889,10 @@ __docker_services() {
 
     lines=(${(f)${:-"$(_call_program commands docker $docker_options service ls)"$'\n'}})
 
-    ***REMOVED*** Parse header line to find columns
+    # Parse header line to find columns
     local i=1 j=1 k header=${lines[1]}
     declare -A begin end
-    while (( j < ${***REMOVED***header} - 1 )); do
+    while (( j < ${#header} - 1 )); do
         i=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 1 ))
         j=$(( i + ${${header[$i,-1]}[(i)  ]} - 1 ))
         k=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 2 ))
@@ -1902,20 +1902,20 @@ __docker_services() {
     end[${header[$i,$((j-1))]}]=-1
     lines=(${lines[2,-1]})
 
-    ***REMOVED*** Service ID
+    # Service ID
     if [[ $type = (ids|all) ]]; then
         for line in $lines; do
-            s="${line[${begin[ID]},${end[ID]}]%% ***REMOVED******REMOVED***}"
-            s="$s:${(l:7:: :::)${${line[${begin[IMAGE]},${end[IMAGE]}]}%% ***REMOVED******REMOVED***}}"
+            s="${line[${begin[ID]},${end[ID]}]%% ##}"
+            s="$s:${(l:7:: :::)${${line[${begin[IMAGE]},${end[IMAGE]}]}%% ##}}"
             services=($services $s)
         done
     fi
 
-    ***REMOVED*** Names
+    # Names
     if [[ $type = (names|all) ]]; then
         for line in $lines; do
-            s="${line[${begin[NAME]},${end[NAME]}]%% ***REMOVED******REMOVED***}"
-            s="$s:${(l:7:: :::)${${line[${begin[IMAGE]},${end[IMAGE]}]}%% ***REMOVED******REMOVED***}}"
+            s="${line[${begin[NAME]},${end[NAME]}]%% ##}"
+            s="$s:${(l:7:: :::)${${line[${begin[IMAGE]},${end[IMAGE]}]}%% ##}}"
             services=($services $s)
         done
     fi
@@ -2017,7 +2017,7 @@ __docker_service_subcommand() {
                 "($help)*--container-label=[Container labels]:label: " \
                 "($help)*--dns=[Set custom DNS servers]:DNS: " \
                 "($help)*--dns-option=[Set DNS options]:DNS option: " \
-                "($help)*--dns-search=[Set custom DNS search domains]:DNS ***REMOVED*** " \
+                "($help)*--dns-search=[Set custom DNS search domains]:DNS search: " \
                 "($help)*--env-file=[Read environment variables from a file]:environment file:_files" \
                 "($help)*--group=[Set one or more supplementary user groups for the container]:group: _groups " \
                 "($help)--mode=[Service Mode]:mode:(global replicated)" \
@@ -2102,8 +2102,8 @@ __docker_service_subcommand() {
                 "($help)*--dns-rm=[Remove custom DNS servers]:DNS: " \
                 "($help)*--dns-option-add=[Add or update DNS options]:DNS option: " \
                 "($help)*--dns-option-rm=[Remove DNS options]:DNS option: " \
-                "($help)*--dns-search-add=[Add or update custom DNS search domains]:DNS ***REMOVED*** " \
-                "($help)*--dns-search-rm=[Remove DNS search domains]:DNS ***REMOVED*** " \
+                "($help)*--dns-search-add=[Add or update custom DNS search domains]:DNS search: " \
+                "($help)*--dns-search-rm=[Remove DNS search domains]:DNS search: " \
                 "($help)--force[Force update]" \
                 "($help)*--group-add=[Add additional supplementary user groups to the container]:group:_groups" \
                 "($help)*--group-rm=[Remove previously added supplementary user groups from the container]:group:_groups" \
@@ -2123,16 +2123,16 @@ __docker_service_subcommand() {
     return ret
 }
 
-***REMOVED*** EO service
+# EO service
 
-***REMOVED*** BO stack
+# BO stack
 
 __docker_stack_complete_ps_filters() {
     [[ $PREFIX = -* ]] && return 1
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (desired-state)
                 state_opts=('accepted' 'running' 'shutdown')
                 _describe -t state-opts "desired state options" state_opts && ret=0
@@ -2154,7 +2154,7 @@ __docker_stack_complete_services_filters() {
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             *)
                 _message 'value' && ret=0
                 ;;
@@ -2175,10 +2175,10 @@ __docker_stacks() {
 
     lines=(${(f)${:-"$(_call_program commands docker $docker_options stack ls)"$'\n'}})
 
-    ***REMOVED*** Parse header line to find columns
+    # Parse header line to find columns
     local i=1 j=1 k header=${lines[1]}
     declare -A begin end
-    while (( j < ${***REMOVED***header} - 1 )); do
+    while (( j < ${#header} - 1 )); do
         i=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 1 ))
         j=$(( i + ${${header[$i,-1]}[(i)  ]} - 1 ))
         k=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 2 ))
@@ -2188,9 +2188,9 @@ __docker_stacks() {
     end[${header[$i,$((j-1))]}]=-1
     lines=(${lines[2,-1]})
 
-    ***REMOVED*** Service NAME
+    # Service NAME
     for line in $lines; do
-        s="${line[${begin[NAME]},${end[NAME]}]%% ***REMOVED******REMOVED***}"
+        s="${line[${begin[NAME]},${end[NAME]}]%% ##}"
         stacks=($stacks $s)
     done
 
@@ -2266,9 +2266,9 @@ __docker_stack_subcommand() {
     return ret
 }
 
-***REMOVED*** EO stack
+# EO stack
 
-***REMOVED*** BO swarm
+# BO swarm
 
 __docker_swarm_commands() {
     local -a _docker_swarm_subcommands
@@ -2362,9 +2362,9 @@ __docker_swarm_subcommand() {
     return ret
 }
 
-***REMOVED*** EO swarm
+# EO swarm
 
-***REMOVED*** BO system
+# BO system
 
 __docker_system_commands() {
     local -a _docker_system_subcommands
@@ -2419,16 +2419,16 @@ __docker_system_subcommand() {
     return ret
 }
 
-***REMOVED*** EO system
+# EO system
 
-***REMOVED*** BO volume
+# BO volume
 
 __docker_volume_complete_ls_filters() {
     [[ $PREFIX = -* ]] && return 1
     integer ret=1
 
     if compset -P '*='; then
-        case "${${words[-1]%=*}***REMOVED****=}" in
+        case "${${words[-1]%=*}#*=}" in
             (dangling)
                 dangling_opts=('true' 'false')
                 _describe -t dangling-filter-opts "Dangling Filter Options" dangling_opts && ret=0
@@ -2458,10 +2458,10 @@ __docker_complete_volumes() {
 
     lines=(${(f)${:-"$(_call_program commands docker $docker_options volume ls)"$'\n'}})
 
-    ***REMOVED*** Parse header line to find columns
+    # Parse header line to find columns
     local i=1 j=1 k header=${lines[1]}
     declare -A begin end
-    while (( j < ${***REMOVED***header} - 1 )); do
+    while (( j < ${#header} - 1 )); do
         i=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 1 ))
         j=$(( i + ${${header[$i,-1]}[(i)  ]} - 1 ))
         k=$(( j + ${${header[$j,-1]}[(i)[^ ]]} - 2 ))
@@ -2471,11 +2471,11 @@ __docker_complete_volumes() {
     end[${header[$i,$((j-1))]}]=-1
     lines=(${lines[2,-1]})
 
-    ***REMOVED*** Names
+    # Names
     local line s
     for line in $lines; do
-        s="${line[${begin[VOLUME NAME]},${end[VOLUME NAME]}]%% ***REMOVED******REMOVED***}"
-        s="$s:${(l:7:: :::)${${line[${begin[DRIVER]},${end[DRIVER]}]}%% ***REMOVED******REMOVED***}}"
+        s="${line[${begin[VOLUME NAME]},${end[VOLUME NAME]}]%% ##}"
+        s="$s:${(l:7:: :::)${${line[${begin[DRIVER]},${end[DRIVER]}]}%% ##}}"
         volumes=($volumes $s)
     done
 
@@ -2543,9 +2543,9 @@ __docker_volume_subcommand() {
     return ret
 }
 
-***REMOVED*** EO volume
+# EO volume
 
-***REMOVED*** BO context
+# BO context
 
 __docker_complete_contexts() {
     [[ $PREFIX = -* ]] && return 1
@@ -2619,11 +2619,11 @@ __docker_context_subcommand() {
     return ret
 }
 
-***REMOVED*** EO context
+# EO context
 
 __docker_caching_policy() {
-  oldp=( "$1"(Nmh+1) )     ***REMOVED*** 1 hour
-  (( $***REMOVED***oldp ))
+  oldp=( "$1"(Nmh+1) )     # 1 hour
+  (( $#oldp ))
 }
 
 __docker_commands() {
@@ -2653,9 +2653,9 @@ __docker_commands() {
     then
         local -a lines
         lines=(${(f)"$(_call_program commands docker 2>&1)"})
-        _docker_subcommands=(${${${(M)${lines[$((${lines[(i)*Commands:]} + 1)),-1]}:***REMOVED*** *}***REMOVED******REMOVED*** ***REMOVED***}/\****REMOVED*** ***REMOVED******REMOVED***/:})
+        _docker_subcommands=(${${${(M)${lines[$((${lines[(i)*Commands:]} + 1)),-1]}:# *}## #}/\*# ##/:})
         _docker_subcommands=($_docker_subcommands 'daemon:Enable daemon mode' 'help:Show help for a command')
-        (( $***REMOVED***_docker_subcommands > 2 )) && _store_cache docker_subcommands _docker_subcommands
+        (( $#_docker_subcommands > 2 )) && _store_cache docker_subcommands _docker_subcommands
     fi
     _describe -t docker-commands "docker command" _docker_subcommands
 }
@@ -2750,7 +2750,7 @@ __docker_subcommand() {
                 "($help)*--default-ulimit=[Default ulimits for containers]:ulimit: " \
                 "($help)*--dns=[DNS server to use]:DNS: " \
                 "($help)*--dns-opt=[DNS options to use]:DNS option: " \
-                "($help)*--dns-search=[DNS search domains to use]:DNS ***REMOVED*** " \
+                "($help)*--dns-search=[DNS search domains to use]:DNS search: " \
                 "($help)*--exec-opt=[Runtime execution options]:runtime execution options: " \
                 "($help)--exec-root=[Root directory for execution state files]:path:_directories" \
                 "($help)--experimental[Enable experimental features]" \
@@ -2892,12 +2892,12 @@ __docker_subcommand() {
                 "($help -p --password)"{-p=,--password=}"[Password]:password: " \
                 "($help)--password-stdin[Read password from stdin]" \
                 "($help -u --username)"{-u=,--username=}"[Username]:username: " \
-                "($help -)1:***REMOVED*** " && ret=0
+                "($help -)1:server: " && ret=0
             ;;
         (logout)
             _arguments $(__docker_arguments) -A '-*' \
                 $opts_help \
-                "($help -)1:***REMOVED*** " && ret=0
+                "($help -)1:server: " && ret=0
             ;;
         (network)
             local curcontext="$curcontext" state
@@ -3082,8 +3082,8 @@ __docker_subcommand() {
 }
 
 _docker() {
-    ***REMOVED*** Support for subservices, which allows for `compdef _docker docker-shell=_docker_containers`.
-    ***REMOVED*** Based on /usr/share/zsh/functions/Completion/Unix/_git without support for `ret`.
+    # Support for subservices, which allows for `compdef _docker docker-shell=_docker_containers`.
+    # Based on /usr/share/zsh/functions/Completion/Unix/_git without support for `ret`.
     if [[ $service != docker ]]; then
         _call_function - _$service
         return
@@ -3135,10 +3135,10 @@ _dockerd() {
 
 _docker "$@"
 
-***REMOVED*** Local Variables:
-***REMOVED*** mode: Shell-Script
-***REMOVED*** sh-indentation: 4
-***REMOVED*** indent-tabs-mode: nil
-***REMOVED*** sh-basic-offset: 4
-***REMOVED*** End:
-***REMOVED*** vim: ft=zsh sw=4 ts=4 et
+# Local Variables:
+# mode: Shell-Script
+# sh-indentation: 4
+# indent-tabs-mode: nil
+# sh-basic-offset: 4
+# End:
+# vim: ft=zsh sw=4 ts=4 et

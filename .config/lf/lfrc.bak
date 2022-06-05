@@ -1,4 +1,4 @@
-***REMOVED*** Basic Settings
+# Basic Settings
 set shellopts '-eu'
 set ifs "\n"
 set scrolloff 10
@@ -11,29 +11,29 @@ set ignorecase true
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 
-***REMOVED*** Custom Functions
+# Custom Functions
 cmd open ${{
   case $(file --mime-type "$f" -bL) in
-    ***REMOVED*** text/*|application/json) $EDITOR "$f";;
+    # text/*|application/json) $EDITOR "$f";;
     *) xdg-open "$f" &!;;
   esac
 }}
 
 cmd paste-async ${{
-  ***REMOVED*** mode="$(cat ~/.local/share/lf/files | head -1)"
-  ***REMOVED*** ***REMOVED*** COLS=$((tput cols)/3)
-  ***REMOVED*** case "$mode" in
-  ***REMOVED***   copy) 
-  ***REMOVED***     ***REMOVED*** tmux splitw -h -p $(($(tput cols)/3)) -- "cpg -g -rn \"$@\" ."
-  ***REMOVED***     tmux splitw -h -p 30 -- bash -c '~/.local/bin/tmux/lf-paste-async.sh'
-  ***REMOVED***     tmux select-pane -l ***REMOVED*** switch to last pane
-  ***REMOVED***     ;;
-  ***REMOVED***   move) 
-  ***REMOVED***     ***REMOVED*** tmux splitw -h -p $(($(tput cols)/3)) -- "mvg -g -n \"$@\" ."
-  ***REMOVED***     tmux splitw -h -p 30 -- bash -c 'for f in $(cat ~/.local/share/lf/files | tail +2); do mvg -g -i "$f" .; done'
-  ***REMOVED***     tmux select-pane -l ***REMOVED*** switch to last pane
-  ***REMOVED***     ;;
-  ***REMOVED*** esac
+  # mode="$(cat ~/.local/share/lf/files | head -1)"
+  # # COLS=$((tput cols)/3)
+  # case "$mode" in
+  #   copy) 
+  #     # tmux splitw -h -p $(($(tput cols)/3)) -- "cpg -g -rn \"$@\" ."
+  #     tmux splitw -h -p 30 -- bash -c '~/.local/bin/tmux/lf-paste-async.sh'
+  #     tmux select-pane -l # switch to last pane
+  #     ;;
+  #   move) 
+  #     # tmux splitw -h -p $(($(tput cols)/3)) -- "mvg -g -n \"$@\" ."
+  #     tmux splitw -h -p 30 -- bash -c 'for f in $(cat ~/.local/share/lf/files | tail +2); do mvg -g -i "$f" .; done'
+  #     tmux select-pane -l # switch to last pane
+  #     ;;
+  # esac
   rm ~/.local/share/lf/files
   lf -remote "send clear"
 }}
@@ -64,7 +64,7 @@ cmd chmod ${{
 
   for file in "$fx"
   do
-    ***REMOVED*** let's just make sure it's valid so we don't screw up the file
+    # let's just make sure it's valid so we don't screw up the file
     if [ "$ans" = "+x" ]; then
       chmod +x $file
     fi
@@ -90,7 +90,7 @@ cmd fzf_jump ${{
   lf -remote "send $id $cmd \"$res\""
 }}
 
-***REMOVED*** Archive bindings
+# Archive bindings
 cmd extract ${{
   case "$f" in
     *.cbt|*.tar.bz2|*.tar.gz|*.tar.xz|*.tbz2|*.tgz|*.txz|*.tar)
@@ -126,9 +126,9 @@ cmd extract ${{
   esac
 }}
 
-***REMOVED*** Trash cli bindings
+# Trash cli bindings
 cmd trash ${{
-  ***REMOVED*** fails on large files
+  # fails on large files
 	clear; tput bold; tput setaf 4; 
 	set -f
   files=$(printf "$fx" | tr '\n' ';')
@@ -137,16 +137,16 @@ cmd trash ${{
 	read ans
   if [ $ans = "y" ] 
   then
-    ***REMOVED*** idk why we have to do all of this
+    # idk why we have to do all of this
     while [ "$files" ]; do 
       file="${files%%;*}" 
       trash-put -- "$(basename "$file")"
 
-      ***REMOVED*** if last element
+      # if last element
       if [ "$files" = "$file" ]; then
-        files='' ***REMOVED*** exit while loop
+        files='' # exit while loop
       else
-        files="${files***REMOVED****;}"
+        files="${files#*;}"
       fi
     done
   fi
@@ -166,9 +166,9 @@ cmd copy-file-path &{{
     echo "$f" | xclip -sel c
 }}
 
-***REMOVED*** cmd copy-file-name &{{
-***REMOVED***     echo "${f***REMOVED******REMOVED****/}" | xclip -sel c
-***REMOVED*** }}
+# cmd copy-file-name &{{
+#     echo "${f##*/}" | xclip -sel c
+# }}
 
 cmd dragon-drag %{{
     dragon-drop "$f"
@@ -185,8 +185,8 @@ cmd fzf-open ${{
 cmd bulkrename $vidir
 cmd copy_filename $printf "%s" "$fx" | xclip -selection clipboard
 
-***REMOVED*** Bindings
-***REMOVED*** Remove some defaults
+# Bindings
+# Remove some defaults
 map m
 map o
 map n
@@ -199,26 +199,26 @@ map f
 map t
 map C
 
-***REMOVED*** File Openers
+# File Openers
 map ee $$EDITOR "$f"
 
-***REMOVED*** Archive Mappings
+# Archive Mappings
 map ex extract "$f"
 map B bulkrename
 
-***REMOVED*** Trash Mappings
+# Trash Mappings
 map dd trash
 map tc clear_trash
 map tr restore_trash
 
-***REMOVED*** Dragon Mapping
+# Dragon Mapping
 map dr dragon-drag
 map da dragon-drag-all
 
-***REMOVED*** Copy filename
+# Copy filename
 map cc copy_filename
 
-***REMOVED*** Basic Functions
+# Basic Functions
 map . set hidden!
 map p paste
 map x cut
@@ -236,7 +236,7 @@ map C clear
 map U unselect
 map fj fzf_jump
 
-***REMOVED*** Movement
+# Movement
 map gtr  cd ~/.local/share/Trash/files
 map gm   cd /run/media/mokou
 
@@ -254,7 +254,7 @@ map gd   cd ~/downloads
 map gs   cd ~/software
 
 map gc.  cd ~/.config
-map gce  cd ~/.config/lvim ***REMOVED*** Supposed to mean gc Editor
+map gce  cd ~/.config/lvim # Supposed to mean gc Editor
 map gcl  cd ~/.config/lf
 map gcs  cd ~/.config/shell
 map gcz  cd ~/.config/zsh

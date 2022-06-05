@@ -9,7 +9,7 @@ M.config = function()
   twilight.setup {
     dimming = {
       alpha = 0.25, -- amount of dimming
-      color = { "Normal", "***REMOVED***ffffff" },
+      color = { "Normal", "#ffffff" },
     },
     context = 15,
     expand = {

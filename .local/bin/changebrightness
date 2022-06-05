@@ -1,11 +1,11 @@
-***REMOVED***!/bin/sh
-***REMOVED*** Usage: 
-  ***REMOVED*** changebrightness +5 (increments 5)
-  ***REMOVED*** changebrightness -5 (decrements 5)
-  ***REMOVED*** changebrightness 50 (sets to 50)
+#!/bin/sh
+# Usage: 
+  # changebrightness +5 (increments 5)
+  # changebrightness -5 (decrements 5)
+  # changebrightness 50 (sets to 50)
 
-***REMOVED*** Change brightness to that value
-***REMOVED***sudo echo $1 > /sys/class/backlight/amdgpu_bl1/brightness
+# Change brightness to that value
+#sudo echo $1 > /sys/class/backlight/amdgpu_bl1/brightness
 
 changebrightness()
 {

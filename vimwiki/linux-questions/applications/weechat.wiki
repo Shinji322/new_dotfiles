@@ -5,7 +5,7 @@
 {{{bash
 /server add libera irc.libera.chat/6697 -ssl
 }}}
->In this command libera is the internal server name used by WeeChat used when you are connecting [[***REMOVED***Connecting to an IRC server]]
+>In this command libera is the internal server name used by WeeChat used when you are connecting [[#Connecting to an IRC server]]
 
 For more info, run `help server`
 
@@ -36,7 +36,7 @@ For more info, run `help server`
 = Joining / Parting from IRC channels =
 
 {{{bash
-/join ***REMOVED***channel
+/join #channel
 /part [quit message]
 }}}
 >Join joins the channel

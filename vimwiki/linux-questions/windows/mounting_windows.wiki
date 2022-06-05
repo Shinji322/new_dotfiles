@@ -1,7 +1,7 @@
 = TL;DR Command =
 
 {{{bash
-HARD_DRIVE_PARTITION="/dev/sdb1" ***REMOVED*** example
+HARD_DRIVE_PARTITION="/dev/sdb1" # example
 sudo pacman -S ntfs-3g nfs-utils
 mount -t ntfs $HARD_DRIVE_PARTITION /mnt
 }}}

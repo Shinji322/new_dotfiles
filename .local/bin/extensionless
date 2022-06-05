@@ -1,5 +1,5 @@
-***REMOVED***!/bin/sh
+#!/bin/sh
 
-***REMOVED*** This gets the file name without the extension 
+# This gets the file name without the extension 
 
 echo ${1%%.*}

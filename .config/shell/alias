@@ -1,4 +1,4 @@
-***REMOVED*** ~-=| Built in Aliases |=-~
+# ~-=| Built in Aliases |=-~
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias l='exa -laG --icons --color=always --group-directories-first'
 alias dir='dir --color=auto'
@@ -7,7 +7,7 @@ alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
-***REMOVED*** ~-=| Streamlining basic commands |=-~
+# ~-=| Streamlining basic commands |=-~
 alias rm='trash-put'
 alias cp='cpg -g -i'
 alias mv='mvg -g -i'
@@ -16,21 +16,21 @@ alias df='df -h'
 alias grep='grep -i --color=auto'
 alias mkdir='mkdir -p'
 
-***REMOVED*** ~-=| Shortcuts |=-~
+# ~-=| Shortcuts |=-~
 alias scim="sc-im"
 alias cat='bat'
 alias sxiv='sxiv -a'
-***REMOVED*** alias figlet='figlet -f ~/software/typefaces/figlet/doom.flf'
-alias strx='startx ***REMOVED***/.config/x11/xinitrc'
+# alias figlet='figlet -f ~/software/typefaces/figlet/doom.flf'
+alias strx='startx /home/mokou/.config/x11/xinitrc'
 alias locate="sudo updatedb && ~/.scripts/alias/locate.sh"
 
-***REMOVED***  ~-=| Others |=-~
-***REMOVED***alias 'pacman -Sy'='pacman -Syu'
+#  ~-=| Others |=-~
+#alias 'pacman -Sy'='pacman -Syu'
 alias con='/usr/bin/lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 
 
-***REMOVED***  ~-=| $HOME ~ Cleanup |=-~
+#  ~-=| $HOME ~ Cleanup |=-~
 alias newsboat='newsboat --url-file="$XDG_CONFIG_HOME/newsboat/urls" --config-file="$XDG_CONFIG_HOME/newsboat/config" --cache-file="$XDG_CACHE_HOME/newsboat/cache"'
 alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia/settings/.nvidia-settings-rc"'
 alias yarn='yarn --use-yarnrc "$XDG_CONFIG_HOME/yarn/config"'
@@ -45,7 +45,7 @@ alias irssi='irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HO
 alias vale='vale --config "$XDG_CONFIG_HOME/vale/config.ini"
 
 
-***REMOVED*** Let's move faster
+# Let's move faster
 alias p="sudo pacman"
 alias y="yay"
 alias f="$FILE"
@@ -54,26 +54,26 @@ alias v="$EDITOR"
 alias yt="yt-dlp --add-metadata -i"
 alias ca="calcurse"
 alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
-***REMOVED*** alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
-***REMOVED*** Let zsh get the entire history 
+# alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
+# Let zsh get the entire history 
 alias hist='history 1'
 alias "source .zshrc"="source ~/.config/zsh/zshrc"
 alias iost='iostat -sxmhtc --dec=0'
 
-***REMOVED*** Git commands
+# Git commands
 alias g="lazygit"
-***REMOVED*** alias gim='git commit -m'
-***REMOVED*** alias gc='git clone'
-***REMOVED*** alias gia='git add'
-***REMOVED*** alias gis='git status'
+# alias gim='git commit -m'
+# alias gc='git clone'
+# alias gia='git add'
+# alias gis='git status'
 
 
-***REMOVED*** Aliasing core utils
-***REMOVED*** This is a bad idea but ehhh
+# Aliasing core utils
+# This is a bad idea but ehhh
 alias cd="z"
 alias du="dust"
 
-***REMOVED*** Tmux
+# Tmux
 alias ta='tmux attach -t'
 alias tad='tmux attach -d -t'
 alias ts='tmux new-session -s'
@@ -81,5 +81,5 @@ alias tl='tmux list-sessions'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
 
-***REMOVED*** For when keys breaek
+# For when keys breaek
 alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"

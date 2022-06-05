@@ -1,30 +1,30 @@
-***REMOVED***!/bin/zsh
+#!/bin/zsh
 
-***REMOVED*** XDG Base directories
+# XDG Base directories
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_SOURCE_HOME="$HOME/.local/src"
 
-***REMOVED*** Useful Env Variables
+# Useful Env Variables
 export SCRIPT_DIR="$HOME/.scripts"
 export APPIMAGE_DIR="$HOME/software/app-images"
 export BINARIES_DIR="$HOME/software/binaries"
 
-***REMOVED*** Add ~/.local/bin to PATH
-***REMOVED***export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
+# Add ~/.local/bin to PATH
+#export PATH="$PATH:${$(find ~/.local/bin -type d -printf %p:)%%:}"
 export PATH="$PATH:${HOME}/.local/bin"
 . "$HOME/.local/share/cargo/env"
-***REMOVED*** . "${XDG_DATA_HOME:-$HOME/.local/share}/npm/bin"
-***REMOVED*** . "${APPIMAGE_DIR}"
-***REMOVED*** . "${BINARIES_DIR}"
-***REMOVED*** . "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/lsp_servers"
+# . "${XDG_DATA_HOME:-$HOME/.local/share}/npm/bin"
+# . "${APPIMAGE_DIR}"
+# . "${BINARIES_DIR}"
+# . "${XDG_DATA_HOME:-$HOME/.local/share}/nvim/lsp_servers"
 
-***REMOVED*** stuff
+# stuff
 unsetopt PROMPT_SP
 
 
-***REMOVED*** Default Programs (most are just for use in scripts)
+# Default Programs (most are just for use in scripts)
 export TERMINAL="kitty"
 export EDITOR="lvim"
 export FILE="lfcd"
@@ -36,14 +36,14 @@ export SHELL="zsh"
 export BROWSER="waterfox-g4"
 export ICON_THEME="Paper"
 
-***REMOVED*** Misc
-***REMOVED*** blocks telemetry
+# Misc
+# blocks telemetry
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
-***REMOVED*** For NPM
+# For NPM
 export NODE_PATH="${XDG_DATA_HOME:-$HOME/.local/share}/npm/lib/node_modules"
 
-***REMOVED*** ~/ Cleanup
+# ~/ Cleanup
 export XINITRC="${XDG_CONFIG_HOME:-$HOME/.config}/x11/xinitrc"
 
 export GTK2_RC_FILES="${XDG_CONFIG_HOME:-$HOME/.config}/gtk-2.0/gtkrc-2.0"
@@ -68,30 +68,30 @@ export NPM_CONFIG_USERCONFIG="${XDG_CONFIG_HOME:-$HOME/.config}/npm/npmrc"
 export SQLITE_HISTORY="${XDG_CACHE_HOME:-$HOME/.cache}/sqlite_history"
 
 
-***REMOVED*** Doesn't seem to work but let's try it anyway
+# Doesn't seem to work but let's try it anyway
 export ANDROID_SDK_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/android"
 export CUDA_CACHE_PATH="${XDG_DATA_HOME:-$HOME/.local/share}/nv"
 
 
-***REMOVED*** Program options
+# Program options
 export FZF_DEFAULT_OPTS="--margin 5% --border"
-***REMOVED*** Less  - check `man terminfo`
-***REMOVED***
+# Less  - check `man terminfo`
+#
 export LESS=-R
 export LESSOPEN="|lesspipe.sh %s"
 
-***REMOVED*** Blink Mode
-export LESS_TERMCAP_mb=$(tput bold; tput setaf 2) ***REMOVED*** green
-***REMOVED*** Start bold
-export LESS_TERMCAP_md=$(tput bold; tput setaf 2) ***REMOVED*** green
-***REMOVED*** Start stand out
-export LESS_TERMCAP_so=$(tput bold; tput rev; tput setaf 3) ***REMOVED*** yellow
-***REMOVED*** End stand out
+# Blink Mode
+export LESS_TERMCAP_mb=$(tput bold; tput setaf 2) # green
+# Start bold
+export LESS_TERMCAP_md=$(tput bold; tput setaf 2) # green
+# Start stand out
+export LESS_TERMCAP_so=$(tput bold; tput rev; tput setaf 3) # yellow
+# End stand out
 export LESS_TERMCAP_se=$(tput rmso; tput sgr0)
-***REMOVED*** Start underline
-export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 1) ***REMOVED*** red
-***REMOVED*** End underline
+# Start underline
+export LESS_TERMCAP_us=$(tput smul; tput bold; tput setaf 1) # red
+# End underline
 export LESS_TERMCAP_ue=$(tput rmul; tput bold; tput sgr0)
-***REMOVED*** End bold, blinking, standout, underline
+# End bold, blinking, standout, underline
 export LESS_TERMCAP_me=$(tput sgr0) 
 

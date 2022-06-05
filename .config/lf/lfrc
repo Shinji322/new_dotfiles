@@ -1,8 +1,8 @@
-***REMOVED*** Basic Settings
+# Basic Settings
 set shell zsh
 set shellopts '-euy'
 set ifs "\n"
-set filesep "\n"  ***REMOVED*** default already
+set filesep "\n"  # default already
 
 set scrolloff 10
 set period 1
@@ -13,7 +13,7 @@ set ignorecase true
 set cleaner '~/.config/lf/cleaner'
 set previewer '~/.config/lf/scope'
 
-***REMOVED*** ==================== Commands ==========================================
+# ==================== Commands ==========================================
 cmd open ${{
   case $(file --mime-type "$(readlink -f $f)" -b) in
 	application/vnd.openxmlformats-officedocument.spreadsheetml.sheet) localc $fx ;;
@@ -77,11 +77,11 @@ cmd restore_trash ${{
   echo $ids | trash-restore 
   clear
 }}
-***REMOVED*** cmd dragon-drag %{{
-***REMOVED***     dragon-drop "$f"
-***REMOVED*** }}
+# cmd dragon-drag %{{
+#     dragon-drop "$f"
+# }}
 cmd setwallpaper ${{ 
-  ***REMOVED*** feh --no-fehbg --bg-fill -r -z "$f"
+  # feh --no-fehbg --bg-fill -r -z "$f"
   setbg "$f"
 }}
 
@@ -96,14 +96,14 @@ cmd fzf_jump ${{
 }}
 
 
-***REMOVED*** ==================== Remaps ==================================
+# ==================== Remaps ==================================
 map x cut
 map c
 map m
 map f
 map d
 
-***REMOVED*** ==================== Command Bindings ==================================
+# ==================== Command Bindings ==================================
 cmap <up> cmd-history-prev
 cmap <down> cmd-history-next
 map D trash
@@ -113,7 +113,7 @@ map bg setwallpaper
 map dr $dragon-drop "$f"
 map f fzf_jump
 
-***REMOVED*** ==================== Other Bindings ==================================
+# ==================== Other Bindings ==================================
 map E $$EDITOR "$f"
 map B $vidir
 map Y $printf "%s" "$fx" | xclip -selection clipboard
@@ -121,7 +121,7 @@ map C $xclip -selection clipboard < "$f"
 map mb $cp -ri "$f" "$f.bak"
 
 
-***REMOVED*** ==================== cd to common directories ==================================
+# ==================== cd to common directories ==================================
 map gtr  cd ~/.local/share/Trash/files
 map gm   cd /run/media/mokou
 
@@ -139,7 +139,7 @@ map gd   cd ~/downloads
 map gs   cd ~/software
 
 map gc.  cd ~/.config
-map gce  cd ~/.config/lvim ***REMOVED*** Supposed to mean gc Editor
+map gce  cd ~/.config/lvim # Supposed to mean gc Editor
 map gcl  cd ~/.config/lf
 map gcs  cd ~/.config/shell
 map gcz  cd ~/.config/zsh

@@ -28,7 +28,7 @@ Several of these sample commands assume that the MySQL employee sample database 
 
 
 == CSharp ==
-[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-csharp.cs|Where X=C***REMOVED***]]
+[[file:~/code/learning/quickstart/learn-x-in-y-minutes/learn-csharp.cs|Where X=C#]]
 
 
 == CSS ==

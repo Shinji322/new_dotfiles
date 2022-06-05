@@ -1,10 +1,10 @@
-***REMOVED***
-***REMOVED*** Calcurse keys configuration file
-***REMOVED***
-***REMOVED*** In this file the keybindings used by Calcurse are defined.
-***REMOVED*** It is generated automatically by Calcurse and is maintained
-***REMOVED*** via the key configuration menu of the interactive user
-***REMOVED*** interface. It should not be edited directly.
+#
+# Calcurse keys configuration file
+#
+# In this file the keybindings used by Calcurse are defined.
+# It is generated automatically by Calcurse and is maintained
+# via the key configuration menu of the interactive user
+# interface. It should not be edited directly.
 
 generic-cancel  ESC 
 generic-select  SPC 
