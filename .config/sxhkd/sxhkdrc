@@ -67,9 +67,9 @@ super + {_, shift + } + F10
 #                           |___/     
 # hotkeys. These are keybindings that are used to launch applications
 super + Return
-    $TERMINAL
+  kitty
 super + w
-    $BROWSER
+  waterfox-g4
 super + a
     ~/.scripts/sxhkd/search-appimages &
 super + f
