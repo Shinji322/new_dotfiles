@@ -94,6 +94,9 @@ cmd fzf_jump ${{
   fi
   lf -remote "send $id $cmd \"$res\""
 }}
+cmd tmux_new_window_right %{{
+  setsid -f tmux splitw -h -p "$(bc <<< "$(tput cols) / 2")" -- lfup
+}}
 
 
 # ==================== Remaps ==================================
@@ -102,6 +105,7 @@ map c
 map m
 map f
 map d
+map t
 
 # ==================== Command Bindings ==================================
 cmap <up> cmd-history-prev
@@ -112,6 +116,7 @@ map P paste
 map bg setwallpaper
 map dr $dragon-drop "$f"
 map f fzf_jump
+map tr tmux_new_window_right
 
 # ==================== Other Bindings ==================================
 map E $$EDITOR "$f"
