@@ -25,15 +25,16 @@ AUR_HELPER       := yay
 PACKAGES         := calcurse syncthing qbittorrent rofi sxhkd dmenu
 PACKAGES         += docker docker-compose
 PACKAGES         += zoxide lazygit gendesk flameshot pandoc
-PACKAGES         += nmap tmux jq redshift htmlq glow tealdeer dust bottom difftastic
+PACKAGES         += nmap tmux jq redshift htmlq glow tealdeer dust bottom difftastic figlet
 # glow: tui Markdown Previewer
 # tealdeer: A very fast implementation of tldr in Rust: Simplified, example based and community-driven man pages. 
 # dust: du on steroids
 # bottom: system monitoring tool
-PACKAGES         += exfat-utils streamlink sysstat
+# kalker-git a powerful cli calculator written in rust
+PACKAGES         += exfat-utils streamlink sysstat figlet-fonts
 AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk picom-git
 AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center zap-bin
-AUR_PACKAGES     += dragon-drop nsxiv
+AUR_PACKAGES     += dragon-drop nsxiv kalker-git
 #AUR_PACKAGES     += qdirstat-bin
 
 
