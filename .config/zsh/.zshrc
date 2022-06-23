@@ -1,4 +1,4 @@
-zmodload zsh/zprof
+# zmodload zsh/zprof
 
 source $ZDOTDIR/zsh_functions
 set -o extendedglob # make glob matching more epic
