@@ -3,6 +3,7 @@ set shell zsh
 set shellopts '-euy'
 set ifs "\n"
 set filesep "\n"  # default already
+# on zsh, -y is very necessary because zsh doesn't separate $fx properly, treating it as one string
 
 set scrolloff 10
 set period 1
@@ -28,7 +29,7 @@ cmd open ${{
 			lf -remote "send toggle"
 		done &
 		;;
-	audio/*) mpv --audio-display=no $f ;;
+	audio/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
 	video/*) setsid -f mpv $f -quiet >/dev/null 2>&1 ;;
 	application/pdf|application/vnd*|application/epub*) setsid -f zathura $fx >/dev/null 2>&1 ;;
 	application/pgp-encrypted) $EDITOR $fx ;;
@@ -58,7 +59,7 @@ cmd extract ${{
 	clear; tput cup $(($(tput lines)/3)); tput bold
 	set -f
 	printf "%s\n\t" "$fx"
-	printf "extract?[y/N]"
+	printf "extract?[y/N] "
 	read ans
 	[ $ans = "y" ] && aunpack $fx
 }}
@@ -74,14 +75,10 @@ cmd restore_trash ${{
     fzf --multi                     | \
     awk '{print $1}'                | \
     sed -z 's/\n/,/g;s/,$/\n/')"
-  echo $ids | trash-restore 
+  echo $ids | trash-restore
   clear
 }}
-# cmd dragon-drag %{{
-#     dragon-drop "$f"
-# }}
-cmd setwallpaper ${{ 
-  # feh --no-fehbg --bg-fill -r -z "$f"
+cmd setwallpaper ${{
   setbg "$f"
 }}
 
@@ -106,6 +103,7 @@ map m
 map f
 map d
 map t
+map u
 
 # ==================== Command Bindings ==================================
 cmap <up> cmd-history-prev
@@ -117,10 +115,11 @@ map bg setwallpaper
 map dr $dragon-drop "$f"
 map f fzf_jump
 map tr tmux_new_window_right
+map ur extract
 
 # ==================== Other Bindings ==================================
 map E $$EDITOR "$f"
-map B $vidir
+map R $vidir
 map Y $printf "%s" "$fx" | xclip -selection clipboard
 map C $xclip -selection clipboard < "$f"
 map mb $cp -ri "$f" "$f.bak"
