@@ -192,7 +192,8 @@ fonts:
 	# Korean
 	$(INSTALL) adobe-source-han-sans-kr-fonts ttf-baekmuk
 	# Nerd
-	$(AUR) nerd-fonts-noto-sans-regular-complete
+	$(AUR) ttf-nerd-fonts-symbols
+	# $(AUR) nerd-fonts-noto-sans-regular-complete
 	# Emoji
 	$(INSTALL) noto-fonts-emoji
 	# Aesthetic fonts
@@ -294,6 +295,9 @@ docker:
 	# Idk if this will work
 	[ -z "$(groups | grep docker)" ] && sudo groupadd docker
 	sudo usermod -aG docker $(USER) # Gimme docker perms
+crypto:
+	$(INSTALL) monero-gui
+	$(AUR) xmrig-bin
 
 
 # Hardware dependent
