@@ -24,7 +24,7 @@ AUR_HELPER       := yay
 # sxiv is archived so we use nsxiv instead
 PACKAGES         := calcurse syncthing qbittorrent rofi sxhkd dmenu
 PACKAGES         += docker docker-compose
-PACKAGES         += zoxide lazygit gendesk flameshot pandoc
+PACKAGES         += zoxide lazygit gendesk flameshot pandoc polybar
 PACKAGES         += nmap tmux jq redshift htmlq glow tealdeer dust bottom difftastic figlet
 # glow: tui Markdown Previewer
 # tealdeer: A very fast implementation of tldr in Rust: Simplified, example based and community-driven man pages. 
@@ -131,16 +131,18 @@ web-dev:
 	$(INSTALL) sassc
 	$(AUR) vue-cli
 	npm install -D sass-loader node-sass typescript
-python: 
+python:
 	$(INSTALL) python-pip
-rust: 
+rust:
 	$(INSTALL) rustup
 	rustup default stable
 	rustup component add rls rust-analysis rust-src
 	mv .rustup $(XDG_DATA_HOME)/rustup
 	$(MKDIR) $(XDG_DATA_HOME)/cargo/env
-go: 
+go:
 	$(INSTALL) go
+perl:
+	perl -MCPAN -e 'install Font::FreeType'
 
 sdl:
 	$(INSTALL) sdl sdl_image sdl_mixer
@@ -192,7 +194,7 @@ fonts:
 	# Korean
 	$(INSTALL) adobe-source-han-sans-kr-fonts ttf-baekmuk
 	# Nerd
-	$(AUR) ttf-nerd-fonts-symbols
+	$(AUR) ttf-nerd-fonts-symbols otf-font-awesome awesome-terminal-fonts
 	# $(AUR) nerd-fonts-noto-sans-regular-complete
 	# Emoji
 	$(INSTALL) noto-fonts-emoji

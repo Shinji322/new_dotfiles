@@ -151,6 +151,7 @@ map gct  cd ~/.config/kitty
 map gcx  cd ~/.config/x11
 map gck  cd ~/.config/sxhkd
 map gcw  cd ~/.config/i3
+map gcp  cd ~/.config/polybar
 
 map gL  cd ~/literature
 
