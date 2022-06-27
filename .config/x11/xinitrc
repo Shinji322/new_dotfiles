@@ -48,5 +48,6 @@ calcurse --daemon
 ~/.scripts/system/wallpaper &
 ~/.scripts/alias/searx &
 ~/.local/bin/remaps &
+#~/.local/bin/xmonitors &
 light -S 70 &
 exec i3
