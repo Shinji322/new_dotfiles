@@ -16,7 +16,7 @@ esac
 
 
 if command -v feh >/dev/null 2>&1 ; then
-  feh --no-fehbg --bg-fill -r -z "$1"
+  feh --no-fehbg --bg-fill -r -z "${@}"
 else
   notify-send "Please install: " "feh or xwallpaper"
 fi
