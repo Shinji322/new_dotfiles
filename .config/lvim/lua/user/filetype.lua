@@ -6,7 +6,8 @@ M.config = function()
       literal = {
         ["kitty.conf"] = "kitty",
         [".gitignore"] = "conf",
-        ["xresources"] = "xdefaults"
+        ["xresources"] = "xdefaults",
+        ["calcurse*"] = "markdown",
       },
       complex = {
         [".clang*"] = "yaml",
