@@ -1,5 +1,4 @@
 # ~-=| Built in Aliases |=-~
-alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 alias l='exa -laG --icons --color=always --group-directories-first'
 alias dir='dir --color=auto'
 alias vdir='vdir --color=auto'
@@ -11,8 +10,8 @@ alias egrep='egrep --color=auto'
 alias rm='trash-put'
 alias cp='cpg -g -i'
 alias mv='mvg -g -i'
-alias du='du -h' 
-alias df='df -h' 
+alias du='du -h'
+alias df='df -h'
 alias grep='grep -i --color=auto'
 alias mkdir='mkdir -p'
 
