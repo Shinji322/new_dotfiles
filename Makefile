@@ -32,6 +32,7 @@ PACKAGES         += nmap tmux jq redshift htmlq glow tealdeer dust bottom diffta
 # bottom: system monitoring tool
 # kalker-git a powerful cli calculator written in rust
 PACKAGES         += exfat-utils streamlink sysstat figlet-fonts
+PACKAGES         += zbar arch-wiki-lite
 AUR_PACKAGES     := hydrus imgbrd-grabber pixivutil2-git tachidesk picom-git
 AUR_PACKAGES     += safeeyes gdb-frontend-bin system-monitoring-center zap-bin
 AUR_PACKAGES     += dragon-drop nsxiv kalker-git
@@ -59,6 +60,12 @@ ${HOME}/.local:
 	$(MKDIR) $</src
 	$(MKDIR) $</share
 	$(MKDIR) $</repos
+	$(MKDIR) $</state
+xdg_base_dirs:
+	$(MKDIR) $(HOME)/.cache
+	$(MKDIR) $(HOME)/.cache/zsh
+	touch $(HOME)/.cache/zsh/history
+	$(MKDIR) $(HOME)/.config
 base:
 	$(INSTALL) $(BASE_PKGS)
 $(AUR_HELPER):
@@ -120,8 +127,14 @@ dotrepos:
 	alias config='/usr/bin/git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 	config config status.showUntrackedFiles no
 gpg:
-	$(INSTALL) gpg-tui pass pass-otp
+	$(INSTALL) gpg-tui
 	$(MKDIR) $(HOME)/.local/share/gnupg
+	chown -R $(shell whoami) ~/.local/share/gnupg
+	chmod 700 ~/.local/share/gnupg
+	chmod 600 ~/.local/share/gnupg/*
+	chmod 700 ~/.local/share/gnupg/*.d
+pass: gpg
+	$(INSTALL) pass pass-otp passff-host passmenu
 
 
 # Programming stuff
@@ -155,7 +168,8 @@ raylib:
 	sudo curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/raygui.h > /usr/include/raylib_extras/raygui.h
 	sudo curl https://raw.githubusercontent.com/raysan5/raylib/master/src/extras/rmem.h > /usr/include/raylib_extras/rmem.h
 rmarkdown:
-	$(INSTALL) r gcc-fortran tk
+	$(INSTALL) r gcc-fortran tk texlive-core
+	echo "install::package(\"rmarkdown\")" | sudo R
 pipkgs:
 	$(PIPINSTALL) pipenv virtualenv
 	$(PIPINSTALL) rnnoise-cli
@@ -183,6 +197,9 @@ advcpmv:
 	rm -rf advcpmv
 terminal:
 	$(INSTALL) kitty
+mutt:
+	$(MKDIR) $(XDG_CONFIG_HOME)/mbsync
+	touch $(XDG_CONFIG_HOME)/mbsync/config
 fonts:
 	# Latin script
 	$(INSTALL) ttf-ubuntu-font-family ttf-croscore ttf-fira-code
