@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# This gets the file name without the extension 
-
-echo ${1%%.*}
