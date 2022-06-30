@@ -2,16 +2,13 @@
 
 CONFIG_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/scripts/tmux"
 selected=`cat $CONFIG_DIR/cht.sh.languages $CONFIG_DIR/cht.sh.progs | fzf`
-if [[ -z $selected ]]; then
-    exit 0
-fi
 
 read -p "Enter Query: " query
 
 if grep -qs "$selected" "$CONFIG_DIR/cht.sh.languages"; then
     query=`echo $query | tr ' ' '+'`
-    tmux neww bash -c "echo \"curl cht.sh/$selected/$query/\" & curl cht.sh/$selected/$query & while [ : ]; do sleep 1; done"
+    bash -c "echo \"curl cht.sh/$selected/$query/\" & curl cht.sh/$selected/$query & while [ : ]; do sleep 1; done"
 else
-    tmux neww bash -c "curl -s cht.sh/$selected~$query | less"
+    bash -c "curl -s cht.sh/$selected~$query | less"
 fi
 
