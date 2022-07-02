@@ -127,7 +127,7 @@ M.config = function()
       -- This plugin provides a tui interface for dap
       "rcarriga/nvim-dap-ui",
       config = function()
-        require("dapui").setup()
+        require("dapui").setup(require("user.dap-ui"))
       end,
       ft = { "python", "rust", "go" },
       event = "BufReadPost",
