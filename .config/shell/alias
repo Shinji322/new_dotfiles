@@ -1,3 +1,5 @@
+# vim: filetype=sh
+
 # ~-=| Built in Aliases |=-~
 alias l='exa -laG --icons --color=always --group-directories-first'
 alias dir='dir --color=auto'
@@ -38,8 +40,8 @@ alias anki='anki --no-sandbox -b "$XDG_DATA_HOME"/Anki'
 alias feh='feh --no-fehbg'
 alias codium='codium --extensions-dir $XDG_DATA_HOME/vscode'
 alias vscodium='vscodium --extensions-dir $XDG_DATA_HOME/vscode'
-alias sqlite3="sqlite3 -init $XDG_CONFIG_HOME/sqlite/sqliterc" 
-alias mdanki="mdanki --config $XDG_CONFIG_HOME/mdanki/settings.json"
+alias sqlite3='sqlite3 -init $XDG_CONFIG_HOME/sqlite/sqliterc'
+alias mdanki='mdanki --config $XDG_CONFIG_HOME/mdanki/settings.json'
 alias irssi='irssi --config="$XDG_CONFIG_HOME"/irssi/config --home="$XDG_DATA_HOME"/irssi'
 alias vale='vale --config "$XDG_CONFIG_HOME/vale/config.ini"'
 alias mbsync='mbsync -c "$XDG_CONFIG_HOME/mbsync/config"'
@@ -57,7 +59,7 @@ alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
 # alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
 # Let zsh get the entire history 
 alias hist='history 1'
-alias "source .zshrc"="source ~/.config/zsh/zshrc"
+alias rfrsh="source ~/.config/zsh/zshrc"
 alias iost='iostat -sxmhtc --dec=0'
 
 # Git commands
@@ -81,5 +83,5 @@ alias tl='tmux list-sessions'
 alias tksv='tmux kill-server'
 alias tkss='tmux kill-session -t'
 
-# For when keys breaek
-alias archlinx-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
+# Functions that make more sense to be an alias
+alias archlinux-fix-keys="sudo pacman-key --init && sudo pacman-key --populate archlinux && sudo pacman-key --refresh-keys"
