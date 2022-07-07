@@ -1,5 +1,6 @@
 [Default Applications]
 text/x-shellscript=text.desktop;
+text/x-script.python=text.desktop;
 x-scheme-handler/magnet=torrent.desktop;
 application/x-bittorrent=torrent.desktop;
 text/plain=text.desktop;
@@ -27,6 +28,7 @@ x-scheme-handler/discord-719647875465871400=discord-719647875465871400.desktop
 x-scheme-handler/mailto=userapp-Thunderbird-VPH7I1.desktop
 message/rfc822=userapp-Thunderbird-VPH7I1.desktop
 x-scheme-handler/mid=userapp-Thunderbird-VPH7I1.desktop
+x-scheme-handler/discord-474605546457137157=discord-474605546457137157.desktop
 
 [Added Associations]
 x-scheme-handler/http=waterfox-g4.desktop;userapp-Waterfox-LRZ2K1.desktop;userapp-Waterfox-FZ93L1.desktop;
