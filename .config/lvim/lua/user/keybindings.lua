@@ -94,9 +94,10 @@ M.set_async_tasks_keymaps = function()
 end
 
 M.set_dapui_keymaps = function ()
-  lvim.keys.normal_mode["<leader>dU"] = "<cmd>lua require('dapui').toggle()<cr>"
-  lvim.keys.normal_mode["<leader>di"] = "<cmd>lua require('dapui').eval()<cr>"
-  lvim.keys.normal_mode["<leader>i"] = "<cmd>lua require('dapui').eval()<cr>"
+  local opts = { noremap = true, silent = true }
+  vim.api.nvim_set_keymap("n", "<leader>dU", "<cmd>lua require('dapui').toggle()<cr>", opts)
+  vim.api.nvim_set_keymap("n", "<leader>dI", "<cmd>lua require('dapui').eval()<cr>", opts)
+  vim.api.nvim_set_keymap("n", "<leader>i", "<cmd>lua require('dapui').eval()<cr>", opts)
 
   lvim.builtin.which_key.mappings["<leader>dU"] = "Toggle Dap-Ui"
   lvim.builtin.which_key.mappings["<leader>di"] = "Evaluate the highlighted expression"
