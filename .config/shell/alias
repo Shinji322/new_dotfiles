@@ -61,6 +61,7 @@ alias tsk="taskell $HOME/documents/kanban/$(date '+%g-%m-%d')_taskell.md"
 alias hist='history 1'
 alias rfrsh="source ~/.config/zsh/.zshrc"
 alias iost='iostat -sxmhtc --dec=0'
+alias hss='hugo server --noHTTPCache'
 
 # Git commands
 alias g="lazygit"
