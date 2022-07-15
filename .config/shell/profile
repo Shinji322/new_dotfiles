@@ -34,7 +34,7 @@ export VISUAL="lvim"
 export PAGER="less"
 export WM="i3"
 export SHELL="zsh"
-export BROWSER="waterfox-g4"
+export BROWSER="chromium"
 export ICON_THEME="Paper"
 
 # Misc
