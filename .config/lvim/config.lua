@@ -72,6 +72,7 @@ if user and user == "mokou" then
   lvim.builtin.hlslens.active = true
   lvim.builtin.async_tasks.active = false
   lvim.builtin.motion_provider = "hop"
+  lvim.transparent_window = true
 end
 -- Global Lunarvim
 -- =========================================
