@@ -1,7 +1,27 @@
 #!/bin/bash 
 # Dependencies: docker docker-compose
 
-export PORT=80
-# docker pull searx/searx
-# docker run --rm -d -v ${PWD}/searx:/etc/searx -p $PORT:8080 -e BASE_URL=http://localhost:$PORT/ searx/searx --name searx_instance
-docker run --rm -d -v ${XDG_CONFIG_HOME:-$HOME/.config}/searx:/etc/searx -p $PORT:8080 -e BASE_URL=http://localhost:$PORT/ searx/searx --name searx_instance
+install() {
+  sudo usermod -a -G docker "$USER"
+  docker pull searxng/searxng
+}
+
+run() {
+  docker run --rm -d -p ${PORT}:8080 \
+    -v "${XDG_CONFIG_HOME:-$HOME/.config}/searxng:/etc/searxng" \
+    -e "BASE_URL:http://localhost:$PORT" \
+    -e "INSTANCE_NAME=SearXNG" \
+    searxng/searxng || exit 1
+}
+
+main() {
+  if [ -n "$(docker ps | grep 'searxng/searxng')" ]; then
+    docker container restart "$(docker ps | grep 'searxng/searxng' | cut -d ' ' -f1)"
+  else
+    run || install
+  fi
+}
+
+
+export PORT=8080
+run
