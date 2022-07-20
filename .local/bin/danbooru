@@ -11,7 +11,7 @@ danbooru() {
 }
 
 grabber_instance() {
-  $HOME/software/bin/appimages/Grabber_v7.8.1-x86_64.AppImage
+  $HOME/software/bin/appimages/Grabber_v*.AppImage
 }
 
 if [[ "$1" == "stop" ]];
