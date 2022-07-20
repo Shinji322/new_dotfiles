@@ -15,8 +15,8 @@ case "$(file --mime-type -b "$trueloc")" in
 esac
 
 
-if command -v feh >/dev/null 2>&1 ; then
-  feh --no-fehbg --bg-fill -r -z "${@}"
-else
-  notify-send "Please install: " "feh or xwallpaper"
+if command -v wal >/dev/null 2>&1 ; then
+	wal -n -i "$(readlink -f $bgloc)" -o "${XDG_CONFIG_HOME:-$HOME/.config}/wal/postrun" >/dev/null 2>&1
 fi
+
+xwallpaper --zoom "$bgloc"
